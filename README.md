@@ -1,2 +1,4 @@
 # Notes
-Was going to call this repo 'turnt-robot,' as GitHub suggested, but then I thought twice.
+This is a repo made to centralize my notes for different software/programming languages.
+
+Inspired by [Julie~](https://github.com/ycp217)
