@@ -136,8 +136,94 @@ eg. ```System.out.println( 1.0F / 3.0F);``` gives you 0.333333334 whereas you'd 
 Write ```1E2``` to get 1 x 10^2
 
 ##### Augmented assignment operators
-* ```+=``` = 
-* ```+=``` =
+* ```+=``` = Addition assignment
+* ```-=``` = Subtraction assignment
+* ```*=``` = Multiplication assignment
+* ```/=``` = Division assignment
+* ```%=``` = Remainder assignment
+
+###### Increment and decrement operators
+```Java
+int increment = 0;
+increment++; //Use increment's value, then add 1
+++increment; //Add 1 to increment's value, then use it
+
+int decrement = 0;
+decrement--; //Use decrement's value, then subtract 1
+--decrement;  //Subtract 1 from decrement's value, then use it
+```
+
+##### Numeric type conversions
+Convert floating-point numbers to integers, and vice versa, using explicit casting
+```Java
+System.out.println( (int) 1.7 );
+
+System.out.println( (double) 1 / 2 ); // if you don't do this, the answer will display as 0
+```
+
+##### Character data type and operations
+A ```character``` data type represents a single character.
+
+```Java
+char letter = 'A';
+char number = '1';
+```
+
+##### Casting between char and numeric types
+You can convert characters into any numeric type & vice versa, but you need to keep in mind that only the lower 16 data bits are used when an integer is casted into a character.
+```Java
+char ch = (char)0XAB0041; // lower 16 bits hexcode is 0041, so that is assigned to ch
+System.out.println(ch); // displays A
+```
+
+* Floating-point values --> char
+  * Procedure: floating-point becomes an integer, then a char.
+```Java
+char ch = (char)55.05; // 55 is assigned to ch
+System.out.println(ch); // displays A
+```
+* char --> int
+```Java
+int i = (int)'B';
+System.out.println(i); //this prints out B's Unicode
+```
+
+You can use implicit casting (```type variable = '[letter]'```) if the result of the casting fits into the range of the type.
+For example, in ```byte b = 'a';```, a's unicode is 97 & that fits w/i a byte. That wouldn't be the case if you were doing ```byte b = '\uFFF4'```, though. It'd be too big.
+
+To force an assignment, cast the type like this: ```byte b = (byte) '\uFFF4';```
+
+###### Escape characters
+To get out of how your code would regularly be interpreted, you can use escape characters.
+
+```Java
+System.out.println("Escape your speech \"to say something\"!"); \ \" together represent one character
+```
+
+Other escape characters work as follows:
+* ```\b``` = Backspace. Unicode: \u0008. Decimal value: 8.
+* ```\t``` = Tab. Unciode: \u0009. Decimal value: 9.
+* ```\n``` = Linefeed. Unicode: \u000A. Decimal value: 10.
+* ```\f``` = Formfeed. Unicode: \u000C. Decimal value: 12.
+* ```\r``` = Carriage Return. Unicode: \u000D. Decimal value: 13.
+* ```\\``` = Backslash. Unicode: \u005C. Decimal value: 92.
+* ```\"``` = Double Quote. Unicode \u0022. Decimal value: 34.
+
+##### The String type
+*String* = sequence of characters.
+
+You can concatenate strings with ```+``` and ```+=```.
+
+*Whitespace characters* include ```' '```, ```\```, ```\f```, ```\r```, or ```\n```.
+
+Caution:
+```Java
+System.out.println("Food " + 1 + 2); //produces: Food 12
+System.out.println("Food " + (1 + 2)); //produces: Food 3
+```
+
+##### Getting input from input dialogs
+
 ``` Java
 public class ClassName{
   public static void main (String[] args) {
