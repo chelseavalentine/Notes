@@ -88,7 +88,6 @@ Note that ```=``` is the *assignment operator*.
 Let's say you want to keep a fixed number and use it throughout your program. How would you go about it? You'd create a named constant.
 
 Its format works like this:
-
 ``` Java
 public class NamedConstants{
   public static void main (String[] args) {
@@ -163,7 +162,6 @@ System.out.println( (double) 1 / 2 ); // if you don't do this, the answer will d
 
 ##### Character data type and operations
 A ```character``` data type represents a single character.
-
 ```Java
 char letter = 'A';
 char number = '1';
@@ -182,6 +180,7 @@ System.out.println(ch); // displays A
 char ch = (char)55.05; // 55 is assigned to ch
 System.out.println(ch); // displays A
 ```
+
 * char --> int
 ```Java
 int i = (int)'B';
@@ -223,11 +222,23 @@ System.out.println("Food " + (1 + 2)); //produces: Food 3
 ```
 
 ##### Getting input from input dialogs
-
+If you prefer a graphical dialog box instead of one in the console, you can do this:
 ``` Java
-public class ClassName{
+import JOptionPane.*;
+
+public class GraphicalInput{
   public static void main (String[] args) {
-    [Main program goes here]
+    String answer = JOptionPane.showInputDialog(x); //Where x is the string that creates the message
   }
 }
+```
+
+##### Converting strings to numbers
+Convert a string to an int
+```Java
+int intValue = Integer.parseInt (123456);
+```
+Convert a string into a double
+```Java
+double doubleValue = Double.parseDouble (123456)
 ```
