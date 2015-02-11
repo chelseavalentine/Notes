@@ -135,10 +135,29 @@ Different `Character` methods:
 * `variable.countLetters(char)` (count the occurrences of each letter in a string)
 
 ##### The `StringBuilder` and `StringBuffer` classes
+* `StringBuilder` and `StringBuffer` can be used wherever strings are used, the only difference is that they're more flexible than `String`s.
+ * can add new content into the `StringBuilder` and `StringBuffer` objects (so they are changeable)
+* Difference between `StringBuilder` and `StringBuffer`:
+ * `StringBuilder`s are synchronized, meaning you can only use one task to execute the methods
+  * But it's more efficient if you only need a single task
+ * `StringBuffer` can be accessed by multiple tasks concurrently
+* Both the `StringBuilder` and `StringBuffer` have the same methods & constructors;  
 
 ##### Modifying strings in the `StringBuilder`
+* `StringBuilder stringBuilder = new StringBuilder();`
+* `stringBuilder.append("some text");`
+* `stringBuilder.insert(11, "some text");` (inserts the text in index 11)
+* `stringBuilder.delete(indexStart, indexEnd);` (delete things in that range)
+* `stringBuilder.reverse()`
+* `stringBuilder.replace(indexStart, indexEnd, "Words");` (replace the characters in that range)
+* `stringBuilder.setCharAt(0, 'w');` (changes a character at the index specified)
 
 ##### The `toString`, `capacity`, `length`, `setLength`, and `charAt` methods
+* `stringBuilder.();` (
+* `stringBuilder.();` (
+* `stringBuilder.();` (
+* `stringBuilder.();` (
+* `stringBuilder.();` (
 
 ##### Command-line arguments
 
