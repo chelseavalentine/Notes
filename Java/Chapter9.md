@@ -1,4 +1,4 @@
-#### Strings (372-389)
+#### Strings (378-389)
 
 ##### Constructing  a String
 * Create a string from a string literal w/ this syntax:
@@ -114,6 +114,23 @@ message.getChars( [(int) beginHere], [(int) endHere], [char[] dst], [(int) dstBe
 ```
 * `char[] dst` indicates which array you want to put the elements of the substring into
 * `dstBegin` indicates which indices which indices of the destination array that you want to replace/add the new substring to
+
+##### Converting characters and numeric values to strings
+```String.valueOf([some number or characters]);``` will return an array of characters converted into strings
+eg. ```String.valueOf(5.44)``` --> '5', '.', '4', '4' in an array
+##### Formatting strings
+The syntax to format strings is ```String.format(format, item1, item2, ..., itemk)```, which is similar to the format for print statements.
+
+##### The `Character` class
+* Create a `Character` object from a `char` value. (eg. `Character character = new Character('a');`)
+
+Different `Character` methods:
+* `variable.isDigit(char)`
+* `variable.isDigit(char)`
+* `variable.isDigit(char)`
+* `variable.isDigit(char)`
+* `variable.isDigit(char)`
+* `variable.isDigit(char)`
 
 ```
 public class ClassName{
