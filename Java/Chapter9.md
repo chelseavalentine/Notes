@@ -1,4 +1,4 @@
-#### Strings (378-389)
+#### Strings (381-389)
 
 ##### Constructing  a String
 * Create a string from a string literal w/ this syntax:
@@ -126,11 +126,21 @@ The syntax to format strings is ```String.format(format, item1, item2, ..., item
 
 Different `Character` methods:
 * `variable.isDigit(char)`
-* `variable.isDigit(char)`
-* `variable.isDigit(char)`
-* `variable.isDigit(char)`
-* `variable.isDigit(char)`
-* `variable.isDigit(char)`
+* `variable.isLetter(char)`
+* `variable.isLetterOrDigit(char)`
+* `variable.isLowerCase(char)`
+* `variable.isUpperCase(char)`
+* `variable.toLowerCase(char)`
+* `variable.toUpperCase(char)`
+* `variable.countLetters(char)` (count the occurrences of each letter in a string)
+
+##### The `StringBuilder` and `StringBuffer` classes
+
+##### Modifying strings in the `StringBuilder`
+
+##### The `toString`, `capacity`, `length`, `setLength`, and `charAt` methods
+
+##### Command-line arguments
 
 ```
 public class ClassName{
