@@ -153,18 +153,9 @@ Different `Character` methods:
 * `stringBuilder.setCharAt(0, 'w');` (changes a character at the index specified)
 
 ##### The `toString`, `capacity`, `length`, `setLength`, and `charAt` methods
-* `stringBuilder.();` (
-* `stringBuilder.();` (
-* `stringBuilder.();` (
-* `stringBuilder.();` (
-* `stringBuilder.();` (
-
-##### Command-line arguments
-
-```
-public class ClassName{
-  public static void main (String[] args) {
-    [Main program goes here]
-  }
-}
-```
+* `stringBuilder.capacity();` (returns the # of characters the string builder can store w/o having to increase in size)
+* `stringBuilder.length();`
+* `stringBuilder.setLength(newLength);` (sets the length of the string builder; string will be truncated if it's less than the current length) (if it's greater, there'll be null characters added)
+* `stringBuilder.charAt(index);` (tells you what character is at a certain index
+* `stringBuilder.trimToSize();` (This will reduce the capacity to the actual size, getting rid of all of the parts that aren't being used)
+* `new StringBuilder (initialCapacity)` creates a StringBuilder with a specified initial capacity
