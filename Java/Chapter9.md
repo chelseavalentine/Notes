@@ -1,4 +1,4 @@
-#### Strings (381-389)
+#### Strings
 
 ##### Constructing  a String
 * Create a string from a string literal w/ this syntax:
