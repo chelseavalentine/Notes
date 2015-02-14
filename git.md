@@ -21,11 +21,11 @@ Follow the instructions in VIM when deciding whether you're editing or deleting.
 
 Some useful things to know about using VIM:
 
-* If you want to delete multiple lines at a time, you can press ESC to go into visual mode in VIM, then select the text with your mouse or the keyboard
-* To finally delete, you can press 'd' or 'x'
-* To save your work and get out of VIM, you can type ':x' or ':wq'
+* If you want to delete multiple lines at a time, you can press `ESC` to go into visual mode in VIM, then select the text with your mouse or the keyboard
+* To finally delete, you can press `d` or `x`
+* To save your work and get out of VIM, you can type `:x` or `:wq`
 
-Once you've done that, you'll probably be asked whether you want to do "git rebase --continue" (to fix the issue) or "git rebase --skip". I haven't seen any problems with just doing the skip, soooo... 
+Once you've done that, you'll probably be asked whether you want to do `git rebase --continue` (to fix the issue) or `git rebase --skip`. I haven't seen any problems with just doing the skip, soooo... 
 
 When you've finished editing the commit history, your current version won't be like the one on GitHub, so you'll have to force a commit. You can do that by typing:
 
