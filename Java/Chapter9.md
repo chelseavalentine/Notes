@@ -32,7 +32,7 @@ String s2 = "Welcome to Java"; //This is an interned string object for "Welcome 
   * You use the `equals` method to check whether they have the same content
 ``` Java
 if (string1.equals(string2))
-  System.out.println("stirng1 and string2 have the same contents");
+  System.out.println("string1 and string2 have the same contents");
 else
   System.out.println("string1 and string2 are not equal");
 ```
@@ -64,7 +64,6 @@ More `String` class methods:
 * get length of the string: `message.length()`
 * `s.charAt(index)` retreieve a particular character in string `s`
 * get a substring from a string `message.substring([start index], [index it goes up to, but not including])'`
-* 
 
 Concatenate two strings
 ``` Java
