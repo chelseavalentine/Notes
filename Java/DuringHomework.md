@@ -1,5 +1,16 @@
 #### Things I learn while doing homework
 
+##### Get a specific character from input
+eg. the first character
+
+```Java
+import java.util.*; 
+
+Scanner in = new Scanner(System.in);
+System.out.print("Write something. ");
+char letter = in.next().charAt(0);
+```
+
 ##### Lists
 
 Create a new list & initialize values at the same time
