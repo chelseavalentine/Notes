@@ -37,7 +37,7 @@ else
   System.out.println("string1 and string2 are not equal");
 ```
 
-* `compare to` is the way to compare two strings lexicographically (depends on Unicode)
+* `compareTo` is the way to compare two strings lexicographically (depends on Unicode)
   * You use this rather than comparison operators `>`, `<`, etc.
   * this will return a value depending on the relation of string1 to string2
     * returns `0` if s1 is equal to s2
