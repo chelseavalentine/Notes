@@ -84,7 +84,7 @@ Boolean operators:
 * ```&&``` = and (logical conjunction)
 * ```||``` = or (logical disjunction)
 * ```^``` = exclusive or (logical exclusion)
-  * The exclusive or, ```^```, of 2 Boolean operands is true if & only if the two operands hve different Boolean values.
+  * The exclusive or, ```^```, of 2 Boolean operands is true if & only if the two operands have different Boolean values.
 
 ##### ```switch``` Statements
 If there're multiple cases that you can foresee (due to you giving options, or w/e), then you can use switch statements to make your life easier.
