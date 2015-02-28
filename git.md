@@ -6,7 +6,7 @@ git subtree add --prefix=YOURPREFIX git://github.com/YOURPATH master
 ```
 
 ```
-git add YOURPREFIX/
+git push [remote name] master
 ```
 
 ##### Delete/edit commit history
