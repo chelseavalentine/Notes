@@ -4,12 +4,12 @@ Link a favicon (located in assets/images
 <%= favicon_link_tag 'favicon.png', type: 'image/png', sizes '16x16', width: '16px' %>
 ```
 
-Image
+img:
 ```Ruby
 <%= image_tag ("image.svg", class: "", id: "", alt: "") %>
 ```
 
-<a> (method isn't usually used, I've seen it used for logging out, where method: "delete"
+a: (method isn't usually used, I've seen it used for logging out, where method: "delete"
 ```Ruby
 <%= link_to "linked text here", route_name_path_thing, class: "", method: "" %>
 ```
@@ -19,7 +19,7 @@ External stylesheet
 <%= stylesheet_link_tag 'whereYouAreImportingItToLikeApplication', 'external URL', type: 'text/css' %>
 ```
 
-`<button>` It works but it behaves nothing as you would expect it to
+button: It works but it behaves nothing as you would expect it to
 ```Ruby
 <%= button_to "buttontext", path_name_here, :method => "get" %>
 ```
