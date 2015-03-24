@@ -32,3 +32,9 @@ When you've finished editing the commit history, your current version won't be l
 ```
 git push -f [remote name] [branch name]
 ```
+
+##### Merge branches together
+```
+git checkout dat-branch-you-want-to-have-merged-into
+git merge dat-branch-you-want-merged-in
+```
