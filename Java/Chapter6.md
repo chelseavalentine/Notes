@@ -115,7 +115,7 @@ public class VarArgsDemo {
 
 ##### Searching Arrays
 
-__The Linear Search Approach__
+###### The Linear Search Approach
 elements are compared to a key; if a match is found, the index of the element is returned; otherwise, -1 is returned
 ```Java
 public class LinearSearch {
@@ -131,7 +131,7 @@ public class LinearSearch {
 }
 ```
 
-__The Binary Search Approach__
+###### The Binary Search Approach
 * elements of the list must be ordered already for binary search to work
 * this is how it works... if this even makes sense
   * If the key is less than the middle element, you continue to search for the key in only the first half of the array
@@ -175,7 +175,7 @@ public static int binarySearch(int[] list, int key){
 ```
 ##### Sorting Arrays
 
-__Selection Sort__
+###### Selection Sort
 * Searches the entire list for the smallest element, then swaps it with the 1st element in the list;
 * Then searches through the remainder of the list, and does the same thing
 * Repeat ^^^ 
@@ -205,8 +205,35 @@ public class SelectionSort {
   }
 }
 ```
-__Insertion Sort__
+###### Insertion Sort
+* Sort a list by repeatedly inserting a new element into a sorted sublist until the whoe list is sorted
+* What the hell does this description even mean... look this up later, please, future self.
 
+```Java
+public class InsertionSort {
+  //The method for sorting numbers
+  public static void insertionSort (double[] list) {
+    for (int i = 1; i < list.length; i++) {
+      //Insert list[i] into a sorted sublist list[0 ... i-1], so that list[0 ... i] is sorted
+      double currentElement = list[i];
+      int k;
+      for (k = i - 1; k >= 0 && list[k] > currentElement; k--) {
+        list[k + 1] = list[k];
+      }
+      
+      //Insert the current element into list[k + 1]
+      list[k + 1] = currentElement;
+    }
+  }
+}
+```
 
 ##### The Arrays Class
+Compare lists
+`java.util.Arrays.equals(list1, list2)` tells you whether two arrays have the same content
 
+Fill a list
+```Java
+java.util.Arrays.fill(list1, 5); //Fill the whole array with 5's
+java.util.Arrays.fill(list2, 1, 3, 8); //Fill a part of the array with 8's
+```
