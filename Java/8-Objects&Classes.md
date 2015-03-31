@@ -20,9 +20,18 @@ public class TestSimpleCircle {
 class SimpleCircle {
 }
 ```
+
 ##### Constructing Objects Using Constructors
+`constructors`:
+* must have the same name as the class itself
+* they don't return a type, not even void
+* are invoked using the `new` operator when an object is created (they initialize objects)
 
 ##### Accessing Objects via Reference Variables
+
+##### Reference Variables and Reference Types
+* object's data & methods can be accessed through the `.` operator via the object's reference variable
+* object's _reference variables_ 
 
 ##### Using Classes from the Java Library
 
