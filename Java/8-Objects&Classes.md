@@ -127,7 +127,7 @@ public returnType getPropertyName()
 ```Java
 public boolean isPropertyName()
 ```
-*`set` methods
+* `set` methods
 ```Java
 public void setPropertyName (dataType propertyValue)
 ```
