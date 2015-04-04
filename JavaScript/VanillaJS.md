@@ -1,26 +1,43 @@
 ## VanillaJS
 
+#### Window
+when it loads, do this stuff
+```JavaScript
+window.onload = function() {
+}
+```
+
 #### Actions
 Click
 ```JavaScript
 document.getElementsByTagName().click()
 ```
 
+#### Characteristics
+value
+```JavaScript
+document.getElementById('thisthing').value;
+```
+
 #### Get
+by tag
 ```JavaScript
-document.
+document.getElementsByTagName('tagname');
 ```
 
+by class
 ```JavaScript
-document.
+document.getElementsByClassName('classname');
 ```
 
+by ID
 ```JavaScript
-document.
+document.getElementById('idname');
 ```
 
+by CSS selector
 ```JavaScript
-document.
+document.querySelector('tag #idname .classname');
 ```
 
 ```JavaScript
