@@ -19,7 +19,6 @@ In order to create an immutable class, meet these criteria:
 * (talking about scope in terms of class, not loops)
 * scope of instance & static variables: the entire class
 	* this is the class regardless of where the variables are declared
-
 * you can put a class's variables & methods in any order
 	* exception: when a data field is initialized based on a reference to another data field
 		* then the other data field needs to be declared first
@@ -120,41 +119,79 @@ More about class abstraction:
 
 
 ##### Object-Oriented Thinking
-```Java
-```
+
+* in OOT, the focus is on designing methods; you use methods & data together in objects
+* procedural paradigm: focus on designing methods; (data & methods are separate)
+* OO paradigm: data & methods are coupled into objects
+
 
 ##### Object Composition
-```Java
-```
+
+* objects can create another object
+	* __composition__: the relationship between the two objects
+	* composition is a case of the aggregation relationship
+* __aggregation__ models _has-a_ relationships & shows ownership relationships between 2 objects
+	* __aggregating object__: the ower object
+		* may be owned by several other aggregating objects
+		* if an object is owned by only 1 aggregating object, the relationship b/t them is called a __composition__
+	* __aggregating class__: the aggregating object's class
+		* aggregated class vs aggregating class
+* __multiplicity__: a number/interval specifying how many of the class's objects are involved in the relationship; (* = unlimited)
+	* each class involved in a relationship may specify a multiplicity
+
 
 ##### Class Design Guidelines
-```Java
-```
 
 ###### Cohesion
 
+* classes describe a single entity & its class operations work toward a coherent purpose
+
+
 ###### Consistency
+
+* place data declarations before the constructor
+* place constructors before methods
+* consistantly provide a public no-arg constructor to construct a default instance
+	* you should document the reason for not including one if you decide not to include one
+	* if no constructors are explicitly defined, a public default no-arg constructor w/ an empty body is assumed
 
 ###### Encapsulation
 
+* __encapsulating data fields__: class should use `private` modifier to hide data from direct access by clients
+
 ###### Clarity
 
-###### Completeness
+* design classes that allow the user to freely use it however they want
+
 
 ###### Instance vs. Static
 
+* always reference static variables & methods from a class name (Not a reference variable) to improve readibility & avoid errors
+* use `set` methods to change static data fields
+* a constructor is always instance b/c it's used to create a specific instance
+	* a static variable/method can be invoked from an instance method, but an instance variable/method can't be invoked from a static method
+
+
 ##### Processing Primitive Data Type Values as Objects
-```Java
-```
+
+* can wrap primitive data types in their respective wrapper objects
+	* eg `int` in `Integer`, `double` in `Double`, `char` in `Character`;
+* wrapper classes don't have no-arg constructors
+	* thus, once the objects are created, internal values can't be changed
+* conversion methods, & other common methods are on p.395 
+
 
 ##### Automatic Conversion between Primitive Types and Wrapper Class Types
-```Java
-```
 
-##### Automatic Conversion between Primitive Types and Wrapper Class Types
-```Java
-```
+* primitive type values can be converted to object using a wrapper, & vice versa
+* __boxing__: converting a primitive value to a wrapper object
+* __unboxing__: converting a wrapper object to a primitive type
+* __autoboxing__ & __autounboxing__: the Java compiler automatically boxes a primitive value that appears in a context requiring an object & unboxes an object that appears in a context requiring a primitive value
+
 
 ##### The `BigInteger` and `BigDecimal` Classes
-```Java
-```
+
+* these are used to represent huge integers and decimal numbers... who would've known
+* they are both immutable!!! Immutable. __Immutable__.
+* can use `new BigInteger(String)` & `new BigDecimal(String)` to create instances of BigInteger & BigDecimal to use `add`, `subtract`, `multiple`, `divide`, & `remainder` methods on, and `compareTo`
+
