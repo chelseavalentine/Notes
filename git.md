@@ -1,3 +1,8 @@
+### Basics
+Set some branch as default when pushing
+`git push -u origin master`
+
+
 ##### Merge a repository into another
 This allows you to keep the commits of the repo you're merging in.
 
@@ -9,7 +14,12 @@ git subtree add --prefix=YOURPREFIX git://github.com/YOURPATH master
 git push [remote name] master
 ```
 
-##### Delete/edit commit history
+### Undo your mistakes
+
+##### Undo since the last commit
+`git checkout -f`
+
+##### For the stupider mistakes: Delete/edit commit history
 If you accidentally merge a repository and add 1,000 of other people's commits (again), you can do a rebase to undo your mistakes. If you merge one of your own repositories, you will double all of the commits of the merged repository. If you want to undo that, you can also use this.
 
 Decide how many parent commits you want to go back. N = number of parent commits.
