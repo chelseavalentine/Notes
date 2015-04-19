@@ -1,6 +1,12 @@
 ### Basics
 Set some branch as default when pushing
+
 `git push -u origin master`
+
+
+Delete a directory that has things in it
+
+`rm -rf [directoryname]`
 
 
 ##### Merge a repository into another
