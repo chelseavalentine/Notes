@@ -1,31 +1,50 @@
 # Packages
 
-Some packages have shortcuts specific to them. Here they are for your reference.
+Some packages have shortcuts specific to them. Here they are for your
+reference.
+
+
+## General usage
+
+### Trailing spaces
+
+`Ctrl` `Shift` `T`: Delete trailing spaces.
+
+`Ctrl` `Shift` `Alt` `T`: Highlight trailing spaces.
+
+ 
 
 ## JavaScript-related
- 
+
 ### FixMyJs
+
 Fix small lint errors via command line.
+
 `fixmyjs file.js`
 
 ### JSHint
+
 Find all of the JavaScript errors for you to obliterate.
+
 `alt` `J` within Sublime.
+
+
 
 ## Style-related
 
 ### SCSS-Lint
 
-In command line 
+Via command line
+
 ```
 scss-lint path/to/file.scss
 ```
 
 
+
 ## Markdown-related
 
 ### SublimeText-Markdown
-
 ##### Common Key Bindings
 
 1. `Ctrl` `Win` `V`: Paste clipboard content & create template for it to be a link
@@ -45,6 +64,8 @@ scss-lint path/to/file.scss
 
 1. `Ctrl` `B` to build it.
 2. Go to the URL.
+
+
 
 ## HTML-related
 

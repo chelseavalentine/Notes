@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"checke",
+				"checked	Attr"
+			],
+			[
+				"input",
+				"inputr	input - radio"
+			],
+			[
+				"inp",
+				"inputm	input - month"
+			],
+			[
+				"inpu",
+				"inputi	input - image"
+			],
+			[
 				"scri",
 				"scripts"
 			],
@@ -58,10 +74,6 @@
 			[
 				"divProject",
 				"divProjectHeader"
-			],
-			[
-				"input",
-				"inputProjectName"
 			],
 			[
 				"create",
@@ -292,72 +304,10 @@
 	"buffers":
 	[
 		{
-			"file": "Utility Belt/SublimeText3/README.md",
+			"file": "HTML & CSS/HTML.md",
 			"settings":
 			{
-				"buffer_size": 2689,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "var aTag = document.getElementsByTagName('a');\nvar pTag = document.getElementsByTagName('p');\nvar questionHolder = document.getElementsByClassName('questions');\nvar divHelper = document.getElementById('helpInsertProjects');\n\nvar com = document.getElementsByClassName('com'); // Stack overflow code format class\nvar pln = document.getElementsByClassName('pln'); // Stack overflow code format class\nvar pun = document.getElementsByClassName('pun'); // Stack overflow code format class\n\n\n/*===================================================================\n---------------------------------------------------------------------\n* GET FROM THE STORAGE\n-\nThis checks whether individual data tables exist, and if they don't,\nit will create the data table for you. \n---------------------------------------------------------------------\n===================================================================*/\n\n/*-------------------------------------------------------------------\n********* GET PROJECTS\nLoad in each of our projects. This will give us the dividers thatKKKK\nour questions will get appended to.\n-------------------------------------------------------------------*/\nfunction getProjects() {\n	return chrome.storage.local.get(null, function(items) {\n		if (!chrome.runtime.error) {\n			// We want the appended stars to be unfilled\n			var filled = false;\n\n			// Iterate through the projects in the storage\n			for (var i = 0; i < items.projects.length; i++) {\n				var name =  items.projects[i].name;\n\n				// Create what a project looks like\n				var divProject = document.createElement('div');\n				divProject.classList.add('project');\n\n				var divProjectHeader = document.createElement('div');\n				divProjectHeader.classList.add('projectHeader');\n\n				var pProjectName = document.createElement('p');\n				pProjectName.classList.add('projectTitle', 'addIcons');\n\n				var inputProjectName = document.createElement('input');\n				inputProjectName.value = name;\n				inputProjectName.disabled = true;\n				pProjectName.appendChild(inputProjectName);\n				divProjectHeader.appendChild(pProjectName);\n				divProject.appendChild(divProjectHeader);\n\n				var divQuestions = document.createElement('div');\n				divQuestions.classList.add('questions');\n				divProject.appendChild(divQuestions);\n\n				var divAnswers = document.createElement('div');\n				divAnswers.classList.add('answers');\n				divProject.appendChild(divAnswers);\n\n				// If it's the first project being loaded, then it is the 'Unsorted' project, and we want that to be first.\n				if (i === 0) {\n					// Insert project after the helper divider\n					divHelper.parentNode.insertBefore(divProject, divHelper.nextSibling);\n\n					// Execute functions that will fill the project up\n					divProject.addEventListener(\"load\", colorHeaders(), addUnsortedEmpty(i), addStar(i));\n				} else {\n					// Load all of the projects that aren't 'Unsorted' in a slightly different manner\n\n					// Place the project after the current last project\n					var projects = document.getElementsByClassName('project');\n					var placing = projects[(projects.length - 1)]; // Place it last in the list of projects\n\n					// Insert project after the placing\n					placing.parentNode.insertBefore(divProject, placing.nextSibling);\n					divProject.addEventListener(\"load\", colorHeaders(), addEmpty(i), addStar(i));\n				}\n			}\n\n			showDefaultProject(); // visually represent the current place links are added to\n\n			// When you double click on a project header, it will hide the questions\n			$(\".projectHeader\").dblclick(function() {\n				 $(this).next().toggle(0);\n				});\n		}\n	});\n}\n\n/*-------------------------------------------------------------------\n********* GET QUESTIONS\nLoad in the questions for each of our projects.\n-------------------------------------------------------------------*/\nfunction getAllLinks() {\n	return chrome.storage.local.get(null, function(items) {\n		if(!chrome.runtime.error) {\n			// Keep track of the total number of questions\n			var onThisQuestion = 0;\n\n			// Iterate through the projects\n			for (var i = 0; i < items.projects.length; i++) {\n\n				// Iterate through the questions\n				for (var j = 0; j < items.projects[i].questions.length; j++, onThisQuestion++) {\n\n					/////////////// DATA INPUT PREPARATION\n					// Prepare the data that we'll display to the user.\n					var question = items.projects[i].questions[j].question;\n					var link = JSON.stringify(items.projects[i].questions[j].link);\n					var answer = items.projects[i].questions[j].answer;\n					var upvotes = items.projects[i].questions[j].upvotes;\n\n					/////////////// DISPLAY THE DATA TO THE USER\n					// Create the dividers to display the data.\n					displayQuestionData(i, j, onThisQuestion, question, link, answer, upvotes);\n				}\n			}\n\n			//Add open in new tab property to every <a>\n			// aTag.target = \"_blank\";\n			for (var k = 0; k < aTag.length; k++ ) {\n				aTag[k].target = '_blank';\n			}\n			\n			//get rid of empty <p> tags\n			for (var l = 0; l < pTag.length; l++) {\n				if (pTag[l].innerHTML.replace(/\\s|&nbsp;/g, '').length === 0) {\n					pTag[l].parentNode.removeChild(pTag[l]);\n				}\n			}\n		}\n	});\n}\n\n/*-------------------------------------------------------------------\n********* DISPLAY QUESTION DATA\nThis header is used to denote a function.\n-------------------------------------------------------------------*/\nfunction displayQuestionData (i, j, onThisQuestion, question, link, answer, upvotes) {\n	// Create & add the question divider\n	var divQuestion = document.createElement('div');\n	divQuestion.classList.add('question');\n	divQuestion.id = 'question' + i + '_' + j;\n\n	questionHolder[i].appendChild(divQuestion);\n\n	// Fill in the question divider\n	var divTitle = document.createElement('div');\n	divTitle.classList.add('title');\n	divTitle.id = 'title' + i + '_' + j;\n\n	var pQuestionTitle = document.createElement('p');\n	pQuestionTitle.classList.add('questionTitle');\n	pQuestionTitle.innerHTML = question;\n	divTitle.appendChild(pQuestionTitle);\n\n	var goToIcon = document.createElement('img');\n	goToIcon.classList.add('icon', 'goToIcon');\n	goToIcon.src = 'images/go.svg';\n\n	var questionLink = document.createElement('a');\n	questionLink.target = '_blank';\n	questionLink.href = link;\n	questionLink.appendChild(goToIcon);\n	divTitle.appendChild(questionLink);\n\n	divTitle.addEventListener(\"click\", function() {\n		$(this).next().toggle(0);\n	});\n\n	var destinationQuestion = document.getElementById('question' + i + '_' + j);\n	destinationQuestion.appendChild(divTitle);\n\n	// Create & fill in the answer divider before adding it after the question\n	var divAnswer = document.createElement('div');\n	divAnswer.classList.add('answer');\n	divAnswer.id = 'answer' + i + '_' + j;\n\n	var center = document.createElement('center');\n\n	var pAnswer = document.createElement('p');\n	pAnswer.innerHTML = answer;\n	center.appendChild(pAnswer);\n\n	var pUpvotes = document.createElement('p');\n	pUpvotes.classList.add('upvotes');\n	pUpvotes.innerHTML = upvotes;\n	center.appendChild(pUpvotes);\n	divAnswer.appendChild(center);\n\n	var answerDestination = document.getElementById('question' + i + '_' + j);\n	answerDestination.appendChild(divAnswer);\n\n	var upvote = document.getElementsByClassName('upvotes')[onThisQuestion];\n	upvote.style.top = 0;\n	upvote.style.right = '5px';\n\n	// Create & add delete icon to question\n	var deleteIcon = document.createElement('img');\n	deleteIcon.src = '/images/delete.svg';\n	deleteIcon.classList.add('icon', 'deleteIcon');\n\n	deleteIcon.addEventListener(\"click\", function() {\n		var deleteTest;\n		chrome.storage.local.get(null, function(item) {\n			var removedVisual = document.getElementById('question' + i + '_' + j);\n			removedVisual.parentNode.removeChild(removedVisual);\n			deleteLink(link, i);\n		});\n	});\n\n	document.getElementsByClassName('title')[onThisQuestion].appendChild(deleteIcon);       \n	}\n\n\n/*-------------------------------------------------------------------\n********* FORMAT <CODE> BLOCKS\nThis header is used to denote a function.\n-------------------------------------------------------------------*/\nfunction formatCodeBlocks() {\n	// Need to include this code snippet, otherwise it'll also edit Stack Overflow's <span>'s (Should probably put in logic for metaexchange later too)\n	var currentURL = window.location.href.toString().indexOf(\"stackoverflow\") >= 0;\n	var br = document.createElement('br');\n\n	// Can't figure out how to rewrite this in pure JS\n	if (!(currentURL)) {\n		// If there is a comment on a line by itself, then add a line break before it to show this\n		for (var i = 0; i < com.length; i++) {\n			if ( ($(\".com\").eq(i).prev().html() === \"\") ) {\n				$(\"<br>\").insertBefore($(\".com\").eq(i));\n			}\n			if ( ($(\".com\").eq(i).prev().html() === \"  \") ) {\n				$(\"<br>\").insertBefore($(\".com\").eq(i));\n			}\n		}\n\n		for (var j = 0; j < pun.length; j++) {\n			// If ; then make a line break after it\n			if ( ($(\".pun\").eq(j).html().indexOf(\";\") > -1) && !($(\".pun\").eq(j).next().next().hasClass(\"com\")) && !($(\".pun\").eq(j).prev().is(\"br\")) ) {\n				$(\"<br>\").insertAfter($(\".pun\").eq(j));\n			}\n		}\n\n		for (var k = 0; k < pln.length; k++) {\n			// If there's an empty pln, add another line break\n			if ( ($(\".pln\").eq(k).html() === \"\") && !($(\".pln\").eq(k).prev().is(\"br\")) ) {\n				$(\"<br>\").insertAfter($(\".pln\").eq(k));\n			}\n\n			// Put a line break before 'tab's, because that's usually indicates a new line\n			if ( ($(\".pln\").eq(k).html() === \"  \") && !($(\".pln\").eq(k).prev().hasClass(\"com\")) ) {\n				$(\"<br>\").insertBefore($(\".pln\").eq(k));\n			}\n\n			// Check whether the span contains a tab; if it does, put a line break before it\n			if (($(\".pln\").eq(k).html().indexOf(\"    \") > -1) && !($(\".pln\").eq(k).prev().is(\"br\")) ) {\n				$(\"<br>\").insertBefore($(\".pln\").eq(k));\n			}\n		}\n	}\n}\n\nsetTimeout(formatCodeBlocks, 500);\n",
-			"file": "/C/Users/Chelsea/stacks/scripts/getters.js",
-			"file_size": 10018,
-			"file_write_time": 130767013512657622,
-			"settings":
-			{
-				"buffer_size": 9759,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html>\n <head>\n	<meta charset=\"UTF-8\">\n	<title>Stacked</title>\n	<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/style.css\">\n	<script src=\"scripts/jquery.min.js\"></script>\n	<script src=\"scripts/jquery.sortable.min.js\"></script>\n </head>\n <body>\n 	<div class=\"header\">\n 		<center><h1 class=\"stacks\">Stacks on Stacks</h1></center>\n 	</div>\n\n 	<center>\n 	<div class=\"container\">\n 		<!--Need a reference point to insert projects after & this takes up the space that the header takes up-->\n 		<div id=\"helpInsertProjects\"></div>\n\n 		<button class=\"admin\" id=\"save\">SAVE</button>\n 		<button class=\"admin\" id=\"saveEdits\">SAVE</button>\n 		<button class=\"admin\" id=\"edit\">EDIT</button>\n 		<button class=\"admin\" id=\"create\">CREATE</button>\n 	</div>\n 	</center>\n <body>\n 	<script src=\"scripts/initialize.js\"></script>\n 	<script src=\"scripts/getters.js\"></script>\n 	<script src=\"scripts/custom.js\"></script>\n 	<script src=\"scripts/stylishjs.js\"></script>\n </body>\n</html>\n",
-			"file": "/C/Users/Chelsea/stacks/popup.html",
-			"file_size": 1006,
-			"file_write_time": 130761075379000119,
-			"settings":
-			{
-				"buffer_size": 979,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "linters.md",
-			"settings":
-			{
-				"buffer_size": 175,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "# Packages\n\nSome packages have shortcuts specific to them. Here they are for your reference.\n\n## JavaScript Related\n \n### FixMyJs\nFix small lint errors via command line.\n`fixmyjs file.js`\n\n### JSHint\nFind all of the JavaScript errors for you to obliterate.\n`alt` `J` within Sublime.\n\n3\n\n## SublimeText-Markdown\n\n### Common Key Bindings\n\n1. `Ctrl` `Win` `V`: Paste clipboard content & create template for it to be a link\n\n2. `Ctrl` `Win` `K`: Insert standard linK template.\n\n3. `Shift` `Win` `K`: Insert inline image template.\n\n4. `Ctrl` `Shift` `B`: __Make it bold__\n\n5. `Ctrl` `Shift` `I`: _Make it italicized_\n\n6. `Ctrl` `1 ... 6`: Create a header.\n\n\n## Sublime Text Markdown Preview\n\n1. `Ctrl` `B` to build it.\n2. Go to the URL.\n\n",
-			"file": "Utility Belt/SublimeText3/packages.md",
-			"file_size": 770,
-			"file_write_time": 130767004039326689,
-			"settings":
-			{
-				"buffer_size": 733,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "[\n	{ \"keys\": [\"ctrl+shift+n\"], \"command\": \"new_window\" },\n	{ \"keys\": [\"ctrl+shift+w\"], \"command\": \"close_window\" },\n	{ \"keys\": [\"ctrl+o\"], \"command\": \"prompt_open_file\" },\n	{ \"keys\": [\"ctrl+shift+t\"], \"command\": \"reopen_last_file\" },\n	{ \"keys\": [\"alt+o\"], \"command\": \"switch_file\", \"args\": {\"extensions\": [\"cpp\", \"cxx\", \"cc\", \"c\", \"hpp\", \"hxx\", \"hh\", \"h\", \"ipp\", \"inl\", \"m\", \"mm\"]} },\n	{ \"keys\": [\"ctrl+n\"], \"command\": \"new_file\" },\n	{ \"keys\": [\"ctrl+s\"], \"command\": \"save\" },\n	{ \"keys\": [\"ctrl+shift+s\"], \"command\": \"prompt_save_as\" },\n	{ \"keys\": [\"ctrl+f4\"], \"command\": \"close_file\" },\n	{ \"keys\": [\"ctrl+w\"], \"command\": \"close\" },\n\n	{ \"keys\": [\"ctrl+k\", \"ctrl+b\"], \"command\": \"toggle_side_bar\" },\n	{ \"keys\": [\"f11\"], \"command\": \"toggle_full_screen\" },\n	{ \"keys\": [\"shift+f11\"], \"command\": \"toggle_distraction_free\" },\n\n	{ \"keys\": [\"backspace\"], \"command\": \"left_delete\" },\n	{ \"keys\": [\"shift+backspace\"], \"command\": \"left_delete\" },\n	{ \"keys\": [\"ctrl+shift+backspace\"], \"command\": \"left_delete\" },\n	{ \"keys\": [\"delete\"], \"command\": \"right_delete\" },\n	{ \"keys\": [\"enter\"], \"command\": \"insert\", \"args\": {\"characters\": \"\\n\"} },\n	{ \"keys\": [\"shift+enter\"], \"command\": \"insert\", \"args\": {\"characters\": \"\\n\"} },\n\n	{ \"keys\": [\"ctrl+z\"], \"command\": \"undo\" },\n	{ \"keys\": [\"ctrl+shift+z\"], \"command\": \"redo\" },\n	{ \"keys\": [\"ctrl+y\"], \"command\": \"redo_or_repeat\" },\n	{ \"keys\": [\"ctrl+u\"], \"command\": \"soft_undo\" },\n	{ \"keys\": [\"ctrl+shift+u\"], \"command\": \"soft_redo\" },\n\n	{ \"keys\": [\"shift+delete\"], \"command\": \"cut\" },\n	{ \"keys\": [\"ctrl+insert\"], \"command\": \"copy\" },\n	{ \"keys\": [\"shift+insert\"], \"command\": \"paste\" },\n	{ \"keys\": [\"ctrl+x\"], \"command\": \"cut\" },\n	{ \"keys\": [\"ctrl+c\"], \"command\": \"copy\" },\n	{ \"keys\": [\"ctrl+v\"], \"command\": \"paste\" },\n	{ \"keys\": [\"ctrl+shift+v\"], \"command\": \"paste_and_indent\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+v\"], \"command\": \"paste_from_history\" },\n\n	{ \"keys\": [\"left\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": false} },\n	{ \"keys\": [\"right\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true} },\n	{ \"keys\": [\"up\"], \"command\": \"move\", \"args\": {\"by\": \"lines\", \"forward\": false} },\n	{ \"keys\": [\"down\"], \"command\": \"move\", \"args\": {\"by\": \"lines\", \"forward\": true} },\n	{ \"keys\": [\"shift+left\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"shift+right\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true, \"extend\": true} },\n	{ \"keys\": [\"shift+up\"], \"command\": \"move\", \"args\": {\"by\": \"lines\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"shift+down\"], \"command\": \"move\", \"args\": {\"by\": \"lines\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"ctrl+left\"], \"command\": \"move\", \"args\": {\"by\": \"words\", \"forward\": false} },\n	{ \"keys\": [\"ctrl+right\"], \"command\": \"move\", \"args\": {\"by\": \"word_ends\", \"forward\": true} },\n	{ \"keys\": [\"ctrl+shift+left\"], \"command\": \"move\", \"args\": {\"by\": \"words\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"ctrl+shift+right\"], \"command\": \"move\", \"args\": {\"by\": \"word_ends\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"alt+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false} },\n	{ \"keys\": [\"alt+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true} },\n	{ \"keys\": [\"alt+shift+left\"], \"command\": \"move\", \"args\": {\"by\": \"subwords\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"alt+shift+right\"], \"command\": \"move\", \"args\": {\"by\": \"subword_ends\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"ctrl+alt+up\"], \"command\": \"select_lines\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"ctrl+alt+down\"], \"command\": \"select_lines\", \"args\": {\"forward\": true} },\n\n	{ \"keys\": [\"pageup\"], \"command\": \"move\", \"args\": {\"by\": \"pages\", \"forward\": false} },\n	{ \"keys\": [\"pagedown\"], \"command\": \"move\", \"args\": {\"by\": \"pages\", \"forward\": true} },\n	{ \"keys\": [\"shift+pageup\"], \"command\": \"move\", \"args\": {\"by\": \"pages\", \"forward\": false, \"extend\": true} },\n	{ \"keys\": [\"shift+pagedown\"], \"command\": \"move\", \"args\": {\"by\": \"pages\", \"forward\": true, \"extend\": true} },\n\n	{ \"keys\": [\"home\"], \"command\": \"move_to\", \"args\": {\"to\": \"bol\", \"extend\": false} },\n	{ \"keys\": [\"end\"], \"command\": \"move_to\", \"args\": {\"to\": \"eol\", \"extend\": false} },\n	{ \"keys\": [\"shift+home\"], \"command\": \"move_to\", \"args\": {\"to\": \"bol\", \"extend\": true} },\n	{ \"keys\": [\"shift+end\"], \"command\": \"move_to\", \"args\": {\"to\": \"eol\", \"extend\": true} },\n	{ \"keys\": [\"ctrl+home\"], \"command\": \"move_to\", \"args\": {\"to\": \"bof\", \"extend\": false} },\n	{ \"keys\": [\"ctrl+end\"], \"command\": \"move_to\", \"args\": {\"to\": \"eof\", \"extend\": false} },\n	{ \"keys\": [\"ctrl+shift+home\"], \"command\": \"move_to\", \"args\": {\"to\": \"bof\", \"extend\": true} },\n	{ \"keys\": [\"ctrl+shift+end\"], \"command\": \"move_to\", \"args\": {\"to\": \"eof\", \"extend\": true} },\n\n\n	{ \"keys\": [\"ctrl+up\"], \"command\": \"scroll_lines\", \"args\": {\"amount\": 1.0 } },\n	{ \"keys\": [\"ctrl+down\"], \"command\": \"scroll_lines\", \"args\": {\"amount\": -1.0 } },\n\n	{ \"keys\": [\"ctrl+pagedown\"], \"command\": \"next_view\" },\n	{ \"keys\": [\"ctrl+pageup\"], \"command\": \"prev_view\" },\n\n	{ \"keys\": [\"ctrl+tab\"], \"command\": \"next_view_in_stack\" },\n	{ \"keys\": [\"ctrl+shift+tab\"], \"command\": \"prev_view_in_stack\" },\n\n	{ \"keys\": [\"ctrl+a\"], \"command\": \"select_all\" },\n	{ \"keys\": [\"ctrl+shift+l\"], \"command\": \"split_selection_into_lines\" },\n	{ \"keys\": [\"escape\"], \"command\": \"single_selection\", \"context\":\n		[\n			{ \"key\": \"num_selections\", \"operator\": \"not_equal\", \"operand\": 1 }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"clear_fields\", \"context\":\n		[\n			{ \"key\": \"has_next_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"clear_fields\", \"context\":\n		[\n			{ \"key\": \"has_prev_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_panel\", \"args\": {\"cancel\": true},\n		\"context\":\n		[\n			{ \"key\": \"panel_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_overlay\", \"context\":\n		[\n			{ \"key\": \"overlay_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_popup\", \"context\":\n		[\n			{ \"key\": \"popup_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"escape\"], \"command\": \"hide_auto_complete\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"tab\"], \"command\": \"insert_best_completion\", \"args\": {\"default\": \"\\t\", \"exact\": true} },\n	{ \"keys\": [\"tab\"], \"command\": \"insert_best_completion\", \"args\": {\"default\": \"\\t\", \"exact\": false},\n		\"context\":\n		[\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \".*[^0-9]$\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"replace_completion_with_next_completion\", \"context\":\n		[\n			{ \"key\": \"last_command\", \"operator\": \"equal\", \"operand\": \"insert_best_completion\" },\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"reindent\", \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"indent\", \"context\":\n		[\n			{ \"key\": \"text\", \"operator\": \"regex_contains\", \"operand\": \"\\n\" }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"next_field\", \"context\":\n		[\n			{ \"key\": \"has_next_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"tab\"], \"command\": \"commit_completion\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\" },\n			{ \"key\": \"setting.auto_complete_commit_on_tab\" }\n		]\n	},\n\n	{ \"keys\": [\"shift+tab\"], \"command\": \"insert\", \"args\": {\"characters\": \"\\t\"} },\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"setting.shift_tab_unindent\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \"^[\\t ]*\" }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"unindent\", \"context\":\n		[\n			{ \"key\": \"text\", \"operator\": \"regex_contains\", \"operand\": \"\\n\" }\n		]\n	},\n	{ \"keys\": [\"shift+tab\"], \"command\": \"prev_field\", \"context\":\n		[\n			{ \"key\": \"has_prev_field\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"ctrl+]\"], \"command\": \"indent\" },\n	{ \"keys\": [\"ctrl+[\"], \"command\": \"unindent\" },\n\n	{ \"keys\": [\"insert\"], \"command\": \"toggle_overwrite\" },\n\n	{ \"keys\": [\"ctrl+l\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"line\"} },\n	{ \"keys\": [\"ctrl+d\"], \"command\": \"find_under_expand\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+d\"], \"command\": \"find_under_expand_skip\" },\n	{ \"keys\": [\"ctrl+shift+space\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"scope\"} },\n	{ \"keys\": [\"ctrl+shift+m\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"brackets\"} },\n	{ \"keys\": [\"ctrl+m\"], \"command\": \"move_to\", \"args\": {\"to\": \"brackets\"} },\n	{ \"keys\": [\"ctrl+shift+j\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"indentation\"} },\n	{ \"keys\": [\"ctrl+shift+a\"], \"command\": \"expand_selection\", \"args\": {\"to\": \"tag\"} },\n\n	{ \"keys\": [\"alt+.\"], \"command\": \"close_tag\" },\n\n	{ \"keys\": [\"ctrl+q\"], \"command\": \"toggle_record_macro\" },\n	{ \"keys\": [\"ctrl+shift+q\"], \"command\": \"run_macro\" },\n\n	{ \"keys\": [\"ctrl+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line.sublime-macro\"} },\n	{ \"keys\": [\"ctrl+shift+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line Before.sublime-macro\"} },\n	{ \"keys\": [\"enter\"], \"command\": \"commit_completion\", \"context\":\n		[\n			{ \"key\": \"auto_complete_visible\" },\n			{ \"key\": \"setting.auto_complete_commit_on_tab\", \"operand\": false }\n		]\n	},\n\n	{ \"keys\": [\"ctrl+p\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"show_files\": true} },\n	{ \"keys\": [\"ctrl+shift+p\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"command_palette\"} },\n	{ \"keys\": [\"ctrl+alt+p\"], \"command\": \"prompt_select_workspace\" },\n	{ \"keys\": [\"ctrl+r\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"text\": \"@\"} },\n	{ \"keys\": [\"ctrl+g\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"text\": \":\"} },\n	{ \"keys\": [\"ctrl+;\"], \"command\": \"show_overlay\", \"args\": {\"overlay\": \"goto\", \"text\": \"#\"} },\n	{ \"keys\": [\"f12\"], \"command\": \"goto_definition\" },\n	{ \"keys\": [\"ctrl+shift+r\"], \"command\": \"goto_symbol_in_project\" },\n	{ \"keys\": [\"alt+keypad_minus\"], \"command\": \"jump_back\" },\n	{ \"keys\": [\"alt+shift+keypad_minus\"], \"command\": \"jump_forward\" },\n	{ \"keys\": [\"alt+-\"], \"command\": \"jump_back\" },\n	{ \"keys\": [\"alt+shift+-\"], \"command\": \"jump_forward\" },\n\n	{ \"keys\": [\"ctrl+i\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"incremental_find\", \"reverse\": false} },\n	{ \"keys\": [\"ctrl+shift+i\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"incremental_find\", \"reverse\": true} },\n	{ \"keys\": [\"ctrl+f\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"find\", \"reverse\": false} },\n	{ \"keys\": [\"ctrl+h\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"replace\", \"reverse\": false} },\n	{ \"keys\": [\"ctrl+shift+h\"], \"command\": \"replace_next\" },\n	{ \"keys\": [\"f3\"], \"command\": \"find_next\" },\n	{ \"keys\": [\"shift+f3\"], \"command\": \"find_prev\" },\n	{ \"keys\": [\"ctrl+f3\"], \"command\": \"find_under\" },\n	{ \"keys\": [\"ctrl+shift+f3\"], \"command\": \"find_under_prev\" },\n	{ \"keys\": [\"alt+f3\"], \"command\": \"find_all_under\" },\n	{ \"keys\": [\"ctrl+e\"], \"command\": \"slurp_find_string\" },\n	{ \"keys\": [\"ctrl+shift+e\"], \"command\": \"slurp_replace_string\" },\n	{ \"keys\": [\"ctrl+shift+f\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"find_in_files\"} },\n	{ \"keys\": [\"f4\"], \"command\": \"next_result\" },\n	{ \"keys\": [\"shift+f4\"], \"command\": \"prev_result\" },\n\n	{ \"keys\": [\"f6\"], \"command\": \"toggle_setting\", \"args\": {\"setting\": \"spell_check\"} },\n	{ \"keys\": [\"ctrl+f6\"], \"command\": \"next_misspelling\" },\n	{ \"keys\": [\"ctrl+shift+f6\"], \"command\": \"prev_misspelling\" },\n\n	{ \"keys\": [\"ctrl+shift+up\"], \"command\": \"swap_line_up\" },\n	{ \"keys\": [\"ctrl+shift+down\"], \"command\": \"swap_line_down\" },\n\n	{ \"keys\": [\"ctrl+backspace\"], \"command\": \"delete_word\", \"args\": { \"forward\": false } },\n	{ \"keys\": [\"ctrl+shift+backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard BOL.sublime-macro\"} },\n\n	{ \"keys\": [\"ctrl+delete\"], \"command\": \"delete_word\", \"args\": { \"forward\": true } },\n	{ \"keys\": [\"ctrl+shift+delete\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard EOL.sublime-macro\"} },\n\n	{ \"keys\": [\"ctrl+/\"], \"command\": \"toggle_comment\", \"args\": { \"block\": false } },\n	{ \"keys\": [\"ctrl+shift+/\"], \"command\": \"toggle_comment\", \"args\": { \"block\": true } },\n\n	{ \"keys\": [\"ctrl+j\"], \"command\": \"join_lines\" },\n	{ \"keys\": [\"ctrl+shift+d\"], \"command\": \"duplicate_line\" },\n\n	{ \"keys\": [\"ctrl+`\"], \"command\": \"show_panel\", \"args\": {\"panel\": \"console\", \"toggle\": true} },\n\n	{ \"keys\": [\"ctrl+space\"], \"command\": \"auto_complete\" },\n	{ \"keys\": [\"ctrl+space\"], \"command\": \"replace_completion_with_auto_complete\", \"context\":\n		[\n			{ \"key\": \"last_command\", \"operator\": \"equal\", \"operand\": \"insert_best_completion\" },\n			{ \"key\": \"auto_complete_visible\", \"operator\": \"equal\", \"operand\": false },\n			{ \"key\": \"setting.tab_completion\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	{ \"keys\": [\"ctrl+alt+shift+p\"], \"command\": \"show_scope_name\" },\n\n	{ \"keys\": [\"f7\"], \"command\": \"build\" },\n	{ \"keys\": [\"ctrl+b\"], \"command\": \"build\" },\n	{ \"keys\": [\"ctrl+shift+b\"], \"command\": \"build\", \"args\": {\"select\": true} },\n	{ \"keys\": [\"ctrl+break\"], \"command\": \"exec\", \"args\": {\"kill\": true} },\n\n	{ \"keys\": [\"ctrl+t\"], \"command\": \"transpose\" },\n\n	{ \"keys\": [\"f9\"], \"command\": \"sort_lines\", \"args\": {\"case_sensitive\": false} },\n	{ \"keys\": [\"ctrl+f9\"], \"command\": \"sort_lines\", \"args\": {\"case_sensitive\": true} },\n\n	// Auto-pair quotes\n	{ \"keys\": [\"\\\"\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\\"$0\\\"\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|>|$)\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"not_regex_contains\", \"operand\": \"[\\\"a-zA-Z0-9_]$\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"\\\"\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\\"${0:$SELECTION}\\\"\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"\\\"\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\"\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\"$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\"\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.double - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n\n	// Auto-pair single quotes\n	{ \"keys\": [\"'\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"'$0'\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|>|$)\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"not_regex_contains\", \"operand\": \"['a-zA-Z0-9_]$\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"'\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"'${0:$SELECTION}'\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"'\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^'\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"'$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^'\", \"match_all\": true },\n			{ \"key\": \"selector\", \"operator\": \"not_equal\", \"operand\": \"punctuation.definition.string.begin\", \"match_all\": true },\n			{ \"key\": \"eol_selector\", \"operator\": \"not_equal\", \"operand\": \"string.quoted.single - punctuation.definition.string.end\", \"match_all\": true },\n		]\n	},\n\n	// Auto-pair brackets\n	{ \"keys\": [\"(\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"($0)\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|;|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"(\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"(${0:$SELECTION})\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\")\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\($\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\)\", \"match_all\": true }\n		]\n	},\n\n	// Auto-pair square brackets\n	{ \"keys\": [\"[\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"[$0]\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|;|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"[\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"[${0:$SELECTION}]\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"]\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\]\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\[$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\]\", \"match_all\": true }\n		]\n	},\n\n	// Auto-pair curly brackets\n	{ \"keys\": [\"{\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"{$0}\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^(?:\\t| |\\\\)|]|\\\\}|$)\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"{\"], \"command\": \"wrap_block\", \"args\": {\"begin\": \"{\", \"end\": \"}\"}, \"context\":\n		[\n			{ \"key\": \"indented_block\", \"match_all\": true },\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_match\", \"operand\": \"^$\", \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"{\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"{${0:$SELECTION}}\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": false, \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"}\"], \"command\": \"move\", \"args\": {\"by\": \"characters\", \"forward\": true}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Left Right.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_match_enabled\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n\n	{ \"keys\": [\"enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line in Braces.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Add Line in Braces.sublime-macro\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_contains\", \"operand\": \"\\\\{$\", \"match_all\": true },\n			{ \"key\": \"following_text\", \"operator\": \"regex_contains\", \"operand\": \"^\\\\}\", \"match_all\": true }\n		]\n	},\n\n	{ \"keys\": [\"enter\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\n\\t$0\\n\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"meta.scope.between-tag-pair\", \"match_all\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n		]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"insert_snippet\", \"args\": {\"contents\": \"\\n\\t$0\\n\"}, \"context\":\n		[\n			{ \"key\": \"setting.auto_indent\", \"operator\": \"equal\", \"operand\": true },\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"meta.scope.between-tag-pair\", \"match_all\": true },\n			{ \"key\": \"selection_empty\", \"operator\": \"equal\", \"operand\": true, \"match_all\": true },\n		]\n	},\n\n	{\n		\"keys\": [\"alt+shift+1\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+2\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.5, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+3\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.33, 0.66, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+4\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.25, 0.5, 0.75, 1.0],\n			\"rows\": [0.0, 1.0],\n			\"cells\": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+8\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 0.5, 1.0],\n			\"cells\": [[0, 0, 1, 1], [0, 1, 1, 2]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+9\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 1.0],\n			\"rows\": [0.0, 0.33, 0.66, 1.0],\n			\"cells\": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]\n		}\n	},\n	{\n		\"keys\": [\"alt+shift+5\"],\n		\"command\": \"set_layout\",\n		\"args\":\n		{\n			\"cols\": [0.0, 0.5, 1.0],\n			\"rows\": [0.0, 0.5, 1.0],\n			\"cells\":\n			[\n				[0, 0, 1, 1], [1, 0, 2, 1],\n				[0, 1, 1, 2], [1, 1, 2, 2]\n			]\n		}\n	},\n	{ \"keys\": [\"ctrl+1\"], \"command\": \"focus_group\", \"args\": { \"group\": 0 } },\n	{ \"keys\": [\"ctrl+2\"], \"command\": \"focus_group\", \"args\": { \"group\": 1 } },\n	{ \"keys\": [\"ctrl+3\"], \"command\": \"focus_group\", \"args\": { \"group\": 2 } },\n	{ \"keys\": [\"ctrl+4\"], \"command\": \"focus_group\", \"args\": { \"group\": 3 } },\n	{ \"keys\": [\"ctrl+5\"], \"command\": \"focus_group\", \"args\": { \"group\": 4 } },\n	{ \"keys\": [\"ctrl+6\"], \"command\": \"focus_group\", \"args\": { \"group\": 5 } },\n	{ \"keys\": [\"ctrl+7\"], \"command\": \"focus_group\", \"args\": { \"group\": 6 } },\n	{ \"keys\": [\"ctrl+8\"], \"command\": \"focus_group\", \"args\": { \"group\": 7 } },\n	{ \"keys\": [\"ctrl+9\"], \"command\": \"focus_group\", \"args\": { \"group\": 8 } },\n	{ \"keys\": [\"ctrl+shift+1\"], \"command\": \"move_to_group\", \"args\": { \"group\": 0 } },\n	{ \"keys\": [\"ctrl+shift+2\"], \"command\": \"move_to_group\", \"args\": { \"group\": 1 } },\n	{ \"keys\": [\"ctrl+shift+3\"], \"command\": \"move_to_group\", \"args\": { \"group\": 2 } },\n	{ \"keys\": [\"ctrl+shift+4\"], \"command\": \"move_to_group\", \"args\": { \"group\": 3 } },\n	{ \"keys\": [\"ctrl+shift+5\"], \"command\": \"move_to_group\", \"args\": { \"group\": 4 } },\n	{ \"keys\": [\"ctrl+shift+6\"], \"command\": \"move_to_group\", \"args\": { \"group\": 5 } },\n	{ \"keys\": [\"ctrl+shift+7\"], \"command\": \"move_to_group\", \"args\": { \"group\": 6 } },\n	{ \"keys\": [\"ctrl+shift+8\"], \"command\": \"move_to_group\", \"args\": { \"group\": 7 } },\n	{ \"keys\": [\"ctrl+shift+9\"], \"command\": \"move_to_group\", \"args\": { \"group\": 8 } },\n	{ \"keys\": [\"ctrl+0\"], \"command\": \"focus_side_bar\" },\n\n	{ \"keys\": [\"ctrl+k\", \"ctrl+up\"], \"command\": \"new_pane\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+shift+up\"], \"command\": \"new_pane\", \"args\": {\"move\": false} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+down\"], \"command\": \"close_pane\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+left\"], \"command\": \"focus_neighboring_group\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+right\"], \"command\": \"focus_neighboring_group\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+shift+left\"], \"command\": \"move_to_neighboring_group\", \"args\": {\"forward\": false} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+shift+right\"], \"command\": \"move_to_neighboring_group\" },\n\n	{ \"keys\": [\"alt+1\"], \"command\": \"select_by_index\", \"args\": { \"index\": 0 } },\n	{ \"keys\": [\"alt+2\"], \"command\": \"select_by_index\", \"args\": { \"index\": 1 } },\n	{ \"keys\": [\"alt+3\"], \"command\": \"select_by_index\", \"args\": { \"index\": 2 } },\n	{ \"keys\": [\"alt+4\"], \"command\": \"select_by_index\", \"args\": { \"index\": 3 } },\n	{ \"keys\": [\"alt+5\"], \"command\": \"select_by_index\", \"args\": { \"index\": 4 } },\n	{ \"keys\": [\"alt+6\"], \"command\": \"select_by_index\", \"args\": { \"index\": 5 } },\n	{ \"keys\": [\"alt+7\"], \"command\": \"select_by_index\", \"args\": { \"index\": 6 } },\n	{ \"keys\": [\"alt+8\"], \"command\": \"select_by_index\", \"args\": { \"index\": 7 } },\n	{ \"keys\": [\"alt+9\"], \"command\": \"select_by_index\", \"args\": { \"index\": 8 } },\n	{ \"keys\": [\"alt+0\"], \"command\": \"select_by_index\", \"args\": { \"index\": 9 } },\n\n	{ \"keys\": [\"f2\"], \"command\": \"next_bookmark\" },\n	{ \"keys\": [\"shift+f2\"], \"command\": \"prev_bookmark\" },\n	{ \"keys\": [\"ctrl+f2\"], \"command\": \"toggle_bookmark\" },\n	{ \"keys\": [\"ctrl+shift+f2\"], \"command\": \"clear_bookmarks\" },\n	{ \"keys\": [\"alt+f2\"], \"command\": \"select_all_bookmarks\" },\n\n	{ \"keys\": [\"ctrl+shift+k\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete Line.sublime-macro\"} },\n\n	{ \"keys\": [\"alt+q\"], \"command\": \"wrap_lines\" },\n\n	{ \"keys\": [\"ctrl+k\", \"ctrl+u\"], \"command\": \"upper_case\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+l\"], \"command\": \"lower_case\" },\n\n	{ \"keys\": [\"ctrl+k\", \"ctrl+space\"], \"command\": \"set_mark\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+a\"], \"command\": \"select_to_mark\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+w\"], \"command\": \"delete_to_mark\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+x\"], \"command\": \"swap_with_mark\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+y\"], \"command\": \"yank\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+k\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard EOL.sublime-macro\"} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+backspace\"], \"command\": \"run_macro_file\", \"args\": {\"file\": \"res://Packages/Default/Delete to Hard BOL.sublime-macro\"} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+g\"], \"command\": \"clear_bookmarks\", \"args\": {\"name\": \"mark\"} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+c\"], \"command\": \"show_at_center\" },\n\n	{ \"keys\": [\"ctrl++\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"ctrl+=\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"ctrl+keypad_plus\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"ctrl+-\"], \"command\": \"decrease_font_size\" },\n	{ \"keys\": [\"ctrl+keypad_minus\"], \"command\": \"decrease_font_size\" },\n\n	{ \"keys\": [\"ctrl+equals\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"ctrl+shift+equals\"], \"command\": \"decrease_font_size\" },\n	{ \"keys\": [\"ctrl+keypad_plus\"], \"command\": \"increase_font_size\" },\n	{ \"keys\": [\"ctrl+shift+keypad_plus\"], \"command\": \"decrease_font_size\" },\n\n	{ \"keys\": [\"alt+shift+w\"], \"command\": \"insert_snippet\", \"args\": { \"name\": \"Packages/XML/long-tag.sublime-snippet\" } },\n\n	{ \"keys\": [\"ctrl+shift+[\"], \"command\": \"fold\" },\n	{ \"keys\": [\"ctrl+shift+]\"], \"command\": \"unfold\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+1\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 1} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+2\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 2} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+3\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 3} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+4\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 4} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+5\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 5} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+6\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 6} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+7\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 7} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+8\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 8} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+9\"], \"command\": \"fold_by_level\", \"args\": {\"level\": 9} },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+0\"], \"command\": \"unfold_all\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+j\"], \"command\": \"unfold_all\" },\n	{ \"keys\": [\"ctrl+k\", \"ctrl+t\"], \"command\": \"fold_tag_attributes\" },\n\n	{ \"keys\": [\"context_menu\"], \"command\": \"context_menu\" },\n\n	{ \"keys\": [\"alt+c\"], \"command\": \"toggle_case_sensitive\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"alt+r\"], \"command\": \"toggle_regex\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"alt+w\"], \"command\": \"toggle_whole_word\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n	{ \"keys\": [\"alt+a\"], \"command\": \"toggle_preserve_case\", \"context\":\n		[\n			{ \"key\": \"setting.is_widget\", \"operator\": \"equal\", \"operand\": true }\n		]\n	},\n\n	// Find panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"find_next\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		 \"context\": [{\"key\": \"panel\", \"operand\": \"find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	// Replace panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"find_next\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		\"context\": [{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"ctrl+alt+enter\"], \"command\": \"replace_all\", \"args\": {\"close_panel\": true},\n		 \"context\": [{\"key\": \"panel\", \"operand\": \"replace\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	// Incremental find panel key bindings\n	{ \"keys\": [\"enter\"], \"command\": \"hide_panel\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"shift+enter\"], \"command\": \"find_prev\", \"context\":\n		[{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n	{ \"keys\": [\"alt+enter\"], \"command\": \"find_all\", \"args\": {\"close_panel\": true},\n		\"context\": [{\"key\": \"panel\", \"operand\": \"incremental_find\"}, {\"key\": \"panel_has_focus\"}]\n	},\n\n	// HTML, XML close tag\n	{ \"keys\": [\"/\"], \"command\": \"close_tag\", \"args\": { \"insert_slash\": true }, \"context\":\n		[\n			{ \"key\": \"selector\", \"operator\": \"equal\", \"operand\": \"(text.html, text.xml) - string - comment\", \"match_all\": true },\n			{ \"key\": \"preceding_text\", \"operator\": \"regex_match\", \"operand\": \".*<$\", \"match_all\": true },\n			{ \"key\": \"setting.auto_close_tags\" }\n		]\n	}\n]\n",
-			"file": "/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-			"file_size": -1,
-			"file_write_time": -1,
-			"settings":
-			{
-				"buffer_size": 35717,
-				"line_ending": "Windows",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-			"settings":
-			{
-				"buffer_size": 39455,
+				"buffer_size": 7020,
 				"line_ending": "Windows"
 			}
 		}
@@ -369,16 +319,48 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "ins",
+		"height": 250.0,
+		"last_filter": "disable",
 		"selected_items":
 		[
 			[
-				"ins",
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
 				"Package Control: Install Package"
 			],
 			[
 				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"worksh",
+				"Worksheet: Evaluate worksheet"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -388,10 +370,6 @@
 			[
 				"Markdown Previ",
 				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"advan",
@@ -414,10 +392,6 @@
 				"SublimeLinter: Disable Linter"
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"linter",
 				"SublimeLinter: Lint This View"
 			],
@@ -434,7 +408,7 @@
 				"View: Toggle Menu"
 			]
 		],
-		"width": 512.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -460,19 +434,30 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Chelsea/notes",
-		"/C/Users/Chelsea/notes/Utility Belt"
+		"/C/Users/Chelsea/notes"
 	],
 	"file_history":
 	[
-		"/C/Users/Chelsea/notes/README.md",
-		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Chelsea/website/layout/_color.scss",
-		"/C/Users/Chelsea/stacks/popup.html",
-		"/C/Users/Chelsea/AppData/Local/Temp/38.html",
 		"/C/Users/Chelsea/notes/notes.sublime-project",
+		"/C/Users/Chelsea/notes/Utility Belt/SublimeText3/README.md",
+		"/C/Users/Chelsea/notes/Utility Belt/Vim/README.md",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
+		"/C/Users/Chelsea/notes/Utility Belt/SublimeText3/packages.md",
+		"/C/Users/Chelsea/stacks/scripts/getters.js",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Chelsea/stacks/popup.html",
+		"/C/Users/Chelsea/notes/Utility Belt/CLI/README.md",
+		"/C/Users/Chelsea/notes/commandline.md",
+		"/C/Users/Chelsea/notes/Utility Belt/CLI/commandline.md",
+		"/C/Users/Chelsea/notes/linters.md",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/SassBeautify/SassBeautify.sublime-settings",
+		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/MarkdownEditing/Default (Windows).sublime-keymap",
+		"/C/Users/Chelsea/notes/README.md",
+		"/C/Users/Chelsea/website/layout/_color.scss",
+		"/C/Users/Chelsea/AppData/Local/Temp/38.html",
 		"/C/Users/Chelsea/notes/JavaScript/VanillaJS.md",
 		"/C/Users/Chelsea/twerk/twrk.sublime-project",
 		"/C/Users/Chelsea/AppData/Local/Temp/36.html",
@@ -482,7 +467,6 @@
 		"/C/Users/Chelsea/notes/HTML & CSS/HTML.md",
 		"/C/Users/Chelsea/stacks/scripts/custom.js",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Chelsea/stacks/scripts/getters.js",
 		"/C/Users/Chelsea/stacks/scripts/initialize.js",
 		"/C/Users/Chelsea/twerk/public/views/watch-twerk.html",
 		"/C/Users/Chelsea/twerk/src/css/_spectator.scss",
@@ -581,18 +565,7 @@
 		"/C/Users/Chelsea/node/package.json",
 		"/C/Users/Chelsea/restart/app/models/user.js",
 		"/C/Users/Chelsea/restart/peck/views/partials/footer.ejs",
-		"/C/Users/Chelsea/restart/peck/views/partials/head.ejs",
-		"/C/Users/Chelsea/restart/peck/views/partials/toolbar.ejs",
-		"/C/Users/Chelsea/restart/peck/views/pages/signup.ejs",
-		"/C/Users/Chelsea/restart/peck/views/pages/login.ejs",
-		"/C/Users/Chelsea/restart/peck/views/pages/index.ejs",
-		"/C/Users/Chelsea/restart/peck/server.js",
-		"/C/Users/Chelsea/restart/peck/package.json",
-		"/C/Users/Chelsea/restart/peck/views/pages/profile.ejs",
-		"/C/Users/Chelsea/restart/peck/config/passport.js",
-		"/C/Users/Chelsea/restart/peck/config/auth.js",
-		"/C/Users/Chelsea/restart/peck/config/database.js",
-		"/C/Users/Chelsea/restart/peck/models/user.js"
+		"/C/Users/Chelsea/restart/peck/views/partials/head.ejs"
 	],
 	"find":
 	{
@@ -761,218 +734,34 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Utility Belt/SublimeText3/README.md",
+					"file": "HTML & CSS/HTML.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2689,
+						"buffer_size": 7020,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "bookmark",
-								"regions":
-								[
-								],
-								"scope": "bookmarks"
-							}
 						},
 						"selection":
 						[
 							[
-								2188,
-								2188
+								1018,
+								1018
 							]
 						],
 						"settings":
 						{
-							"parser": "markdown",
 							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
-							"target": "disk"
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2007.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/Chelsea/stacks/scripts/getters.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9759,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1062,
-								1062
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Dark - Mocha (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Chelsea/stacks/popup.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								777,
-								777
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Dark - Mocha (SL).tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "linters.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 175,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								104,
-								104
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Utility Belt/SublimeText3/packages.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 733,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								285,
-								285
-							]
-						],
-						"settings":
-						{
-							"parser": "markdown",
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
-							"target": "disk"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 35717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35714,
-								3
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Dark - Mocha (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 39455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								39015,
-								39015
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Dark - Mocha (SL).tmTheme",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 8740.0,
+						"translation.y": 305.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1028,7 +817,7 @@
 	"project": "notes.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 62.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1052,7 +841,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Chelsea\\twerk\\twrk.sublime-project"
+				"C:\\Users\\Chelsea\\Bootcamp\\bootcamp.sublime-project"
 			]
 		],
 		"width": 380.0

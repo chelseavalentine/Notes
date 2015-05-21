@@ -1,5 +1,4 @@
 # Sublime Text 3
-
 ## Within the Document
 
 ### Like terms
@@ -25,21 +24,40 @@
 
 ### Lines
 
-##### Addition
+##### Selection
 
 `Ctrl` `L`: Select to the entire current line. Repeat to select the following lines too.
 
 `Ctrl` `Shift` `L`: Split the currently selected lines into separate lines, which you can edit.
 
+`Ctrl` `Shift` `J`: Select everything within this indentation level.
+
+
+##### Addition
+
 `Ctrl` `Shift` `Enter`: Insert a line before line.
 
 `Ctrl` `Enter`: Insert a line after this line.
+
+`Ctrl` `Shift` `D`: Duplicate line(s).
+
+`Ctrl` `Shift` `V`: Paste and indent correctly.
+
 
 ##### Manipulation
 
 `Ctrl` `Shift` `K`: Delete entire line.
 
 `Ctrl` `X`: Cut line.
+
+`Ctrl` `J`: Join the line below to the end of the current line.
+
+
+##### Commenting
+
+`Ctrl` `/`: Single comment/un-comment current/selected line(s).
+
+`Ctrl` `Shift` `/`: block comment/un-comment current/selected line(s).
 
 
 
@@ -86,9 +104,11 @@
 
 `searchTerm#term`: searches for the term in the searchTerm & highlights them
 
+
 ##### Scrolling
 
 `Ctrl` + `Arrow keys`: Scrolls without moving the cursor.
+
 
 
 ### Sidebar
@@ -128,6 +148,8 @@ Insert completions:
 * `Arrow keys`: scroll through the autocompletions
 * `Tab`: select the autocompletion
 * `Enter`: select the autocompletion
+* `Alt` `.`: Close tag.
+
 
 
 ## Viewing the Document
