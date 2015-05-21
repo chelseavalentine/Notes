@@ -1,8 +1,10 @@
 # Sublime Text 3
 
-## Most useful key bindings
+## Within the Document
 
 ### Like terms
+
+##### Words
 
 `Ctrl` `D`: Select the next instance of the selected word. Press it repeatedly to add more instances.
 
@@ -10,26 +12,66 @@
 
 `Ctrl` `U`: Deselect the current instance.
 
-### Selecting Lines
+`alt` `F3`: Add cursor at all occurrences of a word.
 
-#### Additive
 
-`Ctrl` `L`: Select to the entire current line.
+##### Parentheses
 
-`Ctrl` `Shift` `L`: Split the currently selected lines into separate lines, which you can edit. Lines yes lines.
+`Ctrl` `M`: Go to matching parentheses.
 
-#### Subtractive
+`Ctrl` `Shift` `M`: Select all within current parentheses.
 
-### Selecting Text
+
+
+### Lines
+
+##### Addition
+
+`Ctrl` `L`: Select to the entire current line. Repeat to select the following lines too.
+
+`Ctrl` `Shift` `L`: Split the currently selected lines into separate lines, which you can edit.
+
+`Ctrl` `Shift` `Enter`: Insert a line before line.
+
+`Ctrl` `Enter`: Insert a line after this line.
+
+##### Manipulation
+
+`Ctrl` `Shift` `K`: Delete entire line.
+
+`Ctrl` `X`: Cut line.
+
+
+
+### Text
+
+##### Selection
 
 `Ctrl` `Shift` `Space`: Expand selection to the scope
 
 `Ctrl` `Shift` `J`: Expand selection to indentation. 
 
+##### Manipulation
+
+`Ctrl` `Delete`: Delete word forwards
+
+`Ctrl` `Backspace`: Delete word backwards.
+
+
+
+### Code folding and marks
+
+##### Folding and unfolding
+
+`Ctrl` `Shift` `.`: Fold all code, except the scope you're currently in (custom).
+
+`Ctrl` `Shift` `,`: Unfold all code (custom).
+
+
 
 ### Navigation
 
-#### Goto Anything
+##### Goto Anything
 
 * `Ctrl` `P`: Goto Anything; navigate through your project's files easily
     * Once within it, you can do the following:
@@ -43,3 +85,59 @@
 * eg. of symbols: class, function names
 
 `searchTerm#term`: searches for the term in the searchTerm & highlights them
+
+##### Scrolling
+
+`Ctrl` + `Arrow keys`: Scrolls without moving the cursor.
+
+
+### Sidebar
+
+`Alt` `B`: toggle sidebar (custom)
+
+`Ctrl` `0`: give focus to the sidebar
+
+`Esc`: Remove focus from sidebar;
+
+`Arrow keys`: Navigate the sidebar
+
+
+
+### Bookmarks
+
+`Ctrl` `F2`: Toggle bookmark on line.
+
+`F2`: Go to next bookmark.
+
+`Shift` `F2`: Go to previous bookmark.
+
+`alt` `F2`: Select all bookmarks.
+
+
+
+### Projects
+
+`Ctrl` `Alt` `P`: Switch project
+
+
+
+### Completions
+
+Insert completions:
+* `Ctrl` `Spacebar`: scroll through the autocompletions
+* `Arrow keys`: scroll through the autocompletions
+* `Tab`: select the autocompletion
+* `Enter`: select the autocompletion
+
+
+## Viewing the Document
+
+### Split window
+
+`Shift` `Alt` `1...4`: Split the view into 1...4 columns.
+
+`Shift` `Alt` `5`: Split view into a grid with 4 groups.
+
+`Shift` `Alt` `8`: Split view into 2 rows.
+
+`Shift` `Alt` `9`: Split view into 3 rows.

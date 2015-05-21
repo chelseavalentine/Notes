@@ -1,0 +1,32 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns": [],
+			"folder_include_patterns":
+			[
+				"HTML & CSS",
+				"Java",
+				"JavaScript",
+				"Rails",
+				"Ruby",
+				"SVG",
+				"Utility Belt"
+			],
+			"file_include_patterns": [],
+			"file_exclude_patterns": [],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+	
+	"settings":
+	{
+		"tab_size": 4,
+		"translate_tabs_to_spaces": true,
+		"indent_to_bracket": true
+	},
+
+	"build_systems":
+	[]
+}

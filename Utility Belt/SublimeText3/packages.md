@@ -2,6 +2,18 @@
 
 Some packages have shortcuts specific to them. Here they are for your reference.
 
+## JavaScript Related
+ 
+### FixMyJs
+Fix small lint errors via command line.
+`fixmyjs file.js`
+
+### JSHint
+Find all of the JavaScript errors for you to obliterate.
+`alt` `J` within Sublime.
+
+
+
 ## SublimeText-Markdown
 
 ### Common Key Bindings
@@ -21,9 +33,6 @@ Some packages have shortcuts specific to them. Here they are for your reference.
 
 ## Sublime Text Markdown Preview
 
-1. `Ctrl` `Shift` `P` to pull up Command Palette.
-2. Type in "Browser". Enter. Choose _Markdown_.
-3. `Ctrl` `B` to build it.
-4. Go to the URL.
-
+1. `Ctrl` `B` to build it.
+2. Go to the URL.
 

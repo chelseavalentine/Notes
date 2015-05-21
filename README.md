@@ -1,4 +1,3 @@
 # Notes
-This is a repo made to centralize my notes for different software/programming languages.
 
-Inspired by [Julie~](https://github.com/ycp217)
+This repository acts as my personal reference for the different languages, libraries, frameworks, and software that I encounter.
