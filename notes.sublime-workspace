@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"condensed"
+			],
+			[
+				"link",
+				"link	Tag"
+			],
+			[
 				"checke",
 				"checked	Attr"
 			],
@@ -304,10 +312,21 @@
 	"buffers":
 	[
 		{
-			"file": "HTML & CSS/HTML.md",
+			"file": "HTML & CSS/CSS.md",
 			"settings":
 			{
-				"buffer_size": 7020,
+				"buffer_size": 2964,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "p {\n    font-weight: 400;\n    font-style: oblique;\n    font-stretch: condensed;\n}\n\np .cow #elephant{\n    opacity: .81px;\n    display: flex;\n    font-weight: ;\n}",
+			"file": "HTML & CSS/sass.css",
+			"file_size": 146,
+			"file_write_time": 130767261742266584,
+			"settings":
+			{
+				"buffer_size": 160,
 				"line_ending": "Windows"
 			}
 		}
@@ -319,17 +338,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 250.0,
-		"last_filter": "disable",
+		"height": 382.0,
+		"last_filter": "enable",
 		"selected_items":
 		[
 			[
-				"disable",
-				"Package Control: Disable Package"
+				"enable",
+				"Package Control: Enable Package"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
 			],
 			[
 				"inst",
@@ -434,10 +457,13 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Chelsea/notes"
+		"/C/Users/Chelsea/notes",
+		"/C/Users/Chelsea/notes/HTML & CSS"
 	],
 	"file_history":
 	[
+		"/C/Users/Chelsea/notes/HTML & CSS/style.scss",
+		"/C/Users/Chelsea/notes/HTML & CSS/HTML.md",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Chelsea/notes/notes.sublime-project",
 		"/C/Users/Chelsea/notes/Utility Belt/SublimeText3/README.md",
@@ -464,7 +490,6 @@
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/CSS.sublime-settings",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/Main.sublime-menu",
 		"/C/Users/Chelsea/stacks/scripts/content.js",
-		"/C/Users/Chelsea/notes/HTML & CSS/HTML.md",
 		"/C/Users/Chelsea/stacks/scripts/custom.js",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Chelsea/stacks/scripts/initialize.js",
@@ -564,12 +589,11 @@
 		"/C/Users/Chelsea/node/config/database.js",
 		"/C/Users/Chelsea/node/package.json",
 		"/C/Users/Chelsea/restart/app/models/user.js",
-		"/C/Users/Chelsea/restart/peck/views/partials/footer.ejs",
-		"/C/Users/Chelsea/restart/peck/views/partials/head.ejs"
+		"/C/Users/Chelsea/restart/peck/views/partials/footer.ejs"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -587,6 +611,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"selector",
 			"createElement",
 			"side",
 			"side_bar",
@@ -713,8 +738,7 @@
 			"ambient",
 			"queue",
 			"name",
-			";\n",
-			"});"
+			";\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -739,32 +763,59 @@
 			[
 				{
 					"buffer": 0,
-					"file": "HTML & CSS/HTML.md",
+					"file": "HTML & CSS/CSS.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7020,
+						"buffer_size": 2964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1018,
-								1018
+								2780,
+								2780
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 305.0,
+						"translation.y": 1771.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "HTML & CSS/sass.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti_orig (SL).tmTheme",
+							"syntax": "Packages/CSS3/CSS3.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -772,7 +823,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -817,7 +868,7 @@
 	"project": "notes.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 50.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -863,7 +914,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 200.0,
+	"side_bar_width": 192.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
