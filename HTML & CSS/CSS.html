@@ -1016,6 +1016,9 @@ body .markdown-body
 }
 </style><title>CSS</title></head><body><article class="markdown-body"><h2 id="css"><a name="user-content-css" href="#css" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CSS</h2>
 <h3 id="general"><a name="user-content-general" href="#general" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General</h3>
+<ul>
+<li><code>general-property: (Top) (Right) (Bottom) (Left);</code> (clockwise)</li>
+</ul>
 <h5 id="importing-your-css"><a name="user-content-importing-your-css" href="#importing-your-css" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Importing your CSS</h5>
 <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot; /&gt;
 </code></pre>
@@ -1084,14 +1087,117 @@ body .markdown-body
 </ul>
 <h5 id="font-style"><a name="user-content-font-style" href="#font-style" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Font-style</h5>
 <ul>
-<li><code>Normal</code> </li>
+<li><code>Normal</code></li>
 <li><code>Italic</code>: A cursive version of the font.</li>
 <li><code>Oblique</code>: The normal style, put on an angle.</li>
 </ul>
-<h3 id="inline-elements"><a name="user-content-inline-elements" href="#inline-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Inline elements</h3>
-<h5 id="b"><code>&lt;b&gt;</code>, ``</h5>
-<h5 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h5>
-<h3 id="block-elements"><a name="user-content-block-elements" href="#block-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Block elements</h3>
-<h5 id="h1-h6"><code>&lt;h1&gt;</code> &hellip; <code>&lt;h6&gt;</code></h5>
-<h5 id="p"><code>&lt;p&gt;</code></h5>
-<h5 id="div"><code>&lt;div&gt;</code></h5></article></body></html>
+<h5 id="font-face"><a name="user-content-font-face" href="#font-face" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Font-face</h5>
+<p>If the user doesn&rsquo;t/won&rsquo;t have the font on their computer, you can link to the font. You can also specify many sources, so the next source will only be used if the first/preceding one doesn&rsquo;t exist.</p>
+<pre><code class="css">@font-face {
+    font-family: &quot;Your name choice&quot;;
+    src: local(&quot;Your name choice&quot;),
+         local(&quot;Yo name choyce&quot;),
+         url(&quot;http://your.url/font.ttf&quot;) format(&quot;truetype&quot;);
+}
+
+.fonty {
+    font-family: &quot;Your name choice&quot;, sans-serif;
+}
+</code></pre>
+
+<h5 id="text-decoration"><a name="user-content-text-decoration" href="#text-decoration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Text-decoration</h5>
+<ul>
+<li><code>none</code> &amp; <code>underline</code></li>
+<li><code>overline</code>: adds line over top of text</li>
+<li><code>line-through</code>: adds line through words</li>
+<li><code>blink</code>: animates the text to flash on and off (lol so troll)</li>
+</ul>
+<h5 id="line-height"><a name="user-content-line-height" href="#line-height" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Line-height</h5>
+<p>A way to control leading (vertical space between lines of text) via CSS.</p>
+<p>Leading includes the font-size + leading. Best used in <code>em</code> so it changes with text scale.</p>
+<h5 id="letter-spacing-word-spacing"><a name="user-content-letter-spacing-word-spacing" href="#letter-spacing-word-spacing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Letter-spacing &amp; word-spacing</h5>
+<p>A way to control the kerning (space between each letter). Default word-spacing is around 0.25em.</p>
+<h5 id="vertical-align"><a name="user-content-vertical-align" href="#vertical-align" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vertical-align</h5>
+<p>Used with inline elements (not block, like div)</p>
+<ul>
+<li>Values: <code>baseline</code>, <code>sub</code>, <code>super</code>, <code>text-top</code>, <code>middle</code>, <code>bottom</code>, <code>text-bottom</code><ul>
+<li>can also use a numeric value in <code>em</code> or <code>px</code>, or a percentage of the line height</li>
+</ul>
+</li>
+</ul>
+<h5 id="pseudo-elements-classes"><a name="user-content-pseudo-elements-classes" href="#pseudo-elements-classes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pseudo-elements &amp; -classes</h5>
+<p><strong>First-letter and :first-line</strong> (p-e)<br />
+Change how the first line or letter looks.<br />
+<code>p:first-letter</code> &amp; <code>p:first-line</code></p>
+<p><strong>Styling links | :link, :visited, :hover, :active</strong> (p-c)</p>
+<p><strong>:hover, :active, :focus</strong> (p-c)<br />
+These change how an element behaves when the user interacts with it, and it  can apply to any element.</p>
+<ul>
+<li><code>active</code>: when the element is being pressed/clicked</li>
+<li><code>focus</code>: when a browser detects you&rsquo;re ready to interact w/ the element</li>
+</ul>
+<p><strong>Ordering pseudo-classes</strong><br />
+:link, :visited, :hover, :focus, :active.</p>
+<h3 id="attribute-selectors"><a name="user-content-attribute-selectors" href="#attribute-selectors" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Attribute selectors</h3>
+<ul>
+<li><strong>Existence</strong> <code>element[attribute]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute called &lsquo;attribute&rsquo;<ul>
+<li><code>p[class]</code></li>
+</ul>
+</li>
+<li><strong>Equality</strong> <code>element[attribute="value"]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute called &lsquo;attribute&rsquo; whose value is &lsquo;value&rsquo;<ul>
+<li><code>p[class="dog"]</code></li>
+</ul>
+</li>
+<li><strong>Space</strong> <code>element[attribute~="value"]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute called &lsquo;attribute&rsquo; whose value is a list of space-separated words, once of which is &lsquo;value&rsquo;<ul>
+<li><code>p[class~="dog"]</code></li>
+</ul>
+</li>
+<li><strong>Prefix</strong> <code>element[attribute^"l"]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute whose value begins with &lsquo;l&rsquo;<ul>
+<li><code>p[attr*"d"]</code></li>
+</ul>
+</li>
+<li><strong>Substring</strong><code>element[attribute*"yo"]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute whose value contains the letters &lsquo;yo&rsquo;<ul>
+<li><code>p[attr*"do"]</code></li>
+</ul>
+</li>
+<li><strong>Suffix</strong> <code>element[attribute$"d"]</code> Targets any <code>&lt;element&gt;</code> elements with an attribute whose value ends with the letter &lsquo;d&rsquo;<ul>
+<li><code>p[attr$"g"]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="boxes"><a name="user-content-boxes" href="#boxes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Boxes</h3>
+<h5 id="centering-elements"><a name="user-content-centering-elements" href="#centering-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Centering elements</h5>
+<p>Set an elements <code>right-margin</code> and <code>left-margin</code> to <code>auto</code> to center it within its parent.</p>
+<h5 id="visibility"><a name="user-content-visibility" href="#visibility" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visibility</h5>
+<p>Allows you to hide an element while still reserving its space on the page.</p>
+<ul>
+<li>Values: <code>hidden</code>. <code>visible</code>.</li>
+</ul>
+<h5 id="border-image"><a name="user-content-border-image" href="#border-image" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Border-image</h5>
+<p>The numbers indicate where to slice the image. Each image is cut into 9 slices, and all slices, except the center one, are used.</p>
+<pre><code class="css">p {
+    border-width: 50px;
+    border-image: url(&quot;url.png&quot;) 11 11 11 11 stretch;
+}
+
+p.nostretchy {
+    border-image: url(&quot;url.png&quot;) 11 11 11 11 round; /*alt value: repeat*/
+}
+</code></pre>
+
+<h3 id="lists"><a name="user-content-lists" href="#lists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lists</h3>
+<h5 id="list-style-type"><a name="user-content-list-style-type" href="#list-style-type" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List-style-type</h5>
+<p>Unordered lists:<br />
+<code>list-style-type: none | disc | circle | square</code></p>
+<p>Ordered lists:<br />
+<code>list-style-type: decimal | decimal-leading-zero | lower-alpha | upper-alpha | lower-roman | upper-roman</code></p>
+<p>Or you can use an image, for either <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>:<br />
+<code>list-style-image: url("img.png);</code></p>
+<h5 id="list-style-position"><a name="user-content-list-style-position" href="#list-style-position" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>List-style-position</h5>
+<p>Values:<br />
+<em> <code>outside</code>: the marker sits outside the block of text (default)<br />
+</em> <code>inside</code>: marker sits inside text block, so text wraps</p>
+<h3 id="table"><a name="user-content-table" href="#table" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Table</h3>
+<p>Decide what happens to empty cells<br />
+<code>empty-cells: show | hide;</code></p>
+<p><strong>Gaps between cells or not?</strong></p></article></body></html>

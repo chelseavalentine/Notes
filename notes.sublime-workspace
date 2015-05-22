@@ -315,18 +315,7 @@
 			"file": "HTML & CSS/CSS.md",
 			"settings":
 			{
-				"buffer_size": 2964,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "p {\n    font-weight: 400;\n    font-style: oblique;\n    font-stretch: condensed;\n}\n\np .cow #elephant{\n    opacity: .81px;\n    display: flex;\n    font-weight: ;\n}",
-			"file": "HTML & CSS/sass.css",
-			"file_size": 146,
-			"file_write_time": 130767261742266584,
-			"settings":
-			{
-				"buffer_size": 160,
+				"buffer_size": 5783,
 				"line_ending": "Windows"
 			}
 		}
@@ -462,8 +451,10 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Chelsea/notes/HTML & CSS/style.scss",
 		"/C/Users/Chelsea/notes/HTML & CSS/HTML.md",
+		"/C/Users/Chelsea/notes/HTML & CSS/sass.css",
+		"/C/Users/Chelsea/notes/.gitignore",
+		"/C/Users/Chelsea/notes/HTML & CSS/style.scss",
 		"/C/Users/Chelsea/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Chelsea/notes/notes.sublime-project",
 		"/C/Users/Chelsea/notes/Utility Belt/SublimeText3/README.md",
@@ -587,9 +578,7 @@
 		"/C/Users/Chelsea/node/public/stylesheets/_background.scss",
 		"/C/Users/Chelsea/node/.gitignore",
 		"/C/Users/Chelsea/node/config/database.js",
-		"/C/Users/Chelsea/node/package.json",
-		"/C/Users/Chelsea/restart/app/models/user.js",
-		"/C/Users/Chelsea/restart/peck/views/partials/footer.ejs"
+		"/C/Users/Chelsea/node/package.json"
 	],
 	"find":
 	{
@@ -767,55 +756,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2964,
+						"buffer_size": 5783,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2780,
-								2780
+								5783,
+								5783
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1771.0,
+						"translation.y": 4475.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "HTML & CSS/sass.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 160,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								157,
-								157
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Seti_orig (SL).tmTheme",
-							"syntax": "Packages/CSS3/CSS3.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]

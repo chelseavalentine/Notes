@@ -2,6 +2,8 @@
 
 ### General
 
+* `general-property: (Top) (Right) (Bottom) (Left);` (clockwise)
+
 ##### Importing your CSS
 
 ```html
@@ -77,7 +79,7 @@ Can add emphasis, and can also affect amount of whitespace/contrast on a page.
 * Expand: `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
 
 ##### Font-style
-* `Normal` 
+* `Normal`
 * `Italic`: A cursive version of the font.
 * `Oblique`: The normal style, put on an angle.
 
@@ -98,17 +100,133 @@ If the user doesn't/won't have the font on their computer, you can link to the f
 }
 ```
 
-### Inline elements
+##### Text-decoration
 
-##### `<b>`, ``
+* `none` & `underline`
+* `overline`: adds line over top of text
+* `line-through`: adds line through words
+* `blink`: animates the text to flash on and off (lol so troll)
 
-#####
+##### Line-height
+
+A way to control leading (vertical space between lines of text) via CSS.
+
+Leading includes the font-size + leading. Best used in `em` so it changes with text scale.
+
+##### Letter-spacing & word-spacing
+
+A way to control the kerning (space between each letter). Default word-spacing is around 0.25em.
+
+##### Vertical-align
+
+Used with inline elements (not block, like div)
+
+* Values: `baseline`, `sub`, `super`, `text-top`, `middle`, `bottom`, `text-bottom`
+    - can also use a numeric value in `em` or `px`, or a percentage of the line height
+
+##### Pseudo-elements & -classes
+
+__First-letter and :first-line__ (p-e)
+Change how the first line or letter looks.
+`p:first-letter` & `p:first-line`
+
+__Styling links | :link, :visited, :hover, :active__ (p-c)
+
+__:hover, :active, :focus__ (p-c)
+These change how an element behaves when the user interacts with it, and it  can apply to any element.
+
+* `active`: when the element is being pressed/clicked
+* `focus`: when a browser detects you're ready to interact w/ the element
+
+__Ordering pseudo-classes__
+:link, :visited, :hover, :focus, :active.
 
 
-### Block elements
+### Attribute selectors
 
-##### `<h1>` ... `<h6>`
+* __Existence__ `element[attribute]` Targets any `<element>` elements with an attribute called 'attribute'
+    * `p[class]`
+* __Equality__ `element[attribute="value"]` Targets any `<element>` elements with an attribute called 'attribute' whose value is 'value'
+    - `p[class="dog"]`
+* __Space__ `element[attribute~="value"]` Targets any `<element>` elements with an attribute called 'attribute' whose value is a list of space-separated words, once of which is 'value'
+    - `p[class~="dog"]`
+* __Prefix__ `element[attribute^"l"]` Targets any `<element>` elements with an attribute whose value begins with 'l'
+    - `p[attr*"d"]`
+* __Substring__`element[attribute*"yo"]` Targets any `<element>` elements with an attribute whose value contains the letters 'yo'
+    - `p[attr*"do"]`
+* __Suffix__ `element[attribute$"d"]` Targets any `<element>` elements with an attribute whose value ends with the letter 'd'
+    - `p[attr$"g"]`
 
-##### `<p>`
+### Boxes
 
-##### `<div>`
+##### Centering elements
+
+Set an elements `right-margin` and `left-margin` to `auto` to center it within its parent.
+
+##### Visibility
+
+Allows you to hide an element while still reserving its space on the page.
+
+* Values: `hidden`. `visible`.
+
+##### Border-image
+
+The numbers indicate where to slice the image. Each image is cut into 9 slices, and all slices, except the center one, are used.
+
+```css
+p {
+    border-width: 50px;
+    border-image: url("url.png") 11 11 11 11 stretch;
+}
+
+p.nostretchy {
+    border-image: url("url.png") 11 11 11 11 round; /*alt value: repeat*/
+}
+```
+
+### Lists
+
+##### List-style-type
+
+Unordered lists:
+`list-style-type: none | disc | circle | square`
+
+Ordered lists:
+`list-style-type: decimal | decimal-leading-zero | lower-alpha | upper-alpha | lower-roman | upper-roman`
+
+Or you can use an image, for either `<ul>` or `<ol>`:
+`list-style-image: url("img.png);`
+
+##### List-style-position
+
+Values:
+* `outside`: the marker sits outside the block of text (default)
+* `inside`: marker sits inside text block, so text wraps
+
+### Table
+
+__Decide what happens to empty cells__
+`empty-cells: show | hide;`
+
+__Gaps between cells or not?__
+
+Put spaces between borders `border-spacing: [horizontal] [vertical]`
+
+Or get rid of spaces between borders
+`border-collapse: collapse | separate`
+
+### Cursor
+
+`cursor: auto | crosshair | default | pointer | move | text | wait | help | url(cursor.gif);`
+
+### Layouts
+
+##### Position
+
+* __Static__: every block element appears on new line, regardless of whether you specify a size that'd allow them to sit side-by-side
+* __Relative__: elements are relative to other elements in the flow; you can use offset properties (top, bottom, left, right)
+* __Fixed__
+* __Float__: other blocks will wrap around this floated element
+    - `float: right`
+    - `float: left`
+    - `clear: left | right | both | none`
