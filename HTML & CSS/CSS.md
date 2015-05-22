@@ -230,3 +230,45 @@ Or get rid of spaces between borders
     - `float: right`
     - `float: left`
     - `clear: left | right | both | none`
+
+### Multiple Stylesheets
+
+Import a stylesheet.
+
+```css
+@import url("stylesheet2.css");
+```
+
+### Images
+
+##### Backgrounds
+
+Background-image.
+```css
+p {
+    background-image: url("images/image.png");
+    background-repeat: repeat | repeat-x | repeat-y | no-repeat | fixed | scroll;
+    background-position: center top | 50% 25%; /*Pairs are as follows: Pair 1 [left, center, right] & Pair 2 [top, center, bottom]*/
+}
+```
+
+You should use fall-backs when using "cutting-edge" CSS3.
+
+##### Gradients
+
+There are more types/options. You can look it up.
+```css
+div {
+    background-image: linear-gradient(#355, #522); 
+}
+```
+
+### Cross-browser
+
+Because IE still exists. This code snippet can allow your code to look better in old browsers.
+
+```html
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+```

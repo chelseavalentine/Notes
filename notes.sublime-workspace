@@ -315,7 +315,15 @@
 			"file": "HTML & CSS/CSS.md",
 			"settings":
 			{
-				"buffer_size": 5783,
+				"buffer_size": 7556,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 38,
 				"line_ending": "Windows"
 			}
 		}
@@ -756,15 +764,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5783,
+						"buffer_size": 7556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5783,
-								5783
+								7201,
+								7201
 							]
 						],
 						"settings":
@@ -774,10 +782,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4475.0,
+						"translation.y": 5493.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								38
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Seti_orig (SL).tmTheme",
+							"syntax": "Packages/Seti_UI/Langs/Git.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
