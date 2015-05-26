@@ -26,7 +26,7 @@ Fix small lint errors via command line.
 
 Find all of the JavaScript errors for you to obliterate.
 
-`alt` `J` within Sublime.
+`alt` `J` or `Ctrl` `B` within Sublime.
 
 
 
