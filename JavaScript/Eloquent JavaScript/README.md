@@ -10,3 +10,9 @@ __Ch4-5.md__
 
 * Chapter 4: Data Structures: Objects and Arrays
 * Chapter 5: Higher-Order Functions
+
+__Ch6-7-8.md__
+
+* Chapter 6: The Secret Life of Objects
+* Chapter 7: Project: Electronic Life
+* Chapter 8: Bugs and Error Handling
