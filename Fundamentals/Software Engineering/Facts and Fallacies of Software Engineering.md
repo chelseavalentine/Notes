@@ -44,6 +44,64 @@ Facts from the book. Most of them are ones that I found interesting or want to v
 
 ### Facts: About the Life Cycle
 
+* __life cycle__: an organizing scheme for talking about the process of software construction
+    - [1] requirements definition & development
+        + define and analyze the "what" of the problem
+    - [2] design
+        + when & how the problem is to be solved
+    - [3] coding
+        + design is transformed into code that runs on a computer
+    - [4] error removal
+        + run & pass tests
+    - [5] production & maintenance
+
+##### Requirements
+
+* "One of the two most common causes of runaway projects is unstable requirements."
+* "Requirement errors are the most expensive to fix when found during production but the cheapest to fix early in development."
+* "The most persistent software errors--those that escape the testing process and persist into the production version of the software--are errors of omitted logic. Missing requirements result in omitted logic."
+
+##### Design
+
+* "Design is a complex, iterative process. The initial design solution will likely be wrong and certainly not optimal."
+    - "Probably the worst possible design approach, and yet one that is tempting to most design novices, is 'easy-part-first.'"
+
+##### Error Removal
+
+* "Error removal is the most time-consuming phase of the life cycle."
+
+##### Testing
+
+* "Software that a typical programmer believes to be thoroughly tested has often had only but 55-60% of its logic paths executed. Using automated support, such as coverage analyzers, can raise that roughly to 85-90%."
+* Testing approaches:
+    - Requirements-driven testing: testing to see if each requirement is met
+    - Structure-driven testing: testing to see if all pieces of the as-built software function correctly
+    - Statistics-driven testing: randomly testing to see how long/well the software can execute
+    - Risk-driven testing: testing to see that the primary tasks are handled properly
+* "Even if 100% test coverage were possible, that is not a sufficient criterion for testing. Roughly 35% of software defects emerge from missing logic paths, and another 40% from the execution of a unique combination of logic paths."
+* "It's nearly impossible to do a good job of error removal without tools. Debuggers are commonly used, but others, such as coverage analyzers, are not."
+* "Programmer-created built-in debug code, preferably optionally included in the object code based on compiler parameters, is an important supplement to testing tools."
+
+##### Reviews and Inspections
+
+* "In spite of the benefits of rigorous inspections, they cannot and should not replace testing."
+* "Peer reviews are both technical and sociological. Paying attention to one without the other is a recipe for disaster."
+
+##### Maintenance
+
+* "Maintenance typically consumes 40-80% of software costs. Therefore, it is probably the most important life cycle phase of software."
+    - maintenance: fixing errors (created when software was built or changed) as they're discovered & making those changes as they become necessary
+* "Maintenance is a solution, not a problem."
+    - "... 'we built this thing, but now we wish we had built something a little different.'"
+* maintenance life cycle (Fjelsted & Hamlen):
+    - defining & understanding the change [.15]
+    - reviewing the documentation for the product [.05]
+    - tracing logic [.25]
+    - implementing the change [.2]
+    - testing and debugging [.3]
+    - updating the documentation [.05]
+* "Better software engineering development leads to _more_ maintenance, not less."
+
 
 ### Facts: About Quality
 

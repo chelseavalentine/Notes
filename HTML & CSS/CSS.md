@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="" />
 ```
 
-##### Rule precendence
+##### Rule precedence
 
 * The rules that are defined last take precedence
     - Unless there's a more specific rule, then the more specific rule will be applied

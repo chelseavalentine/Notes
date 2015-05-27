@@ -89,7 +89,7 @@ You need to provide the audio in multiple formats for cross-browser support.
 
 ### Forms
 
-* `action`: the URL of the page that'll receive hte information in the form when it's submitted
+* `action`: the URL of the page that'll receive the information in the form when it's submitted
 * `method`: either [get] or [post].
   - `get`: used for things like short forms (search), and info retrieval
     + default method used when unspecified
@@ -161,7 +161,7 @@ More input types:
 * Submit
 * [Etc...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)
 
-##### Labelling inputs
+##### Labeling inputs
 
 ```html
 <!-- Use labels to wrap around input -->

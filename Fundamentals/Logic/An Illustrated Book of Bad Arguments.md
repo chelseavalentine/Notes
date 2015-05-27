@@ -1,6 +1,6 @@
 ## Bad Arguments
 
-* __red herring__: drawing the attention away from a proposition by discussing the propsition's result
+* __red herring__: drawing the attention away from a proposition by discussing the proposition's result
     - says nothing about the truth of the statement(s)
 * __straw man__: to take a version/caricature of someone's argument & attack that, rather than the original argument
     - misrepresenting, misquoting, misconstruing, and/or oversimplifying
@@ -35,7 +35,7 @@
     - diverts attention from the argument at hand to the person making it
 * __slippery slope argument__: discrediting a proposition by arguing that its acceptance will lead to a sequence of events, 1+ of which are undesirable
     - they assume every event in the sequence is inevitable, without providing evidence to support that
-    - includes _appeal to fear_, _false dilemma_, & _argument from consequence
+    - includes _appeal to fear_, _false dilemma_, & _argument from consequence_
 * __appeal to the bandwagon__: arguing that because many/the majority of people believe in something, it must be true
 * __ad hominem__: attacking the person, rather than the argument the person is making, to divert the discussion & discredit their argument
     - _circumstantial ad hominem_: attacking a person for cynical reasons, usually by making a judgment about their intentions
@@ -47,7 +47,7 @@
 
 ## More Definitions
 
-* __falsifiable__: a proposition/argument that can be refuted/disproved through observation/expriment
+* __falsifiable__: a proposition/argument that can be refuted/disproved through observation/experiment
     - falsifiability is a sign of an argument's strength
 * __logical fallacy__: an error that --> violating a principle of good arguments: good structure, consistency, clarity, order, relevance, & completeness 
     - __formal fallacy__: an error b/c of faulty structure
