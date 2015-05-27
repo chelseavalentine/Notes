@@ -105,11 +105,33 @@ Facts from the book. Most of them are ones that I found interesting or want to v
 
 ### Facts: About Quality
 
+##### Quality
+
+* "Quality is a collection of attributes":
+    - Portability: creating software that's easily moved to another platform
+    - Reliability: software that dependably does what it's supposed to do
+    - Efficiency: software that economizes on running time & space consumption
+    - Human engineering (aka usability): software that's easy & comfortable to use
+    - Testability: software that's easy to test
+    - Understandability: software that's easy for a maintainer to comprehend
+    - Modifiability: software that's easy for a maintainer to change
+
+##### Reliability
+
+* "Errors tend to cluster."
+* "Residual errors will always persist. The goal should be to minimize or eliminate severe errors."
+* "Efficiency stems more from good design than from good coding."
+    - "To some eager programmers, coding is the most important task of software construction, and the sooner we get to it, the better. Design, to people in that camp, is simply something that puts off the ultimate problem solution activity." "As long as these people continue to address relatively simple problems, (a) they will probably never be convinced otherwise, and (b) there may be nothing terribly wrong with what they are doing. But it doesn't take much problem complexity before that minimal-design, quick-to-code approach begins to fall apart."
+
 
 ### Facts: About Research
 
+* "Many software researchers advocate rather than investigate. As a result, (a) some advocated concepts are worth far less than their advocates believe, and (b) there is a shortage of evaluative research to help determine what the value of such concepts really is."
+
 
 ### Fallacies: About Management
+
+* "You can't manage what you can't measure." (126)
 
 
 ### Fallacies: About the Life Cycle
