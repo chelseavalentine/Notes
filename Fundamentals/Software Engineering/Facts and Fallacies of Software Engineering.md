@@ -131,11 +131,11 @@ Facts from the book. Most of them are ones that I found interesting or want to v
 
 ### Fallacies: About Management
 
-* "You can't manage what you can't measure." (126)
-
-
-### Fallacies: About the Life Cycle
+* "You can't manage what you can't measure."
+* "Programming can and should be egoless."
 
 
 ### Fallacies: About Education
 
+* "You teach people how to program by showing them how to write programs."
+    - Read-first approach, not write-first.
