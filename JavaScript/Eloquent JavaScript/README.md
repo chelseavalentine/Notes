@@ -21,7 +21,11 @@ __Ch9.md__
 
 * Chapter 9: Regular Expressions
 
-__Ch10-11.md__
+__Ch10-12.md__
 
 * Chapter 10: Modules
-* Chapter 11: Project: A Programming Language
+* Chapter 12: JavaScript and the Browser
+
+__Ch13.md__
+
+* Chapter 13: The Document Object Model
