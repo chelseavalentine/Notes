@@ -26,6 +26,11 @@ __Ch10-12.md__
 * Chapter 10: Modules
 * Chapter 12: JavaScript and the Browser
 
-__Ch13.md__
+__Ch13-14.md__
 
 * Chapter 13: The Document Object Model
+* Chapter 14: Handling Events
+
+__Ch15.md__
+
+* Chapter 15: Project: A Platform Game
