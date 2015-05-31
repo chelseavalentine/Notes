@@ -71,3 +71,26 @@
 
 # Chapter 3: Functions
 
+* functions should be small; no more than 20 lines
+
+### Blocks and indenting
+
+* `if`, `else`, `while`, `for`, etc. statements should be kept to one line long (line prob = function call)
+* shouldn't have more than 2 indent levels in a function
+
+### Do one thing
+
+* Functions should do one thing
+    - If you can extract another function from a function, with a name that isn't a restatement of the function's implementation, then your function isn't small enough
+    - thus, there shouldn't be sections of a function... that's not doing one thing
+
+### One level of abstraction per function
+
+* doing so makes it easier for the reader to not get confused as to whether statements are large concepts or small details
+
+### Reading Code from Top to Bottom: _The Stepdown Rule_
+
+* p.68
+
+### Switch statements
+

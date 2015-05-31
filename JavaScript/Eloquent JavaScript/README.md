@@ -17,8 +17,11 @@ __Ch6-7-8.md__
 * Chapter 7: Project: Electronic Life
 * Chapter 8: Bugs and Error Handling
 
-__Ch9-10-11.md__
+__Ch9.md__
 
 * Chapter 9: Regular Expressions
+
+__Ch10-11.md__
+
 * Chapter 10: Modules
 * Chapter 11: Project: A Programming Language
