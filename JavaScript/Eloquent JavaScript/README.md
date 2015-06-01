@@ -31,6 +31,6 @@ __Ch13-14.md__
 * Chapter 13: The Document Object Model
 * Chapter 14: Handling Events
 
-__Ch15.md__
+__Ch16.md__
 
-* Chapter 15: Project: A Platform Game
+* Chapter 16: Drawing on Canvas
