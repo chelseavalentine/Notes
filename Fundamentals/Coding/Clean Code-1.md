@@ -268,6 +268,6 @@ A funcction that handles errors has satisfied its 'one thing' (ie. it should do 
 * this doesn't really matter if your functions are small anyway; only thing that should be avoided is `goto` (b/c used in large functions)
 
 
-### How Do You Write Functions Like This
+### How Do You Write Functions Like This?
 
 * create draft, then continuously test and refine it
