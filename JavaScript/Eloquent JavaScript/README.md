@@ -35,7 +35,7 @@ __Ch16.md__
 
 * Chapter 16: Drawing on Canvas
 
-__Ch17.md__
+__Ch17-18.md__
 
 * Chapter 17: HTTP
 * Chapter 18: Forms and Form Fields
