@@ -63,3 +63,36 @@ Commenting just because.
 
 
 # Chapter 5: Formatting
+
+
+### The Purpose of Formatting
+
+
+### Vertical Formatting
+
+##### The Newspaper Metaphor
+
+##### Vertical Openness Between Concepts
+
+##### Vertical Density
+
+##### Vertical Distance
+
+##### Vertical Ordering
+
+
+### Horizontal Formatting
+
+##### Horizontal Openness and Density
+
+##### Horizontal Alignment
+
+##### Indentation
+
+##### Dummy Scopes
+
+
+### Team Rules
+
+
+### Uncle Bob's Formatting Rules
