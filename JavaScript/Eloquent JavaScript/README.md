@@ -38,3 +38,8 @@ __Ch16.md__
 __Ch17.md__
 
 * Chapter 17: HTTP
+* Chapter 18: Forms and Form Fields
+
+__Ch20.md__
+
+* Chapter 20: Node.js
