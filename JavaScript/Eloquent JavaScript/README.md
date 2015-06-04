@@ -34,3 +34,7 @@ __Ch13-14.md__
 __Ch16.md__
 
 * Chapter 16: Drawing on Canvas
+
+__Ch17.md__
+
+* Chapter 17: HTTP
