@@ -65,34 +65,55 @@ Commenting just because.
 # Chapter 5: Formatting
 
 
-### The Purpose of Formatting
-
-
 ### Vertical Formatting
 
 ##### The Newspaper Metaphor
 
+* topmost parts hold the high-level concepts & algorithms
+* at the end, there should be low-level functions & details
+
 ##### Vertical Openness Between Concepts
+
+* each line represents an expression/clause; & each group of lines repesents a complete thought
+    - thoughts should be separated by a blank line
 
 ##### Vertical Density
 
+Put code close together to imply close association
+
 ##### Vertical Distance
 
-##### Vertical Ordering
+Concepts closely related should be kept vertically close to each other; and you should have them in the same file, too.
+
+* variable declarations
+    - as close to usage as possible
+* instance variables
+    - declared at the top of the class
+    - used by many of the class's methods
+* dependent functions
+    - functions that call on another should be vertically close, w/ caller above the callee
+* conceptual affinity
+    - if you have a lot of functions that perform the same kind of use, then you should have less vertical distance between them
+        + eg. a group of functions that assertTrue, but have different parameters
 
 
 ### Horizontal Formatting
 
+* limit your line length to ~120 characters. Less is better.
+
 ##### Horizontal Openness and Density
 
-##### Horizontal Alignment
+* spaces around assignment operators imply that the two sides are different
+* no space between a function name and its arguments implies that they're closely related
+* use whitespace to accentuate the precedence of operators
 
-##### Indentation
-
-##### Dummy Scopes
+```java
+private static double determinant(double a, double b, double c) {
+    return b*b - 4*a*c;
+}
+```
 
 
 ### Team Rules
 
-
-### Uncle Bob's Formatting Rules
+A team of developers should agree on a single formatting style, & then every member should use that style.
