@@ -1,20 +1,20 @@
 # How to Prove It
 
 #### Table of Contents
-* [Chapter 1: Sentential Logic](https://github.com/)
-    - Deductive Reasoning and Logical Connectives
-    - Truth Tables: Logical Connectives
-    - Truth Tables: Laws
-        + DeMorgan's Laws
-        + Commutative Laws
-        + Associative Laws
-        + Idempotent Laws
-        + Distributive Laws
-        + Absorption Laws
-        + Double Negation Law
-        + Tautology Laws
-        + Contradiction Laws
-    - Variables and Sets
+* [Chapter 1: Sentential Logic](#chapter-1-sentential-logic)
+    - [Deductive Reasoning and Logical Connectives](#deductive-reasoning-and-logical-connectives)
+    - [Truth Tables: Logical Connectives](#truth-tables-logical-connectives)
+    - [Truth Tables: Laws](#truth-tables-laws)
+        + [DeMorgan's Laws](#demorgans-laws)
+        + [Commutative Laws](#commutative-laws)
+        + [Associative Laws](#associative-laws)
+        + [Idempotent Laws](#idempotent-laws)
+        + [Distributive Laws](#distributive-laws)
+        + [Absorption Laws](#absorption-laws)
+        + [Double Negation Law](#double-negation-law)
+        + [Tautology Laws](#tautology-laws)
+        + [Contradiction Laws](#contradiction-laws)
+    - [Variables and Sets](#variables-and-sets)
 
 
 
@@ -30,18 +30,18 @@
 ### Truth Tables: Logical Connectives
 
 * `+` means _exclusive or_
-    - so `P+Q` represents the statement "P or Q, but not both"
+    - so `P + Q` represents the statement "P or Q, but not both"
 * `↓` means _nor_
-    - so `P↓Q` represents the statement "Neither P nor Q"
+    - so `P ↓ Q` represents the statement "Neither P nor Q"
 * `|` is called _nand_
-    - so `P|Q` represents the statement "P and Q are not both true."
+    - so `P | Q` represents the statement "P and Q are not both true."
 
 ### Truth Tables: Laws
 
 ##### DeMorgan's Laws
 
-* ¬(P∧Q) ≡ ¬P ¬Q
-* ¬(PQ) ≡ ¬P∧¬Q
+* ¬(P∧Q) ≡ ¬P∨¬Q
+* ¬(P∨Q) ≡ ¬P∧¬Q
 
 ##### Commutative Laws
 
@@ -73,7 +73,8 @@
 
 ##### Tautology Laws
 
-* __tautology__: formulas that are always true
+__tautology__: formulas that are always true
+
 * P∧(a tautology) ≡ P
 * P∨(a tautology) is a tautology.
 * ¬(a tautology) is a contradiction.
@@ -83,12 +84,14 @@
 
 ##### Contradiction Laws
 
-* __contradiction__: formulas that are always false
+__contradiction__: formulas that are always false
+
 * P∧(a contradiction) is a contradiction.
 * P∨(a contradiction) ≡ P
 * ¬(a contradiction) is a tautology.
 
 * If a conclusion is a contradiction, the argument is invalid.
 * If a premise is a contradiction, the argument is invalid, unless the argument does not rely on the contradiction (eg. P∨(a contradiction).)
+
 
 ### Variables and Sets
