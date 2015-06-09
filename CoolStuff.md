@@ -1,4 +1,4 @@
-### Cool stuff I found on the Internet
+### Cool stuff
 
 Audio Visualization Dubstep Thing
 http://codepen.io/noeldelgado/full/EaNjBy

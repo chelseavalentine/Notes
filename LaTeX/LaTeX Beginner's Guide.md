@@ -1,13 +1,13 @@
 # Chapter 1: Getting Started with LaTeX
 
-##### What is Latex?
+####  What is Latex?
 
 Software to typeset documents. Prepares documents.
 
 
 # Chapter 2: Formatting Words, Lines, and Paragraphs
 
-##### Exploring the document structure
+#### Exploring the document structure
 
 * documents are based on a __class__
     - __class__: a fundamental template that provides customizable features and styles, built for a certain purpose (eg. books, articles, etc.)
@@ -16,7 +16,7 @@ Software to typeset documents. Prepares documents.
 * __environment__: code that's framed by a `\begin...` & `\end` command pair
 
 
-##### Understanding LaTeX commands
+#### Understanding LaTeX commands
 
 * different ways commands are written:
     - `\command`
@@ -24,7 +24,7 @@ Software to typeset documents. Prepares documents.
     - `\command[optional argument]{argument}`
 
 
-##### Comments
+#### Comments
 
 Comments look like
 
@@ -33,7 +33,7 @@ Comments look like
 ```
 
 
-##### Symbols
+#### Symbols
 
 * `\$` $, `\%` %, `\&` &
 * `\{` {, `\}` }, `\_` _
@@ -41,7 +41,7 @@ Comments look like
 
 ### Formatting text: fonts, shapes, and styles
 
-##### Font shape
+#### Font shape
 
 * `\emph{emphasized text}`
     - this is called __semantic markup__ since it refers to the meaning of the text, in addition to the appearance
@@ -61,7 +61,7 @@ You can next font shape commands like so:
 ```
 
 
-##### Choosing the font family
+#### Choosing the font family
 
 Choosing a sans-serif font:
 
@@ -81,7 +81,7 @@ Serif fonts are used b/c easier reading. Called __Roman__ fonts.
 * `\ttfamily` typewriter family
 
 
-##### Switching the font family
+#### Switching the font family
 
 Use `\sffamily` within an argument to switch to sans-serif font. It affects the following text.
 
@@ -94,14 +94,14 @@ __declaration__: commands that don't produce output, but affect following text
 Keep in mind that not all font properties can be combined, depending on font.
 
 
-##### Delimiting the effect of commands
+#### Delimiting the effect of commands
 
 Can use curly braces to make sure that only the text you want to be changed will be changed.
 
 Curly braces tells LaTeX to begin a __group__. The closing brace stops the commands/declarations made within the group. The braces create the __scope__ of the commands/declarations.
 
 
-##### Exploring font sizes
+#### Exploring font sizes
 
 * `\noindent`, `\bigskip`
 * `\tiny`, `\scriptsize`, `\footnotesize`, `\small`, `\normalsize`, `\large`, `\Large`, `\LARGE`, `\huge`, `\Huge`
@@ -109,7 +109,7 @@ Curly braces tells LaTeX to begin a __group__. The closing brace stops the comma
 The result of using these commands depends on what the base font's size. However, the commands like `\footnotesize` and `\scriptsize` will force the font to take on a LaTeX's fixed size.
 
 
-##### Using environments
+#### Using environments
 
 Environments increase readability of your code: eg.
 
@@ -121,7 +121,7 @@ Some huge bold text lives in here.
 ```
 
 
-##### Creating your own commands
+#### Creating your own commands
 
 __Macros__: custom commands that you've named and defined
 
@@ -135,7 +135,7 @@ __Macros__: custom commands that you've named and defined
 ```
 
 
-##### Gentle spacing after commands
+#### Gentle spacing after commands
 
 You can automate adding a backspace after commands like so:
 
@@ -150,7 +150,7 @@ Why couldn't I come up with a better example. What am I doing \yo
 ```
 
 
-##### Creating more universal commands: using arguments
+#### Creating more universal commands: using arguments
 
 ```latex
 \documentclass{article}
@@ -165,7 +165,7 @@ Why couldn't I come up with a better example. What am I doing \yo
 We have {#1} which refers to the first argument. #2 refers to the second, and so on.
 
 
-##### Using optional arguments (43)
+#### Using optional arguments (43)
 
 
 # Chapter 3: Designing Pages

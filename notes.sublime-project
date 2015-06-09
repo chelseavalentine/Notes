@@ -3,17 +3,20 @@
 	[
 		{
 			// "folder_exclude_patterns": [],
-			// "folder_include_patterns":
-			// [
-			// 	"HTML & CSS",
-			// 	"Java",
-			// 	"JavaScript",
-			// 	"Rails",
-			// 	"Ruby",
-			// 	"SVG",
-			// 	"Utility Belt"
-			// ],
-			"file_include_patterns": [],
+			"folder_include_patterns":
+			[
+				"Fundamentals",
+				"Fundamentals/*",
+				// "HTML & CSS",
+				// "Java",
+				"LaTeX",
+				// "JavaScript",
+				// "Rails",
+				// "Ruby",
+				// "SVG",
+				// "Utility Belt",
+				// "Utility Belt/*"
+			],
 			"file_exclude_patterns": [],
 			"follow_symlinks": true,
 			"path": "."
@@ -25,8 +28,5 @@
 		"tab_size": 4,
 		"translate_tabs_to_spaces": true,
 		"indent_to_bracket": true
-	},
-
-	"build_systems":
-	[]
+	}
 }
