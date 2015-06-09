@@ -1,2 +1,14 @@
+#=======================
+# Sublime Text 3
+#=======================
 *.sublime-project
 *.sublime-workspace
+
+
+#=======================
+# LaTeX
+#=======================
+*.log
+*.synctex.gz
+*.pdf
+*.aux
