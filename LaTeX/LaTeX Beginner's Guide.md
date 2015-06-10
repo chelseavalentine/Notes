@@ -4,6 +4,7 @@
 
 Software to typeset documents. Prepares documents.
 
+What is typesetting?: Arranging the type for printing.
 
 # Chapter 2: Formatting Words, Lines, and Paragraphs
 
@@ -165,25 +166,33 @@ Why couldn't I come up with a better example. What am I doing \yo
 We have {#1} which refers to the first argument. #2 refers to the second, and so on.
 
 
-#### Using optional arguments (43)
+#### Using optional arguments
+
+With __optional arguments__, the arguments may be given. If they aren't, then the default values are used.
+
+To create your own optional arguments:
+
+```latex
+\documentclass{article}
+\newcommand{\keyword}[2][\bfseries]{{#1#2}}
+\begin{document}
+\keyword{Grouping} by curly braces limits the 
+\keyword{scope} of \keyword[\itshape]{declarations}.
+\end{document}
+```
+
+This code produces the following effect: 'Grouping' and 'scope' are bolded, whereas 'declarations' is italicized. By passing in the optional argument of `[\itshape]`, the default formatting is changed to italics.
 
 
-# Chapter 3: Designing Pages
+#### `\newcommand`
 
-# Chapter 4: Creating Lists
+* command: name of command, starting w/ a backslash
+    - can't begin with `\end`, must consist of letters, or consist of a single non-letter symbol
+* arguments: integer from 1-9; the # of arguments of the command; is 0 by default
+* optional: the presence of an optional command makes it so that the arguments are optional, and the default value is given here
+    - otherwise, all arguments are mandatory
+* 
 
-# Chapter 5: Creating Tables and Inserting Pictures
-
-# Chapter 6: Cross-Referencing
-
-# Chapter 7: Listing Content and References
-
-# Chapter 8: Typing Math Formulas
-
-# Chapter 9: Using Fonts
-
-# Chapter 10: Developing Large Documents
-
-# Chapter 11: Enhancing Your Documents Further
-
-# Chapter 12: Troubleshooting
+```latex
+\newcommand{command}[arguments][optional]{definition}
+```

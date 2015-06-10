@@ -2,10 +2,8 @@
 
 * the proper use of comments is to compensate for failure to express yourself in code
     - their use isn't a cause for celebration
-
-###### Comments Do Not Make Up for Bad Code
-
-###### Explain Yourself in Code
+* Comments Do Not Make Up for Bad Code
+* Explain Yourself in Code
 
 
 ## Good Comments
@@ -19,7 +17,7 @@ eg. ones explaining RegExps
 ###### Explanation of Intent
 
 ###### Clarification
-Making things more readable (eg. `a.compareTo(b) == -1`)... but be sure that it's correct!
+Making things more readable (eg. `a.compareTo(b) == -1`)... but make sure that it's correct!
 
 ###### Warning of Consequences
 
@@ -31,34 +29,20 @@ This isn't an excuse to leave in bad code
 
 ## Bad Comments
 
-###### Mumbling
-Commenting just because.
-
-###### Redundant Comments
-
-###### Misleading Comments
-
-###### Mandated Comments
-
-###### Journal Comments
-
-###### Don't Use a Comment When You Can Use a Function or a Variable
-
-###### Position Markers
-
-###### Closing Brace Comments
-
-###### Attributions and Bylines
-
-###### Commented-out Code
-
-###### Nonlocal Information
-
-###### Too Much Information
-
-###### Inobvious Connection
-
-###### Function Headers
+* Mumbling
+* Redundant Comments
+* Misleading Comments
+* Mandated Comments
+* Journal Comments
+* Don't Use a Comment When You Can Use a Function or a Variable
+* Position Markers
+* Closing Brace Comments
+* Attributions and Bylines
+* Commented-out Code
+* Nonlocal Information
+* Too Much Information
+* Inobvious Connection
+* Function Headers
 
 
 
