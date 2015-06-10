@@ -178,7 +178,7 @@ To create your own optional arguments:
 \documentclass{article}
 \newcommand{\keyword}[2][\bfseries]{{#1#2}}
 \begin{document}
-\keyword{Grouping} by curly braces limits the 
+\keyword{Grouping} by curly braces limits the
 \keyword{scope} of \keyword[\itshape]{declarations}.
 \end{document}
 ```
@@ -193,7 +193,7 @@ This code produces the following effect: 'Grouping' and 'scope' are bolded, wher
 * arguments: integer from 1-9; the # of arguments of the command; is 0 by default
 * optional: the presence of an optional command makes it so that the arguments are optional, and the default value is given here
     - otherwise, all arguments are mandatory
-* definition: 
+* definition:
     - every occurence of the form `#n` within the definition will be replaced by the nth argument
 
 ```latex
@@ -317,3 +317,107 @@ Note that you can pass in _package options_ to packages. Separate multiple optio
     - `2`, `3` yes please with that line break
     - `4` forced line break; (default if no option given)
 * `\nolinebreak` has the same options
+
+When you want a phrase/title/etc. to be displayed together (i.e. not get split by a line break), do:
+```latex
+Dr.~Watson %~ is interpreted as a space
+```
+
+
+#### Exploring the fine details
+
+__ligatures__: when 2+ letters are joined into one
+
+You can force letters/symbols to stay separate by doing something like
+
+```latex
+% this
+f\/f f\/i -\/-
+
+% or this
+f{}f f{}i -{}-
+
+% instead of
+ff fi --
+```
+
+Another way to disable ligatures, except globally:
+
+`\usepackage[noligatures]{microtype}`
+
+
+#### Setting dots
+
+`\frenchspacing` can be used in the preamble. It uses the same spacing for everything. `\nonfrenchspacing` is used by default.
+
+LaTeX can't know everything. Sometimes you'll get an 'end-of-sentence' space where you desire an interword space. You can manually fix it.
+
+* `.\ ` produces a normal interword space
+* `\@.` says that the following dot stands at the end of a sentence
+
+Just for fun: `\ldots` produces an ellipse.
+
+
+#### Setting accents
+
+Just for fun: this is how you produce accents:
+* `\'a` á
+
+There are several more that you can find. You can add accented letters directly to the editor, too. But you have to include `\usepackage[utf8]{inputenc}`
+
+
+### Turning off full justification
+
+`\raggedright`, `\raggedleft`
+
+```latex
+\parbox{10cm}{\raggedright
+    This text is left-aligned.
+}
+\parbox{15cm}{\raggedleft
+    This text is right-aligned.
+}
+\parbox{15cm}{\centering
+    This text is centered.
+}
+```
+
+Random: You can use `\today` to have today's date automatically inserted.
+
+
+#### Text justification and environments
+
+`{center}`, `{flushleft}`, `{flushright}`
+
+```latex
+\begin{center}
+    \emph{Chelsea}
+\end{center}
+```
+
+
+### Displaying quotes
+
+```latex
+\begin{quote}
+This is a quote.
+\end{quote}
+``This is also a quote'' Where `` makes the left double quotation mark, and '' makes the right double quotation mark.
+```
+
+For longer quotes, try the quotation environment...
+
+```latex
+\begin{quotation}
+Just pretend that this is a long quotation. Even though it isn't. This looks like a block quote.
+\end{quotation}
+```
+
+
+#### Spacing between paragraphs instead of indentation
+
+Avoid indentation. Kinda like HTML's default formatting for paragraphs. You indicate new paragraphs via increased vertical space. Use this in the preamble:
+
+```latex
+\usepackage{parskip}
+```
