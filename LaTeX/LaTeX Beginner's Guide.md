@@ -6,6 +6,8 @@ Software to typeset documents. Prepares documents.
 
 What is typesetting?: Arranging the type for printing.
 
+
+
 # Chapter 2: Formatting Words, Lines, and Paragraphs
 
 #### Exploring the document structure
@@ -138,7 +140,7 @@ __Macros__: custom commands that you've named and defined
 
 #### Gentle spacing after commands
 
-You can automate adding a backspace after commands like so:
+`\xspace`. You can automate adding a backspace after commands like so:
 
 ```latex
 \documentclass{article}
@@ -191,8 +193,127 @@ This code produces the following effect: 'Grouping' and 'scope' are bolded, wher
 * arguments: integer from 1-9; the # of arguments of the command; is 0 by default
 * optional: the presence of an optional command makes it so that the arguments are optional, and the default value is given here
     - otherwise, all arguments are mandatory
-* 
+* definition: 
+    - every occurence of the form `#n` within the definition will be replaced by the nth argument
 
 ```latex
 \newcommand{command}[arguments][optional]{definition}
 ```
+
+
+#### URLs
+
+`\usepackage{url}` provides the `\url` command to print URLs in typewriter font
+
+
+#### Using boxes to limit the width of paragraphs
+
+```latex
+\parbox{5cm}{Text that fits in a 5cm-wide column}
+```
+
+By default, `\parbox` justifies the text
+
+
+#### Common paragraph boxes
+
+```latex
+% General format:
+\parbox[alignment]{width}{text}
+```
+
+* Alignments
+    - `[t]` align parbox's bottom to the top of the text's baseline
+        + think `vertical-align: top`
+    - `[b]` align parbox's top to the top of the text line
+        + think `vertical-align: bottom`
+    - default behavior: parbox is vertically centered
+
+An extended usage of `\parbox`:
+
+```latex
+\parbox[alignment][height][inner alignment]{width}{text}
+```
+
+* inner alignments
+    - mainly used when the text's height isn't the same as the box's height
+    - `c`: vertically center within box
+    - `t`: place at top of box (think `top: 0`)
+    - `b`: place text at bottom (think `bottom: 0`)
+    - `s`: stretch the text out vertically, if possible
+
+
+#### Boxes containing more text
+
+For larger pieces of text, use `minipage`s. This is helpful in terms of code organization. Note that there aren't page breaks in minipages. Also note that _`minipage` uses the same arguments as `\parbox`._
+
+```latex
+\begin{minipage}{3cm}
+text
+\footnote{You can put footnotes in here, too}
+\end{minipage}
+
+```
+
+
+### Breaking lines and paragraphs
+
+You can define how a word is hyphenated when it is word-wrapped.
+
+```latex
+\hyphenation{acro-nym}
+
+% You can pass in multiple words, separated by spaces
+\hyphenation{acro-nym ac-ro-nym-ic a-cro-nym-i-cal-ly}
+```
+
+While it isn't recommended, just as inline-styles aren't, you can define division points in the body text:
+
+```latex
+ac\-ro\-nym
+```
+
+
+#### Preventing hyphenation
+
+Declare it without break points, or protect it inside the text using the `\mbox` command
+
+```latex
+\hyphenation{youcantdividethiseventhoughyoushould}
+
+...
+
+can't break this \mbox{youcantdividethiseventhoughyoushould}
+% not even line breaks will break it
+```
+
+
+#### Relevant hyphenation packages
+
+* `\usepackage[none]{hyphenat}` prevents hyphenation throughout the document
+    - `\nohypens{text}` does the same for text snippets
+* `\usepackage[htt]{hyphenat}` enables hyphenation for typewriter text (this isn't the norm for monospace fonts)
+* `\usepackage{microtype}`
+    - super cool because it automatically expands and contracts text, and plays with the margin, to create visually-pleasing aligned text
+
+Note that you can pass in _package options_ to packages. Separate multiple options with commas within one set of square brackets.
+
+
+#### Breaking lines manually
+ * `\\` ends a line and pushes the text to the next line, staying within the same paragraph
+    - can also use `\newline`
+* `\linebreak` will end the line, but keep full justification
+    - could end up with huuuge unnatural spaces in your text.
+
+
+#### Line break options
+
+* `\\[value w/ units]` adds 'value w/ units' vertical space after the break
+    - eg. `\\[10cm]` adds a 10cm vertical break
+* `\\*[value]` adds vertical space, but it also prevents a page break before the next line of text
+* `\linebreak[number]` influence a line break based on the option you set
+    - `0` a line break is allowed
+    - `1` a line break is desired
+    - `2`, `3` yes please with that line break
+    - `4` forced line break; (default if no option given)
+* `\nolinebreak` has the same options
