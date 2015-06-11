@@ -102,7 +102,7 @@ More optional arguments:
 
 
 
-# Chapter 5: Creating Tables and Inserting Pictures (121)
+# Chapter 5: Creating Tables and Inserting Pictures
 
 ### Writing in columns
 
@@ -296,8 +296,6 @@ At this point, it's obvious what a lot of this does, but...
 
 ### Inserting code column-wise
 
-* 
-
 ```latex
 \documentclass{article}
 \usepackage{array}
@@ -346,5 +344,124 @@ table body
 \end{table}
 ```
 
+Tables are in a _floating environment_, so they don't always get printed in location in which you typed it. That's why there're placement options.
+
+
+### Placing captions above
+
+You can write captions above, and then ensure good spacing by adding this in the preamble:
+
+```latex
+\setlength{\abovetopsep}{10pt}
+```
+
+
+#### Customizing captions
+
+```latex
+\usepackage[font=small,labelfont=bf,margin=1cm]{caption}
+```
+
+
+### Auto-fitting columns to the table width
+
+```latex
+% in preamble
+\usepackage{tabularx}
+
+% in table
+\begin{tabularx}{table width}{column specifiers}
+...
+\end{tabularx}
+```
+
+Tabularx has a new column type: `X`. They use all of the available space.
+
+Example usage:
+
+```latex
+\begin{tabularx}{0.6\textwidth}{1cX}
+```
+
+
+#### Generating multi-page tables
+
+Available packages:
+
+* `longtable`, `ltxtable`, `ltablex`, `supertabular`, `xtab`, `stabular`
+
+
+#### Coloring tables
+
+`color` package colors text. `xcolor` is an extended version.
+`colortbl` colors tables.
+
+
+#### Using landscape orientation
+
+`rotating` package has `sidewaystable` environment. The table would be landscape, on its own page.
+
+
+#### Aligning columns at the decimal point
+
+Packages: `siunitx`, `dcolumn`, `rccol`
+
+
+#### Hyphenation in narrow columns
+
+First word of a line, box, or table entry doesn't get hyphenated. You can force hyphenation with `\hspace{0pt}` at the begininng.
+
+
+### Inserting pictures
+
+`graphicx` package. PNG, JPG, EPS, PDF are supported.
+
+```latex
+% in preamble
+\usepackage[demo]{graphicx}
+% in document
+\begin{figure}
+\includegraphics{filename}
+\caption{insert caption if you want}
+\end{figure}
+```
+
+
+#### Scaling pictures
+
+Structure of includegraphics:
+
+```latex
+\includegraphics[key=value list]{file name}
+```
+
+Possible values:
+
+* `width`, `height`, `scale`, `angle`
+
+
+### Including whole pages
+
+Use the `pdfpages` packages and the `\includepdf` command to include pdf pages, and png and jpg files.
+
+
+#### Putting images behind the text
+
+`eso-pic` `textpos` packages.
+
+
+#### Managing floating environments
+
+There're 2 floating environments (floats): `figure` and `table`. They go wherever is optimum for the page layout.
+
+Float placement options:
+
+* `h` here (where it's in the source code)
+* `t` top, `b` bottom
+* `p` page (separate page with only floats)
+
+You can add `!` before a placement option to tell LaTeX that that positioning is important for it to execute.
+
 
 p.134 10 AM
+p.XXX 11 AM
