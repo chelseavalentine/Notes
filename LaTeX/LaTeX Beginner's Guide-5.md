@@ -165,7 +165,80 @@ Define a name for your symbol before using them, so the index knows how to sort 
 `\index{keyword|see{other keyword}}`
 
 
-### Designing the index layout
+#### Designing the index layout
+
+Use the `makeindex` command. Can also look into making your own styles.
 
 
-189
+### Creating a bibliography
+
+```latex
+% within the text cite things like
+\cite[optional page range]{citation key, eg. DK01} % eg [p.\,18--20]
+
+% at end of document
+\begin{thebibliography}{8}
+\bibitem{DK01} The citation goes here
+\end{thebibliography}
+```
+
+Structure:
+
+```latex
+\begin{thebibliography}{widest label}
+\bibitem[label]{key} author, title, year, etc.
+...
+\end{thebibliography}
+```
+
+
+#### Using bibliography databases with BibTeX
+
+Create a separate database file (.bib) for references
+
+eg.
+```
+@book{DK01,
+    author = "D.E. Knuth",
+    title = "Title",
+    publisher = "publisher",
+    year = 10
+}
+```
+
+
+#### Understanding BibTeX entry types
+
+Check out the BibTeX reference to see fields you must provide for references. `textdoc bibtex`
+
+
+#### Choosing the bibliography style
+
+* Styles:
+    - `plain` Arabic numbers for labels; sorted according to author name; number is written in square brackets
+    - `unsrt` unsorted
+    - `alpha` sorted according to author names; labels are shortcuts made out of author's name & year of publication; written w/ square brackets
+    - `abbrv` first name & other field entries are abbreviated
+
+Choose style (`\bibliographystyle`) before `\bibliography`, but after `\begin{document}`
+
+
+#### Listing references without citing
+
+`\nocite{key}` & `\nocite{*}`
+
+
+#### Changing the headings
+
+These are the commands that you can renew to change the name, using a format like this:
+
+```latex
+\renewcommand{\contentsname}{New name}
+```
+
+* Table of Contents `\contentsname`
+* List of figures `\listfigurename`
+* List of tables `\listtablename`
+* Bibliography `\bibname` in book & report
+    - `\refname` in article
+* Index `\indexname`
