@@ -100,7 +100,7 @@ Sectioning commands for `book`, `report`, and `article`:
 Use the starred form (`\section*{title}`) to make it so that the numbering will be suppressed and it won't show up in table of contents
 
 
-#### Designing headers and footers (88)
+#### Designing headers and footers
 
 In the preamble:
 
@@ -161,7 +161,7 @@ Can use `\chapter*` and `\section*`, et al. in order to get rid of the header en
 ### Breaking pages
 
 `\pagebreak`
-`\newpage`, `\nopagebreak` 
+`\newpage`, `\nopagebreak`
 
 Note that pagebreak doesn't break a line. It applies to the end of the current line. It also just means new column if you're using the 2-column mode
 
