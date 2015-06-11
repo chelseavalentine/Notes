@@ -463,5 +463,107 @@ Float placement options:
 You can add `!` before a placement option to tell LaTeX that that positioning is important for it to execute.
 
 
-p.134 10 AM
-p.XXX 11 AM
+#### Forcing the output of floats
+
+Multiple ways  of going about this:
+
+* `\clearpage` ends current page & forces output of floats on next page
+    - `\cleardoublepage` is similar
+* the `afterpage` package defers the execution of `\clearpage` until the current page has ended
+
+Example usage of afterpage:
+
+```latex
+% in the preamble
+\usepackage{afterpage}
+
+% in the document
+... body text ...
+\afterpage{\clearpage}
+```
+
+
+#### Limiting floating
+
+`placeins` package allows you to restrict the floating, so you can set `\FloatBarrier`
+
+```latex
+\usepackage[section]{placeins} % you can set which command you want to set as the barrier; here, it is 'section'
+```
+
+
+#### Avoiding floating at all costs
+
+Don't use a floating environment. Just include an image rather than a floating figure that contains the image.
+
+```latex
+% in the preamble
+\usepackage{capt-of} % or caption
+...
+\begin{center}
+\begin{minipage}{\linewidth}%
+\centering%
+\incluegraphics{test}%
+\captionof{figure}[shortened caption]{Longer/normal caption}%
+\end{minipage}
+\end{center}
+```
+
+Also
+
+```latex
+\captionof{table}[short text]{longer caption}
+```
+
+Also the float package gives you the `H` optional command, which makes floats appear here
+
+```latex
+% in the preamble
+\usepackage{float}
+
+% in the document
+\begin{figure}[H]
+...
+```
+
+
+#### Spanning figures and tables over text columns
+
+`figure*` & `table*` will place those floats into one column when you're in a 2-column layout.
+
+
+#### Letting text flow around figures
+
+```latex
+% in preamble
+\usepackage{wrapfig}
+
+% in document
+\begin{wrapfigure}{l}{4.4cm}
+...
+\end{wrapfigure}
+```
+
+Definition of wrapfigure:
+
+```latex
+\begin{wrapfigure}[number of lines]{placement}[overhang]{width}
+```
+
+Options:
+
+* placement
+    - `r` right, `l` left, `i` inner, `o` outer
+    - `R`, `L`, `I`, `O` does the same, but allows figure to float
+
+Overhang specifies a width that the figure can st ick into the margin
+
+Can use `{wraptable}` in the same way.
+
+
+#### Breaking figures and tables into pieces
+
+Additional packages you could look into:
+
+* `subfig` small figures & tables;
+* `subcaption` is used with subfig;
