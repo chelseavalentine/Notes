@@ -54,4 +54,118 @@ Load `hyperref` before the `cleveref` package, and all your references will beco
 
 ### Customizing the table of contents
 
+You can add to the table of contents within your document, like:
+
+```latex
+% in the preamble
+\setcounter{tocdepth}{3} % this goes down to the subsubsections
+
+% in the document
+\tableofcontents
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+...
+\addtocontents{toc}{\bigskip}
+\addcontentsline{toc}{part}{Appendix}
+```
+
+Other depth levels of the TOC:
+* 4: paragraph
+* 5: subparagraph
+
+Counter commands:
+
+```latex
+\setcounter{name}{n} % specify the depth level you want
+\addtocounter{name}{n} % add an integer value to the counter name
+```
+
+
+#### Shortening entries
+
+```latex
+\subsubsection[Short name]{Longer name}
+```
+
+
+#### Adding entries manually
+
+Starred commands don't produce TOC entries, so you can add them manually:
+
+```latex
+\addcontentsline{file extension}{sectional unit}{text}
+```
+
+File extensions: `toc` table of contents file, `lof` list of figures file, `lot` list of tables file
+
+Sectional units: the formatting of the entry (eg. chapter, section, part, subsection)
+
+
+### Creating and customizing lists of figures
+
+`\listoffigures` & `\listoftables`
+
+You can change the name of the List of Figures:
+
+```latex
+% change list of figures names
+\renewcommand{\figurename}{Diagram}
+\renewcommand{\listfigurename}{List of Diagrams}
+
+% change list of tables names
+\renewcommand{\listoftables}{New name}
+\renewcommand{\listtablename}{New name}
+\renewcommand{\tablename}{new name}
+```
+
+Related packages for customization: `tocloft`, `titletoc`, `multitoc`, `minitoc`, `tocbibind`
+
+
+### Generating an index
+
+```latex
+% in the preamble
+\usepackage{index}
+\makeindex
+
+% within the document, make index points like this
+\index{keyword}...text to be indexed...
+
+% or
+\index{keyword}
+
+% right before end of document:
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+```
+
+
+#### Defining index entries and subentries
+
+Subentries: `\index{keyword!subkeyword}` can go up to 3 levels
+
+
+#### Specifying page ranges
+
+Begin the page range: `\index{keyword|(}`
+
+End the page range: `\index{keyword|)}`
+
+
+#### Using symbols and macros in the index
+
+Define a name for your symbol before using them, so the index knows how to sort them
+
+`\index{Gamma@$\Gamma$}` for example. You use this with macros, too, so the actual name is printed. Eg. `\index{TeX@\group}`.
+
+
+#### Referring to other index entries
+
+`\index{keyword|see{other keyword}}`
+
+
+### Designing the index layout
+
+
 189
