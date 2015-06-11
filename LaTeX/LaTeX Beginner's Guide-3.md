@@ -217,17 +217,134 @@ You can check out the `array` package for further formatting options.
 
 Use the `array` package to add padding to rows.
 
+```latex
+\documentclass{article}
+\usepackage{array}
+\setlength{\extrarowheight}{4pt}
+\begin{document}
+\begin{tabular}{@{}>{\itshape}ll!{:}l<{.}@{}} % holy... look into this another time if you ever want to know what it means
+    \hline
+    r1c1 & r1c2 & r1c3\\
+    & r2c2 & r2c3\\
+    \hline
+\end{tabular}
+\end{document}
+```
 
-# Chapter 6: Cross-Referencing (153)
 
-# Chapter 7: Listing Content and References (165)
+### Beautifying tables using the `booktabs` package
 
-# Chapter 8: Typing Math Formulas (189)
+```latex
+% in preamble
+\usepackage{booktabs}
+% in document
+\begin{tabular}{ccc}
+    \toprule[1.5pt]
+    \head{header1} & \head{header2} & \head{header3}\\
+    \midrule
+    r1c1           & r1c2           & r1c3\\
+    \bottomrule[1.5pt]
+\end{tabular}
+```
 
-# Chapter 9: Using Fonts (213)
+Rule is just another way of saying line. Let's decode what was just typed:
 
-# Chapter 10: Developing Large Documents (227)
+* `\toprule[thickness]`: draw horiz line at top of table
+* `\midrule[thickness]`: draws horizontal dividing line b/t table rows
+* `\bottomrule[thickness]`: darks horiz line at bottom of table
+* `\cmidrule[thickness](trim){m-n}`
+    - horizontal line from column m to n;
+    - trim can be `l` or `r` to trim line at right or left end, or `lr`
+        + can also trim at a width: `(trim{width})`
 
-# Chapter 11: Enhancing Your Documents Further (243)
 
-# Chapter 12: Troubleshooting (265)
+#### Adjusting lengths
+
+Lengths you can adjust:
+
+* `\heavyrulewidth` top & bottom lines' thickness
+* `\lightrulewidth` middle lines' thickness by `\midrule`
+* `\cmidrulewidth` thickness of `\cmidrule`
+* `\cmidrulekern` trimming in `\cmidrule`
+* `\abovetopsep` space above top rule
+* `\belowbottomsep` space below bottom rule
+* `\aboverulesep` space above `midrule`, `\cmidrule`, & `\bottomrule`
+* `\belowrulesep` space below `midrule`, `\cmidrule`, & `\bottomrule`
+
+
+#### Spanning entries over multiple columns
+
+Think: row merge.
+
+```latex
+\begin{tabular}{@{}*3l@{}}
+    \toprule[1.5pt]
+    \multicolumn{2}{c}{\head{Input}} & \multicolumn{1}{c}{\head{Output}}\\
+    \head{Command} & \head{Declaration} & \\
+    \cmidrule(r){1-2}\cmidrule(1){3-3}
+    r1c1 & r1c2 & r1c3 \\
+    \bottomrule[1.5pt]
+\end{tabular}
+```
+
+At this point, it's obvious what a lot of this does, but...
+
+```latex
+\multicolumn{number of columns}{formatting options}{entry text}
+```
+
+
+### Inserting code column-wise
+
+* 
+
+```latex
+\documentclass{article}
+\usepackage{array}
+\usepackage{booktabs}
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\newcommand{\normal}[1]{\multicolumn{1}{1}{#1}}
+
+\begin{document}
+\begin{tabular}{@{}1*2{>{\textbackslash\ttfamily}1}1%<{example text}@{}}
+\toprule[1.5pt]
+& \multicolumn{2}{c}{\head{Input}} & \multicolumn{1}{c}{\head{Output}}\\
+& \normal{\head{Command}} & \normal{\head{Declaration}}
+& \normal{}\\
+  \cmmidrule(lr){2-3}\cmidrule(1){4-4}
+  ...
+```
+
+`\>{textblashslash\ttfamily}l` says: left-align a row in typewriter font, with a backslash before the entry
+
+
+### Spanning entries over multiple rows
+
+```latex
+% in preamble
+\usepackage{multirow}
+
+% in document
+\multirow{3}{*}{multiple-row-spanned text} & entry & entry \\
+```
+
+Structure of the multirow command:
+
+```latex
+\multirow{number of rows}{width}{entry text}
+```
+
+
+### Adding captions to tables
+
+The structure of the table command:
+
+```latex
+\begin{table}[placement options]
+table body
+\caption[shorter table title]{table title}
+\end{table}
+```
+
+
+p.134 10 AM
