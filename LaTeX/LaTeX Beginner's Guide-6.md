@@ -343,4 +343,18 @@ The optional argument is for stating an existing environment to share the number
 
 ### Choosing the main font
 
+For particular phrases:
 
+```latex
+\documentclass{article}
+\newcommand{\commandhere}[1][\rmfamily]{{#1 The phrase here}\par}
+\usepackage[T1]{fontenc}
+\begin{document}
+\large
+\commandhere
+\commandhere[\sffamily]
+\commandhere[\ttffamily]
+\end{document}
+```
+
+Basically, there are tons of fonts you could use. You can [look them up](http://tug.dk/FontCatalogue/).
