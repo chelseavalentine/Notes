@@ -5,11 +5,13 @@
 			// "folder_exclude_patterns": [],
 			"folder_include_patterns":
 			[
-				"Fundamentals",
-				"Fundamentals/*",
+				// "Fundamentals",
+				// "Fundamentals/*",
 				// "HTML & CSS",
-				// "Java",
-				"LaTeX",
+				"Java",
+				"Java/*",
+				"Android",
+				// "LaTeX",
 				// "JavaScript",
 				// "Rails",
 				// "Ruby",

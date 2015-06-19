@@ -1,4 +1,4 @@
-#####Typing and formatting code in Microsoft Word is painful.
+##### Typing and formatting code in Microsoft Word is painful.
 
 So I'm going to take notes here.
 
