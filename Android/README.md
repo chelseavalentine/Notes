@@ -70,4 +70,103 @@ ArrayList<Integer> numbers = new ArrayList<Integer>();
 
 # Chapter 3: Designing Better Objects
 
-### Constructors
+### Interface
+
+Interface: has abstract methods, without method bodies, that tell what the 'Human' category, or whatever else it could be, can do.
+```java
+public interface Human {
+    public void eat();
+
+    public void walk();
+
+    public void sleep(int duration);
+}
+```
+
+Extend the interface:
+
+```java
+public class King implements Human {
+    public void eat() {
+        System.out.println("The King eats.");
+    }
+
+    public void walk() {
+        //
+    }
+
+    public void sleep(int duration) {
+        //
+    }
+
+    public void rule() {
+        //
+    }
+}
+```
+
+If you have an object implement an interface, it must implement every abstract method in the interface.
+
+
+### Polymorphism
+
+If you have a method like
+
+```java
+pubic void feed(Human h) {
+    //
+}
+```
+
+You can even pass in a King, or any other object of category 'Human', and it will work. Polymorphism allows you do utilize a commn method with multiple object types.
+
+
+### Inheritance
+
+Using inheritance over interface allows you to reuse code. Inheritance lets similar classes share methods & variables.
+
+```java
+public class Cat extends Animal {
+    //
+}
+```
+
+
+### Graphics
+
+Use `javax.swing` package to create GUIs
+
+
+
+# Chapter 4: Laying the Foundations
+
+### Learning to build games
+
+Three components of a game:
+
+* Game Development Framework
+    - game-independent classes that performs generic tasks like implementing a game screen & handling player input
+* Game-specific classes
+    - classes representing characters, power-ups, levels, etc.
+* Resources
+    - images & sound files
+
+Game will have the following classes:
+
+* Main classes
+    - GameMain
+        + starting point of the game; has the main method
+    - Game
+        + has the game loop, & methods to start & exit the game
+    - Resources
+        + allows you to quickly load images & sound files
+* State classes
+    - State
+        + each state represents a screen in the game; this class is the blueprint fr other states (through inheritance)
+    - LoadState
+        + the initial state of the game, where resources are loaded
+    - MenuState
+        + welcome screen w/ navigation
+* Utility classes
+    - InputHandler
+        + listens for user mouse & keyboard events, and dispatches the state classes to handle the events
