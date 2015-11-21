@@ -1,4 +1,18 @@
 # The Command Line
 
-* `mkdir` Make new directory/folder
-* `sysdm.cpl` Open System Environmental Variables windows 
+
+##### `alias`
+
+You can give commands nicknames using aliases. You just need to use the following syntax:
+
+(Example is for always showing colored output when using `ls`)
+```
+alias ls="ls -Gf"
+
+##### `mv`
+
+
+##### Redirection
+
+
+``` 
