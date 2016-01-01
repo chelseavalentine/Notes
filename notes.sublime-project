@@ -8,9 +8,9 @@
 				// "Fundamentals",
 				// "Fundamentals/*",
 				// "HTML & CSS",
-				"Java",
-				"Java/*",
-				"Android",
+				// "Java",
+				// "Java/*",
+				// "Android",
 				// "LaTeX",
 				// "JavaScript",
 				// "Rails",
@@ -18,13 +18,14 @@
 				// "SVG",
 				// "Utility Belt",
 				// "Utility Belt/*"
+				"C++"
 			],
 			"file_exclude_patterns": [],
 			"follow_symlinks": true,
 			"path": "."
 		}
 	],
-	
+
 	"settings":
 	{
 		"tab_size": 4,
