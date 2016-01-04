@@ -20,4 +20,3 @@ Notes taken while reading __Jumping into C++__ by Alex Allain.
 * __memory leak__: result of not freeing memory when out of use
 * __invalid memory__: memory that hasn't been allocated, and thus cannot be accessed (causes crashes)
   * can occur when you don't init pointers (—> data corruption or crashes)
-
