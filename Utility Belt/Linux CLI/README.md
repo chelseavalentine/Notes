@@ -1,8 +1,8 @@
 # The Linux Command Line
 
-## Ch 2 | What is the Shell?
+## Ch 2 – What is the Shell?
 
-* __`bash`__: Bourne Again SHell
+* __bash__: Bourne Again SHell
 
 ##### Just so you know
 
@@ -15,7 +15,7 @@ Miscellaneous
 
 
 
-## Ch 3 | Navigation
+## Ch 3 – Navigation
 
 * __`pwd`__: Print Working Directory
 * __`cd`__: Change Directory
@@ -26,7 +26,7 @@ Miscellaneous
 
 
 
-## Ch 4 | Exploring the system
+## Ch 4 – Exploring the system
 
 * __`file [filename]`__: brief description of file's contents
 * __`less [filename]`__: examine text file
@@ -37,7 +37,7 @@ Miscellaneous
 
 
 
-## Ch 5 | Manipulating files and directories
+## Ch 5 – Manipulating files and directories
 
 * __`cp`__: CoPy files & directories
   * `cp -u [pattern] [destination]` - copy files that don't exist in the destination over
@@ -75,13 +75,55 @@ Miscellaneous
 
 
 
-## Ch 6 | Working with commands
+## Ch 6 – Working with commands
 
-* __`type`__:
-* __`which`__:
-* __`man`__:
-* __`apropos`__:
-* __`info`__:
-* __`whatis`__:
+* __`type`__: how a command name is interpreted
+  * executable program, shell builtin, shell function, alias
+* __`which`__: where a executable program is located
+* __`man`__: a command's manual page
+  * __`help`__ for shell builtins, or `[cmd] --help`
+  * `man [section] [search_term]` where:
+    1. User commands
+    2. Programming interfaces kernel system calls
+    3. Programming interfaces to the C library
+    4. Special files (device nodes & drivers, etc)
+    5. File formats
+    6. Games & amusements (eg. screen savers)
+    7. Miscellaneous
+    8. System admin commands
+* __`apropos`__: list appropriate commands (gives you possible matches for a search term)
+* __`info`__: a command's info entry 
+  * have hyperlinks to go from topic (node) to topic (node), indicated by * & activated by putting the cursor on it & pressing enter
+  * `n` next node, `p` prev node, `?` cmd help, `[delete]` prev page, `[space]` next page 
+* __`whatis`__: a brief description of a command
 * __`alias`__: give commands nicknames using aliases `alias ls="ls -Gf"`
+  * `alias name='string'`
+  * __`unalias`__
+
+
+
+* `[-op1|-op2]` indicate that op1 & op2 are mutually exclusive
+
+
+
+## Ch 7 – I/O redirection
+
+* __`cat`__:
+* __`sort`__:
+* __`uniq`__:
+* __`grep`__:
+* __`wc`__:
+* __`head`__:
+* __`tail`__:
+* __`tee`__:
+
+## Ch 8 – The world as the Shell
+
+## Ch 9 – Advanced keyboard tricks
+
+## Ch 10 – Permissions
+
+## Ch 11 – Processes
+
+
 
