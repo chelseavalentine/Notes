@@ -9,6 +9,7 @@ Time to learn Swift!
 You usually don't need to declare type, but you can:
 
 ``` swift
+let implicitDouble = 70.0
 let explicitDouble: Double = 70
 ```
 
@@ -158,4 +159,108 @@ let array2 = [String]()
 
 
 #### Functions and methods
+
+* `func`: declares a function
+  * parameters are formatted like `name: Type`
+  * the return type is declared like `-> [type]` after the parameter list
+* when you call a function, the first argument isn't written with its name, but every subsequent argument is
+* __method__: a function that's defined to a specific type
+
+``` swift
+func function(prop1: String, prop2: Int) -> String {
+	return "hehe \(prop1), uhh... \(prop2)."  
+}
+
+// let's execute our function
+function("it's 7:44am", prop2: 3)
+```
+
+
+
+#### Classes and Initializers
+
+**Classes:**
+
+``` swift
+class MyClass {
+  var property1 = 0;
+  
+  func method1() -> void {
+  	print("Hi")
+  }
+}
+```
+
+**Objects:**
+
+We can create instances of the class with the following syntax:
+
+``` swift
+var myClass = MyClass()
+myClass.property1 = 120
+var msg = myClass.method1()
+```
+
+Instead of constructors, we have initializers. So it looks like:
+
+**Initializers:**
+
+``` swift
+class MyClass {
+  // properties...
+  var property: Int
+  
+  init(property: Int) {
+  	self.property = property
+  }
+  
+  // methods...
+}
+```
+
+And we can initialize it like so:
+
+``` swift
+let instance = MyClass(property: 10)
+```
+
+
+
+**Inheritance:**
+
+Just like Java, Swift has single inheritance.
+
+We can create subclasses like this:
+
+``` swift
+class Baby: Human {
+  var age: Int
+  var name: String
+  var numLimbs: Int
+  
+  init(age: Int, name: String) {
+  	self.age = age
+    self.name = name
+    super.init(numLimbs: numLimbs)
+  }
+}
+```
+
+A subclass will inherit all of the superclass' behavior. We can override methods, but we must mark it with `override`
+
+
+
+
+
+#### Enumerations and Structures
+
+
+
+#### Protocols
+
+
+
+## Libraries
+
+#### Swift and Cocoa Touch
 

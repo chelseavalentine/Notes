@@ -20,3 +20,22 @@ Notes taken while reading __Jumping into C++__ by Alex Allain.
 * __memory leak__: result of not freeing memory when out of use
 * __invalid memory__: memory that hasn't been allocated, and thus cannot be accessed (causes crashes)
   * can occur when you don't init pointers (—> data corruption or crashes)
+
+### Pointer syntax
+
+Pointer declaration:
+
+``` c++
+<type> *<pointer_name>
+// or
+<type>* <pointer_name>
+  
+/**
+* However, if you're declaring multiple pointers, indicate that
+* each is a pointer.
+*/
+int *pointer1, *pointer2, *pointer3;
+// not
+int* pointer1, nonpointer2, nonpointer3;
+```
+
