@@ -143,3 +143,94 @@ void swap(int& x1, int& x2) {
 
 It looks virtually the same as the second function, which didn't actually swap the value, but it actually works because of the parameter types are suffixed with `&`.
 
+### Dynamic memory allocation
+
+* __dynamic allocation__: requesting as much/little memory as needed while program runs
+* __freeing memory__: returning memory back to the free store
+
+#### 1. `new`
+
+Initialize pointers w/ memory from the free store (unused memory):
+
+``` c++
+// return the amount of memory that'd hold an integer
+int *p_int = new int;
+```
+
+__freeing memory__: returning memory back to the free store
+
+``` c++
+delete p_int;
+p_int = NULL; // not necessary, but if you dereference a pointer after it's freed, you run the risk of the program crashing in use, or corrupting user data
+```
+
+__tip__: don't store memory & allocate memory on the same line, like:
+
+``` c++
+int &val = *(new int);
+```
+
+The reference won't get immediate access to the memory address. You should make a pointer first, and then get the memory address of that.
+
+##### Assigning an array to a pointer
+
+``` c++
+int array[10];
+int* p_array = array;
+
+for (int i = 0; i < 8; i++) p_array[i] = i;
+
+// or
+int *p_array = new int[10];
+delete[] p_array;
+p_array = NULL;
+```
+
+If we're creating an array assigned to a pointer, specify it in the function's signature!
+
+``` c++
+int *growArray(int* p_values, int* size) {
+  int *p_new = new int[size * 2];
+  //
+  delete[] p_values;
+  return p_new;
+}
+```
+
+##### Pointer arithmetic
+
+``` c++
+int array = new int[10];
+array[3] = 120;
+```
+
+is actually pointer arithmetic, because in reality it's finding the memory location 3 integer sizes over, like
+
+``` c++
+*(x + 3) = 120;
+// aka  x + 3*sizeof(int)
+```
+
+`sizeof` gives you the size of a variable of a type, in bytes
+
+So accessing `array[3][2]` of `new int[][5]` or `new int[5][5]` would be doing the following pointer arithmetic:
+
+``` c++
+*(array + 3 * <width of array> + 2)
+```
+
+##### Pointing to a pointer
+
+``` c++
+int *p_y;
+int **p_p_x;
+p_p_x = & p_y;
+p_p_x = new int;
+```
+
+##### Pointer to pointer vs 2D arrays
+
+* 2D arrays hold contiguous memory
+* pointers to pointers have separate chunks of contiguous memory
+
+Significance? You cannot assign a 2D array to a pointer to a pointer, but you can assign an array to a pointer.
