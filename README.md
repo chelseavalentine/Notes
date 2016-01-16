@@ -6,6 +6,10 @@ This repository acts as my personal reference for the different languages, libra
 
 It's impossible to have time to learn everything as I discover it, so I'll put them on the back burner for now.
 
+### Mobile
+
+* [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
+
 ### Design
 
 1. [FramerJS](http://framerjs.com/) (Create animated prototypes and demos)
@@ -41,4 +45,3 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 ##### Software
 
 1. [JetBrains' WebStorm](https://www.jetbrains.com/webstorm/documentation/) *(will create a lot of boilerplates for you and integrate frameworks)*
-
