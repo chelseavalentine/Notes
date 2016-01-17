@@ -10,6 +10,10 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 
 * [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
 
+### Command Line
+
+* [Vim-Galore](https://github.com/mhinz/vim-galore)
+
 ### Design
 
 1. [FramerJS](http://framerjs.com/) (Create animated prototypes and demos)
@@ -36,6 +40,7 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 
 ##### JavaScript
 
+* [Babel & ES2015](https://babeljs.io/docs/learn-es2015/)
 * [SuperheroJS](http://superherojs.com/)
 
 ##### CSS
