@@ -110,31 +110,85 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 
 #### Processes
 
-* ​
+* __process__: OS's abstraction for running a program
+  * multiple processes are run concurrently
+    * __concurrently__: instructions of one process are interleaved w/ another process's instructions, so the operations appear to be occurring at the same time/running in parallel
+* __context switching__:
+  * __context__: the state (all of the info that the process needs to run), including things like the current values of the PC (the register), the register file, & the main memory's contents
+* __kernel__: the portion of the OS code that's always in memory; a collection of code & data structures the system uses to manage all of the processes
+  * it tdeals w/ transitions from one process to another
+  * (eg. when an app needs the system to do something, eg I/O, it executes a system call instruction, transferring control to the kernel)
 
 #### Threads
 
-* ​
+* __thread__: an execution unit within a process; a process can have multiple threads
+  * threads run in the context of the process & share the same code and global data as the process
+  * easier to communicate between threads than between processes
+  * multithreading can ofc make programs faster (when comptuer has multiple processors)
 
 #### Virtual memory
 
-* ​
+* __virtual memory__: an abstraction that makes it seem like each process has exclusive use of memory
+  
+  * __virtual address space__: a uniform view of memory that a process has, an address to a location in main memory
+    
+    * each address has well-defined areas:
+      
+      1. _program code & data_
+         
+         initialized by the program's executable
+         
+      2. *heap*
+         
+         dynamically expands & contracts & run time due to library routines like `malloc` & `free`
+         
+      3. _shared libraries_
+         
+         eg. C standard library, math library, etc.
+         
+      4. _stack_
+         
+         compiler uses to implement function calls; dynamically expands & contracts w/ program's execution. Eg. imagine a recursive function adding function calls to the stack
+         
+      5. _kernel virtual memory_
+         
+         applications can invoke the kernel here; can't modify the kernel or handle any of its functions
 
 #### Files
 
-* ​
+* __file__: a sequence of bytes
+  * therefore, all I/O devices (eg. disks, keyboards, networks, displays, etc.) are files
 
-### Networking
+
 
 ### Key themes and concepts
 
-#### Amdahl's Law
+#### Amdahl's law
 
-#### Thread-Level Concurrency
+* __Amdahl's law__: when we speed up one part of the system, the overall effect on the system depends on the significance of the part & how much it was sped up
 
-#### Instruction-Level Parallelism
+#### Concurrency and Parallelism
 
-#### Single-Instruction, Multiple-Data (SIMD) Parallelism
+* __parallelism__: use of concurrency to make systems run faster
+
+##### Thread-level concurrency
+
+* __time-sharing__: a single computer switches rapidly among its executed processes, allowing multiple users to interact w/ the system simultaneously, or a single user to run multiple tasks concurrently
+* __uniprocessor system__: system w/ 1 processor core
+* __multiprocessor system__: system w/ 2/+ processor cores, all under the control of one OS kernel
+* __hyperthreading__; __simultaneous multithreading__: a technique enabling a single CPU to execute multiple control flows
+  * needs multiple copies of the cPU hardware (program counters & register files) & single copies of other parts
+  * decides to switch cycles on a cycle-by-cycle basis, rather than having a timer
+    * allows for better usage of resources, b/c if a thread is waiting on something, the CPU can switch to a different thread
+
+##### Instruction-level parallelism
+
+* __instruction-level parallelism__: ability to execute multiple instructions at one time (eg. multiple per clock cycle)
+* __pipelining__: actions needed for an instruction are partitioned into steps, the processor hardware has a series of stages, & then each stage performs a step
+  * stages operate in parallel
+* __superscalar processors__: processors that can sustain execution rates faster than 1 instruction per clock cycle
+* __single-instruction multiple-data (SIMD) parallelism__: splitting a single instruction into multiple operations to be performed in parallel
 
 ##### Importance of abstractions in computer systems
 
+* __Application Program Interface (API)__
