@@ -69,23 +69,60 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 
 (From 1: smaller, faster, & costlier storage devices to 7: larger, slower & cheaper storage devices)
 
-1. register
-2. L1 cache (SRAM)
-3. L2 cache (SRAM)
+* **static random access memory (SRAM)**: system can get the effect of a large & fast memory by exploiting code & data locality
+
+
+1. register file
+   
+   *holds words removed from the cache memory*
+   
+2. L1 cache (SRAM) (located on the processor chip, accesses are almost as fast as the register)
+   
+   *holds cache lines from the L2 cache*
+   
+3. L2 cache (SRAM) (5x longer than L1, connected to the processor by a bus)
+   
+   *holds cache lines from the L3 cache*
+   
 4. L3 cache (SRAM)
-5. main memory (DRAM)
-6. local secondary storage (local disks)
-7. remote secondary storage (distributed file systems, Web servers)
+   
+   *holds cache lines from memory*
+
+
+1. main memory (DRAM)
+   
+   *holds disk blocks from local disks*
+   
+2. local secondary storage (local disks)
+   
+   *holds files retrieved from disks on the remote network servers*
+   
+3. remote secondary storage (distributed file systems, Web servers)
 
 ### How the OS interfaces with Hardware
 
+* __operating system__: the software layer between the application program (software) & the hardware (eg. processor, main memory, I/O devices)
+  * purposes:
+    1. protect the hardware from misuse by bad apps
+    2. abstracts the methods to dealing w/ the low-lvl hardware devices, to make it easier for apps
+  * abstractions:
+    * *processes* (abstractions for the processor, main memory, & I/O devices), *virtual memory* (abstractions for the main memory & disk I/O devices), & *files* (abstractions for I/O devices)
+
 #### Processes
+
+* ​
 
 #### Threads
 
+* ​
+
 #### Virtual memory
 
+* ​
+
 #### Files
+
+* ​
 
 ### Networking
 
