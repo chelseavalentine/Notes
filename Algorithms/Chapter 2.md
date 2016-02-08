@@ -74,22 +74,152 @@
 ##### Trees
 
 * __free tree__, __unrooted tree__: a tree without a notion of a root; essentially a graph
+  
+  <img src="./imgs/unrootedtree.jpg" width="300">
 
 
 
 ## Data structures and the hazards of implementation
 
-## Tarjan's abstractions and conceptualizations
+##### Circular queue
+
+* __cursor__: the technical term for an array index variable
+* an array with _n_ elements can be used to implement a circular queue with at most _n-1_ records
+  * this allows us to distinguish the full and empty situations from each other, because front != back
+  * it's at most _n-1_ unless you do an alternate implementation where you keep track of whether the last queue operation was an insertion/deletion
+
+##### Doubly sorted back-deleting lossy queue
+
+* a priority queue w/ the following rules:
+  * must support `deleteMin()`
+  * inserting a record w/ key `y` means that all values greater than `y` need to be deleted & thrown away
+* example implementation: a sorted list/array, sorted from least → greatest keys
+  * back deletions ensure that the queue is still sorted
+  * records are also sorted by the time they were inserted in the queue
+* amortized operation count for deletion is constant
+
+##### Binary heap
+
+* __complete binary tree__: a binary tree w/ _d_ levels has 2^(d-1) leaves
+
+#####  
 
 ## Tree traversal
 
 ### Depth-first tree traversal
 
+* __Depth-First-Search (DFS)__: traverses edges from vertex to vertex, starting w/ the root; if a vertex has unprocessed children, select one of them to visit next, otherwise go back up the tree to the vertex's parents, and process the other children if any
+  
+  * only goes back up when the entire subtree rooted by the vertex has been processed
+  
+* __preorder traversal__: (Node, Left to Right)
+  
+  processes Node, then starts at the node's right subtree and goes down, then moves onto node's left subtree once that's done, [see this img](https://github.com/chelseavalentine/Problems/raw/master/notes/img/preorder.png)
+  
+  This is the code for a binary tree, but you can do it for a tree; you would have a for loop over the children
+  
+  ``` java
+  void preorderTraversal(Node node) {
+    if (node == null) return;
+    // process node here
+    preorderTraversal(node.left);
+    preorderTraversal(node.right);
+  }
+  ```
+  
+  ​
+  
+* __inorder traversal__: (___for binary trees only___) (Left, Node, Right)
+  
+  Starts at left-most node, goes up to parent, [see this img](https://github.com/chelseavalentine/Problems/raw/master/notes/img/inorder.png)
+  
+  <img src="./imgs/inordernumbering.jpg" width="300">
+  
+  ``` java
+  void inorderTraversal(Node node) {
+    if (node == null) return;
+    inorderTraversal(node.left);
+    // process current node
+    inorderTraversal(node.right);
+  }
+  ```
+  
+  ​
+  
+* __postorder traversal__: (Left to Right, Node)
+  
+  left-most lowest nodes → right-most nodes → process root, [see this image](https://github.com/chelseavalentine/Problems/raw/master/notes/img/postorder.png)
+  
+  This is the code for a binary tree, but you can do it for a tree; you would have a for loop over the children
+  
+  ``` java
+  void postorderTraversal(Node node) {
+    postorderTraversal(node.left);
+    postorderTraversal(node.right);
+    // process current node
+  }
+  ```
+  
+* __code motion__: restructuring a program while preserving the logic
+
+##### Use cases for the traversals
+
+* postorder:
+  * solution for vertex _v_ is complete @ _v_'s postorder exit time (when DFS leaves _v_ for the last time, never to return)
+* preorder:
+  * usually used for initialization
+
+##### Arithmetic expression trees
+
+* a unary `–` operator represents the negated value of its right subtree
+* a postorder DFS will allow us to evaluate the tree from bottom up (Reverse Polish)
+* each vertex has the field `v.op` & `v.numb`, one of them is set to null depending on the nature of the vertex
+* in _Reverse Polish Notation_, we create a string listing the vertices in postorder DFS ordering
+  * each operator will be applied to the 2 numbers before it
+  * indicate the unary `–` operator with a `m` instead, so it isn't confused with subtraction
+
+
+
 ### Iterative depth-first tree traversal
+
+* is done with stacks & a while loop that checks whether the stack is empty, but you would push the children onto the stack in right→ left ordering, so that you can process them left→right when you pop them off the stack
+
+
 
 ### Breadth-first tree traversal
 
+* __Breadth-First-Search (BFS)__: visits a tree's vertices level-by-level, going top→bottom, and right→left
+  
+  * use cases:
+    * path optimization & game search problems
+  * no recursive implementations; needs an auxiliary data structure (queue) to sequence the traversals
+    * when a vertex is dequeued from the front, its children are enqueued at the back
+  
+  ``` java
+  void BFS(Node node) {
+    create empty queue Q;
+    insert v at back of Q;
+    repeat
+      x = DeleteFrontOf(Q);
+    	//process vertex x
+      for each child w of x, do
+        insert w at back of Q
+    until Q is empty
+  }
+  ```
+  
+  * enhancement: use priority queue to hold data
+  
+* __leaf-based bottom-up BFS__: processes the leaves first, then go up and process all of the vertices whose children are just leaves
+  
+  * a vertex can't be processed until all of its children are processed
+  * there's also a level-based bottom-up BFS 
+
+
+
 ## Stepping through recursive algorithms
+
+
 
 ## Tree-based DFS solution methods
 
