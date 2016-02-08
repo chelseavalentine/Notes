@@ -217,13 +217,7 @@
 
 
 
-## Stepping through recursive algorithms
-
-
-
 ## Tree-based DFS solution methods
 
-### DFS traversal of implicitly defined trees
-
-### Iterative deepening: using DFS to simulate BFS
+### Iterative deepening: using DFS to simulate BFS (p. 99)
 
