@@ -9,12 +9,12 @@
 
 ##### Stack
 
-* __L__ast-__I__n-__F__irst-__O__ut (LIFO)
+* __Last-In-First-Out__ (LIFO)
 * methods: `push()`, `pop()`, `peek()`, `isEmpty()`, `isFull()`
 
 ##### Queue
 
-* __F__irst-__I__n-__F__irst-__O__ut
+* __First-In-First-Out__ (FIFO)
 * methods: `enqueue()`, `dequeue()`
 
 ##### Double-ended queue
