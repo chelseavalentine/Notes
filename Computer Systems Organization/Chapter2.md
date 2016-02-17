@@ -36,12 +36,21 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 | `[signed] char` | `unsigned char`  | 1        | 1        |
 | `short`         | `unsigned short` | 2        | 2        |
 | `int`           | `unsigned`       | 4        | 4        |
-| `long`          |                  | 4        | 8        |
+| `long`          | `unsigned long`  | 4        | 8        |
 | `char *`        |                  | 4        | 8        |
 | `float`         |                  | 4        | 4        |
 | `double`        |                  | 8        | 8        |
 
+The compiler won't always treat the data type as `signed`, if you want it to, then you must declare `signed [data type]`
 
+Can declare in multiple ways (all of the following are identical)
+
+``` c
+unsigned long
+unsigned long int
+long unsigned
+long unsigned int
+```
 
 ###### Declaring pointers in C
 
@@ -52,27 +61,45 @@ T *p;
 char *p;
 ```
 
-
-
 #### Addressing and byte ordering
+
+* multi-byte objects are stored as a contiguous sequence of bytes in memory
+* _little endian_: storing bytes from least to most significant
+  * _big endian_: storing bytes from most to least significant
+  * why does this even matter?: if you're sending data over from a machine w/ the reverse ordering
+    * thus, in networking, the data is usually converted  to match the network standard
+  * why does this even matter?: when reading machine-level programs
+
+###### "Aliases" (`typedef`) in C
+
+``` c
+typedef int *int_pointer
+// allows you to declare a pointer to an int like this, which is semantically better
+int_pointer ip;
+```
+
+* also you can cast pointers in C… or maybe it's only `void *` pointers… you'll probably figure it out
 
 #### Representing Strings
 
-#### Representing code
-
-#### Introduction to Boolean algebra
+* __string__: array of characters terminated by `null` (ideally, if the memory is really full or something, you can't count on there being a null at the end, it could be another in-use memory chunk)
 
 #### Bit-level operations in C
 
-#### Logical operations in C
+* _masking operations_ w/ bit-level operations: mask selects a part of the bits in the word using a bit pattern
 
 #### Shift operations in C
 
-
+* consider an operand _x_ that has a bit representation of x, sub …, w-1, w, w-2,.. and so on, doing `x << k` will do w-k-1, w-k, w-k-2,… and so on. `x >> k` will do w+k-1, w+k, w+k-2, and so on.
 
 ### Integer representation
 
+* ​
+
 ### Integer arithmetic
+
+* ​
 
 ### Floating point
 
+* ​

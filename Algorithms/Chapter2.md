@@ -1,4 +1,4 @@
-# Chapter 2: The basics of data structures
+# Chapter 2: Basics of Data Structures
 
 ## Elementary data structures and their ADT abstractions
 
@@ -213,11 +213,10 @@
 * __leaf-based bottom-up BFS__: processes the leaves first, then go up and process all of the vertices whose children are just leaves
   
   * a vertex can't be processed until all of its children are processed
-  * there's also a level-based bottom-up BFS 
+  * there's also a level-based bottom-up BFS
 
 
 
 ## Tree-based DFS solution methods
 
 ### Iterative deepening: using DFS to simulate BFS (p. 99)
-
