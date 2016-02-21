@@ -45,5 +45,17 @@
 
 * _differencing_: cancelling out all but 1 or 2 terms in a sequence
 
+### Transformational methods for solving recurrence equations
 
+1. Telescoping (p. 199)
+
+   1. this method works for expressions of the form expr(n) - expr(n-1) = c sub n
+
+      eg. { T(0) = 1; T(n) = T(n-1) + 1, if n ≥ 1.
+
+2. Domain & range transformations (pp. 200-202)
+
+   1. domain transformations should be done before range transformations
+
+3. Differencing (pp. 204-205)
 

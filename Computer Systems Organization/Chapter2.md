@@ -4,7 +4,7 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 
 
 
-## Chapter 2: Representing and Manipulating Information
+## Chapter 2: Representing & Manipulating Information
 
 * __unsigned__ encodings represent numbers `>= 0`
 * __two's complement__ encodings represent __signed__ integers (numbers + or –)
@@ -86,13 +86,16 @@ int_pointer ip;
 
 #### Bit-level operations in C
 
-* _masking operations_ w/ bit-level operations: mask selects a part of the bits in the word using a bit pattern
+* _masking operations_ w/ bit-level operations: mask selects a part of the bits in the word using a bit pattern (everything but the pattern becomes 0s)
 
 #### Shift operations in C
 
 * consider an operand _x_ that has a bit representation of x, sub …, w-1, w, w-2,.. and so on, doing `x << k` will do w-k-1, w-k, w-k-2,… and so on. `x >> k` will do w+k-1, w+k, w+k-2, and so on.
+  * `x << 4` will add 4 0's to the end of the value, shifting the rest 4 to the left
+    * 01100011 becomes 0011_0000_
+  * `x >> 4` would add 4 0's to the beginning of the value, shifting the rest 4 to the right
 
-### Integer representation
+### Integer representations
 
 * ​
 
