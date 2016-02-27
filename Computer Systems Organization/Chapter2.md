@@ -150,4 +150,27 @@ Typical ranges for C integral data types for 64-bit programs
 
 ### Floating point
 
-* ​
+* floating point representation of rational numbers is V = x • 2^y
+* in base 10 numbers, you can consider the '.' as a binary point, where all digits left are positive & right ones are negative
+* IEEE floating-point standard representation: V = (-1)^s • M • 2^E
+  * sign *s* determines negative/positive,  for number 0, there's a special case
+  * m is a fractional binary number between 1 and 2-e (greek)
+  * exponent E weighs the value by a (possibly negative) power of 2
+* sign, exponent, fractional field diagrams (p. 113), examples (p. 116)
+
+##### Rounding
+
+Illustration of rounding modes
+
+| Mode              | $1.40 | $1.60 | $1.50 | $2.50 | $-1.50 |
+| ----------------- | ----- | ----- | ----- | ----- | ------ |
+| Round-to-even     | $1    | $2    | $2    | $2    | $-2    |
+| Round-toward-zero | $1    | $1    | $1    | $2    | $-1    |
+| Round-down        | $1    | $1    | $1    | $2    | $-2    |
+| Round-up          | $2    | $2    | $2    | $3    | $-1    |
+
+##### Floating-point operators
+
+* there are defined ways to add & multiply (p. 123) 
+  * eg. add: Round(x + y), multiply: Round(x • y)
+* how C handles rounding & overflows (p. 125)
