@@ -97,11 +97,26 @@ int_pointer ip;
 
 ### Integer representations
 
-* ​
+#### Integral data types
+
+Typical ranges for C integral data types for 64-bit programs
+
+| C data type      | Minimum          | Maximum          |
+| ---------------- | ---------------- | ---------------- |
+| `[signed] char`  | -128             | 127              |
+| `unsigned char`  | 0                | 255              |
+| `short`          | -32,768          | 32,767           |
+| `unsigned short` | 0                | 65,535           |
+| `int`            | ≈-2.15 million   | ≈2.15 million    |
+| `unsigned`       | 0                | ≈4.30 million    |
+| `long`           | ≈-9,223 trillion | ≈9.223 trillion  |
+| `unsigned long`  | 0                | ≈18.446 trillion |
 
 ### Integer arithmetic
 
-* ​
+* Encodings
+* Two's complement encodings
+* p. 87
 
 ### Floating point
 
