@@ -116,7 +116,37 @@ Typical ranges for C integral data types for 64-bit programs
 
 * Encodings
 * Two's complement encodings
-* p. 87
+
+#### Unsigned addition
+
+* overflows occur when the sum goes above the max of the data type
+  * it's not a C error when overflows occur, but you probably want to check for them
+  * there can be positive & negative overflow (p. 90)
+
+##### Two's-complement multiplication
+
+| Mode             |    x     |    y     |    x • y    | Truncated x • y |
+| ---------------- | :------: | :------: | :---------: | :-------------: |
+| Unsigned         | 5 [101]  | 3 [011]  | 15 [001111] |     7 [111]     |
+| Two's complement | -3 [101] | 3 [011]  |     -9      |    -1 [111]     |
+| Unsigned         | 4 [100]  | 7 [111]  | 28 [011100] |     4 [100]     |
+| Two's complement | -4 [100] | -1 [111] | 4 [000100]  |    -4 [100]     |
+| Unsigned         | 3 [001]  | 3 [011]  | 9 [001001]  |     1 [001]     |
+| Two's complement | 3 [011]  | 3 [011]  | 9 [001001]  |     1 [001]     |
+
+* Multiplying by constants is just shifting the bits over to the left (p. 101)
+
+* Dividing by constants is just shifting bits over to the right (p. 104)
+
+  * It's x/2^k rounded down in bit form
+
+  * C expression that compules value x/2^k is
+
+    ```c
+     (x<0 ? x+(1<<k)-1 : x) >>k
+    ```
+
+
 
 ### Floating point
 
