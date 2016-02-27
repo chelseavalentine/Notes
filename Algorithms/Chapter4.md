@@ -14,9 +14,7 @@
 
 ## Fast exponentiation & fast evaluation of constant-coefficient recurrences
 
-### Fast exponentiation
-
-* ​
+### Fast exponentiation​
 
 ### Constant coefficient, constant-step recurrence equations
 
@@ -39,8 +37,6 @@
 ### Conditional probabilities
 
 ### Selected properties of random variables
-
-
 
 
 
