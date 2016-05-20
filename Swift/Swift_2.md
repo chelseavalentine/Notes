@@ -11,4 +11,4 @@
 ## Methods
 
 
-[<- Prev page](README.md) | [Next Page ->](Swift_3.md)
+[Prev page](Swift_1.md) • [Next Page](Swift_3.md)
