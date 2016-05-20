@@ -2,10 +2,10 @@ These notes are all based on Apple's Swift 2.2 book.
 
 #### Table of Contents
 1. [A Swift Tour](#a-swift-tour)
-2. [The Basics](#the-basics)
-3. [Strings and Characters](#strings-and-characters)
-4. [Collection Types](#collection-types)
-5. [Control Flow](#control-flow)
+2. [The Basics](Swift_1.md#the-basics)
+3. [Strings and Characters](Swift_1.md#strings-and-characters)
+4. [Collection Types](Swift_1.md#collection-types)
+5. [Control Flow](Swift_1.md#control-flow)
 6. [Functions](Swift_2.md#functions)
 7. [Closures](Swift_2.md#closures)
 8. [Enumerations](Swift_2.md#enumerations)
@@ -195,13 +195,5 @@ These notes are all based on Apple's Swift 2.2 book.
     anyCommonElements([1, 2, 3], [3])
     ```
 
-## The Basics
 
-## Strings and Characters
-
-## Collection Types
-
-## Control Flow
-
-
-[Next page ->](Swift_2.md)
+[Next page ->](Swift_1.md)
