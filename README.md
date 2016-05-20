@@ -2,6 +2,7 @@
 
 This repository acts as my personal reference for the different languages, libraries, frameworks, and software that I learn.
 
+
 ## Back burner
 
 It's impossible to have time to learn everything as I discover it, so I'll put them on the back burner for now.
@@ -40,13 +41,9 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 
 ##### JavaScript
 
-* [Babel & ES2015](https://babeljs.io/docs/learn-es2015/)
 * [SuperheroJS](http://superherojs.com/)
-
-##### CSS
-
-* [transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 
 ##### Software
 
 1. [JetBrains' WebStorm](https://www.jetbrains.com/webstorm/documentation/) *(will create a lot of boilerplates for you and integrate frameworks)*
+
