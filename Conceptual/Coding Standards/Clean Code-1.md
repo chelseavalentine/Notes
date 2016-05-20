@@ -10,7 +10,7 @@
 
 ### We are Authors
 
-* "We are authors. And one thing about authors is that they have readers. Authors are responsible for communicating well with their readers. The net time you write a line of code, remember you are an author, writing for readers who will judge your effort."
+* "We are authors. And one thing about authors is that they have readers. Authors are responsible for communicating well with their readers. The next time you write a line of code, remember you are an author, writing for readers who will judge your effort."
 
 
 
@@ -96,7 +96,7 @@
 
 eg.
     To include the setups and teardowns, we include setups, then we include the tent, and then we include the teardowns.
-    
+
     To include the setups, we include the suite setup if this is a suite, then we include the regular setup.
 
     To include the suite setup, we search the parent hierarchy for the...
@@ -219,7 +219,7 @@ public class EmployeeFactoryImpl implements EmployeeFactory {
 
 ### Prefer Exceptions to Returning Error Codes
 
-* If you use exceptions, rather than returned error codes, then the error processing code can be separated from the path code, and be simplified: 
+* If you use exceptions, rather than returned error codes, then the error processing code can be separated from the path code, and be simplified:
 
 ```java
 try {

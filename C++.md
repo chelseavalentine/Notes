@@ -71,7 +71,7 @@ Note:
 
 _You can set the address stored in a pointer, but you cannot set the address of a variable._
 
-__You should initialize pointers before you use them__. Or mark it as uninitialized:
+__You should initialize pointers before you use them__. Or mark them as uninitialized:
 
 ``` c++
 int *p_x = NULL;

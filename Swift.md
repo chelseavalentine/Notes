@@ -1,7 +1,5 @@
 # Swift
 
-Time to learn Swift!
-
 ## Syntax
 
 #### Type declarations
@@ -26,19 +24,19 @@ let message2 = "I'm \(age) for now"
 
 
 * __Optionals__: used when you have a variable whose value is optional (either the value, or `nil`
-  
+
   ``` swift
   let optionalNum: Int? = 10
   ```
-  
+
   You can later unwrap these to get the type from the optional, if you know the value isn't `nil`. One way is with the __force unwrap operator__ `!`, like so:
-  
+
   ``` swift
   let num: Int = optionalNum!
   ```
-  
+
   Here, we're unwrapping myString to see whether it's an integer. If it is, it'll assign possibleInt to an integer, otherwise it'll be `nil`.
-  
+
   ``` swift
   var myString = "7"
   var possibleInt = Int(myString)
@@ -46,11 +44,11 @@ let message2 = "I'm \(age) for now"
 
 
 * __implicitly unwrapped optionals__: (you'll rarely use) are indicated with a `!`. Its value is mandatory, but you don't need to unwrap it every time you want to access it
-  
+
   ``` swift
   var implicityUnwrappedInt: Int!
   ```
-  
+
   ​
 
 #### Arrays
@@ -74,22 +72,8 @@ let array2 = [String]()
 
 #### Control Flow
 
-* `if`, `else if`, `else`
-  
-  ``` swift
-  if variable == 0 {
-    //
-  } else if variable > 2 {
-    //
-  } else {
-    //
-  }
-  ```
-
-
-
 * optional binding to check an optional's value
-  
+
   ``` swift
   var optional: String? = "Name"
   var greeting = "Hello."
@@ -99,9 +83,8 @@ let array2 = [String]()
   ```
 
 
-
 * `for-in` (like for-each)
-  
+
   ``` swift
   let array = [1, 20, 31, 42, 50]
   for num in array {
@@ -110,13 +93,12 @@ let array2 = [String]()
   ```
 
 
-
 * `switch` statements
-  
+
   Notice how you don't need to break out of each case. Cases don't waterfall.
-  
+
   Also you must make exhaustive switch statements, hence the need for the `default` case
-  
+
   ``` swift
   let variable = "hi"
   switch variable {
@@ -134,10 +116,10 @@ let array2 = [String]()
 
 
 * `for` loops
-  
+
   * `…`: closed range operator, includes both values
   * `..<`: half-open range operator, includes bottom bound up to, but not including the upper bound
-  
+
   ``` swift
   for i in 0..<4 {
     //
@@ -148,16 +130,8 @@ let array2 = [String]()
     // temporary value, we just need iterations
   }
   ```
-  
+
   ​
-
-
-* `while` loops
-  
-  //TODO: read about while loops
-
-
-
 #### Functions and methods
 
 * `func`: declares a function
@@ -168,7 +142,7 @@ let array2 = [String]()
 
 ``` swift
 func function(prop1: String, prop2: Int) -> String {
-	return "hehe \(prop1), uhh... \(prop2)."  
+	return "hehe \(prop1), uhh... \(prop2)."
 }
 
 // let's execute our function
@@ -179,28 +153,6 @@ function("it's 7:44am", prop2: 3)
 
 #### Classes and Initializers
 
-**Classes:**
-
-``` swift
-class MyClass {
-  var property1 = 0;
-  
-  func method1() -> void {
-  	print("Hi")
-  }
-}
-```
-
-**Objects:**
-
-We can create instances of the class with the following syntax:
-
-``` swift
-var myClass = MyClass()
-myClass.property1 = 120
-var msg = myClass.method1()
-```
-
 Instead of constructors, we have initializers. So it looks like:
 
 **Initializers:**
@@ -209,11 +161,11 @@ Instead of constructors, we have initializers. So it looks like:
 class MyClass {
   // properties...
   var property: Int
-  
+
   init(property: Int) {
   	self.property = property
   }
-  
+
   // methods...
 }
 ```
@@ -230,37 +182,5 @@ let instance = MyClass(property: 10)
 
 Just like Java, Swift has single inheritance.
 
-We can create subclasses like this:
-
-``` swift
-class Baby: Human {
-  var age: Int
-  var name: String
-  var numLimbs: Int
-  
-  init(age: Int, name: String) {
-  	self.age = age
-    self.name = name
-    super.init(numLimbs: numLimbs)
-  }
-}
-```
-
 A subclass will inherit all of the superclass' behavior. We can override methods, but we must mark it with `override`
-
-
-
-
-
-#### Enumerations and Structures
-
-
-
-#### Protocols
-
-
-
-## Libraries
-
-#### Swift and Cocoa Touch
 
