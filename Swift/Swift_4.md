@@ -13,4 +13,4 @@
 ## Advanced Operators
 
 
-[<- Prev page](Swift_3.md) | [Next Page ->](Swift_5.md)
+[Prev page](Swift_3.md) • [Next Page](Swift_5.md)

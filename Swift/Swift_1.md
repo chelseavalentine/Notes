@@ -148,7 +148,7 @@ Assertions
 * unary plus operator `+` doesn't do anything, but can be used for code symmetry
 * check whether the identity of objects are equal with `!==` and `===`
 
-Nil coaelescing operator (`a ?? b`)
+Nil coalescing operator (`a ?? b`)
 
 * it only unwraps optional type's `a` if it has a value, or takes on default value `b` if `a` is `nil`
     - `b` has to match the type stored in `a`, of course
@@ -238,6 +238,103 @@ bye.removeRange(range) // bye = "bye bye"
 
 ## Collection Types
 
+#### Arrays
+* arrays: ordered collections of values
+    - either declared as `Array<Type>` or `[Type]` (preferred)
+    - empty array initializer: `[Int]()`
+    ```swift
+    // Create an array w/ a specific amount & a default value:
+    var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+    // [0.0, 0.0, 0.0]
+
+    // can be written like this
+    var secondDoubles: [Double] = [2.0, 2.0]
+    // or like this
+    var secondDoubles = [2.0, 2.0]
+    var manyDoubles = threeDoubles + secondDoubles // [0.0, 0.0, 0.0, 2.0, 2.0]
+    ```
+
+Accessing & modifying arrays
+
+* array API: `.count`, `.append()`, `.isEmpty`, `.removeLast()`
+* access an element as usual (eg. `array[0]`)
+* target & replace a range of array elements, even if the replacement is of a different size:
+    ```swift
+    shoppingList[4...6] = ["Peppers", "Ice cream"]
+    // replaced "Chocolate", "Cheese", and "Butter" with two items.
+    ```
+* insert before the specified index: `.insert([Item], atIndex: [Index])`
+* remove an element by index: `.removeAtIndex([Index])`
+* if you need to iterate over each item, and need the index too, use `.enumerate()`
+    ```swift
+    for (index, value) in shoppingList.enumerate() {
+        print("Item \(index + 1): \(value)")
+    }
+    ```
+
+#### Sets
+
+* sets: unordered collections of unique values
+    - the type must be hashable for you to store it in a set (must conform to the `Hashable` & `Equatable` protocols if custom type)
+    - created with `Set<Type>()`
+    - make set empty by equating it to `[]`
+    ```swift
+    // Create initialized set w/ 3 items
+    var flavors: Set<String> = ["Mint", "Chocolate", "Mint", "Berry"]
+
+    // alternatively written as:
+    var flavors: Set = ["Mint", "Chocolate", "Mint", "Berry"]
+    ```
+* set API: `.insert()`, `.count`, `.isEmpty`, `.remove()` (returns item or `nil`), `.removeAll()`, `.contains()`, `.intersect([set])`, `.exclusiveOr([set])`, `.union([set])`, `.subtract([set])`, `.isSubsetOf()`, `.isSupersetOf()`, `.isStrictSubsetOf()`, `.isStrictSupersetOf()`, `.isDisjointWith()`
+
+Iterating over a set
+
+* Since there's no defined ordering, if you want to iterate over a set in a specific order, you need to use `.sort()`, which'll return the set's element as a sorted array
+    ```swift
+    for flavor in flavors.sort() {
+        print("I like \(flavor)")
+    }
+    ```
+
+
+#### Dictionaries
+
+* dictionaries: unordered collections of key-value associations
+    - created with `Dictionary<KeyType, ValueType>` or `[KeyType: ValueType]` (preferred)
+    - empty dictionary initializer example: `[Int: String]()`
+    - or make dictionary empty `[:]` (if context has given us the types already)
+    ```swift
+    var couples: [String: String] = ["Mickey": "Minnie", "Romeo": "Juliet"]
+
+    // or
+    var couples = ["Mickey": "Minnie", "Romeo": "Juliet"]
+    couples["Barack"] = "Michele"
+
+    // Update the value b/c typo
+    couples["Barack"] = "Michelle"
+    // or
+    couples.updateValue("Michelle", forKey: "Barack") // nil returned if doesn't exist already
+
+    couples["Mickey"] = nil // removed that key-value pair
+    ```
+
+* dictionary API: `.count`, `.isEmpty`, `.removeValueForKey([key])`, `.keys`, `.values`
+
+Iterating over a dictionary:
+
+```swift
+// need both key & value?
+for (partner1, partner2) in couples {
+    print("\(partner1) and \(partner2) are a couple.")
+}
+
+// Create an array from keys or values?
+let firstPartners = [String](couples.keys)
+```
+
+* Since there's no defined ordering, if you want to iterate over a dictionary in a specific order, you need to use `.sort()` on the keys or values
+
+
 ## Control Flow
 
 `for-in` loop
@@ -246,7 +343,103 @@ bye.removeRange(range) // bye = "bye bye"
 for character in "Panda 🐼".characters {
     print(character)
 }
+
+for _ in 1...5000 {
+    print("Hi")
+}
 ```
 
+`while` loop
+
+```swift
+while condition {
+    // statements
+}
+```
+
+`repeat-while` loop
+
+```swift
+repeat {
+    // statements
+} while condition
+```
+
+`if`, `else if`, `else` statements
+
+`switch` statement
+ * has no implicit fall-through; there's an implicit break at the end of each case.
+ * must be exhaustive (Doesn't necessarily mean that a `default` is needed)
+
+```swift
+switch some value to consider {
+case value1:
+    // response to value 1
+case value2,
+     1..<5:
+    // response to value 2 or the rnage
+default:
+    // otherwise do something else
+    break
+}
+```
+
+* You can test multiple values in one switch statement by using tuples
+    - if you want to match any value, you can use wildcard `_`
+* You can use _value binding_ to bind values to temporary constants/variables within the case's body
+* `where` can be used to check for more conditions
+
+    ```swift
+    let point = (1, 3)
+
+    switch point {
+    case (0, 0):
+        print("origin")
+    case (let y, 0):
+        print("x-axis, at y-coordinate \(y)")
+        fallthrough
+    case (0, _) where _ % 2 == 0:
+        print("y-axis")
+    case (-2...2, -2..2):
+        print("is inside the box")
+    // No default needed because this is exhaustive
+    case let (x, y):
+        print ("is somewhere...")
+    }
+    ```
+
+* Control transfer statements: `continue`, `break`, `fallthrough`, `return`, `throw`
+
+Yay! You can label statements in Swift!
+
+```swift
+labelName: while condition {
+    while condition2 {
+        if (badThing) break labelName
+    }
+}
+```
+
+* `guard` executes statements based on the boolean value of an expression; it always has an `else` clause (thereby making it different from `if` statements)
+
+```swift
+func helloWorld(person: [String: String]) {
+    guard let name = person["name"] else {
+        print("How can you not have a name?")
+        return
+    }
+}
+```
+
+#### Checking API availability
+
+```swift
+if #available(iOS9.1, OSX 10.10, *) {
+    // use ios 9.1 APIs on iOS, and use OS X v10.10 APIs on OS X
+    // * is required & specifies that on any other platform, the body of the if statement will use the minimum deployment target specified by your target
+} else {
+    print("You're out of luck!")
+}
+```
 
 [Prev page](README.md) • [Next Page](Swift_2.md)
