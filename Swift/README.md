@@ -1,4 +1,4 @@
-These notes are all based on Apple's Swift 2.2 book.
+These notes are all based on Apple Inc. “The Swift Programming Language (Swift 2.2).” iBooks. https://itun.es/us/jEUH0.l
 
 #### Table of Contents
 1. [A Swift Tour](#a-swift-tour)
