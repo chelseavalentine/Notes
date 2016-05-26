@@ -39,7 +39,7 @@
     - values passed to a variadic parameter are made available w/i the function's body as an array of the declared type
     - _you can use at most one variadic parameter in a function_
 
-* _in-out parameters_: mutable parameters (by default, parameters are constants), defined by writing `inout` at the start of the parameter definition
+* __in-out parameters__: mutable parameters (by default, parameters are constants), defined by writing `inout` at the start of the parameter definition
     - whatever happens in the function body will replace the original value
     - must prepend `&` to the variable name in the function call
     ```swift
@@ -219,11 +219,353 @@ let strings = numbers.map {
 
 ## Enumerations
 
+* enumeration (`enum`): a group of related values specified as `case`s, which can have any type for each case
+```swift
+enum Seasons {
+    case Spring
+    case Summer
+    case Autumn
+    case Winter
+}
+// or
+enum Seasons {
+    case Spring, Summer, Autumn, Winter
+}
+```
+
+* once a value is declared as an enum type, you can change it by using `.[another case here]`
+```swift
+var season = Seasons.Summer
+switch season {
+case .Spring, .Fall:
+    print("Mellow seasons are great.")
+case .Summer:
+    print("Too hot!")
+case .Winter:
+    print("Too cold!")
+}
+```
+
+*  you can store _associated values_ along with each enum case, to change what type it can take. They're accessible if you extract each value as a `let`/`var`
+```swift
+enum Barcode {
+    case UPCA(Int, Int, Int, Int)
+    case QRCode(String)
+}
+var skirtBarcode = Barcode.UPCA(8, 85909, 51226, 3)
+
+switch skirtBarcode {
+case .UPCA(let numberSystem, let manufacturer, let product, let check):
+    print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+case .QRCode(let productCode):
+    print("QR code: \(productCode).")
+}
+
+// alternatively
+switch skirtBarcode {
+case let .UPCA(numberSystem, manufacturer, product, check):
+    print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+case let .QRCode(productCode):
+    print("QR code: \(productCode).")
+}
+
+```
+
+Raw values
+
+* you can assign `enum` cases unique raw values (strings, characters, integer/floating point), all of the same type
+```swift
+enum Titles: String {
+    case Lvl1 = "Noob"
+    case Lvl2 = "Beginner"
+    case Lvl3 = "Pro"
+}
+```
+
+Implicitly-assigned raw values
+
+* you can have Swift automatically set the values for you. Each case is one more than the last. If the first case doesn't have a value, it's set to `0`
+* for strings, it will turn the name of the case into a String for it's `rawValue`
+* initializing from a raw value: you can identify a case from it's raw value
+```swift
+enum Planet: Int {
+    case Mercury = 1, Venus, Earth
+}
+print(Planet.Earth.rawValue) // 3
+print(Planets(rawValue: 2).rawValue) // Can't do this, because it isn't unwrapped; if you want to unwrap it, do Planets(rawValue: 2)!.rawValue
+print(Planets(rawValue: 20412)) // nil
+
+enum Titles: String {
+    case Noob, Beginner, Pro
+}
+print(Titles.Noob.rawValue) // "Noob"
+```
+
+Recursive enumerations
+
+* __recursive enumeration__: an enumeration that has another instance of the enumeration as an associated value for 1/+ cases
+    - indicated by writing `indirect` before the case, or the `enum` to make the whole `enum` a recursive
+    ```swift
+    // Recursive case
+    enum ArithmeticExpression {
+        case Number(Int)
+        indirect case Addition(ArithmeticExpression, ArithmeticExpression)
+        indirect case Multiplication(ArithmeticExpression, ArithmeticExpression)
+    }
+
+    // Recursive enum
+    indirect enum ArithmeticExpression {
+        case Number(Int)
+        case Addition(ArithmeticExpression, ArithmeticExpression)
+        case Multiplication(ArithmeticExpression, ArithmeticExpression)
+    }
+
+    // Example using this recursive enum:
+    let five = ArithmeticExpression.Number(5)
+    let four = ArithmeticExpression.Number(4)
+    let sum = ArithmeticExpression.Addition(five, four)
+    let product = ArithmeticExpression.Multiplication(sum, ArithmeticExpression.Number(2))
+
+    // Another example
+    func evaluate(expression: ArithmeticExpression) -> Int {
+        switch expression {
+        case let .Number(value):
+            return value
+        case let .Addition(left, right):
+            return evaluate(left) + evaluate(right)
+        case let .Multiplication(left, right):
+            return evaluate(left) * evaluate(right)
+        }
+    }
+
+    print(evaluate(product))
+    ```
+
+
 ## Classes and Structures
+
+* things __classes__ have that __structures__ don't
+    - subclasses inherit the characteristics of its superclass
+    - typecasting allows you to check & interpret the typeo f the class at instance
+    - it has a deinitializer
+    - due to reference counting, you can have more than 1 reference to a class instance
+        + structures are value types (like `enum`s), and therefore passed by value, whereas classes are passed by reference
+    - do two instances refer to the same instance behind the scene? Check with `!==` and `===`
+
+```swift
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class Video {
+    var resolution = Resolution()
+    var interlaced = false
+    var name: String?
+}
+```
+
+* things __structures__ have that __classes__ don't
+    - an automatically-generated memberwise initializer
+    ```swift
+    let vga = Resolution(width: 640, height: 480)
+    ```
+    -
+
+* you can modify a class/struct instance's properties even if you make it a constant, because the whole is still the same
+* check whether 2 instances are equal in value with `==`
+
+When to use structures vs. classes:
+* the struct's primary purpose is to encapsulate a few relatively simple data values
+* it's reasonable to expect the values to be copied rather than referenced
+* any properties in the struct are value types
+* the struct doesn't need to inherit properties/behavior from another eixsting type
+
+* `String`, `Array`, `Dictionary` are examples of structures (`NSString`, `NSArry`, `NSDictionary` are classes)
+
 
 ## Properties
 
+* `struct`, `class`, `enum` can have computed properties, which are properties associated with an instance
+* only `class` & `struct` can have stored properties, which are properties associated with an instance
+* __type properties__: properties that are associated w/ a type itself
+* you can have property observers to watch changes
+
+Stored properties
+
+* __stored properties__ example:
+    ```swift
+    struct FixedLengthRange {
+        var firstValue: Int
+        let length: Int
+    }
+    ```
+
+* __lazy stored property__: a property whose initial value isn't calculated until the first time it's used. Must be a variable
+    - write `lazy` bfore the property declaration
+```swift
+// Takes a non-trivial amount of time to initialize. Imports data from an external file.
+class DataImporter {
+    var fileName = "data.txt"
+}
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+}
+
+let manager = DataManager()
+manager.data.append("Data 1")
+manager.data.append("Data 2")
+// importer instance hasn't been created for this manager instance yet
+print(manager.importer.fileName) // now the importer is created & prints "data.txt"
+```
+
+* _caution:_ `lazy` properties may be initialized multiple times if it's accessed by multiple threads simultaneously
+
+Computed properties
+
+* __computed properties__: provide a getter & an optional setter to retrieve and set other properties
+```swift
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set (newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+
+        // Shorthand for setter
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+    var square = Rect(origin: Point(x: 0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+    square.center = Point(x: 15.0, y: 15.0) // using the setter
+}
+```
+
+* __read-only computed properties__: a computed property with a getter but no setter (no need to write get, you can just write `get`'s body in the `{ }`)
+```swift
+struct Cuboid {
+    // ...
+    var volume: Double {
+        return width * height * depth
+    }
+}
+```
+
+Property observers
+
+* __property observers__ are called whenever a property value is set, even if the new value is the same as the old.
+    - can be used for all properties except `lazy` stored properties
+    - you can add a property observer to an inherited property by overriding the property w/i the subclass
+    - two types of observers: `willSet` (called before value is stored), `didSet` (called after value is stored)
+      * if you don't declare a parameter for the value, a default paramter name of `newValue` is made available for `willSet`, or `oldValue` for `didSet`
+    ```swift
+    class StepCounter {
+        var totalSteps: Int = 0 {
+            willSet(newTotalSteps) {
+                print("About to set totalSteps to \(newTotalSteps)")
+            }
+            didSet {
+                if totalSteps > oldValue {
+                    print("Added \(totalSteps - oldValue) steps")
+                }
+            }
+        }
+    }
+    ```
+
+Global and local variables
+
+* global variables: variables defined outside of functions, methods, closures, or type contexts
+
+Type properties
+
+* instance properties: properties belonging to an instance of a particular type. A new set with every instance
+* type properties: they're universal to all instances of that type; like static methods/variables.
+    - must have a default value, since there's no initializer for a type to give it a value once an instance is created
+    - by default, stored type properties are lazily initialized upon first access
+    - type properties are queried at set on the type, not the instance of the type
+    - declared with `static`, except if it's a computed type property, then you can use `class` to allow subclasses to override the implementation
+    ```swift
+    struct MyStructure {
+        static var name = "Name"
+    }
+
+    enum MyEnum {
+        static var yo = "Yo"
+    }
+
+    class MyClass {
+        class var overrideableProp: Int {
+            return 107
+        }
+    }
+    ```
+
+
 ## Methods
+
+* __method__: function associated with a particular type
+
+Instance methods
+
+* __instance method__: method belonging to an instance; same syntax as a function
+    - has implicit access to all other instance methods & properties o fthat type
+    - can only be called on a specific instance of the type it belongs to
+    - here, `increment`, `incrementBy`, and `reset` are all instance methods
+    ```swift
+    class Counter {
+        var count = 0
+        func increment() {
+            self.count += 1 // count += 1 works too
+        }
+        func incrementBy(amount: Int) {
+            count += amount
+        }
+        func reset() {
+            count = 0
+        }
+    }
+    ```
+
+* instance method parameters
+    - given the first param name a local param name by default, and all of the others get both local & external param names. Of course, you can override.
+
+Mutating methods
+
+* declare a method with `mutating` if you want it to modify the properties of your `struct`/`enum`; classes do so by default
+    - it's pretty powerful! you can assign a completely new instance to the `self` property, thereby replacing that instance from within
+    ```swift
+    enum TriStateSwitch {
+        case Off, Low, High
+        mutating func next() {
+            switch self {
+            case Off:
+                self = Low
+            case Low:
+                self = High
+            case High:
+                self = Off
+            }
+        }
+    }
+    var ovenLight = TriStateSwitch.Low
+    ovenLight.next() // now it's .High
+    ```
+
+Type methods
+
+* essentially static methods that're denoted by `static` or `class`, which you call on a type, not an instance
 
 
 [Prev page](Swift_1.md) • [Next Page](Swift_3.md)
