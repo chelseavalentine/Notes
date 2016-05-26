@@ -137,8 +137,72 @@ class MyClass {
 
 ## Deinitialization
 
+* __deinitializers__ are automatically called right before a class instance is deallocated
+    - subclass inherit their superclass's deinitializer, which is called after a subclass's deinitializer, if there is one
+```swift
+deinit {
+    // perform deinitialization
+}
+```
 
-## Automatic Reference Counting
+
+## Automatic Reference Counting (ARC)
+
+* ARC tracks & manages the app's memory usage. If you choose, you can enable ARC to manage the app's memory better
+    - reference counting _only applies to classes_
+    - it makes a _strong reference_ to instances that're being referred to, which means that it's memory won't be deallocated
+        + resolve strong references by defining some relationships b/t classes as week or unowned
+* if obj1 refers to obj2, & obj2 refers to obj1, even if you make both of them `nil`, the memory won't be deallocated!! so you need to resolve their strong reference
+
+* __weak reference__: a reference that doesn't keep a strong hold on the instance it refers to, allowing ARC to deallocate its memory
+    - declared with `weak`
+    - use case: when it's possible for that reference to have a missing value at some point in its lifetime
+    - must be declared as variables
+* __unowned reference__: similar to a weak reference, but the expectation is that the instance it refers to will always have a value
+    - declared with `unowned` before the property/variable declaration
+    - use case: a reference that _always_ has a value
+    - eg. a credit card always has a customer, so you'd define `customer` as `unowned` to prevent a strong reference cycle
+
+Unowned References and Implicitly Unwrapped Optional Properties
+
+* if _both_ properties should have a value, and neither should be `nil`, you can combine an unowned property on one class, w/ an implicitly unwrapped optional property on the other
+```swift
+class Country {
+    let name: String
+    var capitalCity: City!
+    init(name: String, capitalName: String) {
+        self.name = name
+        self.capitalCity = City(name: capitalName, country: self)
+    }
+}
+class City {
+    let name: String
+    unowned let country: Country
+    init(name: String, country: Country) {
+        self.name = name
+        self.country = country
+    }
+}
+```
+
+Strong Reference Cycles for Closures
+
+* can create a strong reference if you assign a closure to a property of an instance and the body of the closure captures the instance (just has to access `self.someProperty` or `self.someMethod`)
+    - a __closure capture list__ defines the rules to use when capturing 1/+ reference types w/i a closure's body
+        + placed before the closure's parameter list & return type (if provided), or at the very start of the closure
+    ```swift
+    lazy var someClosure(Int, String) -> String = {
+        [unowned self, weak delegate = self.delegate!] (index: Int, stringToProcess: String) -> String in
+        // closure body here
+    }
+    lazy var someClosure() -> String = {
+        [unowned self, weak delegate = self.delegate!] in
+        // closure body here
+    }
+    ```
+
+* define a capture as unowned if the closure & instance it captures will always refer to each other, & will always be deallocated at the same time
+* define a capture as weak when it may become `nil`; check for its existence within the closure
 
 
 ## Optional Chaining
