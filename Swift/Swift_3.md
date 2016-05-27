@@ -207,9 +207,53 @@ Strong Reference Cycles for Closures
 
 ## Optional Chaining
 
+* __optional chaining__: process of querying/calling properties/methods/subscripts on an optional that may be `nil`
+    - declared by putting a `?` after what you want to access, or after the method's parentheses
+    - you can use `?` to access an optional property, and it will still be optional
+    - multiple queries can be made, and if the original optional is `nil`, all of the methods/properties/subscripts you call will just return `nil`
+    ```swift
+    if let roomCount = Person().residence?.numberOfRooms {
+        print("This person's residence has \(roomCount) room(s).")
+    } else {
+        print("Unable to retrieve the number of rooms") // prints this b/c residence is nil
+    }
+    ```
+
 
 ## Error Handling
 
+* create enums that extend `ErrorType` for your own error types (`enum CustomError: ErrorType`)
+* `throw` an error (`throw customError.case(optional, params)`)
+
+Propagating Errors Using Throwing Functions
+
+* __throwing function__: a function that throws an error w/i it's scope, thereby propagating it to the scope in which the function is called
+    - syntax: `func canThrowErrors() throws -> String`
+    - an alternative is to handle the error within the function, with `do`, `try`, and `catch`
+    ```swift
+    do {
+        try [expression]
+        [statements]
+    } catch [pattern 1] {
+        [statements]
+    } catch [pattern 2] where [condition] {
+        [statements]
+    }
+    ```
+
+* You don't need to handle every error in `catch` blocks, but if you don't, the error will keep propagating to surrounding scopes, until it's eventually caught, or crashes your app
+* handle an error by converting it to an optional value with `try?`
+```swift
+let x = try? someThrowingFunction()
+```
+
+* _disable error propagation_ with `try!` if you know that an error won't be thrown (eg. accessing a resource packaged with the app); if it is in fact thrown, you'll get a runtime error
+
+Specifying Cleanup Actions
+
+* don't forget `defer` blocks, which you can place anywhere, but will be called right before the code execution leaves the current block of code
+    - cannot include code that'd transfer control out of the `defer` block, like `break` or `return`, or by throwing an error
+    - deferred actions are operated in the _reverse order_ of how the defer actions are specified
 
 
 [Prev page](Swift_2.md) • [Next Page](Swift_4.md)
