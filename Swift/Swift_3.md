@@ -253,7 +253,7 @@ Specifying Cleanup Actions
 
 * don't forget `defer` blocks, which you can place anywhere, but will be called right before the code execution leaves the current block of code
     - cannot include code that'd transfer control out of the `defer` block, like `break` or `return`, or by throwing an error
-    - deferred actions are operated in the _reverse order_ of how the defer actions are specified
+    - deferred actions are operated in the _reverse order_ of how the defer blocks are specified
 
 
 [Prev page](Swift_2.md) • [Next Page](Swift_4.md)
