@@ -85,4 +85,69 @@ if #available([platform name] [version], [...], *) {
 }
 ```
 
+
+## Declarations
+
+* top-level code: code available to everything in the module (default behavior, aka `internal`)
+
+#### Import declaration
+
+There're import kinds!!, this is the import structure:
+
+```swift
+import [import kind] [module].[symbol name]
+```
+
+* import kinds include: `typealias`, `struct`, `class`, `enum`, `protocol`, `var`, `func`
+
+
+#### `inout` parameters
+
+* it's unpredictable when the function using the `inout` parameter will return, so your changes to the original value is overwritten by the value of the copy
+    - likewise, there's no copy-out @ end of closures or nested functions, so if a closure is called after the function returns, any changes the closure makes to the `inout` parameters don't get copied back to the original
+
+
+#### Throwing functions & methods
+
+* just changing whether a function throws or not does not override the superclass's function; you need to change the function type too
+
+* a function/method can use `rethrow` to throw and error if and only if one if its function params throws an eror
+    - cannot throw any errors of its own, thus can't contain a `throw` statement
+
+```swift
+func functionWithCallback(callback: () throws -> Int) rethrows {
+    try callback()
+}
+```
+
+
+## Attributes
+
+* __attributes__ provide more info about a declaration/type
+```swift
+@[attribute name]
+// or
+@[attribute name]([attribute arguments])
+```
+
+Declaration attributes:
+
+* `autoclosure`: delays evaluation of expression by wrapping it in an argument-less closure
+    - also implies `noescape`, unless passed optional argument `escaping`
+* `available`: indicate that something only is intended for a certain platform/operating system variation; takes args with the OS/platform, or arg of `*` to indicate all platforms
+    - alternatively, you can say `unavailable` for ones it isn't available on
+* `introduced=[version number]`: say when the declaration was first introduced
+
+More:
+* `noescape`, `nonobjc`, `noreturn`, `NSApplicationMain`, `NSCopying`, `NSManaged`, `testable`, `UIApplicationMain`, `warn_unused_result`
+
+Type attributes (only appliable to types):
+* `convention`: indicate its calling conventions, `noreturn`
+
+
+## Patterns
+
+* __pattern__: the structure of a single value/composite value
+    - eg. `_` is the wildcard pattern
+
 [Prev page](Swift_4.md)
