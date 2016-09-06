@@ -6,6 +6,7 @@ Can convert to types w/o writing parseInt, etc...
 
 * `!!` converts to boolean
 * `+` converts to number
+* `-` converts to a negative number
 
 Random stuff:
 
