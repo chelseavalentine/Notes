@@ -3,23 +3,23 @@
 	[
 		{
 			// "folder_exclude_patterns": [],
-			"folder_include_patterns":
-			[
-				"Fundamentals",
-				"Fundamentals/*",
-				"HTML & CSS",
-				"Java",
-				"Java/*",
-				"Android",
-				"LaTeX",
-				"JavaScript",
-				"Rails",
-				"Ruby",
-				"SVG",
-				"Utility Belt",
-				"Utility Belt/*",
-				"C++"
-			],
+			// "folder_include_patterns":
+			// [
+			// 	"Fundamentals",
+			// 	"Fundamentals/*",
+			// 	"HTML & CSS",
+			// 	"Java",
+			// 	"Java/*",
+			// 	"Android",
+			// 	"LaTeX",
+			// 	"JavaScript",
+			// 	"Rails",
+			// 	"Ruby",
+			// 	"SVG",
+			// 	"Utility Belt",
+			// 	"Utility Belt/*",
+			// 	"C++"
+			// ],
 			"file_exclude_patterns": [],
 			"follow_symlinks": true,
 			"path": "."
@@ -28,7 +28,7 @@
 
 	"settings":
 	{
-		"tab_size": 4,
+		"tab_size": 2,
 		"translate_tabs_to_spaces": true,
 		"indent_to_bracket": true
 	}
