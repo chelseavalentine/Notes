@@ -247,7 +247,7 @@ public void delete(Page page) {
 }
 ```
 
-A funcction that handles errors has satisfied its 'one thing' (ie. it should do nothing else)
+A function that handles errors has satisfied its 'one thing' (ie. it should do nothing else)
 
 
 ### The `Error.java` Dependency Magnet
