@@ -41,3 +41,32 @@ On teamwork in design:
 
 
 ### Chapter 3: Understanding Relationships
+
+> “What’s ironic to me is that UXers are so good at putting the user first, at garnering empathy for and attempting to see the interface from the perspective of the user. Yet, we often fail to do the same thing for the people who hold the keys to our success.”
+
+> “ There are always things that are influencing people’s behaviors that we are not privy to. And there will always be things that we simply can’t predict. Always. ”
+
+> “it’s often a best practice when working with executives to show both what’s possible in the short term and what’s preferred for the future. This approach creates a buzz that keeps everyone excited and makes it more likely that they’ll agree with you.”
+
+
+### Chapter 4: Reducing Cognitive Load
+
+* for each person in a meeting, while planning a design discussion, ask yourself:
+  - What do they care about the most?
+  - What are their personal goals for this design?
+  - What do I already know they want or don't want?
+
+* write down objections you expect people to have
+
+
+### Chapter 5: Listening is Understanding
+
+* listen for the vocabulary people use when discussing your work, & use them in response
+
+* pause after people are done talking, so that you're sure that thy're done + you can think about it
+
+* discuss things in terms of effectiveness, not preference ("likes" -> "works")
+
+
+### Chapter 6: The Right Frame of Mind
+
