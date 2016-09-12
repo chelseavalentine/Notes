@@ -70,3 +70,17 @@ On teamwork in design:
 
 ### Chapter 6: The Right Frame of Mind
 
+* when receiving design feedback, he recommends:
+  1. thank
+  2. repeat (summarize what they said)
+  3. prepare stakeholders by telling them you're about to respond to their feedback
+
+### Chapter 7: The Response: Strategy and Tactics
+
+* how to craft a good response:
+  1. define a strategy for responding
+  2. employ tactics to deliver the strategy
+  3. identify common, relevant responses (what key messages do we include)
+  4. apply a common framework & ask for agreement
+
+* appeal to a nobler motive (eg. goal, metric, other problem)

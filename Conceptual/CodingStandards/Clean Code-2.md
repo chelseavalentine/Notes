@@ -101,3 +101,27 @@ private static double determinant(double a, double b, double c) {
 ### Team Rules
 
 A team of developers should agree on a single formatting style, & then every member should use that style.
+
+
+
+# Chapter 6: Objects and Data Structures
+
+* Hiding implementation is not just a matter of putting a layer of functions between the variables. Hiding implementation is about abstractions
+  - Serious thought needs to be put into the best way to represent the data that an object contains. The worst option is to blithely add getters and setters.
+
+* Objects hide their data behind abstractions and expose functions that operate on that data. Data structures expose their data and have no meaningful functions.
+
+* the idea that everything is an object is a myth; sometimes you really do want simple data structures with procedures operating on them
+
+* __The Law of Demeter__: modules shouldn't know the inner workings of the objects it manipulates, which means (in the context of C): a method _f_ of class _C_ should only call methods of these
+  - _C_
+  - an object created by _f_
+  - an object passed as an arg to _f_
+  - an object held in instance variable of _C_
+
+* therefore, by this law, the following is a violation:
+  ```c
+  final String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();
+  ```
+
+* instead of chaining methods, separate them into separate lines, so you can name & write the type for their outputs
