@@ -5,7 +5,6 @@
 * Comments Do Not Make Up for Bad Code
 * Explain Yourself in Code
 
-
 ## Good Comments
 
 ##### Legal Comments
@@ -26,7 +25,6 @@ This isn't an excuse to leave in bad code
 
 ###### Amplification
 
-
 ## Bad Comments
 
 * Mumbling
@@ -44,10 +42,7 @@ This isn't an excuse to leave in bad code
 * Inobvious Connection
 * Function Headers
 
-
-
 # Chapter 5: Formatting
-
 
 ### Vertical Formatting
 
@@ -80,7 +75,6 @@ Concepts closely related should be kept vertically close to each other; and you 
     - if you have a lot of functions that perform the same kind of use, then you should have less vertical distance between them
         + eg. a group of functions that assertTrue, but have different parameters
 
-
 ### Horizontal Formatting
 
 * limit your line length to ~120 characters. Less is better.
@@ -97,12 +91,9 @@ private static double determinant(double a, double b, double c) {
 }
 ```
 
-
 ### Team Rules
 
 A team of developers should agree on a single formatting style, & then every member should use that style.
-
-
 
 # Chapter 6: Objects and Data Structures
 
@@ -134,8 +125,6 @@ A team of developers should agree on a single formatting style, & then every mem
 
 * data structures expose data and don't have any significant behavior
 
-
-
 # Chapter 7: Error Handling
 
 * use exceptions rather than return codes (so caller doesn't need to check return call/error flag)
@@ -160,8 +149,6 @@ A team of developers should agree on a single formatting style, & then every mem
 
 * don't pass null either; susceptible to runtime errors
 
-
-
 # Chapter 8: Boundaries
 
 * encapsulate boundary interfaces (eg. `Map`) inside a class; avoid returning it form/accepting it as an argument to public APIs
@@ -173,7 +160,3 @@ A team of developers should agree on a single formatting style, & then every mem
   - helps us avoid thinking that upgrading version is risky, since we have tests to prove that the newer version works
 
 * you can write classes for code that doesn't exist yet (eg. if you know an API will provide x functionality, you can write the class that will help you interface with that API)
-
-
-
-# Chapter 9: Unit Tests
