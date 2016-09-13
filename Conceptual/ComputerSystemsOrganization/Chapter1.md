@@ -116,7 +116,7 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 * __context switching__:
   * __context__: the state (all of the info that the process needs to run), including things like the current values of the PC (the register), the register file, & the main memory's contents
 * __kernel__: the portion of the OS code that's always in memory; a collection of code & data structures the system uses to manage all of the processes
-  * it tdeals w/ transitions from one process to another
+  * it deals w/ transitions from one process to another
   * (eg. when an app needs the system to do something, eg I/O, it executes a system call instruction, transferring control to the kernel)
 
 #### Threads
@@ -129,37 +129,23 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 #### Virtual memory
 
 * __virtual memory__: an abstraction that makes it seem like each process has exclusive use of memory
-  
   * __virtual address space__: a uniform view of memory that a process has, an address to a location in main memory
-    
     * each address has well-defined areas:
-      
       1. _program code & data_
-         
          initialized by the program's executable
-         
       2. *heap*
-         
          dynamically expands & contracts & run time due to library routines like `malloc` & `free`
-         
       3. _shared libraries_
-         
          eg. C standard library, math library, etc.
-         
       4. _stack_
-         
          compiler uses to implement function calls; dynamically expands & contracts w/ program's execution. Eg. imagine a recursive function adding function calls to the stack
-         
       5. _kernel virtual memory_
-         
          applications can invoke the kernel here; can't modify the kernel or handle any of its functions
 
 #### Files
 
 * __file__: a sequence of bytes
   * therefore, all I/O devices (eg. disks, keyboards, networks, displays, etc.) are files
-
-
 
 ### Key themes and concepts
 
@@ -177,7 +163,7 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 * __uniprocessor system__: system w/ 1 processor core
 * __multiprocessor system__: system w/ 2/+ processor cores, all under the control of one OS kernel
 * __hyperthreading__; __simultaneous multithreading__: a technique enabling a single CPU to execute multiple control flows
-  * needs multiple copies of the cPU hardware (program counters & register files) & single copies of other parts
+  * needs multiple copies of the CPU hardware (program counters & register files) & single copies of other parts
   * decides to switch cycles on a cycle-by-cycle basis, rather than having a timer
     * allows for better usage of resources, b/c if a thread is waiting on something, the CPU can switch to a different thread
 
