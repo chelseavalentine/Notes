@@ -61,7 +61,7 @@
 3. expresses the programmer's intent
 4. minimizes the number of classes and methods
 
-# Chapter 13: Concurrency (208)
+# Chapter 13: Concurrency
 
 * concurrency = decoupling strategy, since it allows us to decouple _what_ gets done from _when_ it gets done
   - can improve an application's throughput & structure
@@ -115,3 +115,88 @@ Principles to defend a system from concurrent code problems
   - eg. by adding calls to methods like `Object.wait()`, `Object.sleep()`, `Object.yield()`, and `Object.priority()`
   - you can do this with an automated test framework (eg. CGLIB, ASM, or an Aspect-Oriented Framework)
   - use the jiggling strategy to ferret out errors
+
+# Chapter 14: Successive Refinement
+
+* essentially, the first working version of your code is still a work in progress; you need to refine it, perhaps even a few times
+
+# Chapter 15: JUnit Intervals
+
+* essentially, JUnit is great and makes for extremely readable tests
+
+# Chapter 17: Smells and Heuristics (316)
+
+### Comments
+
+* inappropriate information (which is better held elsewhere, eg. change histories, meta-data, etc.)
+
+* obsolete or redundant comments
+
+### Environment
+
+* build requires more than one step
+
+* tests require more than 1 step
+
+### Functions
+
+* output & flag arguments
+
+* dead functions (which are never called)
+
+### General
+
+* incorrect behavior at boundaries
+
+* overridden safety features (eg. turning off warnings)
+
+* coding at the wrong level of abstraction (eg. base class shouldn't know super specific implementation details)
+
+* using accessors & mutators of some other object to manipulate the data within that object ("feature envy")
+
+* misplaced responsibility (putting code in the wrong place)
+
+* dependent modules should explicitly ask the module it depends on for all the info it depends on
+
+* polymorphism is better than if/else or switch/case statements
+
+* encapsulate conditionals
+
+* avoid negative conditionals
+
+* encapsulate boundary conditions
+  ```java
+  if (level + 1 < tags.length) {
+    // ...
+  }
+
+  // is worse than
+
+  int nextLevel = level + 1;
+
+  if (nextLevel < tags.length) {
+    // ...
+  }
+  ```
+
+* functions should descend only 1 level of abstraction
+
+* keep configurable data at high levels
+
+* don't let a model know too much of the navigation map of the system (eg. `a.getB().getC()` is excessive in excess)
+
+### Java
+
+* avoid long import lists with wildcards (using 2 or more classes from a package -> import whole package)
+
+* don't inherit constants; use a static import instead
+
+* use enums over constants
+
+### Names
+
+* choose names at an appropriate level of abstraction
+
+### Tests
+
+* don't skip trivial tests
