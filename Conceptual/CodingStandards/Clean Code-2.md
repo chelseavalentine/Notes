@@ -125,3 +125,51 @@ A team of developers should agree on a single formatting style, & then every mem
   ```
 
 * instead of chaining methods, separate them into separate lines, so you can name & write the type for their outputs
+
+* __data transfer object__ (DTO): an object with public variables and no functions
+ - usage: communicing w/ databases, parsing messages from sockets, etc. to convert raw db data into objects in the app
+ - __Active record__: a DTO with the addition of navigational methods like `save` and `find`
+
+* objects expose behavior and hide data
+
+* data structures expose data and don't have any significant behavior
+
+
+
+# Chapter 7: Error Handling
+
+* use exceptions rather than return codes (so caller doesn't need to check return call/error flag)
+
+* create informative error messages and pass them along with your exceptions. Mention the operation that failed and the type of failure
+
+### Wrapping third-party APIs
+
+* if many types of exceptions need to be caught (often resulting in duplicate ways of handling), consider defining an exception class in terms of the caller's needs
+  - the wrapper class will return a common exception type, so you only need to catch one exception instead of several
+
+- advantages:
+  * minimizing dependencies on the API
+  * can mock third-party calls in testing
+  * arent tied to the API's design choices
+
+* __special case object__: you can create a class/configure an object so that it handles special cases for you, instead of dealing w/ exceptional behavior
+
+### Don't return null
+
+* throw an exception or return a special case object instead; otherwise a missing null check => disaster
+
+* don't pass null either; susceptible to runtime errors
+
+
+
+# Chapter 8: Boundaries
+
+* encapsulate boundary interfaces (eg. `Map`) inside a class; avoid returning it form/accepting it as an argument to public APIs
+
+* encapsulate APIs in classes as well, so you don't need to worry about the peculiarities of a class each time you want to use it
+
+* write learning tests (tests that verify that the third-party packages work as intended)
+  - they'll also help us figure out when the functionality changes
+  - helps us avoid thinking that upgrading version is risky, since we have tests to prove that the newer version works
+
+* you can write classes for code that doesn't exist yet (eg. if you know an API will provide x functionality, you can write the class that will help you interface with that API)
