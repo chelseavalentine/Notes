@@ -65,7 +65,7 @@
 
 ### Pipelines
 
-* __pipelines__: commands' abiility to read data from stdin & send to stdout
+* __pipelines__: commands' ability to read data from stdin & send to stdout
 
 * __`|`__ pipeline operator: allows us to pipe the stdout of one command into the stdin of another
 
@@ -79,10 +79,29 @@
 
   eg. `ls /usr/bin /usr/documents | sort | less`
 
-## Ch 8 – The world as the Shell
+## Ch 8 – The world as the shell sees it
 
-## Ch 9 – Advanced keyboard tricks
+* `echo` displays a line of text
 
-## Ch 10 – Permissions
+* __expansion__: certain characters sequences mean more to the shell than face value; the shell expands it to something else before executing
+  - eg. `echo *` will first expand `*`, replacing `*` with all the filenames in the directory, and then echo that
 
-## Ch 11 – Processes
+* __tilde expansion__: expands to the home directory of the named user (if it exists), or if no user was named, the current user
+  - eg. `echo ~`, `echo ~mark` (no user named mark, so it's literal)
+
+* __arithmetic expansion__'s form: `$((expression))`
+  - only supports integers, & operators [`+`, `-`, `*`, `/`, `%`, `**`]
+
+* __brace expansion__: create multiple text strings from a pattern containing braces
+  - you can also have specify a range with `..` (eg. `{Z..A})
+  - eg. `echo Front-{A,B,C}-Back` --> `Front-A-Back Front-B-Back Front-C-Back`
+  - eg. `echo Number_{1..5}` --> `Number_1 Number_2 Number_3 Number_4 Number_5`
+
+* __parameter expansion__: `$[variable name here]`
+  - see a list of available variables with `printenv`
+
+* __command substitution__: use `$([command here])`, which allows you to use the output of the command as an expansion
+  - eg. `echo $(ls)`
+
+* paramter expansion, arithmetic expansion, and command substitution still take place w/i double quotes
+  - suppress all expansions with single quotes
