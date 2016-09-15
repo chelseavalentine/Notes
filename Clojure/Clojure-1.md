@@ -12,7 +12,7 @@
 
 ### Chapter 3: Do things: A Clojure crash course
 
-* whitespace separates operands, and commas are interpreted as whitespace
+* whitespace delimits operands, and commas are interpreted as whitespace
 
 #### Control flow
 

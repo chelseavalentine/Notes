@@ -87,9 +87,54 @@
 
 * `passwd`: change a user's password
 
-## Ch 11 – Processes (127)
+## Ch 11 – Processes
 
-## Ch 12 - The environment (142)
+* __daemon program__: a program executing in the background without UI
+
+* `ps`: prints snapshot of current processes
+  - `ps -xj` or `ps aux` will list all processes, regardless of their controlling terminal, as well as additional details like the state
+  - process states:
+    + `R` running
+    + `S` sleeping
+    + `D` uninterruptible sleep (waiting for I/O, eg. disk drive)
+    + `T` terminated
+    + `Z` a defunct or "zombie" process (terminated, but not cleaned up by parent, child)
+    + `<` high priority process
+    + `N` low priority process
+
+* `top`: displays tasks
+
+* `jobs`: lists active jobs
+
+* `bg`: places a job in the background
+
+* `fg`: places a job in the foreground (eg. `fg %1` bring job 1 to foreground)
+  - stop a foreground process with `ctrl-z`
+
+* `kill`: sends a signal to a process
+
+* common signals
+  - `HUP`: hangup (due to wifi lol... obsolete? sometimes used by daemons for reinitialization)
+  - `INT`: interrupt; terminates program
+  - `KILL`: kill; sent to the kernel, not the process, to immediately terminate the process
+    - as a result, process can't cleanup or save its work
+  - `TERM`: terminate; sent  by  `kill` command
+  - `CONT`: continue (used after `STOP`)
+  - `STOP`: stop; signal pauses w/o terminating; signal is sent to the kernel, so can't be ignored
+
+* `killall`: kill processes by name
+
+* `shutdown`: shuts down or reboots the system
+
+## Ch 12 - The environment
+
+* `printenv`: print part or all of the environment
+
+* `set`: set shell options
+
+* `export`: export environment to subsequently executed programs
+
+* `alias`
 
 ## Ch 13 - A gentle introduction to vi (154)
 
