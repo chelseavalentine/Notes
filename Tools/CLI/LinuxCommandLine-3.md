@@ -34,7 +34,7 @@
   - then use `ctrl-j` to copy the line from history to the current command line
   - `ctrl-o` execute current item in history list, & advance to the next one
 
-## Ch 10 – Permissions (107)
+## Ch 10 – Permissions
 
 * `ssh` secure shell
 
