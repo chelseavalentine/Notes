@@ -109,32 +109,9 @@
 
 * `lprm` cancels print jobs
 
-## Ch 24 - Compiling programs (358)
+## Ch 24 - Compiling programs
 
-## Ch 25 - Writing your first shell script (372)
+* __compiling__: translating source code into the computer processor's native language
+  - interpreted programs are slower b/c they're translated every time it's executed; whereas compiled programs are only translated once and then the translation is recorded
 
-## Ch 26 - Starting a project (379)
-
-## Ch 27 - Top-down design (390)
-
-## Ch 28 - Flow control: branching with `if` (399)
-
-## Ch 29 - Reading keyboard input (415)
-
-## Ch 30 - Flow control: looping with `while` / `until` (426)
-
-## Ch 31 - Troubleshooting (433)
-
-## Ch 32 - Flow control: branching with `case` (446)
-
-## Ch 33 - Positional parameters (451)
-
-## Ch 34 - Flow control: looping with `for` (465)
-
-## Ch 35 - Strings and numbers (471)
-
-## Ch 36 - Arrays (490)
-
-## Ch 37 - Exotica (499)
-
-(510)
+* `make` - a utility to maintain programs

@@ -27,7 +27,7 @@
 23. [Printing]()
 24. [Compiling programs]()
 25. [Writing your first script]()
-26. [Starting a project]()
+26. Starting a project
 27. [Top-down design]()
 28. [Flow control: branching with `if`]()
 29. [Reading keyboard input]()
