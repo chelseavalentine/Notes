@@ -79,9 +79,35 @@
 * `aspell` interactive spell checker
   - `aspell check [text file]`
 
-## Ch 22 - Formatting output (323)
+## Ch 22 - Formatting output
 
-## Ch 23 - Printing (344)
+* `nl [file]` number the lines
+
+* `fold` wrap each line to a specified length (80 if no with specified)
+  - `fold -w [width] -s` fold lines @ _width_ & break at the last available space
+
+* `fmt` a simple text formatter for paragraph formatting and more
+
+* `pr` prepare text for printing by paginating
+
+* `printf` formats and prints data
+  - `print "[format]" [arguments]`
+
+* `groff` a document formatting system
+
+## Ch 23 - Printing
+
+* `pr` converts text files for printing
+
+* `lpr` prints files
+
+* `a2ps` formats files for printing on a PostScript printer
+
+* `lpstat` shows printer status information
+
+* `lpq` shows printer queue status
+
+* `lprm` cancels print jobs
 
 ## Ch 24 - Compiling programs (358)
 
