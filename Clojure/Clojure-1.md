@@ -14,6 +14,8 @@
 
 * whitespace delimits operands, and commas are interpreted as whitespace
 
+#### Forms
+
 #### Control flow
 
 #### Naming values with `def`
@@ -45,3 +47,11 @@
 #### Anonymous functions
 
 #### Returning functions
+
+#### `let`
+
+#### `loop`
+
+#### Regular expressions
+
+#### Symmetrizer
