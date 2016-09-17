@@ -50,13 +50,14 @@
     + `{n,} match if occurs n or more times
     + `{,m} match if occurs up to m times
 
-## Ch 21 - Text processing (282)
+## Ch 21 - Text processing
 
 * `cat` concatenate files & print on the standard input
-
-* `sort` sort lines of text files
+  - `-n` numbers lines
+  - `-s` suppresses output of multiple blank lines
 
 * `uniq` report or omit repeated lines
+  - `-c` shows number of duplicates
 
 * `cut` remove sections from each line of files
 
@@ -71,10 +72,12 @@
 * `patch` apply a diff file to an original
 
 * `tr` translate or delete characters
+  - character-based search&replace operation (eg. `echo "lowercase" | tr a-z A-Z` => `LOWERCASE`)
 
 * `sed` stream editor for filtering & transforming text
 
 * `aspell` interactive spell checker
+  - `aspell check [text file]`
 
 ## Ch 22 - Formatting output (323)
 
