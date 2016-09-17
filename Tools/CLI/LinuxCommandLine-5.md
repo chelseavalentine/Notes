@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 14 - Customizing the prompt (174)
+## Ch 14 - Customizing the prompt
 
 * escape codes
   - `\d` current date in day, month, date format
@@ -44,14 +44,72 @@
   - purple `\033[0;45m`
   - cyan `\033[0;46m`
   - light grey `\033[0;47m`
-## Ch 15 - Package management (184)
 
-## Ch 16 - Storage media (194)
+## Ch 17 - Networking
 
-## Ch 17 - Networking (213)
+* IP (Internet Protocol) address; URI (Uniform Resource Identifier)
 
-## Ch 18 - Searching for files (227)
+* `ping` send an ICMP ECHO_REQUEST to network host
+  - sends packets until interrupted, then prints performance statistics (no packets should be lost)
 
-## Ch 19 - Archiving and backup (244)
+* `traceroute` print the route packets trace to a network host
 
-## Ch 20 - Regular expressions (261)
+* `netstat` print network connections, routin tables, interface statistics, masquerade connections, & multicast memberships
+
+* `ftp` communicates w/ FTP servers, which're machines containing files that can be uploaded & downloaded over a network
+  - insecure since usernames & passwords are sent in cleartext, so usually anonymous servers w/ dummy info is used
+
+* `ssh` (Secure SHell) creates a secure connection w/ a remote host
+  - first: ssh authenticates the host, second: encrypts all communications between the hosts
+  - has `scp` (secure copy) To copy files across a network
+  - has `sftp`
+
+## Ch 18 - Searching for files
+
+* `locate` find files by name
+
+* `find` search for files in a directory hierarchy
+  - can find by size & name with additional tests (eg. `find [query] -type f - name "*.JPG" -size +1M)
+    + sizes: `b` 512 byte blocks; `c` byes; `w` 2 byte words; `k` kilobytes; `M` megabytes; `G` gigabytes
+  - there are also operators you can use for conditional file searching, but that's advanced usage; look it up if you need it
+  - predefined find actions:
+    + `-delete` delete currently matching file
+    + `-ls` perform the equivalent of `ls -dils` on matching file(s)
+    + `-print` output full pathname
+    + `-quit` quit once a match has been made
+
+* user defined actions for `find` are in the form `-exec [command] '{}' ';'`
+  - use `ok` instead of `exec` for the interactive version
+  - `{}` represents the current pathname
+  - `;` delimits the end of the command
+  - eg. `-exec rm '{}' ';'`
+
+* `xargs` build & execute command lines from standard input
+  - accepts input & converts it into an arg list for a specified command
+  - eg. `find ~ -type f -name 'foo*' - print | xargs ls -l`
+
+* you can use options to control the depth of `find`
+  - `-depth`, `-maxdepth [levels]`, `-mindepth [levels]`, `-noleaf`
+* `touch` change file times
+
+* `stat` display file or file system status
+
+## Ch 19 - Archiving and backup
+
+#### File compression
+
+* `gzip` compress or expand files
+  - corresponding program is called `gunzip`
+
+* `bzip2` a block sorting file compressor
+
+#### File archiving
+
+* `tar` tape archiving (bundling several files & compressing them) utility
+
+* `zip` package and compress files
+
+#### File synchronization
+
+* `rsync` remote file and directory synchronization
+  - `rsync [options] [source] [destination]`

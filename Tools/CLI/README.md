@@ -16,8 +16,8 @@
 12. [The environment]()
 13. [A gentle introduction to vi]()
 14. [Customizing the prompt]()
-15. [Package management]()
-16. [Storage media]()
+15. Package management
+16. Storage media
 17. [Networking]()
 18. [Searching for files]()
 19. [Archiving and backup]()
