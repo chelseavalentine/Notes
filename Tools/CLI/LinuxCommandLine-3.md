@@ -125,29 +125,3 @@
 * `killall`: kill processes by name
 
 * `shutdown`: shuts down or reboots the system
-
-## Ch 12 - The environment
-
-* `printenv`: print part or all of the environment
-
-* `set`: set shell options
-
-* `export`: export environment to subsequently executed programs
-
-* `alias`
-
-## Ch 13 - A gentle introduction to vi (154)
-
-## Ch 14 - Customizing the prompt (174)
-
-## Ch 15 - Package management (184)
-
-## Ch 16 - Storage media (194)
-
-## Ch 17 - Networking (213)
-
-## Ch 18 - Searching for files (227)
-
-## Ch 19 - Archiving and backup (244)
-
-## Ch 20 - Regular expressions (261)
