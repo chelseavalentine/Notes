@@ -6,6 +6,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 ### Introduction
 
 * Nagios: a scheduling and notification framework that calls small monitoring programs
+  - is both a monitoring system and information collection program
 
 * purpose:
   - helps decrease downtime (2 main ways: redundancy & monitoring systems)
@@ -86,7 +87,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - drawbacks:
     + you know there's a problem, but it doesn't know exactly where (sometimes it can be in a different system altogether)
 
-### Chapter 2: Theory of Operations (pp. 13-39)
+### Chapter 2: Theory of Operations
 
 * need to modify monolithic software when you want to change/add to what you monitor (sometimes impossible due to licenses)
 
@@ -131,7 +132,30 @@ Two scenarios in which a check must be rescheduled:
 
 * can have event handlers as an attempt to automatically fix a break in service
 
-### (skim) Chapter 3: Installing Nagios (pp. 39-51)
+* uses interleaving & inter-check delays to prevent all checks occurring/being scheduled at once and overloading the system
+  - interleaving: checking every k service, and making multiple passes until they're all checked
+
+* there're 2 types of events: ones that can be run in parralel, and those that can't
+  - Nagios has an event called a __reaper__ that'll reads plugins' status in the message queue
+    + Nagios doesn't process the status until the service reaper processes it
+
+#### Notification
+
+* host states: Unreachable, Down, Recovered, Flapping
+  - flapping: services that go up & down repeatedly
+
+* service states: Unknown, Critical, Warning, Recovered, Flapping
+
+* can create generic definitions (templates) to help you define systems that have things in common (eg. can use said template to define multiple web servers)
+
+* Nagios _either_ sends the notification defined in the service, _or_ the notification defined in the escalation
+
+
+#### I/O interfaces summarized
+
+* is better than commerical tools b/c it was designed to be great at interacting w/ other external monitoring & visualization tools
+
+* generates reports for you & has convenient summary interfaces
 
 ### Chapter 4: Configuring Nagios (pp. 51-75)
 
