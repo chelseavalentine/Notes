@@ -53,7 +53,35 @@
 
 * it's possible to enforce architectural standards by setting rules (eg. classes can't make direct calls to the data access objects)
 
-### Chapter 4: Building software at every change (pp. 65-102)
+### Chapter 4: Building software at every change
+
+* example build script structure: [1] clean, [2] compile source code, [3] integrate database, [4] run tests, [5] run inspections, [6] deploy software
+
+* separate build scripts from your IDE; the success of your scripts should be independent
+
+* create a consistent directory structure, such as having high lvl directories like: implementation, requirements, design, management, deployment, testing, tools
+
+* fail should fail fast, suggested build execution order:
+  1. integrate components
+  2. run true unit tests (tests w/o database or other dependencies)
+  3. run other automated processes (rebuild database, inspect, deploy)
+
+* create configurable builds for different environments, specified by QA, local, prod
+
+* build types: for the individual, the team, the users (customer)
+  - private build: [1] get latest code, [2] run a build to execute all unit tests, [3] commit code
+  - integration build (for the team)
+    + no more than 10 minutes
+  - release build (for users), usually occurs at end of an iteration or milestone
+
+* speeding up your build
+  * use mock/stubs for components that are too complex/difficult to use in unit-testing environments
+  * separate long-running integration tests into separate specialized test suites
+  * execute tests in parallel
+  * separate tests by category: unit, component, system
+  * remove unused & unnecessary inspections
+  * reduce duplicate inspections
+  * reduce frequency of certain inspections
 
 ### Chapter 5: Continuous database integration (pp. 107-128)
 
