@@ -164,11 +164,3 @@ Two scenarios in which a check must be rescheduled:
 * two types of config files: [1] configs containing directives, & [2] configs containing definitions
 
 * some configs are required for the daemon to even start; others aren't
-
-### (skim) Chapter 5: Bootstrapping the configs (pp. 75-85)
-
-### Chapter 6: Watching (pp. 85-131)
-
-### Chapter 7: Visualization (pp. 131-173)
-
-### (skim) Chapter 8: Nagios Event Broker Interface (pp. 171-193)
