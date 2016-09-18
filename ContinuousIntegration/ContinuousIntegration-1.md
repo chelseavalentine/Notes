@@ -59,7 +59,7 @@
 
 * separate build scripts from your IDE; the success of your scripts should be independent
 
-* create a consistent directory structure, such as having high lvl directories like: implementation, requirements, design, management, deployment, testing, tools
+* create a consistent directory structure, such as having high level directories like: implementation, requirements, design, management, deployment, testing, tools
 
 * fail should fail fast, suggested build execution order:
   1. integrate components
@@ -106,7 +106,7 @@
 
 * __system tests__ require a fully installed system & associated database; testing for end-to-end functionality
 
-* __functional tests__ / __acceptance tests__ tes tthe functionality from the viewpoint of the client
+* __functional tests__ / __acceptance tests__ test the functionality from the viewpoint of the client
   - eg. testing titles, that text shows up, etc.
 
 * a test directory could look like:
@@ -130,7 +130,7 @@
   - higher CCN correlates with defects
   - reduce CCN w/ the __extract method technique__ (distribute complexity into smaller methods)
 
-* determine overcoupling by looking at __afferent coupling__ & __efferent coupling__
+* determine over-coupling by looking at __afferent coupling__ & __efferent coupling__
   - highly afferent: an object has responsibility to too many other objects
   - highly efferent: the object isn't sufficiently independent of other objects
 
