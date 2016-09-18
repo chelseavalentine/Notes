@@ -83,9 +83,46 @@
   * reduce duplicate inspections
   * reduce frequency of certain inspections
 
-### Chapter 5: Continuous database integration (pp. 107-128)
+### Chapter 5: Continuous database integration
 
-### Chapter 6: Continuous testing (pp. 129-159)
+* __Continuous Database Integration (CDBI)__: rebuilding your database & test data whenever a repo change occurs
+
+* qualities to test for in data
+  - efficient data performance by testing vs. target optimization for SQL queries
+  - analyze data to ensure data integrity
+  - use a SQL recorder to see which queries are being run the most
+  - data naming convention & standards
+
+### Chapter 6: Continuous testing
+
+* system reliability is the product of the reliability of its components
+  - a system w/ 100 components at 99% reliability has a reliability of 37%
+
+* __unit tests__ verify the behavior of small elements; should only be for 1 class (unless tightly coupled :()
+  - should take a fraction of a second; if it's longer, it may be a component test
+
+* __component/subsystem tests__ verify portions of a system
+  - may require a fully installed system or external dependencies
+
+* __system tests__ require a fully installed system & associated database; testing for end-to-end functionality
+
+* __functional tests__ / __acceptance tests__ tes tthe functionality from the viewpoint of the client
+  - eg. testing titles, that text shows up, etc.
+
+* a test directory could look like:
+  ```
+  test/
+    unit/
+    component/
+    system/
+  ```
+
+* write tests for defects (defect-driven development lol)
+
+* make component tests repeatable
+  - either by mocking out as much as possible (easier), or control the database
+
+* limit test cases to 1 assert
 
 ### Chapter 7: Continuous inspection (pp. 161-186)
 
