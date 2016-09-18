@@ -124,8 +124,22 @@
 
 * limit test cases to 1 assert
 
-### Chapter 7: Continuous inspection (pp. 161-186)
+### Chapter 7: Continuous inspection
 
-### Chapter 8: Continuous deployment (pp. 189-200)
+* __Cyclomatic Complexity Number (CCN)__: a plain integer measuring code complexity by counting the number of distinct paths through a method
+  - higher CCN correlates with defects
+  - reduce CCN w/ the __extract method technique__ (distribute complexity into smaller methods)
 
-### Chapter 9: Continuous feedback (pp. 203-222)
+* determine overcoupling by looking at __afferent coupling__ & __efferent coupling__
+  - highly afferent: an object has responsibility to too many other objects
+  - highly efferent: the object isn't sufficiently independent of other objects
+
+### Chapter 8: Continuous deployment
+
+* example high level deployment steps
+  - label a repo's assets
+  - produce a clean environment, free of assumptions
+  - generate & label a build directly from the repo & install it on the target machine
+  - successfully run tests @ all levels in this clone of prod
+  - create build feedback reports
+  - if necessary, roll back the release
