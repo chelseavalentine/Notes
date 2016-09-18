@@ -13,7 +13,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
     + got to uphold those SLAs (Service Level Agreements)
   - helps reveal chronic interoperability issues
   - gives engineers detailed capacity planning information
-  - shows where bandwich bottlenecks are
+  - shows where bandwidth bottlenecks are
   - provides management to critical systems
 
 * monitoring system: periodically connects to a Web server to make sure it responds, & sends notifications to admins if not
@@ -24,12 +24,12 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - better than other monolithic commercial solutions, because they try to accomplish too much by trying to monitor everything, and aren't like Nagios in the sense that it can monitor specific things exactly as you want it
     + often those commercial solutions have contextual limitations due to having architectures that're hard to integrate without a lot of reimplementation
   - highly modular due to single-purpose monitoring _plugins_
-  - community-drievn support for devices & services
+  - community-driven support for devices & services
   - does one thing but does it well
 
-### Chapter 1: Best Practices (pp. 1-11)
+### Chapter 1: Best Practices
 
-* important distinction b/t good & bad monitoring systems: amount of impact they have on network environment, when it comes to resource & bandwith utilization, & security
+* important distinction b/t good & bad monitoring systems: amount of impact they have on network environment, when it comes to resource & bandwidth utilization, & security
 
 #### A procedural approach to systems monitoring
 
@@ -46,9 +46,9 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
     + w/ remote processing, clients report back their results to the monitoring system
 
 * several Nagios servers can be combined to form 1 distributed monitoring system
-  - enables centralized exceution in large environments, or geographically disperse environments
+  - enables centralized execution in large environments, or geographically disperse environments
 
-##### Bandwith considerations
+##### Bandwidth considerations
 
 * plugins generate some IP traffic, so need to position the monitoring system well w/i the network topology to minimize traffic routing, the amount of traffic, and its dependency on other devices
   - manipulate traffic via polling intervals & plugin redundancy (2+ plugins monitoring the same service)
@@ -64,16 +64,16 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 ##### Security
 
-* monitoring systems usually need remote execution rights -> easy to introduce backdoors & vulnerabilities, which may be overlooked by penetration testers & auditing tools
+* monitoring systems usually need remote execution rights -> easy to introduce back doors & vulnerabilities, which may be overlooked by penetration testers & auditing tools
 
-* benefit w/ Nagios is that the popular remote execution plugins use industry-standard OpenSSL libraries, which're peer-reviewed by smart ppl/specialistics
+* benefit w/ Nagios is that the popular remote execution plugins use industry-standard OpenSSL libraries, which're peer-reviewed by smart ppl/specialists
   - helps avoid issue of not implementing encryption protocols correctly, which commercial-monitoring apps sometimes fail at
 
 ##### Silence is golden
 
 * monitoring systems use static thresholds to determine the state of a service
   - a rookie mistake: not figuring out what the normal operating parameters on a server are (eg. a server may routinely run CPU-intense batch jobs in a timeframe), thus creating a false alarm
-  - run monitoring systesm for a few weeks to collect data to create good configs, prior to setting up notifications
+  - run monitoring system for a few weeks to collect data to create good configs, prior to setting up notifications
 
 * Nagios has two threshold levels (warning & critical), & many escalation & polling options
   - thus should architect the system w/ a layered approach
@@ -104,7 +104,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - you define everything else with host & service objects
     + you define a single host check mechanism & several service checks per host, which tells Nagios which plugins to call to get the status of a host/service
   - helps Nagios track dependencies between hosts
-    + you can also do this via dependency defintiions
+    + you can also do this via dependency definitions
 
 * if a host isn't available, all of the services aren't available, so it doesn't send a notification per service, nor run the checks until it's up
 
@@ -135,7 +135,7 @@ Two scenarios in which a check must be rescheduled:
 * uses interleaving & inter-check delays to prevent all checks occurring/being scheduled at once and overloading the system
   - interleaving: checking every k service, and making multiple passes until they're all checked
 
-* there're 2 types of events: ones that can be run in parralel, and those that can't
+* there're 2 types of events: ones that can be run in parallel, and those that can't
   - Nagios has an event called a __reaper__ that'll reads plugins' status in the message queue
     + Nagios doesn't process the status until the service reaper processes it
 
@@ -153,11 +153,17 @@ Two scenarios in which a check must be rescheduled:
 
 #### I/O interfaces summarized
 
-* is better than commerical tools b/c it was designed to be great at interacting w/ other external monitoring & visualization tools
+* is better than commercial tools b/c it was designed to be great at interacting w/ other external monitoring & visualization tools
 
 * generates reports for you & has convenient summary interfaces
 
-### Chapter 4: Configuring Nagios (pp. 51-75)
+### Chapter 4: Configuring Nagios
+
+* object-oriented configurations
+
+* two types of config files: [1] configs containing directives, & [2] configs containing definitions
+
+* some configs are required for the daemon to even start; others aren't
 
 ### (skim) Chapter 5: Bootstrapping the configs (pp. 75-85)
 
