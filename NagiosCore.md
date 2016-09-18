@@ -5,6 +5,8 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 ### Introduction
 
+* Nagios: a scheduling and notification framework that calls small monitoring programs
+
 * purpose:
   - helps decrease downtime (2 main ways: redundancy & monitoring systems)
     + got to uphold those SLAs (Service Level Agreements)
@@ -17,7 +19,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - need to be done well, otherwise could create backdoors into otherwise secure infrastructure, leech time & resources from servers, & congest network with health checks
     + in bad cases: sensitive info could be being transmitted in clear text b/t hosts & the monitoring system
 
-* __Nagios__ is open source software that interfaces well w/ other open source tools (isn't monolithic software solving all your problems)
+* __Nagios__ is unopinionated open source software that interfaces well w/ other open source tools (isn't monolithic software solving all your problems)
   - better than other monolithic commercial solutions, because they try to accomplish too much by trying to monitor everything, and aren't like Nagios in the sense that it can monitor specific things exactly as you want it
     + often those commercial solutions have contextual limitations due to having architectures that're hard to integrate without a lot of reimplementation
   - highly modular due to single-purpose monitoring _plugins_
@@ -87,6 +89,47 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 ### Chapter 2: Theory of Operations (pp. 13-39)
 
 * need to modify monolithic software when you want to change/add to what you monitor (sometimes impossible due to licenses)
+
+* Nagios is unopinionated because it doesn't assume what you want to watch, require/provide any software or interpreters
+  - every element is user defined
+
+#### The host and service paradigm
+
+* in bad systems where people get duplicate notifications if they overlap notification groups, they just need a better system
+  - Nagios manages dependencies b/t groups of monitored objects, provides escalation, & ensures people don't get duplicate notifications
+    + via keeping track of dates/times that the plugins report back to Nagios
+
+* one of the only assumptions Nagios makes: there are hosts and services
+  - you define everything else with host & service objects
+    + you define a single host check mechanism & several service checks per host, which tells Nagios which plugins to call to get the status of a host/service
+  - helps Nagios track dependencies between hosts
+    + you can also do this via dependency defintiions
+
+* if a host isn't available, all of the services aren't available, so it doesn't send a notification per service, nor run the checks until it's up
+
+##### The downside of hosts and services
+
+* in some systems (eg. an email system), outages of services/hosts w/i the system affect parts of the system but don't mean the system is completely unavailable
+
+#### Plugins
+
+* each plugin is only required to provide an exit code (0 ok, 1 warning, 2 critical, 3 unknown)
+
+* the permission to execute scripts remotely problem is solved by the NRPE (Nagios Remote Plugin Executor)
+  - two parts: [1] a plugin called `check_nrpe`, executed locally by Nagios; [2] a daemon running on the monitored hosts
+
+#### Scheduling
+
+* events are put into an event queue, along w/ the time they should be run
+  - Nagios uses the time the plugin was originally scheduled to calculate the next execution time, in case it needs to reschedule a check as a result
+
+Two scenarios in which a check must be rescheduled:
+
+* [1] Nagios is busy & can't execute the check, the schedule has slipped
+
+* [2] plugin takes longer to return than expected (network delays/high utilization)
+
+* can have event handlers as an attempt to automatically fix a break in service
 
 ### (skim) Chapter 3: Installing Nagios (pp. 39-51)
 
