@@ -7,7 +7,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 * Nagios: a scheduling and notification framework that calls small monitoring programs
   - is both a monitoring system and information collection program
-
 * purpose:
   - helps decrease downtime (2 main ways: redundancy & monitoring systems)
     + got to uphold those SLAs (Service Level Agreements)
@@ -15,11 +14,9 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - gives engineers detailed capacity planning information
   - shows where bandwidth bottlenecks are
   - provides management to critical systems
-
 * monitoring system: periodically connects to a Web server to make sure it responds, & sends notifications to admins if not
   - need to be done well, otherwise could create backdoors into otherwise secure infrastructure, leech time & resources from servers, & congest network with health checks
     + in bad cases: sensitive info could be being transmitted in clear text b/t hosts & the monitoring system
-
 * __Nagios__ is unopinionated open source software that interfaces well w/ other open source tools (isn't monolithic software solving all your problems)
   - better than other monolithic commercial solutions, because they try to accomplish too much by trying to monitor everything, and aren't like Nagios in the sense that it can monitor specific things exactly as you want it
     + often those commercial solutions have contextual limitations due to having architectures that're hard to integrate without a lot of reimplementation
