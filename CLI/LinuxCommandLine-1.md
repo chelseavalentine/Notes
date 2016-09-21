@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 2 – What is the Shell?
+## What is the Shell?
 
 * __bash__: Bourne Again SHell
 
@@ -14,7 +14,7 @@ Miscellaneous
 
 `date`, `cal`, `exit`
 
-## Ch 3 – Navigation
+## Navigation
 
 * __`pwd`__: Print Working Directory
 
@@ -25,7 +25,7 @@ Miscellaneous
   * `ls [path]`: list contents without having to go to it
   * `-lh`: long format & human-readable
 
-## Ch 4 – Exploring the system
+## Exploring the system
 
 * __`file [filename]`__: brief description of file's contents
 
@@ -37,7 +37,7 @@ Miscellaneous
 * __symbolic link__ (symlink, soft link): a reference to a file by another name
   - lets you refer to a file by many names
 
-## Ch 5 – Manipulating files and directories
+## Manipulating files and directories
 
 * __`cp`__: CoPy files & directories
   * `cp -u [pattern] [destination]` - copy files that don't exist in the destination over
@@ -79,7 +79,7 @@ Miscellaneous
 * `[[:class:]]`: match any character not in the class
   * _classes_ – [:alnum:] alphanumeric, [:alpha:] alphabetic, [:digit:], [:lower:], [:upper:]
 
-## Ch 6 – Working with commands
+## Working with commands
 
 * __`type`__: how a command name is interpreted
   * executable program, shell builtin, shell function, alias

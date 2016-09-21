@@ -3,11 +3,11 @@
 #### Table of Contents
 
 1. Introduction
-2. [What is the Shell?](LinuxCommandLine-1.md#ch-2--what-is-the-shell)
-3. [Navigation](LinuxCommandLine-1.md#ch-3--navigation)
-4. [Exploring the system](LinuxCommandLine-1.md#ch-4--exploring-the-system)
-5. [Manipulating files and directories](LinuxCommandLine-1.md#ch-5--manipulating-files-and-directories)
-6. [Working with commands](LinuxCommandLine-1.md#ch-6--working-with-commands)
+2. [What is the Shell?](LinuxCommandLine-1.md#what-is-the-shell)
+3. [Navigation](LinuxCommandLine-1.md#navigation)
+4. [Exploring the system](LinuxCommandLine-1.md#exploring-the-system)
+5. [Manipulating files and directories](LinuxCommandLine-1.md#manipulating-files-and-directories)
+6. [Working with commands](LinuxCommandLine-1.md#working-with-commands)
 7. [I/O redirection]()
 8. [The world as the shell sees it]()
 9. [Advanced keyboard tricks]()

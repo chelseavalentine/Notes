@@ -1,18 +1,6 @@
 # The Linux Command Line
 
-## Ch 31 - Troubleshooting
-
-* turn on __tracing__ to aee the commands performed with the expansions applied
-  ```bash
-  # ... code ...
-  set -x # turns on tracing
-
-  # ... code ...
-
-  set +x # turns off tracing
-  ```
-
-## Ch 32 - Flow control: branching with `case` (446)
+## Ch 32 - Flow control: branching with `case`
 
 * __`case`__
   ```bash
@@ -46,7 +34,7 @@
   ```bash
   while [[ $# -gt 0 ]]; do
     echo "Argument $count = $1"
-    count=$((count + 1))
+    count=$((count++))
     shift
   done
   ```
@@ -54,12 +42,97 @@
 * `$*` & `$@` expand into the list of params, starting w/ 1
   - there's a difference, but it'll be clearer once you use it
 
-## Ch 34 - Flow control: looping with `for` (465)
+## Ch 34 - Flow control: looping with `for`
 
-## Ch 35 - Strings and numbers (471)
+* __`for`__:
+  ```bash
+  for [variable] [[in [words]]]; do
+    [commands]
+  done
 
-## Ch 36 - Arrays (490)
+  # eg.
+  for i in A B C D; do echo $i; done
 
-## Ch 37 - Exotica (499)
+  for i in {A..D}; do echo $i; done
+  ```
 
-(510)
+  alternatively
+
+  ```bash
+  for (( expression1; expression2; expression3 )); do
+    [commands]
+  done
+
+  # eg.
+  for (( i=0; i<5; i=i+1 )); do
+    echo $i
+  done
+  ```
+
+## Ch 35 - Strings and numbers
+
+### Strings
+
+* `${parameter:-word}` substitutes the value of the param if unset
+  - doesn't change value
+
+* `${parameter:=word}` sets default value if empty
+
+* `${parameter:?word}` causes the script to exit with an error & the message specified in _word_ variable if the parameter is empty
+
+* `${parameter:+word}` expands into the parameter if it's set, otherwise it doesn't result in anything
+
+* expansions returning variable names:
+  - `${!prefix*}` and `${!prefix@}` return names of existing variables w/ names beginning with _prefix_
+
+* `${#parameter}` expands into length of string contained by parameter
+  - unless parameter is `@` or `*`, then it results in the number of positional parameters
+
+* `${parameter:offset}` & `${paramater:offset:length}` extracts a portion of the string contained in _parameter_
+  - starts @ _offset_ characters & continues unless specified by _length_
+  - if the offset is negative, it starts from the end of the string, but the length needs to be > 0
+
+* `${parameter#pattern}` & `${parameter##pattern}` removes a leading portion of the string in _parameter_ defined by the _pattern_
+  - `${parameter##pattern}` removes longest match, whereas the other removes the shortest match
+  ```bash
+  > foo=file.txt.zip
+  > echo ${foo#*.}
+  txt.zip
+  > echo ${foo##*.}
+  zip
+  ```
+
+* `${parameter%pattern}` & `${parameter%%pattern}` same as above, except it removes text from the end of the string in a parameter, rather than the beginning
+  ```bash
+  > foo=file.txt.zip
+  > echo ${foo%.*}
+  file.txt
+  > echo ${foo%%.*}
+  file
+  ```
+
+* searches & replaces upon _parameter_'s contents with the contents of _string_
+  - `${parameter/pattern/string}` only the first occurrence of _pattern_ is replaced
+  - `${parameter//pattern/string}` all occurrences are replaced
+  - `${parameter/#pattern/string}` requires that the match occur at the beginning of the string
+  - `${parameter/%pattern/string}` match must occur @ end of string
+  - if _string_ is absent, the pattern matches are just deleted
+
+### Numbers
+
+* arithmetic evaluation & expansion `$((expression))`
+
+* number bases
+  - `[number]` treated as decimal integers
+  - `0[number]` considered octal
+  - `0x[number]` hexadecimal notation
+  - `[base]#[number]` _number_ is in _base_
+
+* notable operators
+  - `/` integer division
+  - `**` exponentiation
+  - `%` modulo (remainder)
+
+* can assign nothing to variables like `foo=`
+
+* logic operators: `<=`, `>=`, `==`, and so on

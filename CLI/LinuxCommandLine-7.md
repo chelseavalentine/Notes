@@ -106,3 +106,15 @@ until [ $count -gt 5 ]; do
   count=$((count + 1))
 done
 ```
+
+## Ch 31 - Troubleshooting
+
+* turn on __tracing__ to aee the commands performed with the expansions applied
+  ```bash
+  # ... code ...
+  set -x # turns on tracing
+
+  # ... code ...
+
+  set +x # turns off tracing
+  ```
