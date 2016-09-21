@@ -7,7 +7,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 * Nagios: a scheduling and notification framework that calls small monitoring programs
   - is both a monitoring system and information collection program
-
 * purpose:
   - helps decrease downtime (2 main ways: redundancy & monitoring systems)
     + got to uphold those SLAs (Service Level Agreements)
@@ -15,11 +14,9 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - gives engineers detailed capacity planning information
   - shows where bandwidth bottlenecks are
   - provides management to critical systems
-
 * monitoring system: periodically connects to a Web server to make sure it responds, & sends notifications to admins if not
   - need to be done well, otherwise could create backdoors into otherwise secure infrastructure, leech time & resources from servers, & congest network with health checks
     + in bad cases: sensitive info could be being transmitted in clear text b/t hosts & the monitoring system
-
 * __Nagios__ is unopinionated open source software that interfaces well w/ other open source tools (isn't monolithic software solving all your problems)
   - better than other monolithic commercial solutions, because they try to accomplish too much by trying to monitor everything, and aren't like Nagios in the sense that it can monitor specific things exactly as you want it
     + often those commercial solutions have contextual limitations due to having architectures that're hard to integrate without a lot of reimplementation
@@ -34,7 +31,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 #### A procedural approach to systems monitoring
 
 * need to distinguish which critical systems for monitoring initiatives to be successful (if everything is important, nothing is)
-
 * management needs to be involved w/ planning monitoring systems, because they can help identify critical systems
   - those who work with the things being monitored should also be involved to get a solution that works for everyone
 
@@ -44,7 +40,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
   - but sometimes impossible, and remote processing is preferable
     + like in the instance of 10,000s of hosts, where centralized execution is too much for 1 monitoring server
     + w/ remote processing, clients report back their results to the monitoring system
-
 * several Nagios servers can be combined to form 1 distributed monitoring system
   - enables centralized execution in large environments, or geographically disperse environments
 
@@ -52,7 +47,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 * plugins generate some IP traffic, so need to position the monitoring system well w/i the network topology to minimize traffic routing, the amount of traffic, and its dependency on other devices
   - manipulate traffic via polling intervals & plugin redundancy (2+ plugins monitoring the same service)
-
 * Nagios has _hostgroups_ for hosts that're on slow links or are sensitive to resource utilization, so slowness doesn't trigger an a false alarm
 
 ##### Network location and dependencies
@@ -65,7 +59,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 ##### Security
 
 * monitoring systems usually need remote execution rights -> easy to introduce back doors & vulnerabilities, which may be overlooked by penetration testers & auditing tools
-
 * benefit w/ Nagios is that the popular remote execution plugins use industry-standard OpenSSL libraries, which're peer-reviewed by smart ppl/specialists
   - helps avoid issue of not implementing encryption protocols correctly, which commercial-monitoring apps sometimes fail at
 
@@ -74,7 +67,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 * monitoring systems use static thresholds to determine the state of a service
   - a rookie mistake: not figuring out what the normal operating parameters on a server are (eg. a server may routinely run CPU-intense batch jobs in a timeframe), thus creating a false alarm
   - run monitoring system for a few weeks to collect data to create good configs, prior to setting up notifications
-
 * Nagios has two threshold levels (warning & critical), & many escalation & polling options
   - thus should architect the system w/ a layered approach
 
@@ -90,7 +82,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 ### Chapter 2: Theory of Operations
 
 * need to modify monolithic software when you want to change/add to what you monitor (sometimes impossible due to licenses)
-
 * Nagios is unopinionated because it doesn't assume what you want to watch, require/provide any software or interpreters
   - every element is user defined
 
@@ -99,13 +90,11 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 * in bad systems where people get duplicate notifications if they overlap notification groups, they just need a better system
   - Nagios manages dependencies b/t groups of monitored objects, provides escalation, & ensures people don't get duplicate notifications
     + via keeping track of dates/times that the plugins report back to Nagios
-
 * one of the only assumptions Nagios makes: there are hosts and services
   - you define everything else with host & service objects
     + you define a single host check mechanism & several service checks per host, which tells Nagios which plugins to call to get the status of a host/service
   - helps Nagios track dependencies between hosts
     + you can also do this via dependency definitions
-
 * if a host isn't available, all of the services aren't available, so it doesn't send a notification per service, nor run the checks until it's up
 
 ##### The downside of hosts and services
@@ -115,7 +104,6 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 #### Plugins
 
 * each plugin is only required to provide an exit code (0 ok, 1 warning, 2 critical, 3 unknown)
-
 * the permission to execute scripts remotely problem is solved by the NRPE (Nagios Remote Plugin Executor)
   - two parts: [1] a plugin called `check_nrpe`, executed locally by Nagios; [2] a daemon running on the monitored hosts
 
@@ -123,18 +111,15 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 * events are put into an event queue, along w/ the time they should be run
   - Nagios uses the time the plugin was originally scheduled to calculate the next execution time, in case it needs to reschedule a check as a result
-
+  
 Two scenarios in which a check must be rescheduled:
 
-* [1] Nagios is busy & can't execute the check, the schedule has slipped
-
-* [2] plugin takes longer to return than expected (network delays/high utilization)
+1. Nagios is busy & can't execute the check, the schedule has slipped
+2. plugin takes longer to return than expected (network delays/high utilization)
 
 * can have event handlers as an attempt to automatically fix a break in service
-
 * uses interleaving & inter-check delays to prevent all checks occurring/being scheduled at once and overloading the system
   - interleaving: checking every k service, and making multiple passes until they're all checked
-
 * there're 2 types of events: ones that can be run in parallel, and those that can't
   - Nagios has an event called a __reaper__ that'll reads plugins' status in the message queue
     + Nagios doesn't process the status until the service reaper processes it
@@ -143,24 +128,18 @@ Two scenarios in which a check must be rescheduled:
 
 * host states: Unreachable, Down, Recovered, Flapping
   - flapping: services that go up & down repeatedly
-
 * service states: Unknown, Critical, Warning, Recovered, Flapping
-
 * can create generic definitions (templates) to help you define systems that have things in common (eg. can use said template to define multiple web servers)
-
 * Nagios _either_ sends the notification defined in the service, _or_ the notification defined in the escalation
 
 
 #### I/O interfaces summarized
 
 * is better than commercial tools b/c it was designed to be great at interacting w/ other external monitoring & visualization tools
-
 * generates reports for you & has convenient summary interfaces
 
 ### Chapter 4: Configuring Nagios
 
 * object-oriented configurations
-
 * two types of config files: [1] configs containing directives, & [2] configs containing definitions
-
 * some configs are required for the daemon to even start; others aren't
