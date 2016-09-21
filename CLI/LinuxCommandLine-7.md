@@ -82,20 +82,27 @@ fi
     + non-zero exit is returned by `read` if times out
   - `-u [fd]` use input from file descriptor _fd_ rather than standard input
 
-## Ch 30 - Flow control: looping with `while` / `until` (426)
+## Ch 30 - Flow control: looping with `while` / `until`
 
-## Ch 31 - Troubleshooting (433)
+* __`while`__: `while [commands]; do [commands]; done
+  - `break` & `continue`
 
-## Ch 32 - Flow control: branching with `case` (446)
+```bash
+count=1
 
-## Ch 33 - Positional parameters (451)
+while [ $count -le 5 ]; do
+  echo $count
+  count=$((count + 1))
+done
+```
 
-## Ch 34 - Flow control: looping with `for` (465)
+* __`until`__:
 
-## Ch 35 - Strings and numbers (471)
+```bash
+count=1
 
-## Ch 36 - Arrays (490)
-
-## Ch 37 - Exotica (499)
-
-(510)
+until [ $count -gt 5 ]; do
+  echo $count
+  count=$((count + 1))
+done
+```
