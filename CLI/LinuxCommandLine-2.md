@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 7 – I/O redirection
+## I/O redirection
 
 * __`cat`__: concatenate files: reads 1/+ files & copies them to std output
 
@@ -79,7 +79,7 @@
 
   eg. `ls /usr/bin /usr/documents | sort | less`
 
-## Ch 8 – The world as the shell sees it
+## The world as the shell sees it
 
 * `echo` displays a line of text
 

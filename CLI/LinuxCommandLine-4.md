@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 12 - The environment
+## The environment
 
 * `printenv`: print part or all of the environment
 
@@ -10,7 +10,7 @@
 
 * `alias`
 
-## Ch 13 - A gentle introduction to vi
+## A gentle introduction to vi
 
 * Cursor movements (in command mode)
   - `0` beginning of line
@@ -52,7 +52,6 @@
 * `P` to paste before the cursor
 
 * `J` joins the current and next line together
-
 
 #### Search and replace
 

@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 20 - Regular expressions
+## Regular expressions
 
 * `grep` "global regular expression print": searches text files for occurrence & prints matching lines
   - `grep [[options]] [regex] [[file...]]
@@ -50,7 +50,7 @@
     + `{n,} match if occurs n or more times
     + `{,m} match if occurs up to m times
 
-## Ch 21 - Text processing
+## Text processing
 
 * `cat` concatenate files & print on the standard input
   - `-n` numbers lines
@@ -79,7 +79,7 @@
 * `aspell` interactive spell checker
   - `aspell check [text file]`
 
-## Ch 22 - Formatting output
+## Formatting output
 
 * `nl [file]` number the lines
 
@@ -95,7 +95,7 @@
 
 * `groff` a document formatting system
 
-## Ch 23 - Printing
+## Printing
 
 * `pr` converts text files for printing
 
@@ -109,7 +109,7 @@
 
 * `lprm` cancels print jobs
 
-## Ch 24 - Compiling programs
+## Compiling programs
 
 * __compiling__: translating source code into the computer processor's native language
   - interpreted programs are slower b/c they're translated every time it's executed; whereas compiled programs are only translated once and then the translation is recorded

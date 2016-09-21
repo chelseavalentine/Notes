@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 32 - Flow control: branching with `case`
+## Flow control: branching with `case`
 
 * __`case`__
   ```bash
@@ -23,7 +23,7 @@
   esac
   ```
 
-## Ch 33 - Positional parameters
+## Positional parameters
 
 * positional parameters are named 0 through 9 (`$0`, `$1`, ..., `$9`)
   - specify # > 9 by putting it in braces (eg. `${10}`)
@@ -42,7 +42,7 @@
 * `$*` & `$@` expand into the list of params, starting w/ 1
   - there's a difference, but it'll be clearer once you use it
 
-## Ch 34 - Flow control: looping with `for`
+## Flow control: looping with `for`
 
 * __`for`__:
   ```bash
@@ -69,7 +69,7 @@
   done
   ```
 
-## Ch 35 - Strings and numbers
+## Strings and numbers
 
 ### Strings
 

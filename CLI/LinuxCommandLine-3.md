@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 9 – Advanced keyboard tricks
+## Advanced keyboard tricks
 
 * `clear`: clears the screen
 
@@ -34,7 +34,7 @@
   - then use `ctrl-j` to copy the line from history to the current command line
   - `ctrl-o` execute current item in history list, & advance to the next one
 
-## Ch 10 – Permissions
+## Permissions
 
 * `ssh` secure shell
 
@@ -87,7 +87,7 @@
 
 * `passwd`: change a user's password
 
-## Ch 11 – Processes
+## Processes
 
 * __daemon program__: a program executing in the background without UI
 

@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 36 - Arrays
+## Arrays
 
 * arrays are automatically created when accessed
   - alternate way: `declare -a a`
@@ -42,6 +42,6 @@
 
 * if you access an array without a subscript, it refers to element 0 of the array
 
-## Ch 37 - Exotica
+## Exotica
 
 * you can get asynchronous execution by launching a child script from a parent

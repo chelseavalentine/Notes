@@ -1,6 +1,6 @@
 # The Linux Command Line
 
-## Ch 14 - Customizing the prompt
+## Customizing the prompt
 
 * escape codes
   - `\d` current date in day, month, date format
@@ -45,7 +45,7 @@
   - cyan `\033[0;46m`
   - light grey `\033[0;47m`
 
-## Ch 17 - Networking
+## Networking
 
 * IP (Internet Protocol) address; URI (Uniform Resource Identifier)
 
@@ -64,7 +64,7 @@
   - has `scp` (secure copy) To copy files across a network
   - has `sftp`
 
-## Ch 18 - Searching for files
+## Searching for files
 
 * `locate` find files by name
 
@@ -94,7 +94,7 @@
 
 * `stat` display file or file system status
 
-## Ch 19 - Archiving and backup
+## Archiving and backup
 
 #### File compression
 

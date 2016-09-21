@@ -1,19 +1,19 @@
 # The Linux Command Line
 
-## Ch 25 - Writing your first shell script
+## Writing your first shell script
 
 * first line of every shell script: `#!/bin/bash`
   - tells system the name of the interpreter to execute the script; called a "shebang"
 
 * when writing scripts, use the longer form of the option names for readability
 
-## Ch 27 - Top-down design
+## Top-down design
 
 *  for function calls to be recognized as shell functions and not external programs, function definitions must appear before they are called
 
 * local variables are declared with `local`, eg. `local foo=1`
 
-## Ch 28 - Flow control: branching with `if`
+## Flow control: branching with `if`
 
 * `if`
 
@@ -62,7 +62,7 @@ fi
   - or: w/ test: `-o`; w/ [[ ]] & (( )): `||`
   - not: `!`
 
-## Ch 29 - Reading keyboard input
+## Reading keyboard input
 
 * `read` read values from standard input
   - `read [[-options]] [[variable...]]`
@@ -82,7 +82,7 @@ fi
     + non-zero exit is returned by `read` if times out
   - `-u [fd]` use input from file descriptor _fd_ rather than standard input
 
-## Ch 30 - Flow control: looping with `while` / `until`
+## Flow control: looping with `while` / `until`
 
 * __`while`__: `while [commands]; do [commands]; done
   - `break` & `continue`
@@ -107,7 +107,7 @@ until [ $count -gt 5 ]; do
 done
 ```
 
-## Ch 31 - Troubleshooting
+## Troubleshooting
 
 * turn on __tracing__ to aee the commands performed with the expansions applied
   ```bash
