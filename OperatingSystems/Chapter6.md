@@ -17,4 +17,3 @@
 ### 6.7 Other issues (489)
 
 ### 6.8 Research on deadlocks (495)
-

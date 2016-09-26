@@ -95,7 +95,7 @@
 * you can intertwine user & kernel threads; eg. putting multiple user threads on a kernel thread
   - user-level threads take turns using the kernel thread
 
-* __scheduler activation__ mimics the functionality of kernel threads, but w/ better perf. & flexiility like the user space ones
+* __scheduler activation__ mimics the functionality of kernel threads, but w/ better perf. & flexibility like the user space ones
   - avoids unnecessary transitions b/t user & kernel space
   - kernel assigns a # of virtual processors to each process, & lets (user-space) run-time system allocate threads to processes
 
