@@ -16,3 +16,7 @@ There're notes from several books here:
 2. [Chapter 2](SiegelChapter2.md)
 3. [Chapter 3](SiegelChapter3.md)
 4. [Chapter 4](SiegelChapter4.md)
+
+#### Cracking the Coding Interview
+1. [Big O Notation](CTCI-1.md)
+2. [Chapter 1: Arrays and Strings](CTCI-1.md)
