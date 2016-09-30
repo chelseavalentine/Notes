@@ -2,8 +2,6 @@
 
 Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)_.
 
-
-
 ## Chapter 2: Representing & Manipulating Information
 
 * __unsigned__ encodings represent numbers `>= 0`
@@ -14,7 +12,7 @@ Notes taken while reading _Computer Systems: A Programmer's Perspective (3rd ed)
 * __bytes__ (8 bits) are the smallest addressable unit of memory
 * __virtual memory__: a large array of bytes, with each given an address
   * __virtual address space__: the set of all possible addresses
-* __program objects__: program data, iinstruction, & control information
+* __program objects__: program data, instruction, & control information
 
 #### Hexadecimal notation
 
@@ -135,18 +133,13 @@ Typical ranges for C integral data types for 64-bit programs
 | Two's complement | 3 [011]  | 3 [011]  | 9 [001001]  |     1 [001]     |
 
 * Multiplying by constants is just shifting the bits over to the left (p. 101)
-
 * Dividing by constants is just shifting bits over to the right (p. 104)
-
   * It's x/2^k rounded down in bit form
-
   * C expression that compules value x/2^k is
 
     ```c
      (x<0 ? x+(1<<k)-1 : x) >>k
     ```
-
-
 
 ### Floating point
 
@@ -171,6 +164,6 @@ Illustration of rounding modes
 
 ##### Floating-point operators
 
-* there are defined ways to add & multiply (p. 123) 
+* there are defined ways to add & multiply (p. 123)
   * eg. add: Round(x + y), multiply: Round(x • y)
 * how C handles rounding & overflows (p. 125)
