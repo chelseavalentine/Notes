@@ -59,7 +59,7 @@ From: Andrew Hunt & David Thomas. “The Pragmatic Programmer: From Journeyman t
 
 * design for concurrency; linear code => crappy assumptions made
 
-### Chapter 6: While you are coding (pp. 152-176)
+### Chapter 6: While you are coding
 
 * for routines you call, rely only on documented behavior. If you can't, then document your assumption well
 * don't refactor and add functionality at the same time
@@ -68,6 +68,12 @@ From: Andrew Hunt & David Thomas. “The Pragmatic Programmer: From Journeyman t
 * unit testing = testing against contract
 * test your software, or your users will
 
-### Chapter 7: Before the project (pp. 176-194)
+### Chapter 7: Before the project
 
-### Chapter 8: Pragmatic projects (pp. 194-222)
+* requirements are ultimately an interpretation of the project, and shouldn't be too detailed or specific about implementation; abstract enough but not too abstract
+
+### Chapter 8: Pragmatic projects
+
+* documentation should be generated without human intervention
+* resource exhaustion could include testing: memory, disk space, CPU bandwidth, wall-clock time, disk bandwidth, network bandwidth, color palette, & video resolution
+* you'll be reading the source code 100s of times but only writing it a few times
