@@ -49,9 +49,24 @@ From: Andrew Hunt & David Thomas. “The Pragmatic Programmer: From Journeyman t
   - reduces deadlock
 * can use wrappers for each resource in C (& prob other languages too), to ensure memory gets deallocated
 
-### Chapter 5: Bend, or break (pp. 126-152)
+### Chapter 5: Bend, or break
+
+* __metaprogramming__: using configurations to generate code
+  - eg. making the choice of database engine, UI style, etc. a configuration
+
+* __temporal coding__: coding w/ concurrency & ordering in mind
+  - leads to temporal coupling, meaning that timing matters
+
+* design for concurrency; linear code => crappy assumptions made
 
 ### Chapter 6: While you are coding (pp. 152-176)
+
+* for routines you call, rely only on documented behavior. If you can't, then document your assumption well
+* don't refactor and add functionality at the same time
+* have good tests before refactoring
+* refactor in small steps
+* unit testing = testing against contract
+* test your software, or your users will
 
 ### Chapter 7: Before the project (pp. 176-194)
 
