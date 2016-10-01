@@ -1,8 +1,24 @@
 # Pragmatic Programmer
 
-### Chapter 1: A pragmatic philosophy (pp. 23-46)
+* _kaizen_: Japanese business philosophy of continuously making small improvements
 
-### Chapter 2: A pragmatic approach (pp. 46-93)
+### Chapter 1: A pragmatic philosophy
+
+* instead of excuses, provide options
+* don't leave "broken windows" (bad designs, wrong decisions, poor code) unrepaired; otherwise -> a decline
+* “[McC95] Jim McCarthy. Dynamics of Software Development. Microsoft Press, Redmond, WA, 1995.”
+* “[Ber96] Albert J. Bernstein. Dinosaur Brains: Dealing with All Those Impossible People at Work. Ballantine Books, New York, NY, 1996.”
+
+
+### Chapter 2: A pragmatic approach
+
+> shortcuts make for long delays
+
+* don't rely on the properties of things you can't control
+  - eg. using phone numbers as a user ID (phone co. could reassign area codes)
+
+* keep track of your estimates to gauge their accuracy;
+* don't make estimates on the fly; get back to the person
 
 ### Chapter 3: The basic tools (pp. 93-129)
 
