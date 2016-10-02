@@ -82,34 +82,96 @@
 
 ## Chapter 5: Functional programming
 
+* decouples functions and data
+* by programming to a small set of abstractions, you end up with more reusable, composable code
+
 ### Pure functions: What and why
 
-#### Pure functions are referentially transparent
-
-#### Pure functions have no side effects
+* __pure function__:
+  - has __referential transparency__: always returns same results given the same args
+  - doesn't cause side-effects; can't change things outside of the function
 
 ### Living with immutable data structures
 
 #### Recursion instead of for/while
 
+* since immutable data structures, need to use recursion if you wanted to do a sum
+  ```clojure
+  (defn sum
+    ([vals] (sum vals 0))
+    ([vals accumulating-total]
+      (if (empty? vals)
+      accumulating-total
+      (sum (rest vals) (+ (first vals) accumulating-total)))))
+  ```
+
+* `recur` is better for performance-wise for recursion, since clojure doesn't provide tail call optimization
+  ```clojure
+  (defn sum
+    ([vals]
+      (sum vals 0))
+    ([vals accumulating-total]
+      (if (empty? vals)
+        accumulating-total
+        (recur (rest vals) (+ (first vals) accumulating-total)))))
+  ```
+
 #### Function composition instead of attribute mutation
+
+* __function composition__: return val of a function is passed as an arg to another
 
 ### Cool things to do with pure functions
 
 #### `comp`
 
+* `comp` allows you to create a new function from the composition of any number of functions
+  - applies functions like a composition, so if `(comp f1 f2 ... fn)`, then `f1(f2(..(fn(args))))`
+  ```clojure
+  ((comp inc *) 2 3)
+  ; => 7
+  ```
+
+* can use to retrieve nested values
+  ```clojure
+  (def character
+    {:name "Smooches McCutes"
+     :attributes {:intelligence 10
+                  :dexterity 5}})
+  (def c-int (comp :intelligence :attributes))
+
+  (c-int character)
+  ; => 10
+  ```
+
+* make compositions of functions that take more than 1 arg by wrapping it in an anonymous function
+  ```clojure
+  (def spell-slots-comp (comp int inc #(/ % 2) c-int))
+  ```
+
 #### `memoize`
 
-### Peg thing ?? wtf ??
+* memoization stores the args passed to a function, & the return value of the function
+  - significance: subsequent calls to the function w/ the same args can return the result immediately
 
-#### Playing
+  ```clojure
+  (def memo-sleepy-identity (memoize sleepy-identity))
+  (memo-sleepy-identity "Mr. Fantastico")
+  ; => "Mr. Fantastico" after 1 second
 
-#### Code organization
+  (memo-sleepy-identity "Mr. Fantastico")
+  ; => "Mr. Fantastico" immediately
+  ```
 
-#### Creating the board
+### Misc
 
-#### Moving pegs
+* `assoc-in` returns a map w/ the given value @ the specified nesting
+  ```clojure
+  (assoc-in {} [:cookie :monster :vocals] "Finntroll")
+  ; => {:cookie {:monster {:vocals "Finntroll"}}}
+  ```
 
-#### Rendering and printing the board
-
-#### Player interaction
+* `get-in` lets you look up values in nested maps
+  ```clojure
+  (get-in {:cookie {:monster {:vocals "Finntroll"}}} [:cookie :monster])
+  ; => {:vocals "Finntroll"}
+  ```
