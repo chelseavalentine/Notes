@@ -64,20 +64,80 @@
 
 ### Your project as a library
 
+* __namespaces__ contain maps b/t symbols & references to vars
+  - current namespace: `*ns*`; gotten w/ `(ns-name *ns*)`
+  - if you want to use the symbol & not the thing it refers to, you need to precede it with a quote (`'`)
+  ```clojure
+  (map inc [1 2])
+  ; => (2 3)
+
+  '(map inc [1 2])
+  ; => (map inc [1 2])
+  ```
+
 ### Storing objects with `def`
+
+* `def`: primary tool in Clojure for storing objects
+  - process is called _interning a var_
+  ```clojure
+  (def great-books ["East of Eden" "The Glass Bead Game"])
+  ; => #'user/great-books
+  ```
+
+* get a namespace's interned-vars using `ns-interns`
+  ```clojure
+  (ns-interns *ns*)
+
+  (get (ns-inters *ns*) 'my-defined-symbol')
+  ; => #'user/my-defined-symbol
+  ```
+
+* get the full map of symbols to vars with `(ns-map *ns*)`
+
+* get the symbol corresponding to the var with `deref` and `#'`
+  ```clojure
+  (def chelsea ["Chelsea is" "so cool"])
+
+  (deref #'user/chelsea)
+  ; => ["Chelsea is" "so cool"]
+  ```
+
+* _name collision_: rewritting a symbol with a new value;
 
 ### Creating and switching to namespaces
 
+* `create-ns` creates a namespace
+  ```clojure
+  (create-ns 'chelsea.app)
+  ; => #<Namespace chelsea.app>
+  ```
+
+* __`in-ns`__ creates a namespace if it doesn't exist & switches into it
+  ```clojure
+  (in-ns 'chelsea.app)
+  ; => #<Namespace chelsea.app>
+  ```
+
+* access another namespace's symbols w/ a fully qualified name, eg. `chelsea/printName`
+
 #### `refer`
 
-#### `alias
+* `refer` gives you control over how you refer to symbols in other namespaces by essentially merging in the symbols into the current namespace
+  - use `:only`, `:exclude`, and `:rename` to control what's merged & how
+  ```clojure
+  (clojure.core/refer 'chelsea.app')
 
-### Real project organization
+  (clojure.core/refer 'cheese.taxonomy :only ['bries])
+  (clojure.core/refer 'cheese.taxonomy :exclude ['bries])
+  (clojure.core/refer 'cheese.taxonomy :rename {'bries 'yummy-bries})
+  ```
 
-#### The relationship between file paths and namespace names
+* `defn-` define a private function
+  - still technically referable to outside of its namespace by using `@#'some/private-var`
 
-#### Requiring and using namespaces
+#### `alias`
 
-#### The ns Macro
-
-### To catch a burglar
+* `alias` lets you define shorter names
+  ```clojure
+  (clojure.core/alias 'taxonomy 'cheese.taxonomy)
+  ```
