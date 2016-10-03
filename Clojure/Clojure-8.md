@@ -74,26 +74,128 @@
 
 ## Chapter 7: Reading, evaluation, and macros
 
-### An overview of Clojure's evaluaion model
+### An overview of Clojure's evaluation model
+
+* __evaluation model__: [1] read textual source code, producing the data structures; [2] evaluate: traverse the data structures & use function application or var lookup based on the type
+  - this makes it a __homoiconic__ language since it has a relationship b/t source code, data, & evaluation
+    - it represents abstract syntax trees (ASTs) using lists, and your program is just a tree
 
 ### The reader
 
 #### Reading
 
+* `read-string` takes a string as an arg, processes it w/ Clojure's reader, & returns a data structure
+  ```clojure
+  (read-string "(+ 1 2)")
+  ; => (+ 1 2)
+
+  (list? (read-string "(+ 1 2)"))
+  ; => true
+
+  (eval (read-string "(+ 1 2)"))
+  ; => 3
+  ```
+
 #### Reader macros
+
+* __reader macros__: sets of rules for transforming text into data structures
+  - designated by macro characters, eg. `'` (quote), `#`, & `@` (deref)
 
 ### The evaluator
 
 #### These things evaluate to themselves
 
+* `true`, `false`, `{}`, `:hello`, `()`
+
 #### Symbols
+
+* Clojure resolves a symbol by:
+  1. Looking up whether the symbol names a special form. If it doesn’t...
+  2. Looking up whether the symbol corresponds to a local binding. If it doesn’t...
+  3. Trying to find a namespace mapping introduced by def. If it doesn’t...
+  4. Throwing an exception
+
+* __local binding__: any association b/t a symbol & a value that _wasn't_ created by `def` (eg. created by `let`)
+  - the most recently defined binding takes precedence
+  ```clojure
+  (let [x 5]
+    (+ x 3))
+  ; => 8
+
+  ;; most recent one takes precedence
+  (let [x 5]
+    (let [x 6]
+      (+ x 3)))
+  ; => 9
+  ```
 
 #### Lists
 
+* if a list isn't empty, it's evaluated as a call to the first element in the list
+
 ##### Function calls
+
+```clojure
+(+ 1 2)
+; => 3
+```
 
 ##### Special forms
 
+* instead of resolving symbols, they create associations b/t symbols & values,
+* `def`, `let`, `loop`, `fn`, `do`, `recur`
+
 #### Macros
 
+* can create macros to change how clojure reads things, eg. infix notation
+  ```clojure
+  (let [infix (read-string "(1 + 1)")]
+    (list (second infix) (first infix) (last infix)))
+  ; => (+ 1 1)
+  ```
+
+* the data structures returned by a function isn't evaluated, but if it's returned by a macro, it is
+  * __macro expansion__: the process of determining the return value of a macro
+
+* `macroexpand` shows you which data structure a macro returns before the data structure is evaluated
+  ```clojure
+  (macroexpand '(ignore-last-operand (+ 1 2 10)))
+  ; => (+ 1 2)
+
+  ```
+Examples
+```clojure
+;; 1
+(defmacro ignore-last-operand
+  [function-call]
+  (butlast function-call))
+
+;; 2
+(defmacro infix
+  [infixed]
+  (list (second infixed)
+        (first infixed)
+        (last infixed)))
+
+(infix (1 + 2))
+; => 3
+```
+
 #### Syntactic abstraction and the `->` macro
+
+* threading/stabby macro: `->` lets you rewrite functions so you don't need to read it right-to-left; it also lets you omit parentheses
+  ```clojure
+  ;; before
+  (defn read-resource
+    "Read a resource into a string"
+    [path]
+    (read-string (slurp (clojure.java.io/resource path))))
+
+  ;; after
+  (defn read-resource
+    [path]
+    (-> path
+        clojure.java.io/resource
+        slurp
+        read-string))
+  ```
