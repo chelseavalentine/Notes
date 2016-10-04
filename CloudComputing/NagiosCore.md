@@ -111,7 +111,7 @@ Learning about Nagios Core by reading _Building a Monitoring Infrastructure with
 
 * events are put into an event queue, along w/ the time they should be run
   - Nagios uses the time the plugin was originally scheduled to calculate the next execution time, in case it needs to reschedule a check as a result
-  
+
 Two scenarios in which a check must be rescheduled:
 
 1. Nagios is busy & can't execute the check, the schedule has slipped
