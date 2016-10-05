@@ -2,6 +2,59 @@
 
 This repository acts as my personal reference for the different languages, libraries, frameworks, and software that I learn.
 
+## Table of Contents
+
+<style type="text/css">
+    ol { list-style-type: upper-alpha; }
+</style>
+
+1. Software Engineering
+  1. Coding standards
+    * [Clean Code](CodingStand)ards/CleanCode-1.md)
+  2. Other
+    * [Facts and Fallacies of Software Engineering](SoftwareEngineering/FactsAndFallaciesofSoftwareEngineering.md)
+    * [Peopleware](SoftwareEngineering/Peopleware.md)
+    * [Pragmatic Programmer](SoftwareEngineering/PragmaticProgrammer.md)
+2. Theory
+  1. [Algorithms](Algorithms/)
+    * [Princeton's Coursera Algorithms, part 1 course](Algorithms/AlgoPt1-1.md)
+    * [Cracking the Coding Interview](Algorithms/CTCI-1.md)
+    * [Alan Siegel's Algorithms book](Algorithms/SiegelChapter1.md)
+  2. Cloud Computing
+    * [The Datacenter As A Computer](CloudComputing/TheDatacenterAsAComputer.md)
+  3. [Computer Systems Organization](ComputerSystemsOrganization/)
+  4. [Continuous Integration](ContinuousIntegration/)
+  5. Discrete Math
+    * [How to Prove It](DiscreteMath/HowToProveIt.md)
+  6. Logic
+    * [An Illustrated Book of Bad Arguments](Logic/AnIllustratedBookOfBadArguments.md)
+    * [Crimes Against Logic](Logic/CrimesAgainstLogic.md)
+  7. [Operating Systems](OperatingSystems/)
+3. Languages
+  1. [Clojure](Clojure/)
+  2. Java
+    * [Introduction to Java Programming](Java/IntroToProgramming/)
+  3. JavaScript
+    * [Eloquent JavaScript](JavaScript/EloquentJavaScript/)
+  4. [LaTeX](LaTeX/)
+  5. [Swift](Swift/)
+  6. [C++](C++.md)
+4. Tools
+  1. [Linux Command Line](CLI/)
+  2. [Nagios](CloudComputing/NagiosCore.md)
+  3. [Sublime Text 3](SublimeText3/)
+  4. [Vim](Vim.md)
+5. Design
+  1. Conveying ideas
+    * [Articulating Design Decisions](Design/ArticulatingDesignDecisions.md)
+6. Web
+  * [HTML](HTML%26CSS/HTML.md)
+  * [CSS](HTML%26CSS/CSS.md)
+  * [SASS](SASS.md)
+7. Mobile
+  1. [Android)(Android/)
+8. Miscellaneous
+  * [SVG](SVG/)
 
 ## Back burner
 
@@ -10,10 +63,6 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 ### Mobile
 
 * [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
-
-### Command Line
-
-* [Vim-Galore](https://github.com/mhinz/vim-galore)
 
 ### Design
 
@@ -26,6 +75,7 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 ### Vim
 
 1. [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (VIM code completion)
+2. [Vim-Galore](https://github.com/mhinz/vim-galore)
 
 ### Python
 
@@ -36,14 +86,7 @@ It's impossible to have time to learn everything as I discover it, so I'll put t
 ##### Frameworks
 
 1. [Karma](https://karma-runner.github.io/0.13/index.html) *(a JavaScript test runner)*
-2. [Bower](http://bower.io/) *(a library manager)*
-3. [RequireJS](http://requirejs.org/) *(use one JS import rather than many, by making your other JS files dependencies of your main one)*
 
 ##### JavaScript
 
-* [SuperheroJS](http://superherojs.com/)
-
-##### Software
-
-1. [JetBrains' WebStorm](https://www.jetbrains.com/webstorm/documentation/) *(will create a lot of boilerplates for you and integrate frameworks)*
-
+1. [SuperheroJS](http://superherojs.com/)
