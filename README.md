@@ -4,10 +4,6 @@ This repository acts as my personal reference for the different languages, libra
 
 ## Table of Contents
 
-<style type="text/css">
-    ol { list-style-type: upper-alpha; }
-</style>
-
 1. Software Engineering
   1. Coding standards
     * [Clean Code](CodingStandards/CleanCode-1.md)
