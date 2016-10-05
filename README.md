@@ -52,7 +52,7 @@ This repository acts as my personal reference for the different languages, libra
   * [CSS](HTML%26CSS/CSS.md)
   * [SASS](SASS.md)
 7. Mobile
-  1. [Android)(Android/)
+  1. [Android](Android/)
 8. Miscellaneous
   * [SVG](SVG/)
 
