@@ -1,87 +1,5 @@
 # Clojure
 
-## Chapter 8: Writing macros
-
-* macros allow you to derive a lot of the built-in functionality
-* you can create multiple-arity macros
-
-
-### Building lists for evaluation
-
-#### Distinguishing symbols and values
-
-* you often need to turn off evaluation when trying to get a macro to do what you want
-  ```clojure
-  ;; goal: a result like this
-  (let [result expression]
-    (println result)
-    result)
-
-  ;; this fails @ printing the expression and returning the expression's value;
-  (defmacro my-print-whoopsie
-   [expression]
-   (list let [result expression]
-         (list println result)
-         result))
-
-  ;; this succeeds
-  (defmacro my-print
-    [expression]
-    (list 'let ['result expression]
-          (list 'println 'result)
-          'result))
-  ```
-
-#### Simple quoting
-
-* quoting a symbol returns a symbol regardless of whether it has a value associated with it
-
-#### Syntax quoting: ```
-
-* differences between this and normal quoting
-  - returns fully qualified symbols (with the namespace included); avoids name collisions
-  - allows you to unquote forms using `~`
-    ```clojure
-    `(+ 1 ~(inc 1))
-    ; => (clojure.core/+ 1 2)
-
-    ;; otherwise
-    `(+ 1 (inc 1))
-    ; => (clojure.core/+ 1 (clojure.core/inc 1))
-    ```
-
-### Things to watch out for
-
-#### Variable capture
-
-* __variable capture__: when a macro introduces a binding that eclipses an existing binding
-  - helps prevent accidentally capturing variables w/i macros; you can use `gensym` if you want `let` bindings in your macro
-  - `gensym` creates a new unique symbol, you can do the same with a `#` after the symbol
-  ```clojure
-  (def message "Good job!")
-  (defmacro with-mischief
-    [& stuff-to-do]
-    (concat (list 'let ['message "Oh, big deal!"])
-            stuff-to-do))
-
-  (with-mischief
-    (println "Here's how I feel about that thing you did: " message))
-  ; => Here's how I feel about that thing you did: Oh, big deal!
-
-  ;;; with gensym
-  (defmacro without-mischief
-    [& stuff-to-do]
-    (let [macro-message (gensym 'message)]
-      `(let [~macro-message "Oh, big deal!"]
-         ~@stuff-to-do
-         (println "I still need to say: " ~macro-message))))
-
-  (without-mischief
-    (println "Here's how I feel about that thing you did: " message))
-  ; => Here's how I feel about that thing you did:  Good job!
-  ; => I still need to say:  Oh, big deal!
-  ```
-
 #### Double evaluation
 
 * __double evaluation__: when a form passed to a macro as an arg gets evaluated more than once
@@ -119,3 +37,82 @@
 #### Macros all the way down
 
 * when everything you're using is a macro, so values aren't what you'd expect
+
+## Chapter 9: Concurrent and Parallel Programming
+
+### Futures, delays, and promises
+
+#### Futures
+
+* __`future`__ is used to define a task & put it on another thread, w/o requiring the result immediately
+  - is run once and its result is cached
+  - `future` func returns a reference value you can use to request the result
+    - you need to dereference it w/ `deref` or `@`
+    - dereferencing is blocked until the future is done running
+  ```clojure
+  (future (Thread/sleep 4000)
+          (println "I'll print after 4 seconds"))
+  (println "I'll print immediately")
+
+  ;; dereferencing
+  (let [result (future (println "this prints once")
+                       (+ 1 1))]
+    (println "deref: " (deref result))
+    (println "@: " @result))
+  ; => "this prints once"
+  ; => deref: 2
+  ; => @: 2
+  ```
+
+* you can set a timeout on the `future` by passing a number of milliseconds
+  ```clojure
+  ;; wait at most 10ms, use timeout value 5 if it times out
+  (deref (future (Thread/sleep 1000) 0) 10 5)
+  ; => 5
+  ```
+
+* check whether a `future` is done running
+  ```clojure
+  (realized? (future (Thread/sleep 1000)))
+  ; => false
+
+  (let [f (future)]
+    @f
+    (realized? f))
+  ; => true
+  ```
+
+#### Delays
+
+* __`delay`__ let you define a task w/o having it execute or w/o requiring the result immediately
+  - is also run once and its result is cached
+  ```clojure
+  (def my-delay
+    (delay (let [message "This is my delay"]
+             (println "First deref:" message)
+             message)))
+  ```
+
+* use __`force`__ to evaluate a delay & dereference it
+  ```clojure
+  (force my-delay)
+  ; => First deref: This is my delay
+  ; => "This is my delay"
+
+  @my-delay
+  ; => "This is my delay"
+  ```
+
+#### Promises
+
+* __`promise`__ let you express that you expect a result w/o having to define the task that'll produce it, or when the task should run
+  - you can deliver a result to a promise using __`deliver`__
+  - you get the result by dereferencing the promise
+  - can only be written once
+  - if you dereference the promise w/o receiving the value, the program blocks until you do
+  ```clojure
+  (def my-promise (promise))
+  (deliver my-promise (+ 1 2))
+  @my-promise
+  ; => 3
+  ```

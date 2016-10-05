@@ -11,11 +11,10 @@
   - function body
 
   ```clojure
-  ➊ (defn wat
-  ➋   "Says 'wat'"
-  ➌   [name]
-  ➍   (str "wat " name " wat "
-    "wat"))
+  (defn wat
+    "Says 'wat'"
+    [name]
+    (str "wat " name " wat"))
 
   (wat "Person")
   ; => "wat Person wat"
@@ -106,3 +105,48 @@
   (illustrative-function)
   ; => "joe"
   ```
+
+#### Anonymous functions
+
+* functions don't need to have names; can declare one with `fn` or with `#` (made possible by reader macros)
+  ```clojure
+  (fn [param-list]
+    function body)
+
+  ; eg.
+  ((fn [x] (* x 3)) 8)
+  ; => 24
+
+  ; high-order functions
+  (def my-special-multiplier (fn [x] (* x 3)))
+  (my-special-multiplier 12)
+  ; => 36
+
+  ; with #
+  (#(* % 3) 8)
+  ; => 24
+
+  (map #(str "Hi, " %)
+       ["Darth Vader" "Mr. Magoo"])
+  ; => ("Hi, Darth Vader" "Hi, Mr. Magoo")
+  ```
+
+* the `%` indicates the argument passed to the function
+  - `%` = `%1`, and you can indicate others with `%[number]`
+  - `%&` works as a rest parameter
+
+#### Returning functions
+
+Function factory!
+
+```clojure
+(defn inc-maker
+  "Create a custom incrementor"
+  [inc-by]
+  #(+ % inc-by))
+
+(def inc3 (inc-maker 3))
+
+(inc3 7)
+; => 10
+```

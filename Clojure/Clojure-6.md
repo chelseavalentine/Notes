@@ -1,117 +1,144 @@
 # Clojure
 
-### Lazy seqs
 
-* __lazy seq__: a seq whose members aren't computed until you try to access them
-  - map uses this
+#### Function composition instead of attribute mutation
 
-#### Infinite sequences
+* __function composition__: return val of a function is passed as an arg to another
 
-* can use `take`, along with `repeat` (for a value) and `repeatedly` (for a function) to create sequences
+### Cool things to do with pure functions
+
+#### `comp`
+
+* `comp` allows you to create a new function from the composition of any number of functions
+  - applies functions like a composition, so if `(comp f1 f2 ... fn)`, then `f1(f2(..(fn(args))))`
   ```clojure
-  (concat (take 8 (repeat "na")) ["Batman!"])
-  ; => ("na" "na" "na" "na" "na" "na" "na" "na" "Batmenz")
-
-  (take 3 (repeatedly (fn [] (rand-int 10))))
-  ; => (1 4 0)
+  ((comp inc *) 2 3)
+  ; => 7
   ```
 
-### The collection abstraction
-
-#### `into`
-
-* __`into`__ lets you convert something into a data structure, eg. a sequence into a map
+* can use to retrieve nested values
   ```clojure
-  (map identity {:sunlight-reaction "Glitter!"})
-  ; => ([:sunlight-reaction "Glitter!"])
+  (def character
+    {:name "Smooches McCutes"
+     :attributes {:intelligence 10
+                  :dexterity 5}})
+  (def c-int (comp :intelligence :attributes))
 
-  (into {} (map identity {:sunlight-reaction "Glitter!"}))
-  ; => {:sunlight-reaction "Glitter!"}
-
-  (into ["cherry"] '("pine" "spruce"))
-  ; => ["cherry" "pine" "spruce"]
+  (c-int character)
+  ; => 10
   ```
 
-#### `conj`
-
-* `into` merges values into the holder, whereas `conj` will also put the holder in, if that makes sense?
+* make compositions of functions that take more than 1 arg by wrapping it in an anonymous function
   ```clojure
-  (conj [0] [1])
-  ; => [0 [1]]
-
-  (conj [0] 1)
-  ; => [0 1]
+  (def spell-slots-comp (comp int inc #(/ % 2) c-int))
   ```
 
-### Function functions
+#### `memoize`
 
-#### `apply`
+* memoization stores the args passed to a function, & the return value of the function
+  - significance: subsequent calls to the function w/ the same args can return the result immediately
 
-* `apply` explodes a seqable DS so it can be passed to a function expecting a rest parameter
   ```clojure
-  (max 0 1 2)
-  ; => 2
+  (def memo-sleepy-identity (memoize sleepy-identity))
+  (memo-sleepy-identity "Mr. Fantastico")
+  ; => "Mr. Fantastico" after 1 second
 
-  (max [0 1 2])
-  ; => [0 1 2]
-
-  (apply max [0 1 2])
-  ; => 2
+  (memo-sleepy-identity "Mr. Fantastico")
+  ; => "Mr. Fantastico" immediately
   ```
 
-#### `partial`
+### Misc
 
-* `partial` takes a function & args, then returns a new function
+* `assoc-in` returns a map w/ the given value @ the specified nesting
   ```clojure
-  (def add10 (partial + 10))
-  (add10 3)
-  ; => 13
-  (add10 5)
-  ; => 15
-
-  (def add-missing-elements
-    (partial conj ["water" "earth" "air"]))
-
-  (add-missing-elements "unobtainium" "adamantium")
-  ; => ["water" "earth" "air" "unobtainium" "adamantium"]
+  (assoc-in {} [:cookie :monster :vocals] "Finntroll")
+  ; => {:cookie {:monster {:vocals "Finntroll"}}}
   ```
 
-#### `complement`
-
-* `complement` tests for falseness, rather than doing `not [condition]`
-
-## Chapter 5: Functional programming
-
-* decouples functions and data
-* by programming to a small set of abstractions, you end up with more reusable, composable code
-
-### Pure functions: What and why
-
-* __pure function__:
-  - has __referential transparency__: always returns same results given the same args
-  - doesn't cause side-effects; can't change things outside of the function
-
-### Living with immutable data structures
-
-#### Recursion instead of for/while
-
-* since immutable data structures, need to use recursion if you wanted to do a sum
+* `get-in` lets you look up values in nested maps
   ```clojure
-  (defn sum
-    ([vals] (sum vals 0))
-    ([vals accumulating-total]
-      (if (empty? vals)
-      accumulating-total
-      (sum (rest vals) (+ (first vals) accumulating-total)))))
+  (get-in {:cookie {:monster {:vocals "Finntroll"}}} [:cookie :monster])
+  ; => {:vocals "Finntroll"}
   ```
 
-* `recur` is better for performance-wise for recursion, since clojure doesn't provide tail call optimization
+## Chapter 6: Organizing your project
+
+### Your project as a library
+
+* __namespaces__ contain maps b/t symbols & references to vars
+  - current namespace: `*ns*`; gotten w/ `(ns-name *ns*)`
+  - if you want to use the symbol & not the thing it refers to, you need to precede it with a quote (`'`)
   ```clojure
-  (defn sum
-    ([vals]
-      (sum vals 0))
-    ([vals accumulating-total]
-      (if (empty? vals)
-        accumulating-total
-        (recur (rest vals) (+ (first vals) accumulating-total)))))
+  (map inc [1 2])
+  ; => (2 3)
+
+  '(map inc [1 2])
+  ; => (map inc [1 2])
+  ```
+
+### Storing objects with `def`
+
+* `def`: primary tool in Clojure for storing objects
+  - process is called _interning a var_
+  ```clojure
+  (def great-books ["East of Eden" "The Glass Bead Game"])
+  ; => #'user/great-books
+  ```
+
+* get a namespace's interned-vars using `ns-interns`
+  ```clojure
+  (ns-interns *ns*)
+
+  (get (ns-inters *ns*) 'my-defined-symbol')
+  ; => #'user/my-defined-symbol
+  ```
+
+* get the full map of symbols to vars with `(ns-map *ns*)`
+
+* get the symbol corresponding to the var with `deref` and `#'`
+  ```clojure
+  (def chelsea ["Chelsea is" "so cool"])
+
+  (deref #'user/chelsea)
+  ; => ["Chelsea is" "so cool"]
+  ```
+
+* _name collision_: rewritting a symbol with a new value;
+
+### Creating and switching to namespaces
+
+* `create-ns` creates a namespace
+  ```clojure
+  (create-ns 'chelsea.app)
+  ; => #<Namespace chelsea.app>
+  ```
+
+* __`in-ns`__ creates a namespace if it doesn't exist & switches into it
+  ```clojure
+  (in-ns 'chelsea.app)
+  ; => #<Namespace chelsea.app>
+  ```
+
+* access another namespace's symbols w/ a fully qualified name, eg. `chelsea/printName`
+
+#### `refer`
+
+* `refer` gives you control over how you refer to symbols in other namespaces by essentially merging in the symbols into the current namespace
+  - use `:only`, `:exclude`, and `:rename` to control what's merged & how
+  ```clojure
+  (clojure.core/refer 'chelsea.app')
+
+  (clojure.core/refer 'cheese.taxonomy :only ['bries])
+  (clojure.core/refer 'cheese.taxonomy :exclude ['bries])
+  (clojure.core/refer 'cheese.taxonomy :rename {'bries 'yummy-bries})
+  ```
+
+* `defn-` define a private function
+  - still technically referable to outside of its namespace by using `@#'some/private-var`
+
+#### `alias`
+
+* `alias` lets you define shorter names
+  ```clojure
+  (clojure.core/alias 'taxonomy 'cheese.taxonomy)
   ```

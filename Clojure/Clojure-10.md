@@ -1,104 +1,163 @@
 # Clojure
 
-## Chapter 9: Concurrent and Parallel Programming
-
-### Futures, delays, and promises
-
-#### Futures
-
-* __`future`__ is used to define a task & put it on another thread, w/o requiring the result immediately
-  - is run once and its result is cached
-  - `future` func returns a reference value you can use to request the result
-    - you need to dereference it w/ `deref` or `@`
-    - dereferencing is blocked until the future is done running
-  ```clojure
-  (future (Thread/sleep 4000)
-          (println "I'll print after 4 seconds"))
-  (println "I'll print immediately")
-
-  ;; dereferencing
-  (let [result (future (println "this prints once")
-                       (+ 1 1))]
-    (println "deref: " (deref result))
-    (println "@: " @result))
-  ; => "this prints once"
-  ; => deref: 2
-  ; => @: 2
-  ```
-
-* you can set a timeout on the `future` by passing a number of milliseconds
-  ```clojure
-  ;; wait at most 10ms, use timeout value 5 if it times out
-  (deref (future (Thread/sleep 1000) 0) 10 5)
-  ; => 5
-  ```
-
-* check whether a `future` is done running
-  ```clojure
-  (realized? (future (Thread/sleep 1000)))
-  ; => false
-
-  (let [f (future)]
-    @f
-    (realized? f))
-  ; => true
-  ```
-
-#### Delays
-
-* __`delay`__ let you define a task w/o having it execute or w/o requiring the result immediately
-  - is also run once and its result is cached
-  ```clojure
-  (def my-delay
-    (delay (let [message "This is my delay"]
-             (println "First deref:" message)
-             message)))
-  ```
-
-* use __`force`__ to evaluate a delay & derefence it
-  ```clojure
-  (force my-delay)
-  ; => First deref: This is my delay
-  ; => "This is my delay"
-
-  @my-delay
-  ; => "This is my delay"
-  ```
-
-#### Promises
-
-* __`promise`__ let you express that you expect a result w/o having to define the task that'll produce it, or when the task should run
-  - you can deliver a result to a promise using __`deliver`__
-  - you get the result by dereferencing the promise
-  - can only be written once
-  - if you derefence the promise w/o receiving the value, the program blocks until you do
-  ```clojure
-  (def my-promise (promise))
-  (deliver my-promise (+ 1 2))
-  @my-promise
-  ; => 3
-  ```
-
 ## Chapter 10: Atoms, Refs, and Vars
 
-### Object-orientation
-
-### Clojure
-
 ### Atoms
+
+* _reference types__ let you manage identities of objects
+  - __`atom`__ allows you to name an identity & retrieve its state
+  ```clojure
+  (def person (atom {:name "Chelsea"
+                     :age 19}))
+
+  @person
+  ; => {:name "Chelsea", :age 19}
+  ```
+
+* use __`swap!`__ to update the reference
+  - it produces a new value, updates the atom to refer to the new value, and returns the new value
+  - you can update many properties
+  ```clojure
+  (swap! person
+         (fn [current-state]
+           (merge-with + current-state {:age 20})))
+  ; => {:name "Chelsea", :age 20}
+
+  @person
+  ; => {:name "Chelsea", :age 20}
+  ```
+
+* allows you to keep multiple states
+  ```clojure
+  (let [num (atom 1)
+        s1 @num]
+    (swap! num inc)
+    (println "State 1:" s1)
+    (println "Current state:" @num))
+  ; => State 1: 1
+  ; => Current state: 2
+  ```
+
+* you can use __`reset`__ to change an atom back
+  ```clojure
+  (reset! person {:name "Chelsea"
+                  :age 19})
+  ```
 
 ### Watches and validators
 
 #### Watches
 
+* __watch__ takes 4 args: [1] a key, [2] the reference being watched, [3] its previous state, [4] its new state
+  - `add-watch`'s form: `(add-watch [ref key] [watch function])`
+
+  ```clojure
+  (defn aged-alert
+    [key watched old-state new-state]
+    (if (> (:age new-state) (:age old-state)))
+      (do
+        (println "Just aged a year.")))
+
+  (add-watch person :age aged-alert)
+  ```
+
 #### Validators
 
+* __validators__ allow you to specify what states are OK for a reference to have, attached during atom creation
+  - invalid reference state will be thrown if you violate the validator
+  - throw an exception for give a more descriptive error message
+  ```clojure
+  (defn age-validator
+    [{:keys [age]}]
+    (> -1))
+
+  ;; with exception thrown
+  (defn age-validator
+    [{:keys [age]}]
+    ( or (> -1))
+      (throw (IllegalStateException. "You can't have a negative age."))
+
+  (def person (atom {:name "Chelsea"
+                     :age 19
+                     :validator age-validator}))
+  ```
+
+* modify refs with __`alter`__, but must be done w/i a transaction
+  - behavior:
+    1. reach outside the transaction & read the ref's current state
+    2. compare the  current state to the state the ref started w/ w/i the transaction
+    3. if the 2 differ, make the transaction retry
+    4. otherwise, commit the altered ref state
+
+
 #### `commute`
+
+* __`commute`__ updates the ref's state w/i a transaction, too, with slightly different behavior
+  - doesn't retry; only use if you're sure your refs won't be in an invalid state
+  - behavior:
+    1. reach outside the transaction & read the ref's current state
+    2. run the `commute` function again using the current state
+    3. commit the result
 
 ### Vars
 
 #### Dynamic binding
 
+* used for resources that one or more functions target
+* creation using `^:dynamic`:
+  ```clojure
+  (def ^:dynamic *my-dynamic-var* "its value")
+  ```
+
+* change the value temporarily with __`binding`__
+  ```clojure
+  (binding [*my-dynamic-var* "changed value"]
+    *my-dynamic-var*)
+  ; => "changed value"
+  ```
+
+* if you access a dynamically bound var from within a manually created thread, the var will evaluate to the original value
+
 #### Altering the var root
 
+* when you create a new var, the initial value that you supply is its __root__
+
+* __`alter-var-root`__ allows you to permanently change the root value
+  ```clojure
+  (def power-source "hair")
+  (alter-var-root #'power-source (fn [_] "7-eleven parking lot"))
+  power-source
+  ; => "7-eleven parking lot"
+  ```
+
+* use __`with-redefs`__  to temporarily alter the var's root, & it also appears in child threads
+  ```clojure
+  (with-redefs [*out* *out*]
+          (doto (Thread. #(println "with redefs allows me to show up in the REPL"))
+            .start
+            .join))
+  ```
+
 ### Stateless concurrency and parallelism with `pmap`
+
+* `pmap` gives you concurrency performance benefits! performs a `map` in parallel
+  - sometimes it isn't worth it since there's overhead in creating and coordinating threads
+  ```clojure
+  ;; test how long it takes to map something
+  (time (dorun (pmap clojure.string/lower-case some-list-of-names)))
+  ```
+
+* adjust the amount of things a thread works on by adjusting the grain size
+  ```clojure
+  ;; example macro
+  (defn ppmap
+    "Partitioned pmap, for grouping map ops together to make parallel
+    overhead worthwhile"
+    [grain-size f & colls]
+    (apply concat
+     (apply pmap
+            (fn [& pgroups] (doall (apply map f pgroups)))
+            (map (partial partition-all grain-size) colls))))
+  (time (dorun (ppmap 1000 clojure.string/lower-case orc-name-abbrevs)))
+  ; => "Elapsed time: 44.902 msecs"
+  ```

@@ -1,88 +1,5 @@
 # Clojure
 
-#### Regular expressions
-
-* format:
-  ```clojure
-  #"regular-expression"
-
-  ;; eg.
-  (re-find #"^left-" "left-eye")
-  ; => "left-"
-
-  (re-find #"^left-" "cleft-chin")
-  ; => nil
-  ```
-
-#### `reduce`
-
-* __`map`__ returns a list
-
-* __`reduce`__ applies a function to a sequence (sequence specified by vector)
-  - also it treats your map like a list of vectors
-
-  ```clojure
-  ;; sum with reduce
-  (reduce + [1 2 3 4])
-  ; => 10
-  ```
-
-* __`empty? []`__ tells you whether an array is empty
-
-## Chapter 4: Core functions in depth
-
-#### Treating lists, vectors, sets, and maps as sequences
-
-* __sequence__ / __seq__: a collection of elements organized in linear order
-
-#### Abstraction through indirection
-
-* __indirection__: a mechanism a language employs so that one name can have multiple related meanings
-  - eg. `first` has multiple data-structure-specific meanings
-  - different function bodies are used based on the type of the argument
-
-
-### Seq function examples
-
-#### `map`
-
-* you can give it multiple collections, so that the first arg transforms the second, the second the third, and so on
-  - but the mapping function needs to be able to take a number of args equal to the num of collections
-
-  ```clojure
-  (map str ["a" "b" "c"] ["A" "B" "C"])
-  ```
-
-* you can also pass map a collection of functions
-  ```clojure
-  (defn stats
-    [numbers]
-    (map #(% numbers) [sum count avg]))
-  ```
-
-#### `reduce`
-
-* processes each element in a sequence to build a result
-
-#### `take`, `drop`, `take-while`, and `drop-while`
-
-* `take` & `drop` take a number & a seq; then they either crop values or drop values, & then return an array
-
-* __`take-while`__ & __`drop-while`__ take a predicate function to decide when to stop taking/dropping
-  - __predicate function__: function whose return value is evaluated for truth or falsity
-
-  ```clojure
-  (def food-journal
-    [{:month 1 :day 1 :human 5.3 :critter 2.3}
-     {:month 1 :day 2 :human 5.1 :critter 2.0}
-     {:month 4 :day 1 :human 3.7 :critter 3.9}
-     {:month 4 :day 2 :human 3.7 :critter 3.6}])
-
-  (take-while #(< (:month %) 2) food-journal)
-  ; => ({:month 1 :day 1 :human 5.3 :critter 2.3}
-  ; =>  {:month 1 :day 2 :human 5.1 :critter 2.0})
-  ```
-
 #### `filter` and `some`
 
 * __`filter`__ takes in a predicate function & tests true on all the elements of the sequence
@@ -101,3 +18,119 @@
 * `sort-by` lets you apply a key function, eg. `count` to the sequence (check the docs)
 
 * `concat` appends sequences to the end
+
+### Lazy seqs
+
+* __lazy seq__: a seq whose members aren't computed until you try to access them
+  - map uses this
+
+#### Infinite sequences
+
+* can use `take`, along with `repeat` (for a value) and `repeatedly` (for a function) to create sequences
+  ```clojure
+  (concat (take 8 (repeat "na")) ["Batman!"])
+  ; => ("na" "na" "na" "na" "na" "na" "na" "na" "Batmenz")
+
+  (take 3 (repeatedly (fn [] (rand-int 10))))
+  ; => (1 4 0)
+  ```
+
+### The collection abstraction
+
+#### `into`
+
+* __`into`__ lets you convert something into a data structure, eg. a sequence into a map
+  ```clojure
+  (map identity {:sunlight-reaction "Glitter!"})
+  ; => ([:sunlight-reaction "Glitter!"])
+
+  (into {} (map identity {:sunlight-reaction "Glitter!"}))
+  ; => {:sunlight-reaction "Glitter!"}
+
+  (into ["cherry"] '("pine" "spruce"))
+  ; => ["cherry" "pine" "spruce"]
+  ```
+
+#### `conj`
+
+* `into` merges values into the holder, whereas `conj` will also put the holder in, if that makes sense?
+  ```clojure
+  (conj [0] [1])
+  ; => [0 [1]]
+
+  (conj [0] 1)
+  ; => [0 1]
+  ```
+
+### Function functions
+
+#### `apply`
+
+* `apply` explodes a seqable DS so it can be passed to a function expecting a rest parameter
+  ```clojure
+  (max 0 1 2)
+  ; => 2
+
+  (max [0 1 2])
+  ; => [0 1 2]
+
+  (apply max [0 1 2])
+  ; => 2
+  ```
+
+#### `partial`
+
+* `partial` takes a function & args, then returns a new function
+  ```clojure
+  (def add10 (partial + 10))
+  (add10 3)
+  ; => 13
+  (add10 5)
+  ; => 15
+
+  (def add-missing-elements
+    (partial conj ["water" "earth" "air"]))
+
+  (add-missing-elements "unobtainium" "adamantium")
+  ; => ["water" "earth" "air" "unobtainium" "adamantium"]
+  ```
+
+#### `complement`
+
+* `complement` tests for falseness, rather than doing `not [condition]`
+
+## Chapter 5: Functional programming
+
+* decouples functions and data
+* by programming to a small set of abstractions, you end up with more reusable, composable code
+
+### Pure functions: What and why
+
+* __pure function__:
+  - has __referential transparency__: always returns same results given the same args
+  - doesn't cause side-effects; can't change things outside of the function
+
+### Living with immutable data structures
+
+#### Recursion instead of for/while
+
+* since immutable data structures, need to use recursion if you wanted to do a sum
+  ```clojure
+  (defn sum
+    ([vals] (sum vals 0))
+    ([vals accumulating-total]
+      (if (empty? vals)
+      accumulating-total
+      (sum (rest vals) (+ (first vals) accumulating-total)))))
+  ```
+
+* `recur` is better for performance-wise for recursion, since clojure doesn't provide tail call optimization
+  ```clojure
+  (defn sum
+    ([vals]
+      (sum vals 0))
+    ([vals accumulating-total]
+      (if (empty? vals)
+        accumulating-total
+        (recur (rest vals) (+ (first vals) accumulating-total)))))
+  ```

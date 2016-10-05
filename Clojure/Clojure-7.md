@@ -1,143 +1,146 @@
 # Clojure
 
-#### Function composition instead of attribute mutation
+### Real project organization
 
-* __function composition__: return val of a function is passed as an arg to another
+#### The relationship between file paths and namespace names
 
-### Cool things to do with pure functions
+* __`ns`__: primary way to create & manage namespaces
 
-#### `comp`
+* interpreting a namespace name
+  - creating a directory w/ `lein` makes the source code's root `src`
+  - dashes in namespace names correspond to underscores in the filesystem
+  - the component preceding a `.` corresponds to a directory
 
-* `comp` allows you to create a new function from the composition of any number of functions
-  - applies functions like a composition, so if `(comp f1 f2 ... fn)`, then `f1(f2(..(fn(args))))`
+#### Requiring and using namespaces
+
+* __`require`__ takes a symbol designating a namespace, ensures it exists & is ready for use, and then evaluates it
+  - you can alias a namespace at the same time
+  - example file header
   ```clojure
-  ((comp inc *) 2 3)
-  ; => 7
+  (ns the-divine-cheese-code.core)
+  ;; Ensure that the SVG code is evaluated
+  (require 'the-divine-cheese-code.visualization.svg)
+
+  ; alternatively,
+  (require '[the-divine-cheese-code.visualization.svg :as svg])
+
+  ;; Refer the namespace so that you don't have to use the
+  ;; fully qualified name to reference svg functions
+  (refer 'the-divine-cheese-code.visualization.svg)
   ```
 
-* can use to retrieve nested values
+* __`use`__ combines the functionality of `require` and `refer`
+  - you can also use `:only`, `:exclude`, `:as`, & `:rename` with it
   ```clojure
-  (def character
-    {:name "Smooches McCutes"
-     :attributes {:intelligence 10
-                  :dexterity 5}})
-  (def c-int (comp :intelligence :attributes))
+  (use 'the-divine-cheese-code.visualization.svg)
 
-  (c-int character)
-  ; => 10
+  ; alternatively
+  (use '[the-divine-cheese-code.visualization.svg :as svg])
+
+  ;; more examples
+  (use '[the-divine-cheese-code.visualization.svg :as svg :only [points]])
   ```
 
-* make compositions of functions that take more than 1 arg by wrapping it in an anonymous function
+#### The ns Macro
+
+* example where you can control what's referred from `clojure-core`, using `ns`. It takes the same options as `refer`
   ```clojure
-  (def spell-slots-comp (comp int inc #(/ % 2) c-int))
+  (ns the-divine-cheese-code.core
+    (:refer-clojure :exclude [println]))
   ```
 
-#### `memoize`
+* 6 possible references within `ns`:
+  1. `(:refer-clojure)`
+  2. `(:require)` works like the `require` function, and also lets you refer names & symbols
+  3. `(:use)`
+  4. `(:import)`
+  5. `(:load)`
+  6. `(:gen-class)`
 
-* memoization stores the args passed to a function, & the return value of the function
-  - significance: subsequent calls to the function w/ the same args can return the result immediately
+```clojure
+;; requiring multiple things
+(ns the-divine-cheese-code.core
+  (:require [the-divine-cheese-code.visualization.svg :as svg]
+            [clojure.java.browse :as browse]))
 
+;; referring names
+(ns the-divine-cheese-code.core
+  (:require [the-divine-cheese-code.visualization.svg :refer [points]]))
+
+;; referring all symbols
+(ns the-divine-cheese-code.core
+  (:require [the-divine-cheese-code.visualization.svg :refer :all]))
+```
+
+## Chapter 7: Reading, evaluation, and macros
+
+### An overview of Clojure's evaluation model
+
+* __evaluation model__: [1] read textual source code, producing the data structures; [2] evaluate: traverse the data structures & use function application or var lookup based on the type
+  - this makes it a __homoiconic__ language since it has a relationship b/t source code, data, & evaluation
+    - it represents abstract syntax trees (ASTs) using lists, and your program is just a tree
+
+### The reader
+
+#### Reading
+
+* `read-string` takes a string as an arg, processes it w/ Clojure's reader, & returns a data structure
   ```clojure
-  (def memo-sleepy-identity (memoize sleepy-identity))
-  (memo-sleepy-identity "Mr. Fantastico")
-  ; => "Mr. Fantastico" after 1 second
+  (read-string "(+ 1 2)")
+  ; => (+ 1 2)
 
-  (memo-sleepy-identity "Mr. Fantastico")
-  ; => "Mr. Fantastico" immediately
+  (list? (read-string "(+ 1 2)"))
+  ; => true
+
+  (eval (read-string "(+ 1 2)"))
+  ; => 3
   ```
 
-### Misc
+#### Reader macros
 
-* `assoc-in` returns a map w/ the given value @ the specified nesting
+* __reader macros__: sets of rules for transforming text into data structures
+  - designated by macro characters, eg. `'` (quote), `#`, & `@` (deref)
+
+### The evaluator
+
+#### These things evaluate to themselves
+
+* `true`, `false`, `{}`, `:hello`, `()`
+
+#### Symbols
+
+* Clojure resolves a symbol by:
+  1. Looking up whether the symbol names a special form. If it doesn’t...
+  2. Looking up whether the symbol corresponds to a local binding. If it doesn’t...
+  3. Trying to find a namespace mapping introduced by def. If it doesn’t...
+  4. Throwing an exception
+
+* __local binding__: any association b/t a symbol & a value that _wasn't_ created by `def` (eg. created by `let`)
+  - the most recently defined binding takes precedence
   ```clojure
-  (assoc-in {} [:cookie :monster :vocals] "Finntroll")
-  ; => {:cookie {:monster {:vocals "Finntroll"}}}
+  (let [x 5]
+    (+ x 3))
+  ; => 8
+
+  ;; most recent one takes precedence
+  (let [x 5]
+    (let [x 6]
+      (+ x 3)))
+  ; => 9
   ```
 
-* `get-in` lets you look up values in nested maps
-  ```clojure
-  (get-in {:cookie {:monster {:vocals "Finntroll"}}} [:cookie :monster])
-  ; => {:vocals "Finntroll"}
-  ```
+#### Lists
 
-## Chapter 6: Organizing your project
+* if a list isn't empty, it's evaluated as a call to the first element in the list
 
-### Your project as a library
+##### Function calls
 
-* __namespaces__ contain maps b/t symbols & references to vars
-  - current namespace: `*ns*`; gotten w/ `(ns-name *ns*)`
-  - if you want to use the symbol & not the thing it refers to, you need to precede it with a quote (`'`)
-  ```clojure
-  (map inc [1 2])
-  ; => (2 3)
+```clojure
+(+ 1 2)
+; => 3
+```
 
-  '(map inc [1 2])
-  ; => (map inc [1 2])
-  ```
+##### Special forms
 
-### Storing objects with `def`
-
-* `def`: primary tool in Clojure for storing objects
-  - process is called _interning a var_
-  ```clojure
-  (def great-books ["East of Eden" "The Glass Bead Game"])
-  ; => #'user/great-books
-  ```
-
-* get a namespace's interned-vars using `ns-interns`
-  ```clojure
-  (ns-interns *ns*)
-
-  (get (ns-inters *ns*) 'my-defined-symbol')
-  ; => #'user/my-defined-symbol
-  ```
-
-* get the full map of symbols to vars with `(ns-map *ns*)`
-
-* get the symbol corresponding to the var with `deref` and `#'`
-  ```clojure
-  (def chelsea ["Chelsea is" "so cool"])
-
-  (deref #'user/chelsea)
-  ; => ["Chelsea is" "so cool"]
-  ```
-
-* _name collision_: rewritting a symbol with a new value;
-
-### Creating and switching to namespaces
-
-* `create-ns` creates a namespace
-  ```clojure
-  (create-ns 'chelsea.app)
-  ; => #<Namespace chelsea.app>
-  ```
-
-* __`in-ns`__ creates a namespace if it doesn't exist & switches into it
-  ```clojure
-  (in-ns 'chelsea.app)
-  ; => #<Namespace chelsea.app>
-  ```
-
-* access another namespace's symbols w/ a fully qualified name, eg. `chelsea/printName`
-
-#### `refer`
-
-* `refer` gives you control over how you refer to symbols in other namespaces by essentially merging in the symbols into the current namespace
-  - use `:only`, `:exclude`, and `:rename` to control what's merged & how
-  ```clojure
-  (clojure.core/refer 'chelsea.app')
-
-  (clojure.core/refer 'cheese.taxonomy :only ['bries])
-  (clojure.core/refer 'cheese.taxonomy :exclude ['bries])
-  (clojure.core/refer 'cheese.taxonomy :rename {'bries 'yummy-bries})
-  ```
-
-* `defn-` define a private function
-  - still technically referable to outside of its namespace by using `@#'some/private-var`
-
-#### `alias`
-
-* `alias` lets you define shorter names
-  ```clojure
-  (clojure.core/alias 'taxonomy 'cheese.taxonomy)
-  ```
+* instead of resolving symbols, they create associations b/t symbols & values,
+* `def`, `let`, `loop`, `fn`, `do`, `recur`
