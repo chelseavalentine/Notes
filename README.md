@@ -10,7 +10,7 @@ This repository acts as my personal reference for the different languages, libra
 
 1. Software Engineering
   1. Coding standards
-    * [Clean Code](CodingStand)ards/CleanCode-1.md)
+    * [Clean Code](CodingStandards/CleanCode-1.md)
   2. Other
     * [Facts and Fallacies of Software Engineering](SoftwareEngineering/FactsAndFallaciesofSoftwareEngineering.md)
     * [Peopleware](SoftwareEngineering/Peopleware.md)
