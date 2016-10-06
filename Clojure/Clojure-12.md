@@ -1,29 +1,5 @@
 # Clojure
 
-## Chapter 12: Working with the JVM
-
-### The JVM
-
-* __just-in-time compilation__: a running JVM executing bytecode by translating it to machine code on the fly
-
-### JAR files
-
-* Java Archive file (JAR file)
-
-### Clojure App JARs
-
-* the __`(:gen-class)`__ directive in the namespace declaration tells Clojure to generate a class for the namespace
-
-### Java interop
-
-#### Interop syntax
-
-* call methods on an object with `(.methodName object optional-args go-here)`
-  ```clojure
-  (.toUpperCase "chelsea")
-  ; => "CHELSEA"
-  ```
-
 #### Creating and mutating objects
 
 * `(new ClassName optional-args)` or `(ClassName. optional-args)` (used more often)
@@ -90,3 +66,81 @@
   ```
 
 * etc: `StringReader`, `StringWriter`
+
+## Chapter 13: Creating and extending abstractions with multimethods, protocols, and records
+
+* polymorphism: one name for one purpose with multiple implementations depending on type
+
+### Multimethods
+
+* __multimethods__ let you define a dispatching function, which produces dispatching values that're used to determine which method to use
+
+```clojure
+(defmulti full-moon-behavior (fn [were-creature] (:were-type were-creature)))
+(defmethod full-moon-behavior :wolf
+  [were-creature]
+  (str (:name were-creature) " will howl and murder"))
+(defmethod full-moon-behavior :simmons
+  [were-creature]
+  (str (:name were-creature) " will encourage people and sweat to the oldies"))
+
+(full-moon-behavior {:were-type :wolf
+                     :name "Rachel from next door"})
+; => "Rachel from next door will howl and murder"
+
+(full-moon-behavior {:name "Andy the baker"
+                     :were-type :simmons})
+; => "Andy the baker will encourage people and sweat to the oldies"
+
+(defmethod full-moon-behavior nil
+  [were-creature]
+  (str (:name were-creature) " will stay at home and eat ice cream"))
+
+(full-moon-behavior {:were-type nil
+                     :name "Martin the nurse"})
+; => "Martin the nurse will stay at home and eat ice cream"
+
+(defmethod full-moon-behavior :default
+  [were-creature]
+  (str (:name were-creature) " will stay up all night fantasy footballing"))
+
+(full-moon-behavior {:were-type :office-worker
+                     :name "Jimmy from sales"})
+; => "Jimmy from sales will stay up all night fantasy footballing"
+```
+
+### Protocols
+
+* a __protocol__ is a collection of 1+ polymorphic operations
+  - if you want two different protocols to include methods with the same name, you’ll need to put the protocols in different namespaces
+  - cannot have rest arguments
+  ```clojure
+  (ns my-protocols)
+  (defprotocol MyProtocol
+    "My docstring"
+    (methodSignature1 [x] "A docstring for the method")
+    (methodSignature2 [x] [x y] "I take two"))
+  ```
+
+* you can extend types with __`extend-type`__, even all objects (`java.lang.Object`)!
+  ```clojure
+  (extend-type java.lang.String
+    Wat
+    exclaim [x] (str x "!"))
+
+  (exclaim "lol")
+  ; => "lol!"
+  ```
+
+* __`extend-protocol`__ lets you define protocol implementations for multiple types at once
+  ```clojure
+  (extend-protocol Wat
+    java.lang.String
+    (exclaim [x] (str x "!"))
+
+    java.lang.Object
+    (rando [x] "this is some rando thing that's returned")
+    (feelings-about
+      ([x] "ok")
+      ([x y] (str "feeling great about" y))))
+  ```

@@ -96,7 +96,6 @@
 ### Process pipelines to escape callback hell
 
 * you can make it so each unit of logic lives in its own isolated process, and all communication between units of logic occurs through explicitly defined input and output channels
-
   ```clojure
   (defn upper-caser
     [in]
@@ -124,4 +123,25 @@
 
   (>!! in-chan "repaid")
   ; => DIAPER
+  ```
+
+## Chapter 12: Working with the JVM
+
+### The JVM
+
+* __just-in-time compilation__: a running JVM executing bytecode by translating it to machine code on the fly
+* Java Archive file (JAR file)
+
+### Clojure App JARs
+
+* the __`(:gen-class)`__ directive in the namespace declaration tells Clojure to generate a class for the namespace
+
+### Java interop
+
+#### Interop syntax
+
+* call methods on an object with `(.methodName object optional-args go-here)`
+  ```clojure
+  (.toUpperCase "chelsea")
+  ; => "CHELSEA"
   ```
