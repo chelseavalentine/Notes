@@ -38,19 +38,90 @@
 #### Blocking and parking
 
 * use `!!` w/ the put & take methods if it's _inside the go block_
-  - put: `>!` or `>!!`
-  - take: `<!` or `<!!`
+  - put: `>!` (non-blocking) or `>!!`
+  - take: `<!` (non-blocking) or `<!!`
 
 * outside the go block, you need to use 2 exclamation points
-  - put: `>!!`
-  - take: `<!!`
+  - put: `>!!` (blocking)
+  - take: `<!!` (blocking)
 
 #### `thread`
 
+* you want to use blocking take & put when you use threads
+
+* `thread` creates a thread and executes a process; it returns a channel with the return value of the process in it
+  ```clojure
+  (let [t (thread "chili")]
+    (<!! t))
+  ; => "chili"
+  ```
+
+* use threads, instead of a `go`-block for long-running tasks so you don't clog the thread pool
+
+* use the blocking put & take variants w/ `thread`
+
+* if there's nothing to take, you get a `nil`
+
 ### `alts!!`
 
-### Queues
+* __`alts!!`__ lets you use the result of the first successful channel operation
+  - takes a vector of channels as its argument, and does a blocking take on all of them simultaneously
+  - returns a vector w/ the first element being the value taken, & the second being the channel it was taken from
+  - you can give it a timeout channel, so it waits a specified number of seconds before timing out
+
+  ```clojure
+  (let [c1 (chan)]
+    (upload "serious.jpg" c1)
+    (let [[headshot channel] (alts!! [c1 (timeout 20)])]
+      (if headshot
+        (println "Sending headshot notification for" headshot)
+        (println "Timed out!"))))
+  ; => Timed out!
+  ```
+
+* use it for put operations by putting a vector inside the vector you pass in
+  ```clojure
+  (let [c1 (chan)
+        c2 (chan)]
+    (go (<! c2))
+    (let [[value channel] (alts!! [c1 [c2 "put!"]])]
+      (println value)
+      (= channel c2)))
+  ; => true
+  ; => true
+  ```
+
+* __`alts!`__: the parking alternative (continues execution instead of just waiting on results) to use inside `go` blocks
 
 ### Process pipelines to escape callback hell
 
-### Additional resources
+* you can make it so each unit of logic lives in its own isolated process, and all communication between units of logic occurs through explicitly defined input and output channels
+
+  ```clojure
+  (defn upper-caser
+    [in]
+    (let [out (chan)]
+      (go (while true (>! out (clojure.string/upper-case (<! in)))))
+      out))
+
+  (defn reverser
+    [in]
+    (let [out (chan)]
+      (go (while true (>! out (clojure.string/reverse (<! in)))))
+      out))
+
+  (defn printer
+    [in]
+    (go (while true (println (<! in)))))
+
+  (def in-chan (chan))
+  (def upper-caser-out (upper-caser in-chan))
+  (def reverser-out (reverser upper-caser-out))
+  (printer reverser-out)
+
+  (>!! in-chan "redrum")
+  ; => MURDER
+
+  (>!! in-chan "repaid")
+  ; => DIAPER
+  ```
