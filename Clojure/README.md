@@ -4,7 +4,9 @@ Learning clojure from [Clojure for the Brave and True](http://www.braveclojure.c
 
 
 #### Table of Contents
+
 __[Chapter 1: Building, running, and the REPL](Clojure-1.md#chapter-1-building-running-and-the-repl)__
+
 __[Chapter 3: Crash course](Clojure-1.md#chapter-3-crash-course)__
   * [Control flow](Clojure-1.md#control-flow)
     - `if`, `do`, `when`, `nil?`, `=`, `and`, `or`
@@ -35,6 +37,7 @@ __[Chapter 3: Crash course](Clojure-1.md#chapter-3-crash-course)__
     - `re-find`
   * [`reduce`](Clojure-4.md#reduce)
     - `reduce`, `map`
+
 __[Chapter 4: Core functions in depth](Clojure-4.md#chapter-4-core-functions-in-depth)__
   * [Treating lists, vectors, sets, and maps as sequences](Clojure-4.md#treating-lists-vectors-sets-and-maps-as-sequences)
   * [Abstraction through indirection](Clojure-4.md#abstraction-through-indirection)
@@ -50,6 +53,7 @@ __[Chapter 4: Core functions in depth](Clojure-4.md#chapter-4-core-functions-in-
   * [`apply`](Clojure-5.md#)
   * [`partial`](Clojure-5.md#)
   * [`complement`](Clojure-5.md#)
+
 __[Chapter 5: Functional programming](Clojure-5.md#chapter-5-functional-programming)__
   * [Pure functions: What and why](Clojure-5.md#pure-functions-what-and-why)
   * [Recursion instead of for/while](Clojure-5.md#recursion-instead-of-forwhile)
@@ -58,6 +62,7 @@ __[Chapter 5: Functional programming](Clojure-5.md#chapter-5-functional-programm
   * [`memoize`](Clojure-6.md#memoize)
   * [Misc](Clojure-6.md#misc)
     - `assoc-in`, `get-in`
+
 __[Chapter 6: Organizing your project](Clojure-6.md#chapter-6-organizing-your-project)__
   * [Your project as a library](Clojure-6.md#your-project-as-a-library)
   * [Storing objects with `def`](Clojure-6.md#storing-objects-with-def)
@@ -73,6 +78,7 @@ __[Chapter 6: Organizing your project](Clojure-6.md#chapter-6-organizing-your-pr
     -   `require`, `use`, `refer`, `:only`, `:exclude`, `:as`, `:rename`
   * [The `ns` macro](Clojure-7.md#the-ns-macro)
     - `:refer-clojure`, `:require`, `:use`, `:import`, `:load`, `:gen-class`
+
 __[Chapter 7: Reading, evaluation, and macros](Clojure-7.md#chapter-7-reading-evaluation-and-macros)__
   * [An overview of Clojure's evaluation module](Clojure-7.md#an-overview-of-clojures-evaluation-module)
   * [Reading](Clojure-7.md#reading)
@@ -83,6 +89,7 @@ __[Chapter 7: Reading, evaluation, and macros](Clojure-7.md#chapter-7-reading-ev
   * [Macros](Clojure-8.md#)
     - `defmacro`, `macroexpand`
   * [Syntactic abstraction and the `->` macro](Clojure-8.md#syntactic-abstraction-and-the---macro)
+
 __[Chapter 8: Writing Macros](Clojure-8.md#chapter-8-writing-macros)__
   * [Distinguishing symbols and values](Clojure-8.md#distinguishing-symbols-and-values)
   * [Simple quoting](Clojure-8.md#simple-quoting)
@@ -92,6 +99,7 @@ __[Chapter 8: Writing Macros](Clojure-8.md#chapter-8-writing-macros)__
     - `gensym`
   * [Double evaluation](Clojure-9.md#double-evaluation)
   * [Macros all the way down](Clojure-9.md#macros-all-the-way-down)
+
 __[Chapter 9: The Sacred Art of Concurrent and Parallel Programming](Clojure-9.md#chapter-9-concurrent-and-parallel-programming)__
   * [Futures](Clojure-9.md#futures)
     - `future`, `deref`, `@`
@@ -99,6 +107,7 @@ __[Chapter 9: The Sacred Art of Concurrent and Parallel Programming](Clojure-9.m
     - `delay`, `force`
   * [Promises](Clojure-9.md#promises)
     - `promise`, `deliver`
+
 __[Chapter 10: Atoms, refs, and vars](Clojure-10.md#chapter-10-atoms-refs-and-vars)__
   * [Atoms](Clojure-10.md#atoms)
     - `atom`, `swap!`, `reset`
@@ -112,6 +121,7 @@ __[Chapter 10: Atoms, refs, and vars](Clojure-10.md#chapter-10-atoms-refs-and-va
   * [Altering the var root](Clojure-10.md#altering-the-var-root)
     - `alter-var-root`, `with-redefs`
   * [Stateless concurrency and parallelism with `pmap`](Clojure-10.md#stateless-concurrency-and-parallelism-with-pmap)
+
 __[Chapter 11: Concurrent processes with `core.async`](Clojure-11.md#chapter-11-concurrent-processes-with-coreasync)__
   * [Getting started with processes](Clojure-11.md#getting-started-with-processes)
     - `chan`, `go`, `<!`, `>!!`
@@ -123,6 +133,7 @@ __[Chapter 11: Concurrent processes with `core.async`](Clojure-11.md#chapter-11-
   * [`alts!!`](Clojure-11.md#alts)
     - `alts!!`, `alts!`
   * [Process pipelines to escape callback hell](Clojure-11.md#process-pipelines-to-escape-callback-hell)
+
 __[Chapter 12: Working with the JVM](Clojure-11.md#chapter-12-working-with-the-jvm)__
   * [The JVM](Clojure-11.md#)
   * [Clojure App JARs](Clojure-11.md#clojure-app-jars)
@@ -135,6 +146,7 @@ __[Chapter 12: Working with the JVM](Clojure-11.md#chapter-12-working-with-the-j
     - `exit`, `getEnv`, `getProperty`
   * [Files and I/O](Clojure-12.md#files-and-io)
     - `spit`, `slurp`
+
 __[Chapter 13: Creating and Extending Abstractions with Multimethods, Protocols, and Records](Clojure-12.md#chapter-13-creating-and-extending-abstractions-with-multimethods-protocols-and-records)__
   * [Multimethods](Clojure-12.md#multimethods)
     - `defmulti`, `defmethod`
