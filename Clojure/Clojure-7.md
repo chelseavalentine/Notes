@@ -41,7 +41,7 @@
   (use '[the-divine-cheese-code.visualization.svg :as svg :only [points]])
   ```
 
-#### The ns Macro
+#### The `ns` macro
 
 * example where you can control what's referred from `clojure-core`, using `ns`. It takes the same options as `refer`
   ```clojure
@@ -103,7 +103,7 @@
 
 ### The evaluator
 
-#### These things evaluate to themselves
+#### Things that evaluate to themselves
 
 * `true`, `false`, `{}`, `:hello`, `()`
 
