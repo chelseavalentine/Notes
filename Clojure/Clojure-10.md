@@ -4,7 +4,7 @@
 
 ### Atoms
 
-* _reference types__ let you manage identities of objects
+* __reference types__ let you manage identities of objects
   - __`atom`__ allows you to name an identity & retrieve its state
   ```clojure
   (def person (atom {:name "Chelsea"
@@ -140,7 +140,7 @@
 
 ### Stateless concurrency and parallelism with `pmap`
 
-* `pmap` gives you concurrency performance benefits! performs a `map` in parallel
+* __`pmap`__ gives you concurrency performance benefits! performs a `map` in parallel
   - sometimes it isn't worth it since there's overhead in creating and coordinating threads
   ```clojure
   ;; test how long it takes to map something
