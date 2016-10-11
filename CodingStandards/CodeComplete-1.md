@@ -13,7 +13,7 @@
 
 * Major construction practices (p. 69)
 
-## Chapter 5
+## Chapter 5: Design in construction
 
 * __extensibility__: measurement of the ease in which you can enhance a system w/o affecting its underlying structure
 
@@ -63,3 +63,11 @@
 * choose the time that you bind values to variables carefully
 
 * Design practices checklist (p. 122)
+
+## Chapter 6: Working classes (p. 162)
+
+## Chapter 7: High-quality routines (p. 198)
+
+## Chapter 8: Defensive programming (p. 224)
+
+## Chapter 9: The pseudocode programming process (p. 252)

@@ -1,8 +1,6 @@
 # Clojure
 
-## Introduction
-
-### Chapter 1: Building, Running, and the REPL
+## Chapter 1: Building, Running, and the REPL
 
 * __JAR files__: collections of Java bytecode.
 
@@ -10,7 +8,7 @@
 
 * uses prefix notation, so operator comes first in an expression
 
-### Chapter 3: Do things: A Clojure crash course
+## Crash course
 
 * whitespace delimits operands, and commas are interpreted as whitespace
 
