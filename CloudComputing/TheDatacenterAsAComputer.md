@@ -8,6 +8,7 @@
 * Network Attached Storage (NAS) deals exclusively with data management, and doesn't run compute jobs
   - provides high availability via replication / error correction capabilities
   - Solid State Drives (SSDs) can deliver I/O rates many orders of magnitude higher than disks, but are more expensive
+  - different from DFS b/c it only stores, has redundancy and you can think of it as a single disk, whereas DFS uses a lot of commodity computers and uses their disks to be many parts of a whole
 
 * go for rack-level networking locality to avoid using the uplinks to the cluster-level switch (~100x more expensive than commodity rack switches)
   - you get less bandwidth with off-rack disks via the shared rack uplinks, but much more disk storage

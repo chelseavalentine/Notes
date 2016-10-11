@@ -2,8 +2,34 @@
 
 Learning clojure from [Clojure for the Brave and True](http://www.braveclojure.com/).
 
+### Table of Contents
 
-#### Table of Contents
+__[Chapter 1: Building, running, and the REPL](Clojure-1.md#chapter-1-building-running-and-the-repl)__
+
+__[Chapter 3: Crash course](Clojure-1.md#chapter-3-crash-course)__
+
+__[Chapter 4: Core functions in depth](Clojure-4.md#chapter-4-core-functions-in-depth)__
+
+__[Chapter 5: Functional programming](Clojure-5.md#chapter-5-functional-programming)__
+
+__[Chapter 6: Organizing your project](Clojure-6.md#chapter-6-organizing-your-project)__
+
+__[Chapter 7: Reading, evaluation, and macros](Clojure-7.md#chapter-7-reading-evaluation-and-macros)__
+
+__[Chapter 8: Writing Macros](Clojure-8.md#chapter-8-writing-macros)__
+
+__[Chapter 9: The Sacred Art of Concurrent and Parallel Programming](Clojure-9.md#chapter-9-concurrent-and-parallel-programming)__
+
+__[Chapter 10: Atoms, refs, and vars](Clojure-10.md#chapter-10-atoms-refs-and-vars)__
+
+__[Chapter 11: Concurrent processes with `core.async`](Clojure-11.md#chapter-11-concurrent-processes-with-coreasync)__
+
+__[Chapter 12: Working with the JVM](Clojure-11.md#chapter-12-working-with-the-jvm)__
+
+__[Chapter 13: Creating and Extending Abstractions with Multimethods, Protocols, and Records](Clojure-12.md#chapter-13-creating-and-extending-abstractions-with-multimethods-protocols-and-records)__
+
+
+### Table of Contents (Extended)
 
 __[Chapter 1: Building, running, and the REPL](Clojure-1.md#chapter-1-building-running-and-the-repl)__
 
