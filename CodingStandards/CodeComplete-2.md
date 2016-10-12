@@ -64,10 +64,24 @@
 
 * Defensive programming checklist (p. 248)
 
+## Chapter 10: General issues in using variables
 
-## Chapter 9: The pseudocode programming process (p. 252)
+* initialize variables as they're declared, & close to where it's first used
 
-## Chapter 10: General issues in using variables (p. 274)
+* check input parameters for validity (eg. are they actually positive)
+
+* use a memory-access checker to check against bad pointers
+
+### Scope
+
+* keep variables "live" for a short as possible ("live" = last statement in which it's referenced - first statement in which it's referenced)
+  - reader needs to remember fewer variables
+
+* break groups of related statements into separate routines
+
+* use each variable for exactly one purpose
+
+* avoid variables with hidden meanings (eg. the meaning changes based on the range of values it takes on; eg. when pageCount is +, it means the number of pages, if it's negative, it means an error code)
 
 ## Chapter 11: The power of variable names (p. 296)
 
@@ -120,3 +134,8 @@
 ## Chapter 35: Where to find more information (p. 892)
 
 (p. 899)
+
+
+
+1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0.5 1 1 1 1 1 1 0 0
+25.5
