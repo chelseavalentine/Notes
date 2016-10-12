@@ -24,7 +24,15 @@
 
 * set pointers to null after deleting/freeing them, so you get an error if you try to use it
 
-## Chapter 14: Organizing straight-line code (p. 384)
+## Chapter 14: Organizing straight-line code
+
+* organize code so that dependencies are obvious (eg. write an initializing routine)
+
+* use routine params to make dependencies obvious (eg. all of the routines take the same param)
+
+* document unclear dependencies with comments
+
+* check for dependencies with assertions or error-handling code
 
 ## Chapter 15: Using conditionals (p. 392)
 
