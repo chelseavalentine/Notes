@@ -34,7 +34,24 @@
 
 * check for dependencies with assertions or error-handling code
 
-## Chapter 15: Using conditionals (p. 392)
+## Chapter 15: Using conditionals
+
+### `if` statements
+
+* write the normal path through the code first, then write the unusual cases
+
+* when you have an `if` test w/o an `else`, unless the reason is obvious, use comments to explain why the `else` clause isn't necessary (within the `else` block)
+
+### `case` statements
+
+* if cases are equally important, order them alphabetically or numerically
+
+* put the normal case first
+
+* put the most common case first
+
+* only use the default clause to detect legitimate defaults (not the remaining case)
+  - use it to detect errors
 
 ## Chapter 16: Controlling loops (p. 404)
 
