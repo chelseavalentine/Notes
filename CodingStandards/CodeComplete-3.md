@@ -63,7 +63,11 @@
 
 * consider using safety counters to determine whether the loop has executed too many times
 
-## Chapter 17: Unusual control structures (p. 428)
+## Chapter 17: Unusual control structures
+
+* use safety counters to prevent infinite recursion
+
+* don't use recursion for factorials or Fibonacci numbers
 
 ## Chapter 18: Table-driven methods (p. 448)
 
