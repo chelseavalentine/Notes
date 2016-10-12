@@ -146,7 +146,3 @@
 * name macros that expand to code like routines in case you need to replace them with routines
 
 * High-quality routines checklist (p. 222)
-
-## Chapter 8: Defensive programming (p. 224)
-
-## Chapter 9: The pseudocode programming process (p. 252)
