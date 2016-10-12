@@ -53,7 +53,15 @@
 * only use the default clause to detect legitimate defaults (not the remaining case)
   - use it to detect errors
 
-## Chapter 16: Controlling loops (p. 404)
+## Chapter 16: Controlling loops
+
+* keep loop-housekeeping chores at either the beginning or end of the loop
+
+* make each loop perform only one function
+
+* avoid code that depends on the loop index's final value
+
+* consider using safety counters to determine whether the loop has executed too many times
 
 ## Chapter 17: Unusual control structures (p. 428)
 
