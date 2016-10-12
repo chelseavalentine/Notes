@@ -73,3 +73,12 @@
 #### Application-level software
 
 * hardware specialization sometimes isn't worth it b/c of the speed of workload churn, changing product requirements, & thus changing problem area
+
+## Etc for Midterm
+
+* __oversubscription__: when demand for servers exceeds the throughput the servers can serve
+  - -> slower speeds as work/requests gets backed up
+  - oversubscription factor: `amount_being_asked_for` / `amount_you_can_serve`
+  - there isn't oversubscription w/i a rack b/c the bottleneck is the rack switch
+
+* when designing system you need to expect that communications will fail or be slow
