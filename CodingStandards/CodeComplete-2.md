@@ -116,7 +116,31 @@
 
 * document extremely short names
 
-## Chapter 12: Fundamental data types (p. 328)
+## Chapter 12: Fundamental data types
+
+### Numbers in general
+
+* make type conversions obvious
+
+* avoid mixed-type comparisons
+
+* check for integer overflow, including in intermediate results
+
+* for floats
+  - avoid additions & subtractions on numbers that have greatly different magnitudes
+  - avoid equality comparisons
+  - anticipate rounding numbers
+
+* for strings/characters:
+  - decide on an internationalization/localization strategy early
+  - in C: set the end of the string to `NULL`
+  - in C: use `strncpy()` instead of `strcpy()` to avoid endless strings
+
+### Enumerated types
+
+* define the first & last entries of an enum for use as loop limits (value is a repeat of the actual first and last)
+
+* reserve the first entry in the enum as invalid (usually `0`)
 
 ## Chapter 13: Unusual data types (p. 356)
 
