@@ -83,7 +83,38 @@
 
 * avoid variables with hidden meanings (eg. the meaning changes based on the range of values it takes on; eg. when pageCount is +, it means the number of pages, if it's negative, it means an error code)
 
-## Chapter 11: The power of variable names (p. 296)
+## Chapter 11: The power of variable names
+
+### Naming specific types of data
+
+* if you have several nested loops, assign longer names to the loop variables to improve readability (if applicable)
+
+* if the loop is really long, you may need a longer name so that you can remember the use of the variable
+
+* typical boolean names: done, error, found, success, ok
+
+* abstract the entity the constant refers to, rather than the number (eg... MAX_DONUTS is better than DOZEN)
+
+### Guidelines for language-specific conventions
+
+* C conventions
+  - character variables: `c`, `ch`
+  - integer indexes: `i`, `j`
+  - a number of something: `n`
+  - a pointer: `p`,
+  - a string: `s`,
+  - preprocessor macros in ALL_CAPS
+  - variable & routine names in all_lowercase
+  - _ as a word separator
+
+* C++ conventions, same as C, except for
+  - camelCase
+
+* Java conventions
+  - integer indexes: `i`, `j`
+  - constants in ALL_CAPS
+
+* document extremely short names
 
 ## Chapter 12: Fundamental data types (p. 328)
 
