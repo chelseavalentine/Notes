@@ -126,7 +126,16 @@
   - 6-10: try simplifying routine
   - 10+: break routine into 2 and call second part from the first routine
 
-## Chapter 20: The software-quality landscape (p. 500)
+## Chapter 20: The software-quality landscape
+
+* characteristics of software quality: correctness, usability, efficiency, reliability, integrity, adaptability, accuracy, robustness
+
+* internal quality characteristics: maintainability, flexibility, portability, reusability, readability, testability, understandability
+
+### Relative effectiveness of quality techniques
+
+* by using practices in extreme programming, you can get a 74-97% defect-detection rate
+  - informal design reviews (pair programming) [25-40%], informal code reviews (pair programming) [20-35%], personal desk-checking of code [20-60%], unit tests [15-50%], integration tests [25-40%], regression tests [15-30%]
 
 ## Chapter 21: Collaborative construction (p. 516)
 
