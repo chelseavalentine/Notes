@@ -71,6 +71,10 @@
 
 ## Chapter 18: Table-driven methods (p. 448)
 
+*  __table-driven method__: a scheme where you look up info in a table, rather than `if`/`switch` statements
+
+* if the entries in a lookup table are large, it takes a lot less space to create an index array with a lot of wasted space than it does to take a lookup table w/ a lot of wasted space
+
 ## Chapter 19: General control issues (p. 468)
 
 ## Chapter 20: The software-quality landscape (p. 500)
