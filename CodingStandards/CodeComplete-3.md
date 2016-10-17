@@ -69,13 +69,62 @@
 
 * don't use recursion for factorials or Fibonacci numbers
 
-## Chapter 18: Table-driven methods (p. 448)
+## Chapter 18: Table-driven methods
 
 *  __table-driven method__: a scheme where you look up info in a table, rather than `if`/`switch` statements
 
 * if the entries in a lookup table are large, it takes a lot less space to create an index array with a lot of wasted space than it does to take a lookup table w/ a lot of wasted space
 
-## Chapter 19: General control issues (p. 468)
+## Chapter 19: General control issues
+
+### Boolean expressions
+
+* consider using decision tables to replace complicated conditions
+
+* write boolean statements with positive tests, rather than negative ones
+  - use DeMorgan's Theorems to create positive tests from negative ones
+    + (!this || !that) == !(this && that)
+
+* write numeric expressions in number-line order (ie. smaller values -> larger values)
+
+### Null statements
+
+* create a preprocessor `doNothing()` macro, or an inline function for null statements for emphasis
+  - alternatively, consider whether the code would be clearer w/ a non-null loop body
+
+### Taming dangerously deep nesting
+
+* retest a part of the condition (splitting it into 2+ blocks)
+
+* use a break block
+
+* see if you can use `if-else` rather than just a nested `if`
+
+* convert to a `switch` statement
+
+* move part of the if-statement logic into its own routine
+
+### Structured programming
+
+* __structured programming__
+  - a program should use only _single-entry, single-exit_ control constructs (only have one place it starts, & one place it could end)
+
+* 3 components of structured programming:
+  1. _sequence_: a set of statements executed in order
+  2. _selection_: a group of statements are executed based on a condition
+  3. _iteration_: a control structure
+
+### Control structures and complexity
+
+* a technique for counting complexity of a routine
+  1. start w/ 1 for the straight path through the routine
+  2. add 1 for each of the following keywords: `if`, `while`, `repeat`, `for`, `and`, `or`
+  3. add 1 for each case in a `switch` statement
+
+* rate your routine on this scale:
+  - 0-5: probably fine
+  - 6-10: try simplifying routine
+  - 10+: break routine into 2 and call second part from the first routine
 
 ## Chapter 20: The software-quality landscape (p. 500)
 
