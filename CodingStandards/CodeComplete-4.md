@@ -56,7 +56,24 @@
 
 * system calls are often expensive, because it often needs a context switch
 
-## Chapter 26: Code-tuning techniques (p. 646)
+## Chapter 26: Code-tuning techniques
+
+### Logic
+
+* order tests by frequency
+
+* compare performance of similar logic structures, some are faster than others depending on the language
+  - eg. `if-else` is 82% faster in Java than a `switch` statement
+
+### Other optimizations
+
+* replace expensive operations w/ cheaper operations (eg. addition over multiplicatio, multiplication with exponentiation, etc.)
+
+* use the fewest array dimensions possible
+
+* if you know the result of an expression is always the same, replace it with a constant rather than computing it each time
+
+* recoding parts of a program in a low-level language
 
 ## Chapter 27: How program size affects (p. 686)
 
