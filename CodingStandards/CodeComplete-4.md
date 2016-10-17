@@ -36,7 +36,25 @@
   - when you add a routine or class
   - when you fix a defect
 
-## Chapter 25: Code-tuning strategies (p. 624)
+## Chapter 25: Code-tuning strategies
+
+### Performance overview
+
+* efficiency can be thought of from these viewpoints:
+  - _program requirements_: before you make high performance a requirement, make sure the users require that/wouldn't be fine with less; high performance can make systems more complex
+  - program design
+  - class and routine design
+  - OS interactions
+  - _code compilation_: some compilers are better at optimizing when turning high-level language into machine code
+  - code tuning
+
+### Code tuning
+
+* reducing the number of lines in a high-level language doesn't necessarily improve the speed/size of the resulting machine code
+
+* you shouldn't optimize as you go, since you don't know where the program's bottlenecks are
+
+* system calls are often expensive, because it often needs a context switch
 
 ## Chapter 26: Code-tuning techniques (p. 646)
 
