@@ -75,8 +75,6 @@
 
 * recoding parts of a program in a low-level language
 
-## Chapter 32: Self-documenting code (p. 814)
-
 ## Chapter 33: Personal character (p. 856)
 
 ## Chapter 34: Themes in software craftsmanship (p. 874)
