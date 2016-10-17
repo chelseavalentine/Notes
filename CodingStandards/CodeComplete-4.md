@@ -26,7 +26,15 @@
 
 * treat warnings as errors
 
-## Chapter 24: Refactoring (p. 600)
+## Chapter 24: Refactoring
+
+* small fixes (1-5 lines) are more likely to have errors than larger fixes, so don't treat them casually
+
+* if a big refactor seems necessary, look at whether a redesign & reimplementation seems more appropriate
+
+* times to check if you need to refactor
+  - when you add a routine or class
+  - when you fix a defect
 
 ## Chapter 25: Code-tuning strategies (p. 624)
 
