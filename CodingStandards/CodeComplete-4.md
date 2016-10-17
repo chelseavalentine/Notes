@@ -75,39 +75,6 @@
 
 * recoding parts of a program in a low-level language
 
-## Chapter 28: Managing construction (p. 698)
-
-### Encourage good coding
-
-*
-
-
-### Configuration management
-
-*
-
-
-### Estimating a construction schedule
-
-*
-
-
-### Measurement
-
-*
-
-
-### Treating programmers as people
-
-*
-
-
-###   Managing your manager
-
-*
-
-
-
 ## Chapter 29: Integration (p. 726)
 
 ## Chapter 30: Programming tools (p. 746)
