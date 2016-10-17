@@ -74,11 +74,3 @@
 * if you know the result of an expression is always the same, replace it with a constant rather than computing it each time
 
 * recoding parts of a program in a low-level language
-
-## Chapter 33: Personal character (p. 856)
-
-## Chapter 34: Themes in software craftsmanship (p. 874)
-
-## Chapter 35: Where to find more information (p. 892)
-
-(p. 899)
