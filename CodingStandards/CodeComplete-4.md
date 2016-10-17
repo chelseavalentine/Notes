@@ -1,6 +1,6 @@
 # Code Complete
 
-## Chapter 23
+## Chapter 23: Debugging
 
 ### Finding a defect
 
@@ -75,9 +75,38 @@
 
 * recoding parts of a program in a low-level language
 
-## Chapter 27: How program size affects (p. 686)
-
 ## Chapter 28: Managing construction (p. 698)
+
+### Encourage good coding
+
+*
+
+
+### Configuration management
+
+*
+
+
+### Estimating a construction schedule
+
+*
+
+
+### Measurement
+
+*
+
+
+### Treating programmers as people
+
+*
+
+
+###   Managing your manager
+
+*
+
+
 
 ## Chapter 29: Integration (p. 726)
 
