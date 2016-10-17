@@ -137,7 +137,28 @@
 * by using practices in extreme programming, you can get a 74-97% defect-detection rate
   - informal design reviews (pair programming) [25-40%], informal code reviews (pair programming) [20-35%], personal desk-checking of code [20-60%], unit tests [15-50%], integration tests [25-40%], regression tests [15-30%]
 
-## Chapter 21: Collaborative construction (p. 516)
+## Chapter 21: Collaborative construction
+
+### Pair programming
+
+* don't force pair programming for the easy part (you could just collaborate on design & then program solo)
+
+* rotate pairs & work assignments regularly (cross-pollination, learning different parts of the system)
+
+### Formal inspections
+
+* checklists to focus reviewers' attention on past problem areas
+
+* inspection focuses on defect detection, not correction
+
+* for rework (correcting defects), a person other than the author is assigned
+
+### Other collaborative development practices
+
+* code walk-through (by author of design/code), focused on technical issues
+  - participants prepare ahead of time by reading the design/code & looking for errors
+  - focus on error detection, not correction
+  - 30-60 mins
 
 ## Chapter 22: Developer testing (p. 536)
 
