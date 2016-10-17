@@ -158,9 +158,41 @@
 * code walk-through (by author of design/code), focused on technical issues
   - participants prepare ahead of time by reading the design/code & looking for errors
   - focus on error detection, not correction
-  - 30-60 mins
+  - 30-60 min
 
-## Chapter 22: Developer testing (p. 536)
+## Chapter 22: Developer testing
+
+* _dirty tests_ vs _clean tests_:
+  - _clean tests_: tests whether the code works
+  - _dirty tests_: testing for all the ways the code could break
+
+* use complexity of program to decide how many test cases to write
+
+* test data flow by making tests for each of the states of data: defined, used, and killed
+
+* things to test for when looking for bad data:
+  - too little/no data
+  - too much data
+  - the wrong kind of data (invalid data)
+  - the wrong size of data
+  - uninitialized data
+
+* things to look for in good data:
+  - expected values
+  - minimum & maximum normal configurations
+  - compatibility with old data
+
+### Test-support tools
+
+* test data generators
+
+* data recorder/logging (log significant errors)
+
+* use system perturbers
+  - memory filling
+  - memory shaking (makes sure you haven't written code that depends on data being in an absolute, rather than relative, location)
+  - selective memory failing (low memory conditions)
+  - memory access checking (bounds checking) for pointer behavior
 
 ## Chapter 23: Debugging (p. 572)
 
