@@ -75,38 +75,6 @@
 
 * recoding parts of a program in a low-level language
 
-## Chapter 30: Programming tools (p. 746)
-
-### Design tools
-
-*
-
-
-### Source-code tools
-
-*
-
-
-### Executable-code tools
-
-*
-
-
-### Tool-oriented environments
-
-*
-
-
-### Building your own programming tools
-
-*
-
-
-### Tool fantasyland
-
-*
-
-
 ## Chapter 31: Layout and style (p. 766)
 
 ## Chapter 32: Self-documenting code (p. 814)
