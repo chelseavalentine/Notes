@@ -257,6 +257,181 @@ pubic class LinkedQueueOfStrings {
   - avoids making clients have to cast
   - discovers type mismatch errors at compile time, not runtime
 
+##### Generic implementation of a stack
+
+```java
+public class Stack<Item> {
+  private Node first = null;
+
+  private class Node {
+    Item item;
+    Node next;
+  }
+
+  public boolean isEmpty() {
+    return first == null;
+  }
+
+  public void push(Item item) {
+    Node old = first;
+    first = new Node();
+    first.item = item;
+    first.next = old;
+  }
+
+  public Item pop() {
+    Item item = first.item;
+    first = first.next;
+    return item;
+  }
+}
+```
+
+##### Array implementation of a stack
+
+```java
+public class ArrayStack<Item> {
+  private Item[] s;
+  private int N = 0;
+
+  public ArrayStack(int capacity) {
+    s = (Item[]) new Object[capacity];
+  }
+
+  public boolean isEmpty() {
+    return N == 0;
+  }
+
+  public void push(Item item) {
+    S[N++] = item;
+  }
+
+  public Item pop() {
+    return s[--N];
+  }
+}
+```
+
+#### Iterators
+
+If you make stack implement the `Iterable` interface, then you can use the for-each statement
+
+##### Linked list stack's iterator
+
+```java
+public Iterator<Item> iterator() {
+  return new ListIterator();
+}
+
+private class ListIterator implements Iterator<Item> {
+  private Node current = first;
+
+  public boolean hasNext() {
+    return current != null;
+  }
+
+  public void remove() { ... }
+
+  public Item next() {
+    Item item = current.item;
+    current = current.next;
+    return item;
+  }
+}
+```
+
+##### Array stack's iterator
+
+```java
+public Iterator<Item> iterator() {
+  return new ReverseArrayIterator();
+}
+
+private class ReverseArrayIterator implements Iterator<Item> {
+  private int i = N;
+
+  public boolean hasNext() {
+    return i > 0;
+  }
+
+  public void remove() { ... }
+
+  public Item next() {
+    return s[--i];
+  }
+}
+```
+
+* `Bag` is used when we're just adding to a collection, and order doesn't matter
+  - is implemented as a stack w/o pop, or a queue w/o dequeue
+
+### Elementary sorts
+
+* callback: a reference to executable code
+
+* __insertion sort__: iterate through an array, swapping array[i] with each larger entry to its left
+  - is about 2x as fast as selection sort, because about 1/2 of the time, there aren't larger entries to its left
+    + insertion sort: ~N²/4 vs. selection sort: ~N²/2
+
+* __inversion__: a pair of keys that are out of order
+  - an array is __partially sorted__ if inversions ≤ cN for some constant _c_
+
+#### Shellsort
+* __shellsort__: move entries more than 1 position at a time by h-sorting the array
+  - where _h_ is the number of entries back that you can compare and move each element with
+  - best numbers to use haven't been discovered; you can set h to 7, 3, and then 1, or make h = 3x + 1
+
+```java
+public class Shellsort {
+  public static void sort(Comparable[] a) {
+    int N = a.length;
+    int h = 1;
+
+    while (h < N/3) {
+      h = 3 * h + 1; // 1, 4, 13, 40, ...
+    }
+
+    while (h >= 1) {
+      for (int i = h; i < N; i++) {
+        for (j = i; j <=  && less(a[j], a[j - h]); j = -h) {
+          exchange(a, j, j-h);
+        }
+      }
+
+      h /= 3;
+    }
+  }
+}
+```
+
+* __h-sorted array__: _h_ interleaved sorted subsequences
+  - you h-sort by using insertion sort, but go _h_ steps instead of 1
+
+#### Shuffling
+
+* __shuffle sort__ (linear time shuffling): shuffling a set/list/array elements. In iteration _i_ pick integer _r_, between 0 and _i_ uniformly and at random. Then swap `a[i]` and `a[r]`.
+
+```java
+public static void shuffle(Object[] a) {
+  int N = a.length;
+
+  for (int i = 0; i < N; i++) {
+    int r = StdRandom.uniform(i + 1);
+    exchange(a, i, r);
+  }
+}
+```
+
+#### Convex hull
+
+* __convex hull__: for N points, the convex hull is the smallest perimeter fence enclosing the points
+
+### Mergesort
+
+#### Mergesort
+
+
+
 
 
 
