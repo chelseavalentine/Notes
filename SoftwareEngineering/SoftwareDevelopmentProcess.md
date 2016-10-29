@@ -281,3 +281,209 @@ Looking @ reqs, do these steps to get your system:
 ### Unified Modeling Language (UML): Structural diagrams
 
 UML diagrams represent the static characteristics of a system.
+
+
+
+
+
+
+## General concepts
+
+Clarification of terms:
+
+* __failure__: observable incorrect behavior
+* __fault/bug__: incorrect code
+* __error__: cause of a fault
+
+### Software verification approaches
+
+1. Testing:
+  - pro: no false positives
+  - con: incomplete
+2. Static verification
+  - pro: considers all program behaviors
+  - con: considers some impossible behaviors, -> false positives
+3. Inspections
+  - manual group walk-through
+4. Formal proofs of correctness
+  - pro: strong guarantee
+  - con: complex, expensive
+
+#### 1. Testing
+
+* __test case__: {i ϵ D, o ϵ O}, where D is the input domain, and O is the output domain.
+* __test suite__: a set of test cases
+
+Levels of testing:
+
+1. __unit testing__: testing individual modules in isolation
+2. __integration testing__: testing interactions among different modules (a subset of all)
+  - _big bang integration testing_: testing interactions b/t all modules at once (yikes)
+3. __system testing__: testing complete system's functional & non-functional requirements
+
+Other testing:
+
+* __acceptance testing__: validating software against customer requirements
+* __regression testing__: a test performed after each system change to check for regression errors
+* __alpha testing__: having users w/i organization test software
+* __beta testing__: having a subset of users outside organization test software
+
+### Black-box testing vs. white-box testing
+
+* __black-box testing__: testing based on description of a software
+  - covers as much specified behavior as possible
+  - can't reveal errors due to implementation details
+
+* __white-box testing__: testing based on the code
+  - covers as much coded behavior as possible
+  - can't reveal errors due to missing paths (parts of specification that aren't implemented)
+
+## Black-box testing (a.k.a. functional testing)
+
+Advantages:
+
+* can focus on domain
+* no need for code, thus can write tests early
+* catches logic defects
+* applicable at all granularity levels
+
+### Systematic approach to black-box testing
+
+1. the _functional specification_ identifies the
+2. _independently testable features_, which identifies the
+3. _relevant inputs_, through which you can derive the
+4. _test cases' specifications_, to generate the
+5. _test cases_
+
+#### Test data selection: how to select good values
+
+1. random testing
+  * pros: pick inputs uniformly; no designer bias
+  * cons: it's essentially looking for a needle in the haysack
+
+2. __partition testing__: using the fact that the input domain is naturally split into partitions by the software, & failures tend to be dense in particular partitions
+
+3. __boundary values__: errors tend to occur @ the boundaries of (sub)domains, thus select inputs at the boundaries
+
+### The Category-Partition Method
+
+A specific black-box testing approach where, you use the specification to:
+
+1. identify independently testable features
+2. identify _categories_ (characteristics of each input element)
+3. _partition_ categories into choices
+4. identify constraints amongst choices
+5. produce/evaluate test case specifications
+6. generate test cases from test case specifications
+
+* __test frame__: a specification of a test
+  - eg. input str has length `size - 1`, content includes special chars; input size has value of `70`
+
+TSLgenerator is a tool for this.
+
+### Model-based testing
+
+You take a specification, create a model (an abstract representation of the software being tested, eg. FSM), and then create test cases from that.
+
+#### Finite State Machines (FSM)
+
+* nodes = states of a system
+* edges = transitions between states
+  - edge labels = events/actions
+
+Building an FSM involves:
+
+1. identify system boundaries, and the input & output
+2. identify relevant states & transitions
+  - draw FSM & then the test cases are the paths you can take
+
+About FSMs:
+
+* they're just state diagrams
+* you must find a suitable level of abstraction
+
+## White-Box Testing (a.k.a. structural testing)
+
+* Advantages:
+  - based on code, thus can measure objectively & automatically
+  - can be used to compare test suites
+  - allows for covering coded behavior
+
+* Types of white-box testing:
+  - control-flow based
+  - data-flow based
+  - fault based
+
+* Coverage criteria is defined in terms of test requirements, and it leads to the test specs & cases
+  - _test requirements_ are the number of statements in the program
+    + thus, the (statement coverage's coverage measure) = (number of executed statements) / (total number of statements)
+
+* (branch coverage's coverage measure) = (number of executed branches) / (total number of branches)
+
+* branch coverage subsumes statement coverage for any test suite, but branch coverage is more expensive
+
+* (condition coverage's coverage measure) = (number of conditions that are both T and F) / (total number of conditions)
+
+### Modified condition/Decision coverage (MC/DC)
+
+This is required for safety-critical software. MC/DC subsumes branch coverage.
+
+* purpose: test important conditions, & limit testing costs
+  - by extending branch & decision coverage w/ requirement that each condition should affect the decision outcome independently
+
+## Agile Development Methods (aka TDD)
+
+The agile method mentality's principles:
+
+* focus on code (≠ design, to avoid unnecessary changes)
+* focus on people over process
+* iterative approach
+* customer involvement
+* expectation that requirements will change
+* simplicity
+
+### Extreme Programming (XP)
+
+A lightweight, humanistic discipline for software development.
+
+Values and principles of XP:
+
+* communication
+  - elements: pair programming, user stories, customer involvement
+* simplicity
+* feedback
+  - elements: test cases, estimating stories once getting feature from customer
+* courage (to throw out code, make changes)
+
+XP's practices:
+
+1. incremental planning
+2. small releases
+3. simple design
+4. test first
+5. refactoring
+6. pair programming
+7. continuous integration
+8. on-site customer
+
+### Scrum
+
+* actors:
+  - product owner (customer): says what needs to be done & prioritizes them
+  - team: ships
+  - scrum master: person responsible for scrum process
+
+## Software refactoring
+
+Goal of refactoring: keep program readable, understandable, & maintainable, while preserving behavior.
+
+Refactoring methods:
+
+* collapse hierarchy
+  - merging subclasses & superclasses together when they're too similar
+* consolidate conditional expressions
+* extracting classes
+* decomposing conditionals
+* converting to in-line classes
+  - for when a class doesn't do much
+* extracting methods
