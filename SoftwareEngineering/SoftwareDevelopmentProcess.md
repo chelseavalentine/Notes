@@ -166,7 +166,7 @@ Other VCSs: Subversion, CVS, ProForce (commercial), etc. vs. __Git__ (open sourc
 * VCSs use an efficient algorithm to store copies, so it doesn't take too much space
   - eg. Git hashes all the things
 
-#### Git workflow
+#### Git work-flow
 
 1. workspace (working directory): changes that haven't been committed
 2. index (staging): tagged to be considered in the next commit
@@ -197,7 +197,7 @@ Other VCSs: Subversion, CVS, ProForce (commercial), etc. vs. __Git__ (open sourc
     + have a well-defined satisfaction criteria
   - __non-functional requirements__: qualities of a system
     + eg. security, accuracy, performance, usability, adaptability, interoperability, etc.
-    + don't have a well-defined satisfaction criteria, so must refine them to make them verifiable (eg. < 30s)
+    + don't have a well-defined satisfaction criteria, so must refine them to make them verifiable (eg. < 30 seconds)
 
 ### Requirements elicitation techniques
 
@@ -234,8 +234,8 @@ Ways to model requirements, with different focuses
 
 ### Analyzing requirements
 
-1. __verification__: are the reqs. correct & fulfilling customer needs? complete? relevant? testable?
-2. __validation__: do the reqs. satisfy what stakeholders want?
+1. __verification__: are the requirements correct & fulfilling customer needs? complete? relevant? testable?
+2. __validation__: do the requirements satisfy what stakeholders want?
 3. __risk analysis__: risks involved w/ developing the system
 
 ### Requirements prioritization
@@ -282,8 +282,188 @@ Looking @ reqs, do these steps to get your system:
 
 UML diagrams represent the static characteristics of a system.
 
+* __class diagram__: a static structural view of a system, which describes the classes and their structure, and the relationships amongst classes
+  - `+` indicates public visibility
+  - `-` indicates only visible to the class
 
+* attributes: representation of a class' structure, which're found by:
+  - examining class definitions
+  - studying requirements
+  - applying domain knowledge
 
+* relationships: descriptions of interactions between objects
+  - 3 main types of relationships:
+    1. __dependencies__: x uses y, indicated by a dashed arrow
+      - changes in y can affect xx
+    2. __associations/aggregations__: x has a y; x consists of y; "has-a" relationship
+      - an association is indicated by a straight line
+      - an aggregation is indicated by a straight line and a diamond at the end which aggregates
+    3. __generalization__: x is a y
+      - indicated by an arrow with its head unfilled
+
+* __component diagram__: a static view of components and their relationships
+  - each node/component defines a set of classes w/ a well-defined interface
+  - each edge represents a relationship (ie. A "uses services of" B)
+  - indicated symbolically by a straight line with a cupped circle (lol just look it up), to say "represents an interface provided by the component"
+
+* __deployment diagram__: a static deployment view of a system
+  - physical allocation of components to computational units
+  - here, a node = computational unit (eg. server, client), and the edge = the communication
+
+#### UML: Behavioral diagrams
+
+Represents the dynamic aspects of a system.
+
+* __use case diagram__ (a.k.a. scenarios, scripts, user stories) are a representation of:
+  1. sequence of interactions of actors (outside entities) w/ the system
+  2. system actions that yield observable results to the actors
+  - basic notation:
+    + the use case is indicated by a circle w/ text in it, defining the use case
+    + a labeled stick figure indicates the actor (human/device)
+    + a straight line to indicate "is the actor of"
+
+* documenting use cases:
+  - __documentation__: specification of a flow of events from an actor's point of view, which describes:
+    + how the use case starts and ends
+    + the normal flow of events
+    + alternative flows of events
+    + exceptional flows of events
+  - can use informal/formal language, pseudocode, sequence diagrams, etc.
+
+* Roles of use cases:
+  - requirements elicitation
+  - architectural analysis
+  - user prioritization
+  - planning
+  - testing
+
+* __sequence diagram__: an interaction diagram emphasizing the time ordering of messages
+
+* __state transition diagram__: represents the possible lifecycle for a given class/object
+  - describes possible states of the class as defined by attributes' values
+  - describes events that cause state transitions
+  - describes actions resulting from state change
+
+## Software architecture
+
+_What is it?_ Architectural design decisions are the decisions that can impact the success of a system, like a building's foundation
+
+* __architectural erosion__: locally optimizing software via new features, platform upgrades, etc. resulting in the compromization of the system's behavior (esp. non-functional properties)
+
+* __software architecture__ consists of the _elements_, _form_, and _rationale_
+  - __elements__: processes, data, and connections
+  - __form__: properties and relationships amongst elements
+  - __rationale__: justification for the elements and their relationships
+
+* __software architecture__: a set of principal design decisions about the system
+  - the "blueprint" of the software = { structure, behavior, interactions, non-functional properties }
+
+### Architectural degradation
+
+* __architectural drift__: introducing architectural design decisions independent of a system's prescriptive (decided-on) architecture
+
+* __architectural erosion__: introducing architectural design decisions that violate a system's prescriptive architecture
+
+* __architectural recovery__: determining the software architecture from implementation and fixing it
+
+* software architecture's elements include:
+  - __processing elements__: implementers of the business logic & transformers of data
+  - __data elements__ (aka information, state): containers of the info that processing elements use/transform
+  - __interaction elements__: the glue  holding the architecture's pieces together
+
+Components, connectors, and confirmation
+
+* __software component__: an architectural entity that:
+  - encapsulates a subset of the functionality and/or data
+  - restricts access to the subset via an explicitly defined interface
+  - can have explicitly defined dependencies on its execution environment
+
+* __software connector__: an architectural entity affecting and regulating interaction
+
+* __(architectural configuration)/topology__: the association between components and connectors of a SWA
+  - __deployment architectural perspective__: mapping components and connectors to specific hardware elements
+
+### Architectural styles
+
+* __architectural style__: a named collection of architectural design decisions applicable in a given context
+
+#### 1. Pipes and filters
+
+A chain of processing elements (processes, threads, co-routines) are arranged so that the output of each element is the input of the next one
+  - usually some buffering in-between
+
+#### 2. Event-driven system
+
+A system with event emitters and event consumers. Consumers are notified when events of interest occur.
+
+#### 3. Publish-subscribe
+
+Publishers send out messages w/o knowing the subscribers. Subscribes express interest in 1+ tags.
+
+#### 4. Client-server
+
+Server provides resources and functionality. Client contacts server & requests its resources/functionality.
+
+#### 5. Peer-to-Peer (P2P)
+
+A decentralized and distributed network system, where peers (individual nodes in the network) act as independent agents, supplying and consuming resources.
+
+#### 6. Representational State Transfer (REST)
+
+A hybrid architecture for distributed hypermedia systems.
+
+## Design patterns
+
+* __design patterns__: tried-and-true successful solutions to problems
+
+### Five main classes of design patterns
+
+1. Fundamental patterns (basic patterns)
+2. Creational patterns (patterns supporting object creation)
+3. Structural patterns (patterns that help compose and put objects together)
+4. Behavioral patterns (patterns that realize interactions among objects)
+5. Concurrency patterns (patterns supporting concurrency)
+
+#### Factory method pattern
+
+* intent: can create objects w/o specifying class by invoking a factory method (via interface)
+
+* applicability:
+  - class doesn't know the object types it'll create @ compile time (eg. frameworks)
+  - class wants its subclasses to specify the object types it creates
+  - class needs control over the creation of its objects
+
+* participants:
+  - __creator__ provides interface for factory method
+  - __concrete creator__ provides a method for creating the actual object
+  - __product__: the object made by the factory method
+
+#### Strategy pattern
+
+* intent: allows you to switch b/t different algorithms to accomplish a task
+
+* applicability:
+  - different variants of an algorithm
+  - many related classes that only differ in their behavior
+
+* participants:
+  - __context__: an interface to the outside world; has reference to current algorithm, which can change at runtime
+  - __algorithm (strategy)__: the common interface for the different algorithms
+  - __concrete strategy__: the actual implementation of the algorithm
+
+#### Other common design patterns
+
+* __visitor pattern__: separating an algorithm from an object structure it operates on -> decoupled operation
+
+* __decorator pattern__: a wrapper that adds functionality to a class
+
+* __iterator pattern__: access elements of a collection w/o knowing how they're represented
+
+* __observer pattern__: notify dependents when object changes
+
+* __proxy pattern__: a surrogate controls access to an object
+
+## Unified Software Process (USP)
 
 
 
@@ -359,7 +539,7 @@ Advantages:
 
 1. random testing
   * pros: pick inputs uniformly; no designer bias
-  * cons: it's essentially looking for a needle in the haysack
+  * cons: it's essentially looking for a needle in the hay sack
 
 2. __partition testing__: using the fact that the input domain is naturally split into partitions by the software, & failures tend to be dense in particular partitions
 
@@ -377,7 +557,7 @@ A specific black-box testing approach where, you use the specification to:
 6. generate test cases from test case specifications
 
 * __test frame__: a specification of a test
-  - eg. input str has length `size - 1`, content includes special chars; input size has value of `70`
+  - eg. input string has length `size - 1`, content includes special chars; input size has value of `70`
 
 TSLgenerator is a tool for this.
 
@@ -480,7 +660,7 @@ Goal of refactoring: keep program readable, understandable, & maintainable, whil
 Refactoring methods:
 
 * collapse hierarchy
-  - merging subclasses & superclasses together when they're too similar
+  - merging subclasses & super classes together when they're too similar
 * consolidate conditional expressions
 * extracting classes
 * decomposing conditionals
