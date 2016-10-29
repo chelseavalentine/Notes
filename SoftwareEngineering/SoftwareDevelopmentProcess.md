@@ -465,7 +465,116 @@ A hybrid architecture for distributed hypermedia systems.
 
 ## Unified Software Process (USP)
 
+* __Rational Unified Process__ (RUP): a software process model w/ following key features:
+  1. order of phases in which things are done, which implies #2
+  2. transition criteria to move between phases, which implies #3
+  3. software built-in components, which implies #4
+  4. well-defined interfaces
 
+* distinguishing aspects of RUP:
+  1. use-case driven
+  2. architecture-centric
+  3. iterative and incremental
+
+### Features of RUP: Use-case driven
+
+* perspective: system reacts to user inputs
+  - what's the system supposed to do for each user? Use cases define a system's functions
+
+### Features of RUP: Architecture-centric
+
+* architecture defines how the system is structured to provide the functionality
+
+1. create a rough draft of the system, independent of the use cases
+2. use key use cases to create subsystems
+3. refine the architecture by using additional use cases
+
+### Features of RUP: Iterative and incremental
+
+* there are many cycles of development (w/ all phases of development), w/ each resulting in a product release
+  - each cycle has 4 phases (which may have multiple iterations within each)
+    1. inception
+    2. elaboration
+    3. construction
+    4. transition
+
+* each cycle focusing on a small subset of the use cases, or a single use case. There could be some overlap between cycles
+
+### Cycle phases: Phase 1 – Inception
+
+Asks and answers the following questions:
+
+* __Q__: what're the system's major users (actors), and what will the system do for them?
+  - Use-case model.
+
+* __Q__: What could the architecture for the system be?
+  - tentative architecture w/ crucial subsystems
+
+* __Q__: what's the plan and how much will it cost?
+  - identification of main risks, and rough planning w/ estimates
+
+Produces:
+
+* a __vision document__: the project requirements, key features, and main constraints
+* initial use-case model
+* initial project glossary (the main terms in the project and their meanings), and initial business case (business context & success criteria)
+* initial project plan & risk assessment
+* (optional) 1+ prototype(s)
+
+__Criteria for transition to phase 2 (elaboration)__:
+
+* stakeholders concur on the scope, definition, and cost/schedule estimates
+* requirements understanding
+* credibility of estimates, risks, priorities, and development process
+* depth and breadth of any prototype(s)
+
+### Cycle phases: Phase 2 – Elaboration
+
+Four main goals & activities of elaboration:
+
+1. analyze problem domain
+2. establish solid architectural foundation
+3. eliminate highest risk elements (by addressing the most critical use-cases)
+4. refine plan of activities and estimates
+
+Outcomes/deliverables:
+
+* almost complete use-case model, w/ all use-cases and actors defined
+* supplementary requirements (eg. non-functional requirements)
+* software architecture
+* design model, test cases, executable prototype
+* revised project plan and risk assessment
+* preliminary user manual
+
+__Criteria for transition to phase 3 (construction)__:
+
+* stable vision and architecture
+* prototype shows resolved/addressed risks
+* detailed/accurate project plan
+* stakeholders agree vision can be achieved with this plan
+* acceptable actual resource vs. planned resource expenditure
+
+### Cycle phases: Phase 3 – Construction
+
+* What happens:
+  - all considered features are developed
+  - thoroughly test features
+
+* Outcomes:
+  - all use-cases are realized, w/ traceability info to the product
+  - software is integrated on adequate platforms
+  - user manual
+
+__Criteria for transition to phase 4 (transition)__:
+
+* stable/mature product for deployment
+* are stakeholders ready to transition into user community?
+* acceptable actual vs. planned resource expenditures
+
+### Cycle phases: Phase 4 – Transition
+
+1. issues after deployment -> new release (maintenance)
+2. training customer service & providing help-line assistance
 
 ## General concepts
 
