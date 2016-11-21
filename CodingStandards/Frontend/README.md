@@ -92,6 +92,10 @@ Things to keep in mind while writing CSS:
   - simple, slightly affecting styles
   - eg. link colors, low-level OOCSS, global modifiers
 
+### CSS Modules
+
+* React uses CSS modules, which allow you to use whatever class names to style the component without having to worry about name conflicts; can focus on the component, not the styling
+
 ## Shadow DOM
 
 * has a __shadow boundary__ ,which allows for style encapsulation, because CSS styles defined w/i it are scoped to the ShadowRoot
