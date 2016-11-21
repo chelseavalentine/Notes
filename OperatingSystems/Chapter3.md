@@ -68,6 +68,44 @@ Two ways of keeping track of memory usage: [1] bitmaps, [2] free lists
   - programmer had to define the overlays
 
 * __virtual memory__: each program has its own address space, broken into chunks (__pages__)
+  - __page__: a contiguous range of addresses, mapped onto physical memory, or stored on disk
+
+* __paging__: when a computer stores & receives data from a secondary storage for use in main memory
+  - __virtual addresses__: the program-generated addresses, which form the __virtual address space__
+
+* when virtual memory is used, virtual addresses go to a __MMU (Memory Management Unit)__ instead of directly to the memory bus
+
+* __page frames__: the corresponding units in the physical memory that map the fixed-size units called pages, holding the virtual address space
+
+* a __Present/absent bit__ keeps track of which pages are physically present in memory
+
+* __page fault__: when the MMU causes the CPU to trap the operating system, when it notices that a page is unmapped
+
+* __page table__: stores the number of the page frame corresponding to the virtual page, mapping virtual addresses onto physical addresses
+  - __dirty bit__: a reflection of the page's state
+
+Concerns with speeding up paging:
+
+* Mapping from virtual -> physical address must be fast
+* If the virtual address space is large, the page table will be large
+
+A solution:
+
+* use a __TLB (Translation Lookaside Buffer)__ or an __associative memory__ to map virtual -> physical addresses w/o going through the page table
+
+* a __soft miss__: the page referenced isn't in the TLB, but is in memory; don't need disk I/O, but takes 10-20 machine instructions
+  - __minor page fault__: when a page is in memory but not in the process's page table (perhaps because brought in by another process)
+
+* a __hard miss__: page isn't in memory, and need to use disk I/O; easily 1 million times slower than a soft miss
+  - __major page fault__
+
+* __page table walk__: the act of looking up the mapping in the page table hierarchy
+
+* __segmentation fault__: when a program accesses an invalid address, leading to the OS killing the program
+
+For large memories, you can:
+
+* use a __multilevel page table__, __page directory__, __inverted page tables__
 
 ### 3.4 Page replacement algorithms (240)
 
