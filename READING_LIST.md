@@ -142,6 +142,7 @@ I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 3. [Scala best practices](https://github.com/alexandru/scala-best-practices) (Online)
 4. [Scala style guide](http://docs.scala-lang.org/style/) (Online)
 5. [Scala docs](http://docs.scala-lang.org/) (Online)
+6. [The Neophyte's Guide to Scala](http://danielwestheide.com/scala/neophytes.html) (Online)
 
 ### Python
 
@@ -188,3 +189,4 @@ I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 * [Awesome artificial intelligence](https://github.com/owainlewis/awesome-artificial-intelligence)
 * [Golang books](https://github.com/dariubs/GoBooks)
 * [Infrastructure engineer books](https://github.com/stack72/ops-books)
+* [Site Reliability Engineer resources Medium article](https://medium.com/@tammybutow/graduating-from-bootcamp-and-interested-in-becoming-a-site-reliability-engineer-b69a38ce858b#.nwqhmn2p0)
