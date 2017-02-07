@@ -142,6 +142,7 @@ I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 3. [Scala best practices](https://github.com/alexandru/scala-best-practices) (Online)
 4. [Scala style guide](http://docs.scala-lang.org/style/) (Online)
 5. [Scala docs](http://docs.scala-lang.org/) (Online)
+6. [The Neophyte's Guide to Scala](http://danielwestheide.com/scala/neophytes.html) (Online)
 
 ### Python
 
