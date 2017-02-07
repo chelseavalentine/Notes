@@ -151,6 +151,7 @@ I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 3. [Dive into Python 3](http://www.diveintopython3.net/) (Online)
 4. [Full-stack python](https://github.com/mattmakai/fullstackpython.com) (Online)
 5. [Python enhancement proposals](https://github.com/python/peps) (Online)
+6. [PEP 8: Python Style Guide](https://www.python.org/dev/peps/pep-0008/) (Online)
 
 ### Review
 

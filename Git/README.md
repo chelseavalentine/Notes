@@ -1,3 +1,5 @@
+# Git
+
 ### Basics
 Set some branch as default when pushing
 
@@ -41,7 +43,7 @@ Some useful things to know about using VIM:
 * To finally delete, you can press `d` or `x`
 * To save your work and get out of VIM, you can type `:x` or `:wq`
 
-Once you've done that, you'll probably be asked whether you want to do `git rebase --continue` (to fix the issue) or `git rebase --skip`. I haven't seen any problems with just doing the skip, soooo... 
+Once you've done that, you'll probably be asked whether you want to do `git rebase --continue` (to fix the issue) or `git rebase --skip`. I haven't seen any problems with just doing the skip, soooo...
 
 When you've finished editing the commit history, your current version won't be like the one on GitHub, so you'll have to force a commit. You can do that by typing:
 
