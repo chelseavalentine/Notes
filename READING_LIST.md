@@ -3,6 +3,7 @@
 ## Software
 
 I. [Architecture](#Architecture)
+
 II. [Performance](#Performance)
 
 ### On Engineering
@@ -185,5 +186,5 @@ I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 * [Awesome python books](https://github.com/Junnplus/awesome-python-books)
 * [List of books to master JavaScript development](https://github.com/javascript-society/javascript-path)
 * [Awesome artificial intelligence](https://github.com/owainlewis/awesome-artificial-intelligence)
- * [Golang books](https://github.com/dariubs/GoBooks)
- * [Infrastructure engineer books](https://github.com/stack72/ops-books)
+* [Golang books](https://github.com/dariubs/GoBooks)
+* [Infrastructure engineer books](https://github.com/stack72/ops-books)
