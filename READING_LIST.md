@@ -8,7 +8,7 @@ II. [Performance](#Performance)
 
 ### On Engineering
 
-1. [Guide to programming](https://github.com/thoughtbot/guides) (Online)
+1. [Thoughtbot's Guide to programming](https://github.com/thoughtbot/guides) (Online)
 2. [Design and development standards](https://github.com/north/north) (Online)
 3. [Prose for programmers](https://github.com/joshuacc/prose-for-programmers)
 

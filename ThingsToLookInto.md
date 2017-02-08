@@ -2,6 +2,9 @@
 
 Usually because they were discussed somewhere.
 
+#### Generally,...
+
+* [Code Climate](https://codeclimate.com/)
 
 #### [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
 
@@ -26,3 +29,8 @@ Usually because they were discussed somewhere.
   - [Heading Map for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) - allows you to see the heading structure of a webpage
   - [The Visual ARIA Bookmarklet](http://whatsock.com/training/matrices/visual-aria.htm) - A bookmarklet that can be run on a webpage and color codes ARIA roles.
   - [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb) - A Chrome extension that adds an “Audit” tab in Chrome’s developer tools that can scan a webpage for accessibility issues.
+
+#### [DOM Enlightenment: JS & the DOM](http://domenlightenment.com/)
+
+* [JavaScript Enlightenment](http://javascriptenlightenment.com/)
+* [jQuery Enlightenment](http://jqueryenlightenment.com/)

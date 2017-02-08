@@ -37,16 +37,18 @@ This repository acts as my personal reference for the different languages, libra
   6. [C++](C++.md)
 4. Tools
   1. [Linux Command Line](CLI/)
-  2. [Nagios](CloudComputing/NagiosCore.md)
-  3. [Sublime Text 3](SublimeText3/)
-  4. [Vim](Vim.md)
+  2. [Git](Git/)
+  3. [Nagios](CloudComputing/NagiosCore.md)
+  4. [Sublime Text 3](SublimeText3/)
+  5. [Vim](Vim.md)
 5. Design
   1. Conveying ideas
     * [Articulating Design Decisions](Design/ArticulatingDesignDecisions.md)
 6. Web
-  * [HTML](HTML%26CSS/HTML.md)
-  * [CSS](HTML%26CSS/CSS.md)
-  * [SASS](SASS.md)
+  * [The DOM](WebTechnologies/DomEnlightenment.md)
+  * [HTML](WebTechnologies/HTML.md)
+  * [CSS](WebTechnologies/CSS.md)
+  * [SASS](WebTechnologies/SASS.md)
 7. Mobile
   1. [Android](Android/)
 8. Miscellaneous
