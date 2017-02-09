@@ -90,3 +90,25 @@
   - `className`
   - `dataset`
   - `attributes`
+
+
+### Chapter 4: Element node selecting
+
+* selecting a node
+  - `querySelector()`
+  - `getElementById()`
+  - `querySelectorAll()`
+    + doesn't return a live list of elements; it's static
+  - `getElementsByTagName()`, `getElementsByClassName()`
+    + returns a live list of elements
+  - `getElementsByName()`
+
+* preconfigured (live) lists of element nodes
+  - `document.all`
+  - `document.forms`
+  - `document.images`
+  - `document.links`
+  - `document.scripts`
+  - `document.styleSheets` (all `link` and `style` objects)
+
+* check whether a node matches a selector with `.matches()`

@@ -45,7 +45,7 @@ This repository acts as my personal reference for the different languages, libra
   1. Conveying ideas
     * [Articulating Design Decisions](Design/ArticulatingDesignDecisions.md)
 6. Web
-  * [The DOM](WebTechnologies/DomEnlightenment.md)
+  * [The DOM](WebTechnologies/DomEnlightenment-1.md)
   * [HTML](WebTechnologies/HTML.md)
   * [CSS](WebTechnologies/CSS.md)
   * [SASS](WebTechnologies/SASS.md)
