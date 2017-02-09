@@ -65,3 +65,26 @@
   - `innerText` normalizes the returned text, whereas `textContent` returns exactly what's in the document w/ the removed markup, which may include carriage returns, etc.
   - `innerText` is browser-specific
 
+
+### Chapter 8: `DocumentFragment` nodes
+
+* `DocumentFragment` is a lightweight DOM only living in memory, that can be easily manipulated in memory and then appended to the live DOM
+  - when you add it to the DOM, only its contents are added, not the fragment itself
+  - when appended to the DOM, it's no longer in memory in the place you created it
+    + if you want to keep them in memory, use `cloneNode(true)` on the fragment
+  - can't contain `body` or `html` nodes
+
+
+### Chapter 9: CSS style sheets and rules
+
+* you can use the `sheet` property on `<style>` or `<link>` to access the `CSSStyleSheet` object
+
+* `CSSStyleSheet` properties and methods
+  - `disabled`
+  - `href`, `title`, `type`
+  - `media`
+  - `ownerNode`
+  - `parentStylesheet`
+  - `cssRules`
+  - `ownerRule`
+  - `deleteRule`, `insertRule`
