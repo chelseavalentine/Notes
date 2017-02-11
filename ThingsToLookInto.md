@@ -34,3 +34,38 @@ Usually because they were discussed somewhere.
 
 * [JavaScript Enlightenment](http://javascriptenlightenment.com/)
 * [jQuery Enlightenment](http://jqueryenlightenment.com/)
+
+
+#### [North: Development and Design Guide](https://github.com/north/north)
+
+* [Death to Bullshit](http://www.slideshare.net/bradfrostweb/death-to-bullshit) [(Video)](https://www.youtube.com/watch?v=nE0CRMm59BY)
+
+* [dark patterns library](http://darkpatterns.org/)
+
+* [What's the signal to noise ratio of your design](http://www.vanseodesign.com/web-design/signal-to-noise-ratio/)
+
+* [Noise-to-Noise Ratio photoset](http://www.flickr.com/photos/merlin/sets/72157622077100537/)
+
+* [Organizing mobile (UI)](http://alistapart.com/article/organizing-mobile)
+
+* [Style prototypes (Yeoman generator)](https://github.com/team-sass/generator-style-prototype)
+
+* [Style tiles](http://styletil.es/)
+
+* [IcoMoon](http://icomoon.io/app/) for icons
+
+* responsive images?
+  - [Borealis](https://github.com/Snugug/borealis)
+  - [Picturefill](https://github.com/scottjehl/picturefill)
+
+* [`requestAnimationFrame` to reduce layout thrashing](http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)
+
+* [Jank Free](http://jankfree.org/): more about in-page performance optimization
+
+* [Understanding the critical path for page loading](http://sethgodin.typepad.com/seths_blog/2013/11/understanding-critical-path.html)
+
+* Filament Group's [Ajax-include pattern](https://github.com/filamentgroup/Ajax-Include-Pattern/) for lazy loading non-critical content
+
+* [.webp](https://developers.google.com/speed/webp/) and [.webm](http://www.webmproject.org/) file formats
+
+* [spdy](http://www.chromium.org/spdy/spdy-whitepaper) protocol

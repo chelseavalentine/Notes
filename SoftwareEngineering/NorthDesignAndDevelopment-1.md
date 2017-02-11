@@ -1,4 +1,4 @@
-# North's design and development guidelines
+# North: Design and Development Guide
 
 ### Development process
 
