@@ -7,7 +7,9 @@ This repository acts as my personal reference for the different languages, libra
 1. Software Engineering
   1. Coding standards
     * [Clean Code](CodingStandards/CleanCode-1.md)
-  2. Other
+  2. General standards
+    * [North: Design and Development Guide](NorthDesignAndDevelopment-1.md)
+  3. Other
     * [Facts and Fallacies of Software Engineering](SoftwareEngineering/FactsAndFallaciesofSoftwareEngineering.md)
     * [Peopleware](SoftwareEngineering/Peopleware.md)
     * [Pragmatic Programmer](SoftwareEngineering/PragmaticProgrammer.md)
