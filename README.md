@@ -52,6 +52,7 @@ This repository acts as my personal reference for the different languages, libra
   * [HTML](WebTechnologies/HTML.md)
   * [CSS](WebTechnologies/CSS.md)
   * [SASS](WebTechnologies/SASS.md)
+  * [How to lose weight (in the browser)](WebTechnologies/BrowserDiet.md)
 7. Mobile
   1. [Android](Android/)
 8. Miscellaneous
