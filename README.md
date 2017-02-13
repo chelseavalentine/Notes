@@ -13,6 +13,7 @@ This repository acts as my personal reference for the different languages, libra
     * [Facts and Fallacies of Software Engineering](SoftwareEngineering/FactsAndFallaciesofSoftwareEngineering.md)
     * [Peopleware](SoftwareEngineering/Peopleware.md)
     * [Pragmatic Programmer](SoftwareEngineering/PragmaticProgrammer.md)
+    * [Prose for Programmers](SoftwareEngineering/ProseForProgrammers.md)
 2. Theory
   1. [Algorithms](Algorithms/)
     * [Princeton's Coursera Algorithms, part 1 course](Algorithms/AlgoPt1-1.md)
