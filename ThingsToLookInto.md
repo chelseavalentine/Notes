@@ -69,3 +69,11 @@ Usually because they were discussed somewhere.
 * [.webp](https://developers.google.com/speed/webp/) and [.webm](http://www.webmproject.org/) file formats
 
 * [spdy](http://www.chromium.org/spdy/spdy-whitepaper) protocol
+
+* [Mark Otto's code guide](http://mdo.github.io/code-guide/)
+
+* [North's styling guidelines](http://pointnorth.io/#styling)
+
+* [North's partial structure standards](http://pointnorth.io/#partial-structure)
+
+* [Web Platform's Accessibility Basics article](http://docs.webplatform.org/wiki/concepts/accessibility)
