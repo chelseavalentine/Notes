@@ -36,4 +36,4 @@ Notes from the guide, [_How to Lose Weight (in the Browser)](https://browserdiet
 
 * always define the width & height attributes of an image to avoid unnecessary repaints and reflows
 
-### Bonus
+* use progressive JPEGs

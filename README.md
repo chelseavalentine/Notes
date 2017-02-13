@@ -6,57 +6,58 @@ This repository acts as my personal reference for the different languages, libra
 
 1. Software Engineering
   1. Coding standards
-    * [Clean Code](CodingStandards/CleanCode-1.md)
+    * [Clean Code](coding-standards/CleanCode-1.md)
+    * [CSS Coding standards](coding-standards/frontend/) 
   2. General standards
-    * [North: Design and Development Guide](NorthDesignAndDevelopment-1.md)
+    * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
   3. Other
-    * [Facts and Fallacies of Software Engineering](SoftwareEngineering/FactsAndFallaciesofSoftwareEngineering.md)
-    * [Peopleware](SoftwareEngineering/Peopleware.md)
-    * [Pragmatic Programmer](SoftwareEngineering/PragmaticProgrammer.md)
-    * [Prose for Programmers](SoftwareEngineering/ProseForProgrammers.md)
+    * [Facts and Fallacies of Software Engineering](software-engineering/FactsAndFallaciesofSoftwareEngineering.md)
+    * [Peopleware](software-engineering/Peopleware.md)
+    * [Pragmatic Programmer](software-engineering/PragmaticProgrammer.md)
+    * [Prose for Programmers](software-engineering/ProseForProgrammers.md)
 2. Theory
-  1. [Algorithms](Algorithms/)
-    * [Princeton's Coursera Algorithms, part 1 course](Algorithms/AlgoPt1-1.md)
-    * [Cracking the Coding Interview](Algorithms/CTCI-1.md)
-    * [Alan Siegel's Algorithms book](Algorithms/SiegelChapter1.md)
+  1. [Algorithms](algorithms/)
+    * [Princeton's Coursera Algorithms, part 1 course](algorithms/AlgoPt1-1.md)
+    * [Cracking the Coding Interview](algorithms/CTCI-1.md)
+    * [Alan Siegel's Algorithms book](algorithms/SiegelChapter1.md)
   2. Cloud Computing
-    * [The Datacenter As A Computer](CloudComputing/TheDatacenterAsAComputer.md)
-  3. [Computer Systems Organization](ComputerSystemsOrganization/)
-  4. [Continuous Integration](ContinuousIntegration/)
+    * [The Datacenter As A Computer](cloud-computing/TheDatacenterAsAComputer.md)
+  3. [Computer Architecture](computer-architecture/)
+  4. [Continuous Integration](continuous-integration/)
   5. Discrete Math
-    * [How to Prove It](DiscreteMath/HowToProveIt.md)
+    * [How to Prove It](discrete-math/HowToProveIt.md)
   6. Logic
-    * [An Illustrated Book of Bad Arguments](Logic/AnIllustratedBookOfBadArguments.md)
-    * [Crimes Against Logic](Logic/CrimesAgainstLogic.md)
-  7. [Operating Systems](OperatingSystems/)
+    * [An Illustrated Book of Bad Arguments](logic/AnIllustratedBookOfBadArguments.md)
+    * [Crimes Against Logic](logic/CrimesAgainstLogic.md)
+  7. [Operating Systems](operating-systems/)
 3. Languages
-  1. [Clojure](Clojure/)
+  1. [Clojure](clojure/)
   2. Java
-    * [Introduction to Java Programming](Java/IntroToProgramming/)
+    * [Introduction to Java Programming](java/IntroToProgramming/)
   3. JavaScript
-    * [Eloquent JavaScript](JavaScript/EloquentJavaScript/)
-  4. [LaTeX](LaTeX/)
-  5. [Swift](Swift/)
+    * [Eloquent JavaScript](javascript/EloquentJavaScript/)
+  4. [LaTeX](latex/)
+  5. [Swift](swift/)
   6. [C++](C++.md)
 4. Tools
-  1. [Linux Command Line](CLI/)
-  2. [Git](Git/)
-  3. [Nagios](CloudComputing/NagiosCore.md)
-  4. [Sublime Text 3](SublimeText3/)
+  1. [Linux Command Line](cli/)
+  2. [Git](git/)
+  3. [Nagios](cloud-computing/NagiosCore.md)
+  4. [Sublime Text 3](sublime-text/)
   5. [Vim](Vim.md)
 5. Design
   1. Conveying ideas
-    * [Articulating Design Decisions](Design/ArticulatingDesignDecisions.md)
+    * [Articulating Design Decisions](design/ArticulatingDesignDecisions.md)
 6. Web
-  * [The DOM](WebTechnologies/DomEnlightenment-1.md)
-  * [HTML](WebTechnologies/HTML.md)
-  * [CSS](WebTechnologies/CSS.md)
-  * [SASS](WebTechnologies/SASS.md)
-  * [How to lose weight (in the browser)](WebTechnologies/BrowserDiet.md)
+  * [The DOM](web-technologies/DomEnlightenment-1.md)
+  * [HTML](web-technologies/HTML.md)
+  * [CSS](web-technologies/CSS.md)
+  * [SASS](web-technologies/SASS.md)
+  * [How to lose weight (in the browser)](web-technologies/BrowserDiet.md)
 7. Mobile
-  1. [Android](Android/)
+  1. [Android](android/)
 8. Miscellaneous
-  * [SVG](SVG/)
+  * [SVG](svg/)
 
 ## Back burner
 
