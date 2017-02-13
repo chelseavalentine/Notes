@@ -39,24 +39,27 @@ This repository acts as my personal reference for the different languages, libra
   4. [LaTeX](latex/)
   5. [Swift](swift/)
   6. [C++](C++.md)
-4. Tools
+4. Frameworks
+  1. Node.js
+    * [The Art of Node](frameworks/node/the-art-of-node.md)
+5. Tools
   1. [Linux Command Line](cli/)
   2. [Git](git/)
   3. [Nagios](cloud-computing/NagiosCore.md)
   4. [Sublime Text 3](sublime-text/)
   5. [Vim](Vim.md)
-5. Design
+6. Design
   1. Conveying ideas
     * [Articulating Design Decisions](design/ArticulatingDesignDecisions.md)
-6. Web
+7. Web
   * [The DOM](web-technologies/DomEnlightenment-1.md)
   * [HTML](web-technologies/HTML.md)
   * [CSS](web-technologies/CSS.md)
   * [SASS](web-technologies/SASS.md)
   * [How to lose weight (in the browser)](web-technologies/BrowserDiet.md)
-7. Mobile
+8. Mobile
   1. [Android](android/)
-8. Miscellaneous
+9. Miscellaneous
   * [SVG](svg/)
 
 ## Back burner
