@@ -44,6 +44,7 @@ This repository acts as my personal reference for the different languages, libra
     * [The Art of Node](frameworks/node/the-art-of-node.md)
 5. Networking
   1. [HTTP/2 Explained](networking/http2-explained.md)
+  2. [HTTP API Design Guide](networking/http-api-design-guide.md)
 5. Tools
   1. [Linux Command Line](cli/)
   2. [Git](git/)

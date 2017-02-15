@@ -4,10 +4,6 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ## Software
 
-I. [Architecture](#Architecture)
-
-II. [Performance](#Performance)
-
 ### On Engineering
 
 1. [Thoughtbot's Guide to programming](https://github.com/thoughtbot/guides)
