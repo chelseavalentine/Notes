@@ -82,3 +82,7 @@ Usually because they were discussed somewhere.
 #### [Google's Web Fundamentals]()
 
 * [Google's Custom Search Engine](https://cse.google.com/cse/)
+
+#### [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
+
+* [Recess: Twitter's CSS Hinter](https://twitter.github.io/recess/)

@@ -8,6 +8,8 @@ This repository acts as my personal reference for the different languages, libra
   1. Coding standards
     * [Clean Code](coding-standards/CleanCode-1.md)
     * [CSS Coding standards](coding-standards/frontend/) 
+    * [Code Guide: HTML & CSS](coding-standards/frontend/code-guide-html-css.md)
+    * [HTML Best Practices](coding-standards/frontend/html-best-practices.md)
   2. General standards
     * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
   3. Other
