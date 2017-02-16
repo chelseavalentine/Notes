@@ -77,3 +77,8 @@ Usually because they were discussed somewhere.
 * [North's partial structure standards](http://pointnorth.io/#partial-structure)
 
 * [Web Platform's Accessibility Basics article](http://docs.webplatform.org/wiki/concepts/accessibility)
+
+
+#### [Google's Web Fundamentals]()
+
+* [Google's Custom Search Engine](https://cse.google.com/cse/)

@@ -24,7 +24,7 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ### Reliability
 
-1. [Site Reliability Engineering: How Google Runs Production Systems](https://www.amazon.com/gp/product/149192912X/) (Book)
+1. [Site Reliability Engineering: How Google Runs Production Systems](https://landing.google.com/sre/book/chapters/introduction.html)
 
 ### Frameworks
 
@@ -102,8 +102,6 @@ It's assumed that everything without `(Book)` is freely available online.
 
 
 ## Languages
-
-I. [ECMA Script & JavaScript](#ECMA-Script-JavaScript)
 
 ### ECMA Script & JavaScript
 
