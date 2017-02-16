@@ -81,7 +81,10 @@ Usually because they were discussed somewhere.
 
 #### [Google's Web Fundamentals]()
 
+* [The Basic of Web Workers](https://www.html5rocks.com/en/tutorials/workers/basics/)
 * [Google's Custom Search Engine](https://cse.google.com/cse/)
+
+* [WhatWg: HTML: Living standard](https://html.spec.whatwg.org/)
 
 #### [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
 
