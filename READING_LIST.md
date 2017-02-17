@@ -160,11 +160,18 @@ It's assumed that everything without `(Book)` is freely available online.
 3. [The Nature of Code](https://github.com/shiffman/The-Nature-of-Code)
 
 
+
 ## Theory
 
 ### Algorithms
 
 1. [Algorithms - Robert Sedgewick](https://www.amazon.com/gp/product/032157351X/)
+
+### Design patterns
+
+1. [Design patterns for humans](https://github.com/kamranahmedse/design-patterns-for-humans)
+
+2. [Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)
 
 <hr>
 

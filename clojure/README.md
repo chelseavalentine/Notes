@@ -1,35 +1,13 @@
 # Clojure
 
+### Table of Contents: Clojure Docs
+
+* [Concurrency and Parallelism](clojure-docs-1.md)
+
+
+### Table of Contents: Clojure for the Brave and True
+
 Learning clojure from [Clojure for the Brave and True](http://www.braveclojure.com/).
-
-### Table of Contents
-
-__[Chapter 1: Building, running, and the REPL](clojure-for-the-brave-and-true-1.md#chapter-1-building-running-and-the-repl)__
-
-__[Chapter 3: Crash course](clojure-for-the-brave-and-true-1.md#chapter-3-crash-course)__
-
-__[Chapter 4: Core functions in depth](clojure-for-the-brave-and-true-4.md#chapter-4-core-functions-in-depth)__
-
-__[Chapter 5: Functional programming](clojure-for-the-brave-and-true-5.md#chapter-5-functional-programming)__
-
-__[Chapter 6: Organizing your project](clojure-for-the-brave-and-true-6.md#chapter-6-organizing-your-project)__
-
-__[Chapter 7: Reading, evaluation, and macros](clojure-for-the-brave-and-true-7.md#chapter-7-reading-evaluation-and-macros)__
-
-__[Chapter 8: Writing Macros](clojure-for-the-brave-and-true-8.md#chapter-8-writing-macros)__
-
-__[Chapter 9: The Sacred Art of Concurrent and Parallel Programming](clojure-for-the-brave-and-true-9.md#chapter-9-concurrent-and-parallel-programming)__
-
-__[Chapter 10: Atoms, refs, and vars](clojure-for-the-brave-and-true-10.md#chapter-10-atoms-refs-and-vars)__
-
-__[Chapter 11: Concurrent processes with `core.async`](clojure-for-the-brave-and-true-11.md#chapter-11-concurrent-processes-with-coreasync)__
-
-__[Chapter 12: Working with the JVM](clojure-for-the-brave-and-true-11.md#chapter-12-working-with-the-jvm)__
-
-__[Chapter 13: Creating and Extending Abstractions with Multimethods, Protocols, and Records](clojure-for-the-brave-and-true-12.md#chapter-13-creating-and-extending-abstractions-with-multimethods-protocols-and-records)__
-
-
-### Table of Contents (Extended)
 
 __[Chapter 1: Building, running, and the REPL](clojure-for-the-brave-and-true-1.md#chapter-1-building-running-and-the-repl)__
 
