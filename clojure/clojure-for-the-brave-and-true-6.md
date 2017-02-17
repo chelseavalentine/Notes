@@ -1,5 +1,4 @@
-# Clojure
-
+# Clojure for the Brave and True
 
 #### Function composition instead of attribute mutation
 

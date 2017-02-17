@@ -1,4 +1,4 @@
-# Clojure
+# Clojure for the Brave and True
 
 ## Chapter 10: Atoms, Refs, and Vars
 

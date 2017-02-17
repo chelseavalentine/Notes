@@ -1,4 +1,4 @@
-# Clojure
+# Clojure for the Brave and True
 
 #### Vectors
 
@@ -13,7 +13,7 @@
   ```clojure
   (get [3 2 1] 0) ; => 3
   ```
-  
+
 * add more elements to the vector with `conj`
   ```clojure
   (conj [1 2 3] 4)

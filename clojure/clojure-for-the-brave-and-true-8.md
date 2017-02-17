@@ -1,4 +1,4 @@
-# Clojure
+# Clojure for the Brave and True
 
 #### Macros
 

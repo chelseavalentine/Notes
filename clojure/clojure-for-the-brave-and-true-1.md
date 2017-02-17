@@ -1,4 +1,4 @@
-# Clojure
+# Clojure for the Brave and True
 
 ## Chapter 1: Building, Running, and the REPL
 
