@@ -34,6 +34,7 @@ This repository acts as my personal reference for the different languages, libra
   7. [Operating Systems](operating-systems/)
 3. Languages
   1. [Clojure](clojure/)
+    * [Clojure docs' concurrency and parallelism guide](clojure/clojure-docs-1.md)
   2. Java
     * [Introduction to Java Programming](java/introduction-to-java-programming/)
   3. JavaScript

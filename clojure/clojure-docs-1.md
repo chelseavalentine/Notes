@@ -155,23 +155,238 @@ Notes taken on CDS' [concurrency and parallelism guide](http://clojure-doc.org/a
 
 * you can have it ignore errors, by using the `:error-mode :continue` option, along with an `:error-handler`
 
+#### Refs
+
+* __refs (`ref`)__ ensure that multiple identities can be modified concurrently w/i a transaction
+  - this means:
+    + either all refs are modified or none are
+    + there're no race conditions between involved refs
+    + no possibility of deadlines between involved refs
+
+  - refs are backed by Clojure's implementation of __STM (software transactional memory)__
+    + a concurrency control method controlling access to shared storage, as an alternative to lock-based synchronization
+    + uses multiversion concurrency control (MVCC) by taking a snapshot of the ref, making the changes in isolation of that, and then applying the result
+    + detection of an update on the ref leads to a forced transaction retry
+
+  - instantiating a ref
+
+    ```clojure
+    (def account-a (ref 0))
+    ;; => #'user/account-a
+
+    @account-a
+    ;; => 0
+    ```
+
+* `clojure.core/dosync` starts a transaction, performs all modifications and commits changes
+  - if a concurrently-running transaction modifies a ref within the current transaction before it commits, the current transaction is retried
+
+##### `alter`
+
+* `clojure.core/alter` is used to modify refs
+
+  - its args: [1] ref, [2] function that takes the old value and returns a new value of the ref, and [3] any number of optional args to pass to the function
+
+An example:
+
+```clojure
+(def account-a (ref 1000))
+(def account-b (ref 1000))
+
+(dosync
+  (alter account-a + 100)
+  (alter account-b - 100))
+
+@account-a
+;; => 1100
+@account-b
+;; => 900
+```
+
+##### `commute`
+
+* you can use `clojure.core/commute` for operations whose order can be changed without affecting the result
+  - it does the same as `alter`, but doesn't retry because you  can do it in any order
+
+  - `commute` doesn't cause transaction conflicts
+
+  ```clojure
+  (dosync
+    (commute account-a + 100)
+    (commute account-b - 100))
+  ```
+
+##### Limitations of Refs
+
+* __idempotent__: operations that when given the same inputs will produce the same results
+  - may cause side effects (eg. updating a ref/atom), but may only produce the side effect once
+  - pure functions, on the other hand, produce no side effects
+
+* since transactions are retriable, you should structure your code into pure and idempotent code
+
+* `clojure.core/io!` raises an exception if it's run when there's an STM transaction running
+  - Clojure doesn't prevent you from doing I/O in transactions, it's a matter of programmer discipline
+
+#### Vars
+
+* __vars (`def`)__ are defined with `def`, and functions defined with `defn` are stored in vars
+  - vars that only have root bindings (the default) have the same value regardless of the thread
+
+  ```clojure
+  (def url "http://en.wikipedia.org/wiki/Chelsea")
+
+  (.start (Thread. (fn []
+                     (println (format "url is %s" url)))))
+  (.start (Thread. (fn []
+                     (println (format "url is %s" url)))))
+  ```
+
+##### Dynamic scoping and thread-local bindings
+
+* you can temporarily change a var's value, using `:dynamic` in its declaration, and then with `clojure.core/binding`
+  - convention: using `*` around dynamic var names
+  - `binding` only changes the var's current value within the same thread that it was originally defined in (making it __thread-local__)
+
+  - usage:
+
+    ```clojure
+    (def ^:dynamic *url* "http://en.wikipedia.org/wiki/Chelsea")
+
+    (binding [*url* "http://en.wikipedia.org/wiki/New+York"]
+      (println (format "*url* is now %s" *url*)))
+    ```
+
+* you can alter a var's root binding with `clojure.core/alter-var-root
+  - args: [1] a var, [2] a function that takes the old var value, and returns a new one
+
+  ```clojure
+  *url*
+  ;; => "http://en.wikipedia.org/wiki/Chelsea"
+
+  (.start (Thread. (fn []
+                      (alter-var-root (var user/*url*) (fn [_] "http://en.wikipedia.org/wiki/New+York"))))))
+
+  *url*
+  ;; => "http://en.wikipedia.org/wiki/New+York"
+  ```
+
+* you can alter a var's root binding to a specific known value, using `clojure.core/constantly`
+
 
 ### Dereferencing
 
+* `@` and `clojure.core/deref` allow you to dereference Clojure references
+
 ### Delays
+
+* __delay__: a data structure that's evaluated the first time it's dereferenced
+  - subsequent dereferencing uses the cached value
+  - instantiated with `clojure.core/delay`
+
+    ```clojure
+    (def d (delay (System/currentTimeMillis)))
+
+    @d
+    ;; => some valuue
+
+    @d
+    ;; => same value
+    ```
+
+* you can use `clojure.core/realized?` to check whether a delay has been realized or is still pending
+
 
 ### Futures
 
+* Clojure __future__s evaluate a piece of code in another thread
+  - instantiated with `clojure.core/future`
+  - it returns immediately, thereby not blocking the current thread
+  - need to dereference the future to get its result
+
+  ```clojure
+  (def ft (future (+ 1 2)))
+
+  @ft
+  ;; => 3
+  ```
+
+* you can specify a timeout upon dereferencing, in case it takes a long time or gets blocked forever
+
+  ```clojure
+  (def ft (future (Thread/sleep 10000) :completed))
+  (deref ft 2000 :timed-out)
+  ;; => :timed-out
+  ```
+
+
 ### Promises
 
-### Watches and validators
+* __promises__ are realized by calling `clojure.core/deliver` on a promise, along with a value
+  - can be dereferenced with a timeout & cache the realized value
+  - also supported by `clojure.core/realized?`
 
-### Using intrinsic locks (`synchronized`) in Clojure
+  ```clojure
+  ; have no body
+  (def p (promise))
 
-### Reducers (Clojure 1.5+)
+  (deliver p {:result 42})
+  (realized? p)
+  ;; => true
+  ```
 
 ### `java.util.concurrent`
 
-### Other approaches to concurrency
+#### Executors (Thread Pools)
 
-### Runtime parallelism
+* essentially standardizes, invocating, scheduling, execution, and control of asynchronous tasks
+  - essentially you  create a thread pool and feed it a function to work on
+
+  ```clojure
+  (import '[java.util.concurrent Execturos ExecutorService Callable])
+
+  (let [^ExecutorService pool (Executors/newFixedThreadPool 16)
+        ^Callable clbl        (cast Callable (fn []
+                                                (reduce + (range 0 10000))))]
+    (.submit pool clbl))
+  ```
+
+* use `j.u.c.Future#get` to dereference the java Futures
+  ```clojure
+  (import '[java.util.concurrent Executors ExecutorService Callable])
+
+  (let [^ExecutorService pool (Executors/newFixedThreadPool 16)
+        ^Callable clbl        (cast Callable (fn []
+                                               (reduce + (range 0 10000))))
+        task                  (.submit pool clbl)]
+    (.get task))
+  ```
+
+#### Countdown latches
+
+* __countdown latch__ is a thread synchronization data structure that handles a group of concurrent workflows (eg. block current thread until N other threads are done with their work)
+
+  - instantiation
+    ```clojure
+    (import java.util.concurrent.CountDownLatch)
+
+    (CountDownLatch. n)
+    ```
+
+  - execution of `CountdownLatch#await` blocks the calling thread until the counter gets to 0
+  - `CountdownLatch#countDown` invocations decrease the counter by 1
+
+  - example using `await` and `countDown`
+    ```clojure
+    (let [cnt   (atom [])
+          n     5
+          latch (java.util.concurrent.CountDownLatch. n)]
+      (doseq [i (range 0 n)]
+        (.start (Thread. (fn []
+                           (swap! cnt conj i)
+                           (.countDown latch)))))
+      (.await latch)
+      @cnt)
+    ;; note the ordering: starting N threads in parallel leads to
+    ;; non-deterministic thread interleaving
+    ;; ⇒ [0 1 2 4 3]
+    ```

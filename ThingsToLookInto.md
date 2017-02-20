@@ -6,6 +6,7 @@ Usually because they were discussed somewhere.
 
 * [Code Climate](https://codeclimate.com/)
 
+
 #### [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
 
 * integrating [Schema.org](https://schema.org/docs/schemas.html) markup into your HTML for better search engine results.
@@ -29,6 +30,7 @@ Usually because they were discussed somewhere.
   - [Heading Map for Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) - allows you to see the heading structure of a webpage
   - [The Visual ARIA Bookmarklet](http://whatsock.com/training/matrices/visual-aria.htm) - A bookmarklet that can be run on a webpage and color codes ARIA roles.
   - [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb) - A Chrome extension that adds an “Audit” tab in Chrome’s developer tools that can scan a webpage for accessibility issues.
+
 
 #### [DOM Enlightenment: JS & the DOM](http://domenlightenment.com/)
 
@@ -86,6 +88,14 @@ Usually because they were discussed somewhere.
 
 * [WhatWg: HTML: Living standard](https://html.spec.whatwg.org/)
 
+
 #### [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
 
 * [Recess: Twitter's CSS Hinter](https://twitter.github.io/recess/)
+
+
+#### [Clojure docs: concurrency & parallelism guide]
+
+* [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601) by Brian Goetz (Book)
+
+* [Programming Concurrency on the JVM](https://pragprog.com/book/vspcon/programming-concurrency-on-the-jvm) by Venkat Subramaniam (Book)
