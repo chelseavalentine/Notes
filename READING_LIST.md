@@ -6,9 +6,9 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ### On Engineering
 
-1. [Thoughtbot's Guide to programming](https://github.com/thoughtbot/guides)
-2. [North: Design and development standards](https://github.com/north/north)
-3. [Prose for programmers](https://github.com/joshuacc/prose-for-programmers)
+1. [x] [Thoughtbot's Guide to programming](https://github.com/thoughtbot/guides)
+2. [x] [North: Design and development standards](https://github.com/north/north)
+3. [x] [Prose for programmers](https://github.com/joshuacc/prose-for-programmers)
 
 ### Architecture
 
@@ -20,7 +20,7 @@ It's assumed that everything without `(Book)` is freely available online.
 
 1. [The Performance of Open Source Applications](http://aosabook.org/en/index.html)
 2. [High Performance Web Sites](https://www.amazon.com/gp/product/0596529309/)
-3. [How to lose weight (in the browser)](https://github.com/zenorocha/browser-diet)
+3. [x] [How to lose weight (in the browser)](https://github.com/zenorocha/browser-diet)
 
 ### Reliability
 
@@ -29,21 +29,21 @@ It's assumed that everything without `(Book)` is freely available online.
 ### Frameworks
 
 1. [Web Development with Django Cookbook](https://www.amazon.com/gp/product/1785886770/) (Book)
-2. [A short introduction to Node.js](https://github.com/maxogden/art-of-node)
+2. [x] [A short introduction to No[x] de.js](https://github.com/maxogden/art-of-node)
 3. [How to write Node programs with streams](https://github.com/substack/stream-handbook)
 
 ### Web
 
-1. [DOM Enlightenment: JS & the DOM](http://domenlightenment.com/)
+1. [x] [DOM Enlightenment: JS & the DOM](http://domenlightenment.com/)
 2. [Restful Web Services](http://restfulwebapis.org/rws.html)
 
 ### Networking
 
-1. [HTTP/2 Explained](https://github.com/bagder/http2-explained)
+1. [x] [HTTP/2 Explained](https://github.com/bagder/http2-explained)
 
 ### Conventions, design guides, and best practices
 
-1. [HTTP Api Design Guide](https://github.com/interagent/http-api-design)
+1. [x] [HTTP Api Design Guide](https://github.com/interagent/http-api-design)
 2. [Best practices for modern web development - Google](https://github.com/google/WebFundamentals/)
 3. [Best practices for web components](https://github.com/webcomponents/webcomponents.github.io)
 4. [reStructured Text Markup Specification](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html)
@@ -124,8 +124,8 @@ It's assumed that everything without `(Book)` is freely available online.
 ### HTML/CSS
 
 1. [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
-2. [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
-3. [HTML Best Practices](https://github.com/hail2u/html-best-practices)
+2. [x] [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
+3. [x] [HTML Best Practices](https://github.com/hail2u/html-best-practices)
 
 ### C and C++
 
