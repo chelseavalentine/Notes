@@ -48,7 +48,7 @@ It's assumed that everything without `(Book)` is freely available online.
 3. [Best practices for web components](https://github.com/webcomponents/webcomponents.github.io)
 4. [reStructured Text Markup Specification](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html)
 5. [NPR Visual's best practices](https://github.com/nprapps/bestpractices)
-6. [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
+6. [x] [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
 7. [iOS good practices](https://github.com/futurice/ios-good-practices)
 8. [Android best practices](https://github.com/futurice/android-best-practices)
 9. [Git style guide](https://github.com/agis-/git-style-guide)
@@ -170,7 +170,6 @@ It's assumed that everything without `(Book)` is freely available online.
 ### Design patterns
 
 1. [Design patterns for humans](https://github.com/kamranahmedse/design-patterns-for-humans)
-
 2. [Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)
 
 <hr>
