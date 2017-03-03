@@ -72,7 +72,8 @@ Notes taken on CDS' [concurrency and parallelism guide](http://clojure-doc.org/a
     ```clojure
     (reset! created-films [101920])
     ;; => [101920]
-
+    ```
+    
     + it sets the atom to a specific value
     + should be used sparingly in implementation code, but makes sense to use between test executions
 
