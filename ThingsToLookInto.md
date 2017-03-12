@@ -6,6 +6,10 @@ Usually because they were discussed somewhere.
 
 * [Code Climate](https://codeclimate.com/)
 
+* [Clojure.com's reducers intro](http://clojure.com/blog/2012/05/08/reducers-a-library-and-model-for-collection-processing.html)
+
+* [Clojure reference's reducers docs](https://clojure.org/reference/reducers)
+
 
 #### [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
 
