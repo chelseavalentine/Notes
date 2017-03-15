@@ -103,3 +103,13 @@ Usually because they were discussed somewhere.
 * [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601) by Brian Goetz (Book)
 
 * [Programming Concurrency on the JVM](https://pragprog.com/book/vspcon/programming-concurrency-on-the-jvm) by Venkat Subramaniam (Book)
+
+#### [Google's Site Reliability Engineering book](https://landing.google.com/sre/)
+
+* [How Embracing Continuous Release Reduced Change Complexity](http://usenix.org/conference/ures14west/summit-program/presentation/dickson)
+
+* [Maintaining Consistency in a Massively Parallel Environment](https://www.usenix.org/conference/ucms13/summit-program/presentation/mcnutt)
+
+* [The 10 Commandments of Release Engineering](https://www.youtube.com/watch?v=RNMjYV_UsQ8)
+
+* [Distributing Software in a Massively Parallel Environment](https://www.usenix.org/conference/lisa14/conference-program/presentation/mcnutt)

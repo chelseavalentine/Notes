@@ -66,3 +66,61 @@ Notes taken reading Google's [Site Reliability Engineering](https://landing.goog
 
 ## Ch 7: The evolution of automation at Google
 
+* important concerns to resolve when configuring clusters
+  - are all of the service's dependencies available and correctly configured?
+  - were all configurations and packages consistent with other deployments?
+
+* aspects of automation processes:
+  - competence (their accuracy)
+  - latency (how quickly all steps are executed once initiated)
+  - relevance (portion of real-world process covered by automation)
+
+* Borg turned cluster management into something where you could make API calls to a central coordinator
+  - gave additional efficiency, flexibility (e.g. machines can schedule batch __and__ user-facing tasks), & reliability
+
+## Ch 8: Release engineering
+
+### The role of a release engineer
+
+* understanding of source code management, compilers, build configuration languages, automated build tools, package managers, & installers
+
+* release engineers & SREs work together to develop strategies for canarying changes, pushing out new releases w/o service interruption, & rolling back features demonstrating problems
+
+### Philosophy
+
+#### Self-service model
+
+* develop best practices & tools s.t. product teams can be self-sufficient/control + run their own release processes
+
+#### High velocity
+
+* frequent releases means less changes between versions, and can test/troubleshoot easier
+
+#### Hermetic builds
+
+* __hermetic build__: a build insensitive to the libraries and other software installed on the build machine
+  - builds depend on known versions of build tools (e.g. compilers) and dependencies (e.g. libraries)
+
+### Continuous build and deployment
+
+* __Rapid__: Google's automated release system, which uses several Google technologies to provide a scalable, hermetic, and reliable release system
+  - building: Google uses __Blaze__ (since it supports building binaries from many languages
+  - branches: the main branch of the source code tree (mainline) isn't used, they branch off it and cherry pick the changes for a release, so they know the exact contents of each release
+  - testing: a continuous test system runs unit tests upon each change submission
+  - packaging: uses Midas Package Manager (MPM) to distribute software to Google production machines
+
+### Configuration management
+
+* methods of managing the distribution of config files
+  - using the mainline
+    + allows you to decouple the binary releases and configuration changes
+    + but can lead to a skew between the checked-in version and the running version, since you need to update jobs to pickup config changes
+  - including config files and binaries in the same MPM package
+    + works when there're few configuration files, or the project change with each release cycle
+    + limits flexibility by tightly coupling binary & config files
+    + simplifies deployment since only need to install one package
+  - packaging config files into MPM "configuration packages"
+    + allows changing each config and binary package independently
+  - reading config files from an external store
+    + good for projects with config files that need to change frequently or dynamically (while the binary is running)
+    + stored in Chubby, Bigtable, or their source-based filesystem
