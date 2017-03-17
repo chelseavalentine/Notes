@@ -80,3 +80,56 @@ Notes taken reading Google's [Site Reliability Engineering](https://landing.goog
   - a blameless postmortem culture
 
 ## Ch 12: Effective troubleshooting
+
+### Theory
+
+* __hypothetico-deductive method__ (? lol): given a set of observations about a system, and a theoretical basis for understanding system behavior, we iteratively hypothesize potential causes for the failure and try to test these hypotheses
+
+* troubleshooting process: [1] problem report -> [2] triage -> [3] examine -> [4] diagnose -> [5] test/treat -> [6] cure ([diagram here](https://landing.google.com/sre/book/chapters/effective-troubleshooting.html#xref_troubleshooting_process))
+
+* common troubleshooting pitfalls:
+  - looking at irrelevant symptoms or misunderstanding the meaning of system metrics
+  - misunderstanding how to change the system, its inputs, or its environment, so as to safely and effectively test hypotheses
+  - coming up with wildly improbable theories about what's wrong, or latching onto causes of past problems
+  - hunting down spurious correlations that are actually coincidences, or are correlated with shared causes
+
+### In practice
+
+* problem report: every problem starts with an automated report/someone saying there's a problem
+  - effective reports tell you: [1] the expected behavior, [2] the actual behavior, and [3] how to reproduce the behavior
+
+* first step in your course of action should be to make the system work as well as it can under the circumstances
+  - e.g. diverting traffic to working clusters, preventing cascading failure, or disabling subsystems to lighten the load
+
+* need to be able to examine every component in a system in order to understand if it's behaving correctly
+  - monitoring and logging are invaluable for this
+    + text logs are helpful for reactive, real-time debugging, while storing logs in a structured binary format allows you to conduct retrospective analysis with much more information
+    + great to have multiple verbosity levels, with ways to increase these levels in real-time, so you can examine any/all operations in detail without having to restart the process
+
+* you can look at connections _between_ components (the data flowing between them) to determine whether a given component is working properly
+  - for small-enough systems, you can examine the correctness from end to beginning
+  - for large systems, it's probably better to split the system in half and examine communication paths between components on one side and the other and repeatedly determining which half is working properly
+
+* ask "what", "where", and "why" the malfunctioning system is do whatever it's doing
+
+* figure out when last the system was working
+
+* finally, test and treat your hypotheses, keeping in mind that:
+  - ideal tests have mutually exclusive alternatives, so that it can rule out a group of hypotheses
+  - perform tests in decreasing order of likelihood, considering the possible risks to the system from the test
+  - an experiment may provide misleading results due to confounding factors
+  - active tests may have side effects that change future test results
+    + e.g. using more CPUs to make operations faster, but encounter more data races; turning on verbose logging, but can't tell whether system is getting slower because of logging
+  - some tests may not be definitive, only suggestive
+
+### Negative results are magic
+
+* experiments with negative results are conclusive
+
+* tools and methods can outlive the experiment and inform future work
+
+### Making troubleshooting easier
+
+* build observability – with both white-box metrics and structured logs – into each component from the ground up
+
+* design systems with well-understood and observable interfaces between components
