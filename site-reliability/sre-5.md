@@ -84,3 +84,57 @@ This plan, like most plans, should be adequately revised as the variables change
 * __Auxon__: Google's implementation of an intent-based capacity planning and resource allocation solution
 
 * don't focus on perfection & purity of a solution, especially if the bounds of the problem aren't well known; launch and iterate
+
+## Ch 19: Load balancing at the front-end
+
+### Power isn't the answer
+
+* Google uses __traffic load balancing__
+  - take into account need for high throughput (e.g. video uploading) vs. low latency (e.g. searching)
+    + on the global level, they send things requiring high throughput to less-utilized, perhaps further away, datacenters
+    + on the local level, they focus on optimal resource utilization & protecting a single server from overloading
+    + exceptions: could route requests to slightly further away datacenter to keep caches warm, or even a different region to avoid network congestion
+
+### Load balancing using DNS
+
+* problems with just letting client randomly pick an IP address
+  - doesn't know which one is closest
+    + mitigated if use an anycast address for authoritative nameservers, since DNS queries flow to the nearest address
+      - instead of having end users talk directly to an authoritative nameserver, a recursive DNS server lies between
+
+* implications of the DNS middleman on traffic management:
+  - recursive resolution of IP addresses
+  - nondeterministic reply paths
+  - additional caching complications
+
+* considerations
+  - does the closest datacenter have the capacity to serve nearby users? is it experiencing network problems?
+  - authoritative nameservers can't flush resolvers' caches, so need to use a relatively low TTL, and any DNS changes need to wait for caches to invalidate
+
+### Load balancing at the virtual IP address
+
+* Virtual IP addresses (VIPs) are shared across many devices, but the end user sees it as a single, regular IP address
+  - allows hiding the implementation details, so can schedule upgrades/change the machine pool size, etc. without user knowing
+
+* __network load balancer__ is a part of the VIP implementation, and it receives packets and forwards them to one of the machines behind the VIP
+  - from there, there're many algorithms you can use to decide which machine gets the packet; e.g. lead loaded, round-robin, etc.
+  - for stateful protocols, the balancer needs to keep track of all connections sent through it so that subsequent packets are sent to the same backend
+    + how? use parts of the packet to create a connection ID, and then use the connection ID to select a backend
+    + however, a backend could fail while a session is ongoing, and all goes to shit; need better solution
+
+* better solution: __consistent hashing__ provides a relatively stable mapping algorithm even when backends are added or removed, leading to minimal disruption
+  - so they use simple connection tracking, but fall back to consistent hashing when the system is under pressure
+
+* another solution: __Direct Server Response (DSR)__: backend can send replies directly to the original sender, because you modify information on the data link later (layer 2 in OSI networking model) by changing the destination MAC address of the forwarding packet
+  - allows balancer to leave all information in upper layers intact, so the backend receives the original source & destination IP addresses
+  - saves a lot of work in the typical case (when user requests are small and replies are large), because only a small fraction of the traffic needs to traverse the load balancer
+  - great b/c doesn't require keeping state on the load balancer device
+  - not great because using layer 2 for internal load balancing incurs _serious_ disadvantages when deployed at scale, since all machines need to reach each other at the data link layer
+    + not an issue if the network can support this connectivity & the number of machines doesn't grow excessively
+
+* Google uses packet encapsulation:
+  - network load balancer puts forwarded packet into another IP packet w/ Generic Routing Encapsulation (GRE), uses the backend's address as the destination, the backend processes the inner packet as if it were delivered directly to its network interface
+  - allows the network load balancer & backend to be geographically independent
+  - con: inflated packet size
+    + can cause the packet to exceed the available Maximum Transmission Unit (MTU) size, and thus require fragmentation
+      - but once the packet reaches the datacenter, can avoid fragmentation by using a larger MTU w/i the datacenter, but that requires a network supporting large Protocol Data Units
