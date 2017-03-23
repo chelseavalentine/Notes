@@ -51,7 +51,7 @@ It's assumed that everything without `(Book)` is freely available online.
 6. [x] [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
 7. [iOS good practices](https://github.com/futurice/ios-good-practices)
 8. [Android best practices](https://github.com/futurice/android-best-practices)
-9. [Git style guide](https://github.com/agis-/git-style-guide)
+9. [x] [Git style guide](https://github.com/agis-/git-style-guide)
 
 ### Data visualization
 
@@ -108,7 +108,7 @@ It's assumed that everything without `(Book)` is freely available online.
 1. ECMA Script Language Specification
 2. [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 3. [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read)
-4. [A JavaScript quality guide](https://github.com/bevacqua/js)
+4. [x] [A JavaScript quality guide](https://github.com/bevacqua/js)
 5. [A comprehensive Node.js tutorial for beginners](https://github.com/manuelkiessling/nodebeginner.org)
 6. [Learn You The Node.js For Much Win](https://github.com/workshopper/learnyounode)
 7. [Node style guide](https://github.com/felixge/node-style-guide)
@@ -123,7 +123,7 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ### HTML/CSS
 
-1. [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
+1. [x] [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
 2. [x] [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
 3. [x] [HTML Best Practices](https://github.com/hail2u/html-best-practices)
 
@@ -158,8 +158,6 @@ It's assumed that everything without `(Book)` is freely available online.
 1. [Markdown Specification](https://github.com/jgm/CommonMark)
 2. [Thematic cartography guide](https://github.com/axismaps/thematic-cartography)
 3. [The Nature of Code](https://github.com/shiffman/The-Nature-of-Code)
-
-
 
 ## Theory
 
