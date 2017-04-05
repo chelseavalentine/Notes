@@ -84,3 +84,13 @@ Notes taken reading Google's [Site Reliability Engineering](https://landing.goog
   - canaries: first stage of a rollout, which includes observing how the new version performs on a subset of the machines
   - gradual rollouts example: invite system for a 
 * feature flag frameworks
+
+## Ch 29: Dealing with interrupts
+
+### Managing operational load
+
+* __operational load__: the work that must be done to maintain the system in a functional state
+  - falls into 3 general categories: pages, tickets, & ongoing operational activities
+    + __pages__: production alerts, triggered in response to production emergencies
+    + __tickets__: customer requests that require you to take an action
+    + __ongoing operational responsibilities__/toil: team-owned code, flag rollouts, responses to ad hoc, time-sensitive questions from customers
