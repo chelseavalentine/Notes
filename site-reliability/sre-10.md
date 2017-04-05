@@ -56,3 +56,31 @@ Notes taken reading Google's [Site Reliability Engineering](https://landing.goog
 ### General principles of SRE as applied to data integrity
 
 * anything and everything can and will go wrong
+
+## Ch 27: Reliable product launches at scale
+
+### Setting up a launch process
+
+* questions on your launch checklist need to meet the following criteria:
+  - is a substantial question, as proven by a previous launch disaster
+  - is concrete, practical, and reasonable for developers to accomplish
+
+### Developing a launch checklist
+
+* question categories on a launch checklist:
+  - architecture & dependencies
+  - integration
+  - capacity planning
+  - failure modes
+  - client behavior
+  - processes and automation
+  - development process
+  - external dependencies
+  - rollout planning
+
+### Selected techniques for reliable launches
+
+* gradual & staged rollouts
+  - canaries: first stage of a rollout, which includes observing how the new version performs on a subset of the machines
+  - gradual rollouts example: invite system for a 
+* feature flag frameworks
