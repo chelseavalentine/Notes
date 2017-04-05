@@ -27,5 +27,3 @@ Notes taken reading Google's [Site Reliability Engineering](https://landing.goog
   - responses are "dark" since they aren't shown to users, but allow the team to gain operational insight & see issues prior to real launch
 
 * a production platform w/ common service structure, conventions, & software infrastructure means that SREs can focus on platform-related bugs, and the product team can work on application-related bugs, achieving shared responsibility
-
-## Ch 32: Lessons learned from other industries
