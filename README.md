@@ -72,8 +72,6 @@ This repository acts as my personal reference for the different languages, libra
 
 It's impossible to have time to learn everything as I discover it, so I'll put them on the back burner for now.
 
-### Mobile
-
 * [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
 * [FramerJS](http://framerjs.com/) (Create animated prototypes and demos)
 * [AutoDesk's AutoCAD, Maya, etc.](http://au.autodesk.com/au-online/overview?mktvar004=661084&internalc=true)
