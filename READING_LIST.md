@@ -75,8 +75,6 @@ It's assumed that everything without `(Book)` is freely available online.
 2. [Pro Git Book](https://github.com/progit/progit)
 3. [Git magic: a guide to using git](https://github.com/blynn/gitmagic)
 
-
-
 ## Databases
 
 * [More readings found here](https://github.com/rxin/db-readings).
@@ -98,8 +96,6 @@ It's assumed that everything without `(Book)` is freely available online.
 ### Other Databases
 
 1. [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html)
-
-
 
 ## Languages
 
@@ -169,6 +165,17 @@ It's assumed that everything without `(Book)` is freely available online.
 
 1. [Design patterns for humans](https://github.com/kamranahmedse/design-patterns-for-humans)
 2. [Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)
+
+## People
+
+1. The Count of Monte Cristo (Book)
+2. Conflict Communication (ConCom): A New Paradigm in Conscious Communication (Book)
+3. The Anatomy of Peace: Resolving the Heart of Conflict (Book)
+4. People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts (Book)
+5. The Verbally Abusive Relationship (Book)
+6. 4 Essential Keys to Effective Communication (Book)
+7. Generation Z in the Workplace (Book)
+8. When the Past Is Present (Book)
 
 <hr>
 
