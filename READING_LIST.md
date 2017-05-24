@@ -24,7 +24,7 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ### Reliability
 
-1. [Site Reliability Engineering: How Google Runs Production Systems](https://landing.google.com/sre/book/chapters/introduction.html)
+1. [x] [Site Reliability Engineering: How Google Runs Production Systems](https://landing.google.com/sre/book/chapters/introduction.html)
 
 ### Frameworks
 
@@ -67,7 +67,7 @@ It's assumed that everything without `(Book)` is freely available online.
 
 1. [WriteTheDocs' Documentation Guide](https://github.com/writethedocs/docs/)
 2. [Jacobian.org's Writing great documentation](https://jacobian.org/writing/great-documentation/)
-3. [Parse's Designing great API docs](http://blog.parse.com/learn/engineering/designing-great-api-docs/)
+3. [x] [Parse's Designing great API docs](http://blog.parse.com/learn/engineering/designing-great-api-docs/)
 
 ### Miscellaneous
 
@@ -107,13 +107,13 @@ It's assumed that everything without `(Book)` is freely available online.
 4. [x] [A JavaScript quality guide](https://github.com/bevacqua/js)
 5. [A comprehensive Node.js tutorial for beginners](https://github.com/manuelkiessling/nodebeginner.org)
 6. [Learn You The Node.js For Much Win](https://github.com/workshopper/learnyounode)
-7. [Node style guide](https://github.com/felixge/node-style-guide)
+7. [x] [Node style guide](https://github.com/felixge/node-style-guide)
 8. [Node.js best practices](https://github.com/alanjames1987/Node.js-Best-Practices)
 9. [JavaScript Garden: most quirky parts of the JS language](https://github.com/BonsaiDen/JavaScript-Garden)
 10. [JavaScript: the right way](https://github.com/braziljs/js-the-right-way)
-11. [Guide to writing consistent, idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)
+11. [x] [Guide to writing consistent, idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)
 12. [React primer draft](https://github.com/mikechau/react-primer-draft/)
-13. [Overview of ES6 features](https://github.com/lukehoban/es6features)
+13. [x] [Overview of ES6 features](https://github.com/lukehoban/es6features)
 14. [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 15. [Best practices for JS modules](https://github.com/mattdesl/module-best-practices)
 
