@@ -4,12 +4,6 @@ It's assumed that everything without `(Book)` is freely available online.
 
 ## Software
 
-### On Engineering
-
-1. [x] [Thoughtbot's Guide to programming](https://github.com/thoughtbot/guides)
-2. [x] [North: Design and development standards](https://github.com/north/north)
-3. [x] [Prose for programmers](https://github.com/joshuacc/prose-for-programmers)
-
 ### Architecture
 
 1. [500 Lines or Less](http://aosabook.org/en/index.html)
@@ -20,38 +14,22 @@ It's assumed that everything without `(Book)` is freely available online.
 
 1. [The Performance of Open Source Applications](http://aosabook.org/en/index.html)
 2. [High Performance Web Sites](https://www.amazon.com/gp/product/0596529309/)
-3. [x] [How to lose weight (in the browser)](https://github.com/zenorocha/browser-diet)
-
-### Reliability
-
-1. [x] [Site Reliability Engineering: How Google Runs Production Systems](https://landing.google.com/sre/book/chapters/introduction.html)
 
 ### Frameworks
 
 1. [Web Development with Django Cookbook](https://www.amazon.com/gp/product/1785886770/) (Book)
-2. [x] [A short introduction to No[x] de.js](https://github.com/maxogden/art-of-node)
-3. [How to write Node programs with streams](https://github.com/substack/stream-handbook)
+2. [How to write Node programs with streams](https://github.com/substack/stream-handbook)
 
 ### Web
 
-1. [x] [DOM Enlightenment: JS & the DOM](http://domenlightenment.com/)
-2. [Restful Web Services](http://restfulwebapis.org/rws.html)
-
-### Networking
-
-1. [x] [HTTP/2 Explained](https://github.com/bagder/http2-explained)
+1. [Restful Web Services](http://restfulwebapis.org/rws.html)
 
 ### Conventions, design guides, and best practices
 
-1. [x] [HTTP Api Design Guide](https://github.com/interagent/http-api-design)
-2. [Best practices for modern web development - Google](https://github.com/google/WebFundamentals/)
-3. [Best practices for web components](https://github.com/webcomponents/webcomponents.github.io)
-4. [x] [reStructured Text Markup Specification](http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html)
-5. [x] [NPR Visual's best practices](https://github.com/nprapps/bestpractices)
-6. [x] [10up Engineering Best Practices](https://github.com/10up/Engineering-Best-Practices)
-7. [iOS good practices](https://github.com/futurice/ios-good-practices)
-8. [Android best practices](https://github.com/futurice/android-best-practices)
-9. [x] [Git style guide](https://github.com/agis-/git-style-guide)
+1. [Best practices for modern web development - Google](https://github.com/google/WebFundamentals/)
+2. [Best practices for web components](https://github.com/webcomponents/webcomponents.github.io)
+3. [iOS good practices](https://github.com/futurice/ios-good-practices)
+4. [Android best practices](https://github.com/futurice/android-best-practices)
 
 ### Data visualization
 
@@ -67,7 +45,6 @@ It's assumed that everything without `(Book)` is freely available online.
 
 1. [WriteTheDocs' Documentation Guide](https://github.com/writethedocs/docs/)
 2. [Jacobian.org's Writing great documentation](https://jacobian.org/writing/great-documentation/)
-3. [x] [Parse's Designing great API docs](http://blog.parse.com/learn/engineering/designing-great-api-docs/)
 
 ### Miscellaneous
 
@@ -104,24 +81,14 @@ It's assumed that everything without `(Book)` is freely available online.
 1. ECMA Script Language Specification
 2. [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
 3. [Understanding ECMAScript 6](https://leanpub.com/understandinges6/read)
-4. [x] [A JavaScript quality guide](https://github.com/bevacqua/js)
-5. [A comprehensive Node.js tutorial for beginners](https://github.com/manuelkiessling/nodebeginner.org)
-6. [Learn You The Node.js For Much Win](https://github.com/workshopper/learnyounode)
-7. [x] [Node style guide](https://github.com/felixge/node-style-guide)
-8. [Node.js best practices](https://github.com/alanjames1987/Node.js-Best-Practices)
-9. [JavaScript Garden: most quirky parts of the JS language](https://github.com/BonsaiDen/JavaScript-Garden)
-10. [JavaScript: the right way](https://github.com/braziljs/js-the-right-way)
-11. [x] [Guide to writing consistent, idiomatic JavaScript](https://github.com/rwaldron/idiomatic.js)
-12. [React primer draft](https://github.com/mikechau/react-primer-draft/)
-13. [x] [Overview of ES6 features](https://github.com/lukehoban/es6features)
-14. [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-15. [Best practices for JS modules](https://github.com/mattdesl/module-best-practices)
-
-### HTML/CSS
-
-1. [x] [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css)
-2. [x] [Code Guide: HTML & CSS](https://github.com/mdo/code-guide)
-3. [x] [HTML Best Practices](https://github.com/hail2u/html-best-practices)
+4. [A comprehensive Node.js tutorial for beginners](https://github.com/manuelkiessling/nodebeginner.org)
+5. [Learn You The Node.js For Much Win](https://github.com/workshopper/learnyounode)
+6. [Node.js best practices](https://github.com/alanjames1987/Node.js-Best-Practices)
+7. [JavaScript Garden: most quirky parts of the JS language](https://github.com/BonsaiDen/JavaScript-Garden)
+8. [JavaScript: the right way](https://github.com/braziljs/js-the-right-way)
+9. [React primer draft](https://github.com/mikechau/react-primer-draft/)
+10. [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+11. [Best practices for JS modules](https://github.com/mattdesl/module-best-practices)
 
 ### C and C++
 
