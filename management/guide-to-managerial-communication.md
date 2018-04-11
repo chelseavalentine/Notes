@@ -199,3 +199,135 @@
 * some cultures may prefer tell styles (e.g. autocratic ones), whereas democratic cultures may favor consult styles
 
 ## Chapter 2: Writing: Composing efficiently
+
+### General composing techniques
+
+* set communication strategy first, paying attention to audience's needs & expectations
+
+* clearly differentiate among the different stages of the process: (1) researching, (2) organizing, (3) focusing information, (4) drafting, and (5) editing
+
+#### 1. Research
+
+#### 2. Organize
+
+* Bucket similar ideas, and put those buckets in order
+    - you can create an organizational blueprint to organize the ideas (linear, tree, circular, etc.)
+
+#### 3. Focus
+
+* imagine the reader skimming
+
+* nutshell your ideas, and also try teaching them
+
+* formulate a thesis statement, or "bottom line"
+
+#### 4. Draft
+
+* write out sections you're most comfortable with first, and avoid editing while you write
+    - drafting should be creative; don't worry about problems as they arise
+
+* print a hard copy
+
+* schedule a time gap between creative drafting and analytical editing stages
+
+#### 5. Edit
+
+1. __Step 1:__ Edit for strategy
+
+2. __Step 2:__ Edit for macro issues, such as:
+    * high skim value (e.g. headings, lists, whitespace, typography, short paragraphs)
+    * clear progression and linkage
+    * effective paragraphs/sections
+
+3. __Step 3:__ Edit for micro issues (sentences and words)
+
+4. __Step 4:__ Edit for correctness (grammar/punctuation)
+
+### Special composing challenges
+
+* writer's block
+    - write your headings first, then bullet points, then flesh out each one
+    - re-sketch the idea chart
+
+## Chapter 3: Writing: Macro issues
+
+### Document design for high-skim value
+
+* using standalone headings and subheadings
+    - make it such that your headings & subheadings can make sense on their own
+    - standalone headings provide key takeaways of your message, not the topics
+    - e.g. "Open new office in Singapore", "Use team-building to increase effectiveness", "Recommendation: ..."
+
+* use grammar and conceptual parallelism in your headings (i.e. they should be the same kind of item, and written in the same kind of way)
+
+* using whitespace
+    - ident the entire section so that numbered/bullet-pointed sections are easier to read
+
+### Clear progression and linkage
+
+#### Throughout the message
+* it's easier to grasp the message if there're back-and-forth references and section previews (if it's a longer document)
+    - both reference forwards and reference backwards
+
+#### In the introduction
+
+* establish a common context ("what exists")
+    - either the existing situation and why you're writing, or a common ground that you share with the reader
+
+* explain your purpose for writing
+    - i.e. what you want to tell them, what you want them to do, or what your opinion is
+
+* make your structure explicit (set expectations)
+
+* depending on your credibility, you should structure your introduction differently
+    - low credibility/lower agreement: establish common context first
+    - high credibility/indifferent audience: state your preview/purpose first
+
+#### In the closing
+
+* effective closings:
+    - feedback mechanism (mention when you'll ask for feedback)
+    - what-next step (what they should do if they want to act on this email)
+    - goodwill ending (e.g. "I look forward to working with you on this project")
+
+### Effective paragraphs and sections
+
+* each paragraph should have: (1) generalization and support, and (2) signposts to clearly connect the ideas within each paragraph
+
+#### Generalization and support
+
+* transitional words & phrases (e.g. "most importantly", "in addition", "finally")
+    - __addition/amplification__: and; furthermore; besides; next; moreover; in addition; again; also; similarly; too; finally; second; subsequently; last
+    - __contrast__: but; or; nor; yet; still; however; nevertheless; on the contrary; on the other hand; conversely; although
+    - __example__: for example; for instance; such as; thus; that is
+    - __sequence__: first; second; third; next; then
+    - __conclusion__: therefore; thus; then; in conclusion; consequently; as a result; accordingly; finally
+    - __time or place__: at the same time; simultaneously; above; below; further on; so far; until now
+
+## Chapter 4: Writing: Micro issues
+
+### Editing for brevity
+
+* avoid overusing linking verbs (e.g. to be, become, seem, appear, sound, feel, is, after, as, before, between, like, in, over, through, etc.)
+    - strategy: circle/highlight all instances of linking verbs
+
+* don't use phony subjects that don't refer to the actual person or entity performing the action
+    - e.g. "It was...", "There are..."
+
+* avoid using too many prepositions
+    - if there're 4+ consistently in a sentence, you need to revise & shorten
+
+* avoid compound prepositions (e.g. "in order to", "in regard to", "in advance of", "in the event that", etc.)
+
+* avoid elongated verbs with prepositions
+    - e.g. "give consideration to", "make assumptions about", "is dependent on"
+
+* avoid overlong sentences (12-24 words is a good average to try to hit)
+    - check for too many main ideas in a sentence (signaled by 'and' more than once in a sentence)
+    - check for hard-to-find main ideas in a sentence
+
+### Choosing a style
+
+* how formal? how passive? how much jargon?
+
+## Chapter 5: Speaking: Verbal structure
