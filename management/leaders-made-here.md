@@ -82,3 +82,20 @@ Of course, the best quote that humanity has to offer:
 > most people do want to grow; sometimes they need a little encouragement to combat complacency
 
 > hold strategies tightly and tactics loosely
+
+### It just happens
+
+* reasons to have a scorecard/measurement:
+    - clarifies what's important now
+    - shows our performance trend
+    - tracks the impact of our interventions
+    - allows us to see actual performance vs. our goals
+
+### Connect the dots
+
+* the "waiting on Superman" syndrome – the hope that when you find yourself in a dire situation, a superhero (a.k.a. a leader) will miraculously appear
+    - the problem with this strategy: hope is not a strategy
+
+### The pitch
+
+* there's no real value in assessment, true value can only be realized in our response
