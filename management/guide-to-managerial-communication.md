@@ -18,7 +18,6 @@
         * Action: Report 2x per quarter
         * Communication: As a result of this presentation, my boss will learn the results of two new HR programs
 
-
 ### Communication styles
 
 * __tell/sell style__:
