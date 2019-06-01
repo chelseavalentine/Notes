@@ -136,13 +136,7 @@ It's assumed that everything without `(Book)` is freely available online.
 ## People
 
 1. The Count of Monte Cristo (Book)
-2. Conflict Communication (ConCom): A New Paradigm in Conscious Communication (Book)
-3. The Anatomy of Peace: Resolving the Heart of Conflict (Book)
-4. People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts (Book)
-5. The Verbally Abusive Relationship (Book)
-6. 4 Essential Keys to Effective Communication (Book)
-7. Generation Z in the Workplace (Book)
-8. When the Past Is Present (Book)
+3. Generation Z in the Workplace (Book)
 
 <hr>
 

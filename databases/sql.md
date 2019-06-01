@@ -11,3 +11,4 @@
 ```sql
 COPY ([query here]) TO '[absolute file path here]' WITH CSV DELIMITER ',';
 ```
+
