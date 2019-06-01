@@ -2,31 +2,29 @@
 
 A collection of notes on a variety of books, courses, and online resources so that I don't need to store a lot of journals. Hopefully this will eventually become an easy reference for making recommendations and identifying which books were insightful or insightless.
 
-## Table of Contents
+## Software engineering
 
-### Software engineering
-
-##### Standards
+### Standards
 
 * [Clean Code](software-engineering/standards/clean-code.md)
 * [Code Complete](software-engineering/standards/code-complete.md)
 * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
 * [NPR Visual's Best Practices](software-engineering/standards/npr-visuals-best-practices.md)
 
-##### Processes
+### Processes
 
 * [Software Development Process](software-engineering/processes/software-development-process.md)
 * [Facts and Fallacies of Software Engineering](software-engineering/processes/facts-and-fallacies-of-software-engineering.md)
 * [Peopleware](software-engineering/processes/peopleware.md)
 * [Pragmatic Programmer](software-engineering/processes/pragmatic-programmer.md)
 
-##### Technical communication
+### Technical communication
 
 * Writing and documentation
   * [Prose for Programmers](software-engineering/communication/prose-for-programmers.md)
   * [Parse's Guide to Designing Great API Docs](software-engineering/communication/parse-api-docs-guide.md)
 
-##### Theory
+### Theory
 
 * [Algorithms](software-engineering/theory/algorithms/)
   * [Princeton's Coursera Algorithms, part 1 course](software-engineering/theory/algorithms/princeton-coursera-algorithms-pt-1.md)
@@ -46,7 +44,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [Operating Systems](software-engineering/theory/operating-systems/)
   * [Modern Operating Systems](software-engineering/theory/operating-systems/modern-operating-systems.md)
 
-##### Programming and markdown languages
+### Programming and markdown languages
 
 * [Clojure](software-engineering/programming-languages/clojure/)
   * [Clojure for the Brave and True](software-engineering/programming-languages/clojure/clojure-for-the-brave-and-true.md)
@@ -78,17 +76,23 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [C++](software-engineering/programming-languages/latex/c-plus-plus/)
   * [Jumping into C++](software-engineering/programming-languages/latex/c-plus-plus/jumping-into-c++.md)
 
-##### Frameworks
+### Frameworks
 
 * [Node.js](software-engineering/frameworks/node/)
   * [The Art of Node](software-engineering/frameworks/node/the-art-of-node.md)
 
-##### Networking
+### Data
+
+* [Hadoop](software-engineering/data/hadoop/)
+  * [Hadoop: The Definitive Guide](software-engineering/data/hadoop/hadoop-the-definitive-guide.md)
+* [SQL](software-engineering/data/sql.md)
+
+### Networking
 
 * [HTTP/2 Explained](software-engineering/networking/http2-explained.md)
 * [HTTP API Design Guide](software-engineering/networking/http-api-design-guide.md)
 
-##### Tools
+### Tools
 
 * [Linux Command Line](software-engineering/tools/cli/)
   * [The Linux Command Line](software-engineering/tools/cli/the-linux-command-line.md)
@@ -101,73 +105,63 @@ A collection of notes on a variety of books, courses, and online resources so th
   * [Packages](software-engineering/tools/sublime-text/packages.md)
 * [Nagios Core](software-engineering/tools/nagios-core.md)
 
-##### Design
+### Design
 
 * Conveying ideas
   * [Articulating Design Decisions](software-engineering/design/articulating-design-decisions.md)
 
-##### The Web
+### The Web
 
 * [DOM Enlightenment](software-engineering/the-web/dom-enlightenment.md)
 * [Google Web Fundamentals](software-engineering/the-web/google-web-fundamentals.md)
 
 * [How to lose weight (in the browser)](software-engineering/the-web/how-to-lose-weight-in-the-browser.md)
 
-##### Mobile
+### Mobile
 
 * [Android](software-engineering/mobile/android/)
   * [Introduction to Game Development](software-engineering/mobile/android/introduction-to-game-development.md)
 
-##### Miscellaneous
+### Miscellaneous
 
 * [SVG animation](software-engineering/misc/svg-animation.md)
 
-### Site reliability engineering
+## Site reliability engineering
 
 * [Google's Site Reliability Engineering book](site-reliability/site-reliability-engineering.md)
 
-### Communication
+## Communication
 
-To be added.
+* [Exactly What to Say: The Magic Words for Influence and Impact](communication/exactly-what-to-say.md)
 
-### Management
+## Management
 
 * [Guide to Managerial Communication](management/guide-to-managerial-communication.md)
 * [The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery](the-truth-about-employee-engagement.md)
 
-### Leadership
+## Leadership
 
 * [Leaders Made Here: Building a Leadership Culture](leadership/leaders-made-here.md)
 
-### Teams
+## Teams
 
 * [The Five Dysfunctions of a Team](teams/the-five-dysfunctions-of-a-team.md)
 
-### Languages
+## Mindsets
 
-##### Korean
+* [Managing Oneself](mindsets/managing-oneself.md)
 
-To be added.
+## Languages
 
-##### Japanese
-
-To be added.
-
-##### French
+### Korean
 
 To be added.
 
+### Japanese
 
+To be added.
 
-## Back burner
+### French
 
-It's impossible to have time to learn everything as I discover it, so I'll put them on the back burner for now.
+To be added.
 
-* [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
-* [FramerJS](http://framerjs.com/) (Create animated prototypes and demos)
-* [AutoDesk's AutoCAD, Maya, etc.](http://au.autodesk.com/au-online/overview?mktvar004=661084&internalc=true)
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (VIM code completion)
-* [Vim-Galore](https://github.com/mhinz/vim-galore)
-* [Pattern](https://github.com/clips/pattern) *(Web mining module for Python, with tools for scraping, natural language processing, machine learning, network analysis and visualization)*
-* [Karma](https://karma-runner.github.io/0.13/index.html) *(a JavaScript test runner)*
-* [SuperheroJS](http://superherojs.com/)

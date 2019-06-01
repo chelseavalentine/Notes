@@ -1,7 +1,5 @@
 # Exactly What to Say: The Magic Words for Influence and Impact
 
-Notes on the book.
-
 ### Notes
 
 > I'm not sure if it's for you, but...

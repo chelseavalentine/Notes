@@ -159,3 +159,16 @@ It's assumed that everything without `(Book)` is freely available online.
 * [Golang books](https://github.com/dariubs/GoBooks)
 * [Infrastructure engineer books](https://github.com/stack72/ops-books)
 * [Site Reliability Engineer resources Medium article](https://medium.com/@tammybutow/graduating-from-bootcamp-and-interested-in-becoming-a-site-reliability-engineer-b69a38ce858b#.nwqhmn2p0)
+
+## Back burner
+
+It's impossible to have time to learn everything as I discover it, so I'll put them on the back burner for now.
+
+- [React Native](https://facebook.github.io/react-native/docs/getting-started.html#content)
+- [FramerJS](http://framerjs.com/) (Create animated prototypes and demos)
+- [AutoDesk's AutoCAD, Maya, etc.](http://au.autodesk.com/au-online/overview?mktvar004=661084&internalc=true)
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (VIM code completion)
+- [Vim-Galore](https://github.com/mhinz/vim-galore)
+- [Pattern](https://github.com/clips/pattern) *(Web mining module for Python, with tools for scraping, natural language processing, machine learning, network analysis and visualization)*
+- [Karma](https://karma-runner.github.io/0.13/index.html) *(a JavaScript test runner)*
+- [SuperheroJS](http://superherojs.com/)
