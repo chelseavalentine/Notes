@@ -136,28 +136,70 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ## Communication
 
-* Verbal communication
-  * [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
-* [Relationships](communication/relationships/)
-  * [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
-  * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
+* [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
 
-## Management
+### Relationships
 
-* [_Guide to Managerial Communication_](management/guide-to-managerial-communication.md)
-* [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](the-truth-about-employee-engagement.md)
+* [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
+* [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
+* [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
+* [_Couple Skills_](communication/relationships/couple-skills.md)
 
-## Leadership
+### Writing
 
-* [_Leaders Made Here: Building a Leadership Culture_](leadership/leaders-made-here.md)
+* [_The Elements of Style_](communication/writing/the-elements-of-style.md)
 
-## Teams
+## Mindset
 
-* [_The Five Dysfunctions of a Team_](teams/the-five-dysfunctions-of-a-team.md)
+- [_Why Zebras Don't Get Ulcers_](mindset/why-zebras-dont-get-ulcers)
+- [_The Upside of Stress_](mindset/the-upside-of-stress.md)
+- [_Managing Oneself_](mindset/managing-oneself.md)
+- [_Lying_](mindset/lying.md)
+- [_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+- [_Daring Greatly_](mindset/daring-greatly.md)
+- [_The Happiness Advantage_](mindset/the-happiness-advantage.md)
 
-## Mindsets
+## Companies
 
-* [_Managing Oneself_](mindsets/managing-oneself.md)
+* [_Work Rules!_](companies/work-rules.md)
+* [_How Google Works_](companies/how-google-works.md)
+* [_Creativity, Inc._](companies/creativity-inc.md)
+* [A collection of notes on articles](companies/notes-on-articles.md)
+
+### Management
+
+- [_Radical Candor_](companies/management/radical-candor.md)
+- [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
+- [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
+- [Questions to ask during 1:1s](one-on-one-questions.md)
+
+### Leadership
+
+* [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
+
+### Teams
+
+* [_The Five Dysfunctions of a Team_](companies/teams/the-five-dysfunctions-of-a-team.md)
+* [A collection of notes on articles](companies/teams/notes-on-articles.md)
+
+### Product
+
+* [A collection of notes on Ken Norton's blog posts](companies/product/ken-norton-blog-posts.md)
+* [A collection of notes on articles](companies/product/notes-on-articles.md)
+
+### Diversity and inclusion
+
+* [A collection of notes on articles](companies/diversity-and-inclusion/notes-on-articles.md)
+
+## Economics
+
+* [_The Signal and the Noise_](economics/the-signal-and-the-noise.md)
+
+### Personal finance
+
+* [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
+* [_Where are the customers' yachts?_](economics/personal-finance/where-are-the-customers-yachts.md)
+* [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
 
 ## Languages
 
