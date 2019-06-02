@@ -5,7 +5,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 **Recommendation legend:** 
 
 * 🌟 = Transformative/insightful
-* 👎 = Don't even bother
+* 👎 = Don't even bother/uninsightful
 
 ## Software engineering
 
@@ -147,7 +147,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
 * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
 * 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
-* [_Couple Skills_](communication/relationships/couple-skills.md)
+* 🌟 [_Couple Skills_](communication/relationships/couple-skills.md)
 
 ### Writing
 
@@ -164,8 +164,10 @@ A collection of notes on a variety of books, courses, and online resources so th
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - 🌟 [_Lying_](mindset/lying.md)
 - 🌟 [_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
-- [_Daring Greatly_](mindset/daring-greatly.md)
-- [_The Happiness Advantage_](mindset/the-happiness-advantage.md)
+- [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
+- [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
+- [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
+- 👎 _Man's Search for Meaning_
 
 ## Companies
 
@@ -176,7 +178,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ### Management
 
-- [_Radical Candor_](companies/management/radical-candor.md)
+- 🌟 [_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
 - [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
 - [Questions to ask during 1:1s](one-on-one-questions.md)
@@ -200,8 +202,6 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [A collection of notes on articles](companies/diversity-and-inclusion/notes-on-articles.md)
 
 ## Economics
-
-* [_The Signal and the Noise_](economics/the-signal-and-the-noise.md)
 
 ### Personal finance
 

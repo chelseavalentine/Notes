@@ -15,3 +15,8 @@ Notes from The New York Time's article, [_What Google Learned in its Quest to Bu
   2. high social sensitivity: good at intuiting how people feel
 * people may speak over one another, go on tangents instead of focusing on the agenda, and may seem inefficient to the casual observer, but their sum will be greater than their parts
 
+### Diversity in tech: the unspoken empathy gap
+
+Notes from [this Medium article](https://medium.com/tech-diversity-files/diversity-in-tech-the-unspoken-empathy-gap-5b806c83d717).
+
+* research from Google suggests that psychological safety is the most predictive characteristic of successful teams
