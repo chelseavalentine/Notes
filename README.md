@@ -47,6 +47,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [Logic](software-engineering/theory/logic/)
   * [_An Illustrated Book of Bad Arguments_](software-engineering/theory/logic/an-illustrated-book-of-bad-arguments.md)
   * [_Crimes Against Logic_](software-engineering/theory/logic/crimes-against-logic.md)
+  * 👎 _How to Lie with Statistics_
 * [Operating Systems](software-engineering/theory/operating-systems/)
   * [_Modern Operating Systems_](software-engineering/theory/operating-systems/modern-operating-systems.md)
 * [Multicore Programming course](software-engineering/theory/multicore-programming-course.md)
@@ -141,6 +142,8 @@ A collection of notes on a variety of books, courses, and online resources so th
 ## Communication
 
 * [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
+* [_4 Essential Keys To Effective Communication_](communication/4-essential-keys-to-effective-communication.md)
+* [_People Skills_](communication/people-skills.md)
 
 ### Relationships
 
@@ -148,6 +151,8 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
 * 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
 * 🌟 [_Couple Skills_](communication/relationships/couple-skills.md)
+* [_Should I Stay or Should I Go?_](communication/relationships/should-i-stay-or-should-i-go.md)
+* [_The Anatomy of Peace_](communication/relationships/the-anatomy-of-peace.md)
 
 ### Writing
 
@@ -186,7 +191,9 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ### Leadership
 
+* [_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
+* [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 
 ### Teams
 
@@ -206,9 +213,12 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ### Personal finance
 
+* [_The Boglehead's Guide to Investing_](economics/personal-finance/the-bogleheads-guide-to-investing.md)
+* [_The White Coat Investor_](economics/personal-finance/the-white-coat-investor.md)
 * 🌟 [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
 * [_Where are the Customers' Yachts?: or a Good Hard Look at Wall Street_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
+* [_The Little Book of Common Sense Investing_](economics/personal-finance/the-little-book-of-common-sense-investing.md)
 
 ## Languages
 
@@ -224,3 +234,6 @@ To be added.
 
 To be added.
 
+## Science
+
+To be added.
