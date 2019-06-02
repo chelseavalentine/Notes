@@ -45,6 +45,8 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [Operating Systems](software-engineering/theory/operating-systems/)
   * [_Modern Operating Systems_](software-engineering/theory/operating-systems/modern-operating-systems.md)
 * [Multicore Programming course](software-engineering/theory/multicore-programming-course.md)
+* [Object-Oriented Programming course](software-engineering/theory/object-oriented-programming-course.md)
+* [Database Design & Web Implementations course](software-engineering/theory/database-design-and-web-implementations-course.md)
 
 ### Programming and markdown languages
 
