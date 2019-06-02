@@ -118,7 +118,6 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 * [DOM Enlightenment](software-engineering/the-web/dom-enlightenment.md)
 * [Google Web Fundamentals](software-engineering/the-web/google-web-fundamentals.md)
-
 * [How to lose weight (in the browser)](software-engineering/the-web/how-to-lose-weight-in-the-browser.md)
 
 ### Mobile
@@ -148,6 +147,10 @@ A collection of notes on a variety of books, courses, and online resources so th
 ### Writing
 
 * [_The Elements of Style_](communication/writing/the-elements-of-style.md)
+
+### Listening
+
+* [_Why Don't We Listen Better?: Communicating & Connecting in Relationships_](communication/listening/why-dont-we-listen-better.md)
 
 ## Mindset
 
