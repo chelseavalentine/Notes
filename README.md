@@ -2,12 +2,17 @@
 
 A collection of notes on a variety of books, courses, and online resources so that I don't need to store a lot of journals. Hopefully this will eventually become an easy reference for making recommendations and identifying which books were insightful or insightless.
 
+**Recommendation legend:** 
+
+* 🌟 = Transformative/insightful
+* 👎 = Don't even bother
+
 ## Software engineering
 
 ### Standards
 
-* [_Clean Code_](software-engineering/standards/clean-code.md)
-* [_The Clean Coder: A Code of Conduct for Professional Programmers_]((software-engineering/standards/the-clean-coder.md))
+* 🌟 [_Clean Code_](software-engineering/standards/clean-code.md)
+* 🌟 [_The Clean Coder: A Code of Conduct for Professional Programmers_]((software-engineering/standards/the-clean-coder.md))
 * [_Code Complete_](software-engineering/standards/code-complete.md)
 * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
 * [NPR Visual's Best Practices](software-engineering/standards/npr-visuals-best-practices.md)
@@ -131,7 +136,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ## Site reliability engineering
 
-* [Google's Site Reliability Engineering book](site-reliability/site-reliability-engineering.md)
+* [Google's _Site Reliability Engineering_ book](site-reliability/site-reliability-engineering.md)
 
 ## Communication
 
@@ -141,7 +146,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 * [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
 * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
-* [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
+* 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
 * [_Couple Skills_](communication/relationships/couple-skills.md)
 
 ### Writing
@@ -155,10 +160,10 @@ A collection of notes on a variety of books, courses, and online resources so th
 ## Mindset
 
 - [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers)
-- [_The Upside of Stress_](mindset/the-upside-of-stress.md)
+- 🌟 [_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
-- [_Lying_](mindset/lying.md)
-- [_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+- 🌟 [_Lying_](mindset/lying.md)
+- 🌟 [_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
 - [_Daring Greatly_](mindset/daring-greatly.md)
 - [_The Happiness Advantage_](mindset/the-happiness-advantage.md)
 
@@ -200,7 +205,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ### Personal finance
 
-* [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
+* 🌟 [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
 * [_Where are the customers' yachts?_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
 
