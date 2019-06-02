@@ -159,7 +159,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ## Mindset
 
-- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers)
+- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
 - 🌟 [_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - 🌟 [_Lying_](mindset/lying.md)
@@ -168,6 +168,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 - [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
 - 👎 _Man's Search for Meaning_
+- [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
 
 ## Companies
 
@@ -206,7 +207,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 ### Personal finance
 
 * 🌟 [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
-* [_Where are the customers' yachts?_](economics/personal-finance/where-are-the-customers-yachts.md)
+* [_Where are the Customers' Yachts?: or a Good Hard Look at Wall Street_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
 
 ## Languages

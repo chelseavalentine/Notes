@@ -1036,7 +1036,7 @@ This plan, like most plans, should be adequately revised as the variables change
 
 ### Google SRE objectives in maintaining integrity and availability
 
-- it's important to recognize that replication and redundancy != recoverability
+- it's important to recognize that replication and redundancy ≠ recoverability
   - won't protect you from software bugs, defects in the system, user errors, etc.
     - database exports to a file, and other methods, may though
 - need defense in depth (several types of defense):

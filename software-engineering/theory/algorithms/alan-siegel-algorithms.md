@@ -101,7 +101,7 @@
 
 - __cursor__: the technical term for an array index variable
 - an array with _n_ elements can be used to implement a circular queue with at most _n-1_ records
-  - this allows us to distinguish the full and empty situations from each other, because front != back
+  - this allows us to distinguish the full and empty situations from each other, because front ≠ back
   - it's at most _n-1_ unless you do an alternate implementation where you keep track of whether the last queue operation was an insertion/deletion
 
 ##### Doubly sorted back-deleting lossy queue

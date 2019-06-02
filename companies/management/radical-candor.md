@@ -28,7 +28,7 @@
   * give them more work, even when it seems like it's more than what's feasible for one person to do
     * find them mentors from outside your team/org.: people who can offer more
     * don't get too dependent on them, think of them like shooting stars
-* **potential != leadership potential**
+* **potential ≠ leadership potential**
 * an unpopular, but a thing to encourage 100% exceptional work, was to give people who hadn't done exceptional work in 2 years the ability to shine by giving them the opportunity to work on a project
   * if they weren't exceptional then, they were encouraged to find a new job
 * how do you know when to fire?
