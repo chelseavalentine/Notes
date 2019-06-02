@@ -143,7 +143,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 * [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
 * [_4 Essential Keys To Effective Communication_](communication/4-essential-keys-to-effective-communication.md)
-* [_People Skills_](communication/people-skills.md)
+* [_People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts_](communication/people-skills.md)
 
 ### Relationships
 
@@ -152,7 +152,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 * 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
 * 🌟 [_Couple Skills_](communication/relationships/couple-skills.md)
 * [_Should I Stay or Should I Go?_](communication/relationships/should-i-stay-or-should-i-go.md)
-* [_The Anatomy of Peace_](communication/relationships/the-anatomy-of-peace.md)
+* [_The Anatomy of Peace: Resolving the Heart of Conflict_](communication/relationships/the-anatomy-of-peace.md)
 
 ### Writing
 
