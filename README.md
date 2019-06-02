@@ -154,7 +154,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ## Mindset
 
-- [_Why Zebras Don't Get Ulcers_](mindset/why-zebras-dont-get-ulcers)
+- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers)
 - [_The Upside of Stress_](mindset/the-upside-of-stress.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Lying_](mindset/lying.md)
@@ -164,9 +164,9 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ## Companies
 
-* [_Work Rules!_](companies/work-rules.md)
+* [_Work Rules!: Insights from Google That Will Transform How You Live and Lead_](companies/work-rules.md)
 * [_How Google Works_](companies/how-google-works.md)
-* [_Creativity, Inc._](companies/creativity-inc.md)
+* [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
 * [A collection of notes on articles](companies/notes-on-articles.md)
 
 ### Management
