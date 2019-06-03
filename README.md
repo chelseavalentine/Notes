@@ -1,6 +1,8 @@
 # Notes
 
-A collection of notes on a variety of books, courses, and online resources so that I don't need to store a lot of journals. Hopefully this will eventually become an easy reference for making recommendations and identifying which books were insightful or insightless.
+A collection of notes on a variety of books, courses, and online resources so that I don't need to store a lot of journals.
+
+_Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it years later.
 
 **Recommendation legend:** 
 
@@ -151,7 +153,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
 * 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
 * 🌟 [_Couple Skills_](communication/relationships/couple-skills.md)
-* [_Should I Stay or Should I Go?_](communication/relationships/should-i-stay-or-should-i-go.md)
+* [_Should I Stay or Should I Go?: A Guide to Knowing if Your Relationship Can – and Should – Be Saved_](communication/relationships/should-i-stay-or-should-i-go.md)
 * [_The Anatomy of Peace: Resolving the Heart of Conflict_](communication/relationships/the-anatomy-of-peace.md)
 
 ### Writing
@@ -191,7 +193,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 
 ### Leadership
 
-* [_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
+* 🌟 [_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 
@@ -214,7 +216,7 @@ A collection of notes on a variety of books, courses, and online resources so th
 ### Personal finance
 
 * [_The Boglehead's Guide to Investing_](economics/personal-finance/the-bogleheads-guide-to-investing.md)
-* [_The White Coat Investor_](economics/personal-finance/the-white-coat-investor.md)
+* 🌟 [_The White Coat Investor: A Doctor's Guide to Personal Finance and Investing_](economics/personal-finance/the-white-coat-investor.md)
 * 🌟 [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
 * [_Where are the Customers' Yachts?: or a Good Hard Look at Wall Street_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
@@ -228,7 +230,8 @@ To be added.
 
 ### Japanese
 
-To be added.
+* [Genki Elementary Japanese](languages/japanese/genki-elementary-japanese/)
+  * [Alphabet](languages/japanese/genki-elementary-japanese/alphabet.md)
 
 ### French
 
