@@ -230,7 +230,7 @@ To be added.
 
 ### Japanese
 
-* [Genki Elementary Japanese](languages/japanese/genki-elementary-japanese/)
+* [_Genki: Elementary Japanese_](languages/japanese/genki-elementary-japanese/)
   * [Alphabet](languages/japanese/genki-elementary-japanese/alphabet.md)
 
 ### French

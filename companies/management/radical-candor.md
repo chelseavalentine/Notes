@@ -1,5 +1,75 @@
 # Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity
 
+* the effects of accepting mediocrity to be kind are:
+  * others start wondering why you accept such poor work
+  * exceptional people start getting sloppy and missing key deadlines
+  * others wonder whether you know the difference between great and mediocre
+    * don't know if you can appreciate the quality of their work
+* lack of guidance => a dysfunctional team that gets poor results
+  * productive, but extremely direct, feedback is key!
+* approach to giving criticism: do it in a way that doesn't call into question your confidence in their abilities, but doesn't leave too much room for interpretation
+* the war for talent is so intense that there's no need to pay "the asshole tax"
+
+### A new management philosophy
+
+* emotional labor isn't just part of the job, it's key to being a good boss
+
+* most important thing: developing a trusting relationship with all direct reports
+
+* 3 responsibilities as a manager
+
+  1. create a culture of guidance (praise & criticism)
+  2. understand what motivates each person on your team well enough to avoid burnout/boredom and keep the team cohesive
+  3. drive results collaboratively
+
+* the desire to "keep it professional" denies something essential to getting people to "care personally"
+
+  * we become alienated when we must suppress who we are to earn a living
+
+* being a boss is a job, not a value judgment
+
+* What does it mean to care personally?
+
+  * acknowledging that we're all people with lives and aspirations
+  * learning what's important to people
+  * sharing what helps you get out of bed and what has the opposite effect
+
+* you have to encourage people to challenge you directly enough that you may be the one who feels upset or angry
+
+* it's not radical candor if you don't show that you care personally
+
+* you need to look at people in the eyes to convey the full sincerity of your words, more so when they believe the opposite to be true
+
+* don't let a positive result get in the way of telling someone something they need to fix
+
+  * also don't personalize feedback (criticism) to be a personality trait
+
+* > It's not mean, it's clear
+
+* **radically candid praise:** "I admire that about you" but you must say why and be specific for it to be sincere
+
+* fundamental human decency is something every person owes every other, regardless of position
+
+* **belittling compliments:** making people feel like they got fucked over even though you're complimenting their effort
+
+  * a.k.a. backhanded compliments
+
+* **manipulative insincerity:** when you don't care enough about a person to challenge them directly
+
+  * occurs when: you're too concerned with being liked; you think you can gain a political advantage by being fake; or when you're too tired to argue anymore
+  * when you're overly worried about how people will perceive you, you're less willing to say what needs to be said
+    * give a damn about other people, but don't worry about whether they give a damn about you
+
+* **manipulative insincere praise:** reversing your intellectual position in order to keep your job, or in fear of losing something
+
+* when bosses are too invested in everyone getting along, they fail to encourage people on their teams to criticize one another for fear of sowing discord
+
+* **be as specific and thorough with praise as you are with criticism**
+
+  * Who did what? Why was it so great?
+
+* **the worst thing is to say silent because you want to spare yourself**
+
 ### Understand what motivates each person on your team
 
 * you need to understand how each person's job fits into their life goals
