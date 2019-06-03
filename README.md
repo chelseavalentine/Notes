@@ -226,12 +226,15 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ### Korean
 
-To be added.
+* [Elementary Korean 1](languages/korean/elementary-korean-1/)
+  * [Introduction](languages/korean/elementary-korean-1/introduction.md)
+  * [Lesson 1](languages/korean/elementary-korean-1/lesson-1.md)
 
 ### Japanese
 
 * [_Genki: Elementary Japanese_](languages/japanese/genki-elementary-japanese/)
   * [Alphabet](languages/japanese/genki-elementary-japanese/alphabet.md)
+  * [Lesson 1](languages/japanese/genki-elementary-japanese/lesson-1.md)
 
 ### French
 

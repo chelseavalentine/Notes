@@ -4,97 +4,77 @@
 
 ### Temporal
 
-| いま   | now       |
-| ------ | --------- |
-| 〜じ   | … o'clock |
-| はん   | half      |
-| ごぜん | A.M.      |
-| ごご   | P.M.      |
+|      |           |      |        |      |
+| ---- | --------- | ---- | ------ | ---- |
+| いま | 〜じ      | はん | ごぜん | ごご |
+| now  | … o'clock | half | A.M.   | P.M. |
 
 ### Education
 
-| がくせい         | student               |
-| ---------------- | --------------------- |
-| こうこう         | high-school           |
-| せんこう         | major                 |
-| せんせい         | teacher; Professor    |
-| だいがく         | college; university   |
-| 〜ねんせい       | … year student        |
-| りゅうがくせいい | international student |
+|          |                    |                  |                       |
+| -------- | ------------------ | ---------------- | --------------------- |
+| がくせい | student            | だいがく         | college; university   |
+| こうこう | high-school        | 〜ねんせい       | … year student        |
+| せんこう | major              | りゅうがくせいい | international student |
+| せんせい | teacher; Professor |                  |                       |
 
 ### Worldliness
 
-| えいご | English (language) |
-| ------ | ------------------ |
-| 〜じん | … people           |
-| 〜ご   | … language         |
-| にほん | Japan              |
+|        |                    |        |            |
+| ------ | ------------------ | ------ | ---------- |
+| えいご | English (language) | 〜ご   | … language |
+| 〜じん | … people           | にほん | Japan      |
 
 ### Speech
 
-| あの。。。   | um...              |
-| ------------ | ------------------ |
-| ええ         | yes                |
-| 〜さん       | Mr./Ms. …          |
-| そうですか。 | I see; Is that so? |
-| なん・なに   | what               |
-| いいえ       | no                 |
+|            |           |              |                    |
+| ---------- | --------- | ------------ | ------------------ |
+| あの。。。 | um...     | そうですか。 | I see; Is that so? |
+| ええ       | yes       | なん・なに   | what               |
+| 〜さん     | Mr./Ms. … | いいえ       | no                 |
 
 ### People
 
-| ともだち | friend      |
-| -------- | ----------- |
-| なまえ   | name        |
-| でんわ   | telephone   |
-| わたし   | I           |
-| 〜さい   | … years old |
-| ばんごう | number      |
+|          |           |          |             |
+| -------- | --------- | -------- | ----------- |
+| ともだち | friend    | わたし   | I           |
+| なまえ   | name      | 〜さい   | … years old |
+| でんわ   | telephone | ばんごう | number      |
 
 ### Countries
 
-| アメリア       | America        |
-| -------------- | -------------- |
-| オーストラリア | Australia      |
-| イギリス       | United Kingdom |
-| かんこく       | Korea          |
-| スウェイデン   | Sweden         |
-| ちゅうごく     | China          |
+|                |                |              |        |
+| -------------- | -------------- | ------------ | ------ |
+| アメリア       | America        | かんこく     | Korea  |
+| オーストラリア | Australia      | スウェイデン | Sweden |
+| イギリス       | United Kingdom | ちゅうごく   | China  |
 
 ### Majors
 
-| かがく           | science                 |
-| ---------------- | ----------------------- |
-| じんるいがく     | anthropology            |
-| せいじ           | politics                |
-| アジアけんきゅう | Asian studies           |
-| けいざい         | economics               |
-| ビジネス         | business                |
-| こんさいかんけい | international relations |
-| ぶんがく         | literature              |
-| コンピューター   | computer                |
-| れきし           | history                 |
+|                  |               |                  |                         |
+| ---------------- | ------------- | ---------------- | ----------------------- |
+| かがく           | science       | ビジネス         | business                |
+| じんるいがく     | anthropology  | こんさいかんけい | international relations |
+| せいじ           | politics      | ぶんがく         | literature              |
+| アジアけんきゅう | Asian studies | コンピューター   | computer                |
+| けいざい         | economics     | れきし           | history                 |
 
 ### Occupations
 
-| しごと             | job; work; occupation |
-| ------------------ | --------------------- |
-| いしゃ             | doctor                |
-| かいしゃいん       | office worker         |
-| こうこうせい       | high-school student   |
-| しゅふ             | housewife             |
-| だいがくせいんせい | graduate student      |
-| だいがくせい       | college student       |
-| べんごし           | lawyer                |
+|              |                       |                    |                  |
+| ------------ | --------------------- | ------------------ | ---------------- |
+| しごと       | job; work; occupation | しゅふ             | housewife        |
+| いしゃ       | doctor                | だいがくせいんせい | graduate student |
+| かいしゃいん | office worker         | だいがくせい       | college student  |
+| こうこうせい | high-school student   | べんごし           | lawyer           |
 
 ### Family
 
-| おかあさん | mother          |
-| ---------- | --------------- |
-| おとうさん | father          |
-| おねえさん | older sister    |
-| おにいさん | older brother   |
-| いもうと   | younger sister  |
-| おとうと   | younger brother |
+|            |              |            |                 |
+| ---------- | ------------ | ---------- | --------------- |
+| おかあさん | mother       | おにいさん | older brother   |
+| おとうさん | father       | いもうと   | younger sister  |
+| おねえさん | older sister | おとうと   | younger brother |
 
 # Grammar
 
@@ -127,23 +107,20 @@
 
 ###Numbers
 
-| 0    | ゼロ　・　れい           |
-| ---- | ------------------------ |
-| 1    | いち                     |
-| 2    | に                       |
-| 3    | さん                     |
-| 4    | よん　・　し　・　（よ） |
-| 5    | ご                       |
-| 6    | ろく                     |
-| 7    | なな　・　しち           |
-| 8    | はち                     |
-| 9    | きゅう　・　く           |
-| 10   | じゅう                   |
+|      |                          |      |                |
+| ---- | ------------------------ | ---- | -------------- |
+| 0    | ゼロ　・　れい           | 6    | ろく           |
+| 1    | いち                     | 7    | なな　・　しち |
+| 2    | に                       | 8    | はち           |
+| 3    | さん                     | 9    | きゅう　・　く |
+| 4    | よん　・　し　・　（よ） | 10   | じゅう         |
+| 5    | ご                       |      |                |
 
 #### Extended
 
-| 11   | じゅういち                 | 20   | にじゅう     |
+|      |                            |      |              |
 | ---- | -------------------------- | ---- | ------------ |
+| 11   | じゅういち                 | 20   | にじゅう     |
 | 12   | じゅうに                   | 30   | さんじゅう   |
 | 13   | じゅうさん                 | 40   | よんじゅう   |
 | 14   | じゅうよん　・　じゅうし   | 50   | ごじゅう     |
@@ -155,17 +132,17 @@
 
 ### Age
 
-| なんさいですか。         | How old are you? |
-| ------------------------ | ---------------- |
-| はっさい                 | 8 years old.     |
-| じゅっさい　・　じっさい | 10 years old.    |
-| じゅういっさい           | 11 years old.    |
-| はたち                   | 20 years old.    |
+|                          |                  |                |              |
+| ------------------------ | ---------------- | -------------- | ------------ |
+| なんさいですか。         | How old are you? | じゅういっさい | 11 years old |
+| はっさい                 | 8 years old      | はたち         | 20 years old |
+| じゅっさい　・　じっさい | 10 years old     |                |              |
 
 ### Time (じかん) 
 
-| いちじ | 1 o'clock | くじ               | 9 o'clock        |
+|        |           |                    |                  |
 | ------ | --------- | ------------------ | ---------------- |
+| いちじ | 1 o'clock | くじ               | 9 o'clock        |
 | にじ   | 2 o'clock | じゅうじ           | 10 o'clock       |
 | さんじ | 3 o'clock | じゅういちじ       | 11 o'clock       |
 | よじ   | 4 o'clock | じゅうにじ         | 12 o'clock       |
@@ -176,8 +153,9 @@
 
 #### Minutes
 
-| いっぷん                 | 1    | じゅうにふん                       | 12              |
+|                          |      |                                    |                 |
 | ------------------------ | ---- | ---------------------------------- | --------------- |
+| いっぷん                 | 1    | じゅうにふん                       | 12              |
 | にふん                   | 2    | じゅうさんぷん                     | 13              |
 | さんぷん                 | 3    | じゅうよんぷん                     | 14              |
 | よんぷん                 | 4    | じゅうごふん                       | 15              |
@@ -191,21 +169,21 @@
 
 ### Self-introduction
 
-| はじめまして。チェルシーバレンタインです。ニューヨークだいがくのがくせいです。いまさんねんせいです。せんこうはコンピューターです。じゅうきゅうさいです。よろしくおねがいします。 |
-| ------------------------------------------------------------ |
-| How do you do? I'm Chelsea Valentine. I'm a student at New York University. I'm a third year/Junior. My major is Computer Science. I'm 19 years old. Nice to meet you. |
+はじめまして。チェルシーバレンタインです。ニューヨークだいがくのがくせいです。いまさんねんせいです。せんこうはコンピューターです。じゅうきゅうさいです。よろしくおねがいします。
 
-| おなまえは？           | What's your name?             |
-| ---------------------- | ----------------------------- |
-| せんこうはなんですか。 | What's your major?            |
-| なんねんせいですか。   | What year are you in college? |
-| おしごとは？           | What's your occupation?       |
-| ごしゅっしんは？       | Where do you come from?       |
+> How do you do? I'm Chelsea Valentine. I'm a student at New York University. I'm a third year/Junior. My major is Computer Science. I'm 19 years old. Nice to meet you.
+
+|                        |                               |                  |                         |
+| ---------------------- | ----------------------------- | ---------------- | ----------------------- |
+| おなまえは？           | What's your name?             | おしごとは？     | What's your occupation? |
+| せんこうはなんですか。 | What's your major?            | ごしゅっしんは？ | Where do you come from? |
+| なんねんせいですか。   | What year are you in college? |                  |                         |
 
 ### Miscellaneous
 
-| ね         | right?   |
+|            |          |
 | ---------- | -------- |
+| ね         | right?   |
 | れんしゆう | practice |
 
  

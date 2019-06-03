@@ -2,40 +2,38 @@
 
 ### Basic
 
-| おはよう。           | Good morning.                   |
-| -------------------- | ------------------------------- |
-| おはようございます。 | Good morning (polite).          |
-| こんにちわ。         | Good afternoon.                 |
-| こんばんは。         | Good evening.                   |
-| さようなら。         | Good bye.                       |
-| おやすみ（なさい）。 | Good night.                     |
-| じゃあ、また。       | See you soon (between friends). |
+|                      |                        |                      |                                 |
+| -------------------- | ---------------------- | -------------------- | ------------------------------- |
+| おはよう。           | Good morning.          | さようなら。         | Good bye.                       |
+| おはようございます。 | Good morning (polite). | おやすみ（なさい）。 | Good night.                     |
+| こんにちわ。         | Good afternoon.        | じゃあ、また。       | See you soon (between friends). |
+| こんばんは。         | Good evening.          |                      |                                 |
 
 ### Politeness/Gratefulness
 
-| ありがとう。           | Thank you.            |
-| ---------------------- | --------------------- |
-| ありがとうございます。 | Thank you (polite).   |
-| すみません。           | Excuse me; I'm sorry. |
-| いいえ。               | No; Not at all.       |
+|                        |                     |              |                       |
+| ---------------------- | ------------------- | ------------ | --------------------- |
+| ありがとう。           | Thank you.          | すみません。 | Excuse me; I'm sorry. |
+| ありがとうございます。 | Thank you (polite). | いいえ。     | No; Not at all.       |
 
 ### Coming and going
 
-| いってきます。       | I'll go and come back.   |
-| -------------------- | ------------------------ |
-| いいてらっしゃい。   | Please go and come back. |
-| ただいま。           | I'm home.                |
-| おかえり（なさい）。 | Welcome home.            |
+|                    |                          |                      |               |
+| ------------------ | ------------------------ | -------------------- | ------------- |
+| いってきます。     | I'll go and come back.   | ただいま。           | I'm home.     |
+| いいてらっしゃい。 | Please go and come back. | おかえり（なさい）。 | Welcome home. |
 
 ### Eating
 
-| いただきます。           | Thank you for the meal (before). |
+|                          |                                  |
 | ------------------------ | -------------------------------- |
+| いただきます。           | Thank you for the meal (before). |
 | ごちそうさま（でした）。 | Thank you for the meal (after).  |
 
 ### First impressions
 
-| はじめまして。           | How do you do?    |
+|                          |                   |
 | ------------------------ | ----------------- |
+| はじめまして。           | How do you do?    |
 | よろしくおねがいします。 | Nice to meet you. |
 
