@@ -6,15 +6,15 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 **Recommendation legend:** 
 
-* 🌟 = Transformative/insightful
+* 👍 = Transformative/insightful
 * 👎 = Don't even bother/uninsightful
 
 ## Software engineering
 
 ### Standards
 
-* 🌟 [_Clean Code_](software-engineering/standards/clean-code.md)
-* 🌟 [_The Clean Coder: A Code of Conduct for Professional Programmers_]((software-engineering/standards/the-clean-coder.md))
+* 👍[_Clean Code_](software-engineering/standards/clean-code.md)
+* 👍[_The Clean Coder: A Code of Conduct for Professional Programmers_]((software-engineering/standards/the-clean-coder.md))
 * [_Code Complete_](software-engineering/standards/code-complete.md)
 * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
 * [NPR Visual's Best Practices](software-engineering/standards/npr-visuals-best-practices.md)
@@ -151,8 +151,8 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
 * [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
-* 🌟 [_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
-* 🌟 [_Couple Skills_](communication/relationships/couple-skills.md)
+* 👍[_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
+* 👍[_Couple Skills_](communication/relationships/couple-skills.md)
 * [_Should I Stay or Should I Go?: A Guide to Knowing if Your Relationship Can – and Should – Be Saved_](communication/relationships/should-i-stay-or-should-i-go.md)
 * [_The Anatomy of Peace: Resolving the Heart of Conflict_](communication/relationships/the-anatomy-of-peace.md)
 
@@ -167,10 +167,10 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ## Mindset
 
 - [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
-- 🌟 [_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
+- 👍[_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
-- 🌟 [_Lying_](mindset/lying.md)
-- 🌟 [_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+- 👍[_Lying_](mindset/lying.md)
+- 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
 - [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
@@ -186,14 +186,14 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ### Management
 
-- 🌟 [_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
+- 👍[_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
 - [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
 - [Questions to ask during 1:1s](one-on-one-questions.md)
 
 ### Leadership
 
-* 🌟 [_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
+* 👍[_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 
@@ -216,8 +216,8 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Personal finance
 
 * [_The Boglehead's Guide to Investing_](economics/personal-finance/the-bogleheads-guide-to-investing.md)
-* 🌟 [_The White Coat Investor: A Doctor's Guide to Personal Finance and Investing_](economics/personal-finance/the-white-coat-investor.md)
-* 🌟 [_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
+* 👍[_The White Coat Investor: A Doctor's Guide to Personal Finance and Investing_](economics/personal-finance/the-white-coat-investor.md)
+* 👍[_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
 * [_Where are the Customers' Yachts?: or a Good Hard Look at Wall Street_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
 * [_The Little Book of Common Sense Investing_](economics/personal-finance/the-little-book-of-common-sense-investing.md)
@@ -229,12 +229,15 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [Elementary Korean 1](languages/korean/elementary-korean-1/)
   * [Introduction](languages/korean/elementary-korean-1/introduction.md)
   * [Lesson 1](languages/korean/elementary-korean-1/lesson-1.md)
+  * [Lesson 2](languages/korean/elementary-korean-1/lesson-2.md)
 
 ### Japanese
 
 * [_Genki: Elementary Japanese_](languages/japanese/genki-elementary-japanese/)
   * [Alphabet](languages/japanese/genki-elementary-japanese/alphabet.md)
+  * [Kanji](languages/japanese/genki-elementary-japanese/kanji.md)
   * [Lesson 1](languages/japanese/genki-elementary-japanese/lesson-1.md)
+  * [Lesson 2](languages/japanese/genki-elementary-japanese/lesson-2.md)
 
 ### French
 
