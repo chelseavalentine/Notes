@@ -77,19 +77,6 @@
 | ろくまん       | ななまん   | はちまん       | きゅうまん |          |
 | 60,000         | 70,000     | 80,000         | 90,000     |          |
 
-### In the classroom ()
-
-|                            |                             |
-| -------------------------- | --------------------------- |
-| わかりましたか。           | Do you understand?          |
-| わかりました。             | I understand; I understood. |
-| わかいません。             | I don't understand/know.    |
-| ゆっくりいってください。   | Please say it slowly.       |
-| もういちどいってください。 | Please say it again.        |
-| ちょっとまってください。   | Please wait.                |
-| きてください。             | Please listen; Please ask.  |
-| １０ページをみてください。 | Please look at page 10.     |
-
 ### Objects
 
 |          |             |          |            |          |        |
@@ -172,11 +159,11 @@ Used to negate statements of the form "Xは　Yです。"
 
 ### Big numbers
 
-* 10,000 is suffixed by
-* 1,000 is suffixed by 
-* 100 is suffixed by
+* 10,000 is suffixed by まん
+* 1,000 is suffixed by せん
+* 100 is suffixed by ひゃく
 
-Therefore, 234,567 = 23 x 10,000 + 4 x 1,000 + 5 x 100 + 6 x 10 + 7 x 1 = 
+Therefore, 234,567 = 23 x 10,000 + 4 x 1,000 + 5 x 100 + 6 x 10 + 7 x 1 = にじゅうさん、よんせん、ごひゃく、ろくじゅう、なな
 
 * note the following sound changes:
   * counters whose first sound is "h" change shape after 3, 6, and 8

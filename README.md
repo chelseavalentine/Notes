@@ -241,7 +241,9 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ### French
 
-To be added.
+* French textbook (Need to look this up)
+  * [Introduction](languages/french/introduction.md)
+  * [Chapitre 1](languages/french/chapitre-1.md)
 
 ## Science
 
