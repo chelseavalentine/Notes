@@ -17,32 +17,32 @@
 四 (four)
 * *Chinese-based pronunciation(s):* し
 * *Native Japanese pronunciation(s):* **よん**、**よ**、よっ
-* <img src="imgs/kanji-4-stroke-order.png" height=60>
+* <img src="imgs/kanji-4-stroke-order.png" height=30>
   
 五 (five)
 * *Chinese-based pronunciation(s):* **ご**
 * *Native Japanese pronunciation(s):* いつ
-* <img src="imgs/kanji-5-stroke-order.png" height=60>
+* <img src="imgs/kanji-5-stroke-order.png" height=30>
 
 六 (six)
 * *Chinese-based pronunciation(s):* **ろく**、**ろっ**
 * *Native Japanese pronunciation(s):* むっ
-* <img src="imgs/kanji-6-stroke-order.png" height=60>
+* <img src="imgs/kanji-6-stroke-order.png" height=30>
 
 七 (seven)
 * *Chinese-based pronunciation(s):* **しち**
 * *Native Japanese pronunciation(s):* **なな**
-* <img src="imgs/kanji-7-stroke-order.png" height=60>
+* <img src="imgs/kanji-7-stroke-order.png" height=30>
 
 八 (eight)
 * *Chinese-based pronunciation(s):* **はち**、**はっ**
 * *Native Japanese pronunciation(s):* やつ
-* <img src="imgs/kanji-8-stroke-order.png" height=60>
+* <img src="imgs/kanji-8-stroke-order.png" height=30>
 
 九 (nine)
 * *Chinese-based pronunciation(s):* **きゅう**、**く**
 * *Native Japanese pronunciation(s):* ここの
-* <img src="imgs/kanji-9-stroke-order.png" height=60>
+* <img src="imgs/kanji-9-stroke-order.png" height=30>
 
 十 (ten)
 * *Chinese-based pronunciation(s):* **じゅう**、じゅっ、じっ
@@ -50,15 +50,15 @@
 
 百 (hundred)
 * *Chinese-based pronunciation(s):* **ひゃく**、**びゃく**、**ぴゃく**
-* <img src="imgs/kanji-100-stroke-order.png" height=60>
+* <img src="imgs/kanji-100-stroke-order.png" height=30>
 
 千 (thousand)
 * *Chinese-based pronunciation(s):* **せん**、**ぜん**
-* <img src="imgs/kanji-1000-stroke-order.png" height=60>
+* <img src="imgs/kanji-1000-stroke-order.png" height=30>
 
 万 (ten thousand)
 * *Chinese-based pronunciation(s):* **まん**
-* <img src="imgs/kanji-10000-stroke-order.png" height=60>
+* <img src="imgs/kanji-10000-stroke-order.png" height=30>
 
 円 (yen; circle)
 * *Chinese-based pronunciation(s):* **えん**
@@ -67,4 +67,4 @@
 時 (time)
 * *Chinese-based pronunciation(s):* **じ**
 * *Native Japanese pronunciation(s):* とき
-* <img src="imgs/kanji-time-stroke-order.png" height=60>
+* <img src="imgs/kanji-time-stroke-order.png" height=30>
