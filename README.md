@@ -234,17 +234,11 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Japanese
 
 * [_Genki: Elementary Japanese_](languages/japanese/genki-elementary-japanese/)
-  * [Alphabet](languages/japanese/genki-elementary-japanese/alphabet.md)
-  * [Kanji](languages/japanese/genki-elementary-japanese/kanji.md)
-  * [Lesson 1](languages/japanese/genki-elementary-japanese/lesson-1.md)
-  * [Lesson 2](languages/japanese/genki-elementary-japanese/lesson-2.md)
 
 ### French
 
-* French textbook (Need to look this up)
-  * [Introduction](languages/french/introduction.md)
-  * [Chapitre 1](languages/french/chapitre-1.md)
+* [Elementary French I, intensive](languages/french/) (Need to look up the textbook)
 
 ## Science
 
-To be added.
+* Human Sexual Reproduction course
