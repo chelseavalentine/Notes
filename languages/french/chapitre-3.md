@@ -79,7 +79,7 @@
 | **comment**    | *"como"*        | how           | **quand**    | *"kon"*    | when |
 | **où**         | *"oo"*          | where         |              |            |      |
 
-## Grammar
+## Grammaire
 
 ### Time
 

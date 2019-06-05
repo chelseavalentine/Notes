@@ -185,7 +185,7 @@
 | **C'est...'**            | *"say..."*          | It/that/he/she is...           | **Ce sont...**            | *"swi-san"*         | Those/They are... |
 | **Ça s'écrit comment?**  | *"sa secri commo?"* | How is that spelled (written)? |                           |                     |                   |
 
-## Grammar
+## Grammaire
 
 ### Les nombres
 

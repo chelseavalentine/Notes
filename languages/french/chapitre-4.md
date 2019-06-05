@@ -94,7 +94,7 @@
 | **quatre-vingt-un**  | *"katrevan-au"*   | 81   | **mille**             | *"mille"*        | 1.000 |
 | **quatre-vingt-dix** | *"katrevan-diis"* | 90   | **deux mille**        | *"doo mille"*    | 2.000 |
 
-## Grammar
+## Grammaire
 
 ### aller (to go) + à
 

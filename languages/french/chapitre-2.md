@@ -105,7 +105,7 @@
 | **un(e) colocataire**    | *"aun kolo-kat-er"* | roommate       |
 | **quelqu'un de (riche)** | *"kel-qan du rish"* | someone (rich) |
 
-## Grammar
+## Grammaire
 
 ### avoir (to have)
 
