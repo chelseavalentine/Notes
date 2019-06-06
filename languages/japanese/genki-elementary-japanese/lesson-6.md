@@ -2,7 +2,104 @@
 
 ## Vocabulary
 
+### Nouns
+
+|                  |                    |                          |              |
+| ---------------- | ------------------ | ------------------------ | ------------ |
+| おかね           | おふろ             | かんじ                   | きょうかしょ |
+| money            | bath               | Kanji; Chinese character | textbook     |
+| CD（シーディー） | 市民びょういん     | シャワー                 | つぎ         |
+| CD               | municipal hospital | shower                   | next         |
+| でんしゃ         | にもつ             | パソコン                 | ページ       |
+| train            | baggage            | personal computer        | page         |
+| よる             |                    |                          |              |
+| night            |                    |                          |              |
+
+### な-adjective
+
+|                |                   |
+| -------------- | ----------------- |
+| たいへん（な） | tough (situation) |
+
+### U-verbs
+
+|                |                                    |
+| -------------- | ---------------------------------- |
+| おそぶ         | to play, spend time pleasantly     |
+| いそぐ         | to hurry                           |
+| おふろにはいる | to take a bath                     |
+| かえす         | to return (personに　a thingを)    |
+| けす           | to turn off, erase (~を)           |
+| しぬ           | to die                             |
+| すわる         | to sit down (seatに)               |
+| たつ           | to stand up                        |
+| たばこをすう   | to smoke                           |
+| つかう         | to use (~を)                       |
+| てつだう       | to help (person/taskを)            |
+| はいる         | to enter (~に)                     |
+| もつ           | to carry, hold (~を)               |
+| やすむ         | to be absent (from…)(~を); to rest |
+
+### Ru-verbs
+
+|                  |                                        |
+| ---------------- | -------------------------------------- |
+| あける           | to open (somethingを)                  |
+| おしえる         | to teach/instruct (someoneに　thingを) |
+| おりる           | to get off (~を)                       |
+| かりる           | to borrow (personに thingを)           |
+| しめる           | to close (somethingを)                 |
+| シャワーをあべる | to take a shower                       |
+| つける           | to turn on (~を)                       |
+| でんわをかける   | to make a phone call (~に)             |
+| わすれる         | to forget, leave behind (~を)          |
+
+### Irregular verbs
+
+|            |                           |
+| ---------- | ------------------------- |
+| つれてくる | to bring (a person) (~を) |
+| もってくる | to bring (a thingを)      |
+
+### Adverbs and other expressions
+
+|                                                |                     |                  |
+| ---------------------------------------------- | ------------------- | ---------------- |
+| あとで                                         | おそく              | 〜から           |
+| later on                                       | (do something) late | because...       |
+| けっこうです。                                 | すぐ                | ほんとうですか。 |
+| That would be fine; That wouldn't be necessary | right away          | Really?          |
+| ゆっくり                                       |                     |                  |
+| slowly; leisurely; unhurriedly                 |                     |                  |
+
+### Directions
+
+|                          |                                |                                       |
+| ------------------------ | ------------------------------ | ------------------------------------- |
+| まっすぐいく             | ひだりにまがる                 | みぎにまがる                          |
+| Go straight              | turn left                      | turn right                            |
+| みちをわたる             | きた                           | ひがし                                |
+| cross the street         | north                          | east                                  |
+| みなみ                   | にし                           | みちのひだりがわ                      |
+| south                    | west                           | left side of the street               |
+| みちのみぎがわ           | ふたつめのかどをひだりにまがる | ひとつめのしんごうをみぎにまがる      |
+| right side of the street | turn left at the second corner | turn right at the first traffic light |
+
 ## Grammar
+
+### 〜から (because)
+
+Format: [situation]。 [explanation]から。
+
+* バスにのりましょう。タクシーはたかいですから。
+  * Let's go by bus. (Because) taxis are expensive.
+
+### 〜ましょうか。 (Let me do...)
+
+- （わたしが）やりましょうか。
+  - I'll do it.
+- にもつをもちましょうか。
+  - Shall I carry your bag?
 
 ### て-form
 
