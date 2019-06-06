@@ -11,7 +11,9 @@
 * [Lesson 4](lesson-4.md)
 * [Lesson 5](lesson-5.md)
 * [Lesson 6](lesson-6.md)
+* [Lesson 7](lesson-7.md)
+* [Lesson 8](lesson-8.md)
 * Kanji
-  * [Kanji 1: Lesson 1-4](kanji-1-4.md)
-  * [Kanji 2: Lesson 5-8](kanji-5-8.md)
+  * [Kanji 1: Lesson 3-6](kanji-3-6.md)
+  * [Kanji 2: Lesson 7-8](kanji-7-8.md)
 
