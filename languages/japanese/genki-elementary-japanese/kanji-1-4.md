@@ -2,7 +2,7 @@
 
 Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 
-## Lesson 1: Daily life (毎日の生活)
+## Lesson 3: Daily life (毎日の生活)
 
 一 (one)
 * Chinese: **いち**、いつ
@@ -71,7 +71,7 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 * Japanese: とき
 * <img src="imgs/kanji-time-stroke-order.png" height=30>
 
-## Lesson 2: Mary's weekend (メアリーのしゅうまつ)
+## Lesson 4: Mary's weekend (メアリーのしゅうまつ)
 
 日 (day; sun)
 * Chinese: **に**、**にち**、にっ
@@ -140,7 +140,7 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 * Chinese: **よう**
 * <img src="imgs/kanji-weekday-stroke-order.png" height=60>
 
-## Lesson 3: Travel (りょこう)
+## Lesson 5: A trip to Okinawa (おきなわりょこう)
 
 山 (mountain)
 * Chinese: さん
@@ -207,7 +207,7 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 * Japanese: **の**
 * <img src="imgs/kanji-to-drink-stroke-order.gif" height=150>
 
-## Lesson 4: My Favorite Restaurant (わたしのすきなレストラン)
+## Lesson 6: A day in Robert's life (ロバートさんのいちにち)
 
 東 (east)
 * Chinese: とう
