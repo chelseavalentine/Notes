@@ -10,7 +10,7 @@ Notes taken on the Elementary French I, intensive course at NYU.
 * [Chapitre 3](chapitre-3.md)
 * [Chapitre 4](chapitre-4.md)
 * [Chapitre 5](chapitre-5.md)
-* Chapitre 6
+* [Chapitre 6](chapitre-6.md)
 * Chapitre 7
 * Chapitre 8
 * Chapitre 9

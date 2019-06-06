@@ -1,4 +1,4 @@
-# Kanji
+# Kanji: Lesson 1-4
 
 Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 
