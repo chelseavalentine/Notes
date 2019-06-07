@@ -6,7 +6,7 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 
 京 (capital)
 * Chinese: **きょう**
-* <img src="imgs/kanji-capital-stroke-order.png" height=30>
+* <img src="imgs/kanji-capital-stroke-order.gif" height=100>
 
 子 (child)
 * Chinese: し
@@ -25,7 +25,7 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 
 社 (company)
 * Chinese: **しゃ**、じゃ
-* <img src="imgs/kanji-company-stroke-order.png" height=30>
+* <img src="imgs/kanji-company-stroke-order.gif" height=100>
 
 父 (father)
 * Chinese: ふ
@@ -44,24 +44,23 @@ Chinese/Japanese refer to the Chinese-based or native Japanese pronunciation(s).
 
 校 (school)
 * Chinese: **こう**
-* <img src="imgs/kanji-school-stroke-order.png" height=30>
+* <img src="imgs/kanji-school-stroke-order.jpeg" height=100>
 
 毎 (every)
 * Chinese: **まい**
-* <img src="imgs/kanji-every-stroke-order.png" height=30>
+* <img src="imgs/kanji-every-stroke-order.gif" height=100>
 
 語 (word)
 * Chinese: **ご**
-* <img src="imgs/kanji-word-stroke-order.png" height=30>
+* <img src="imgs/kanji-word-stroke-order.png" height=100>
 
 文 (sentence)
 * Chinese: **ぶん**
-* <img src="imgs/kanji-sentence-stroke-order.png" height=30>
 
 帰 (to return)
 * Chinese: き
 * Japanese: **かえ**
-* <img src="imgs/kanji-to-return-stroke-order.png" height=30>
+* <img src="imgs/kanji-to-return-stroke-order.png" height=100>
 
 入 (to enter)
 * Chinese: にゅう
