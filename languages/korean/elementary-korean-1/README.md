@@ -1,6 +1,6 @@
 # Elementary Korean I
 
-Notes taken during the first semester of the Elementary Korean course at NYU.
+Notes taken during  the Elementary Korean I course at NYU.
 
 ### Table of Contents
 
