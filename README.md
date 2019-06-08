@@ -143,9 +143,12 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ## Communication
 
+* 👍[_Nonviolent Communication: A Language of Life_](communication/nonviolent-communication.md)
+* 👍[_Authentic Conversations: Moving from Manipulation to Truth and Commitment_](communication/authentic-conversations.md)
 * [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
 * [_4 Essential Keys To Effective Communication_](communication/4-essential-keys-to-effective-communication.md)
 * [_People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts_](communication/people-skills.md)
+* [_10 Skills for Effective Business Communication_](communication/10-skills-for-effective-business-communication.md)
 
 ### Relationships
 
@@ -192,6 +195,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Management
 
 - 👍[_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
+- [_The Manager's Path_](companies/management/the-managers-path.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
 - [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
 - [Questions to ask during 1:1s](one-on-one-questions.md)
@@ -200,6 +204,9 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * 👍[_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * 👍[_Conscious Business: How to Build Value through Values_](companies/leadership/conscious-business.md)
+* [*Unlocking Leadership Mindtraps: How to Thrive in Complexity*](companies/leadership/unlocking-leadership-mindtraps.md)
+* [_From Hierarchy to High Performance_](companies/leadership/from-hierarchy-to-high-performance.md)
+* [_The 15 Commitments of Conscious Leadership_](companies/leadership/the-15-commitments-of-conscious-leadership.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 
