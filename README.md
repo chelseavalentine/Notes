@@ -176,6 +176,9 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
 - 👎 _Man's Search for Meaning_
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
+- 👍[_The Art of Extraordinary Confidence_](mindset/the-art-of-extraordinary-confidence.md)
+- [*The Confidence Gap*](mindset/the-confidence-gap.md)
+- 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
 
 ## Companies
 
