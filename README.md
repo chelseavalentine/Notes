@@ -159,6 +159,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Writing
 
 * [_The Elements of Style_](communication/writing/the-elements-of-style.md)
+* [_Nobody Wants To Read Your Shit_](communication/writing/nobody-wants-to-read-your-shit.md)
 
 ### Listening
 
@@ -166,19 +167,20 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ## Mindset
 
-- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
+- 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
+- 👍[_What I Talk About When I Talk About Running_](mindset/what-i-talk-about-when-i-talk-about-running.md)
+- 👍[_The Art of Extraordinary Confidence_](mindset/the-art-of-extraordinary-confidence.md)
 - 👍[_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
-- [_Managing Oneself_](mindset/managing-oneself.md)
 - 👍[_Lying_](mindset/lying.md)
 - 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
+- [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
 - [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
-- 👎 _Man's Search for Meaning_
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
-- 👍[_The Art of Extraordinary Confidence_](mindset/the-art-of-extraordinary-confidence.md)
 - [*The Confidence Gap*](mindset/the-confidence-gap.md)
-- 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
+- 👎 _Man's Search for Meaning_
 
 ## Companies
 
@@ -197,6 +199,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Leadership
 
 * 👍[_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
+* 👍[_Conscious Business: How to Build Value through Values_](companies/leadership/conscious-business.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 
