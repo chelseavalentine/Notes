@@ -176,6 +176,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - 👍[_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
 - 👍[_Lying_](mindset/lying.md)
 - 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+- 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
 - [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
@@ -209,6 +210,8 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_The 15 Commitments of Conscious Leadership_](companies/leadership/the-15-commitments-of-conscious-leadership.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
+* [_Leading Change_](companies/leadership/leading-change.md)
+* 👎[_The Power of Other_](companies/leadership/the-power-of-other.md)
 
 ### Teams
 
