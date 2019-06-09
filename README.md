@@ -52,9 +52,11 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
   * 👎 _How to Lie with Statistics_
 * [Operating Systems](software-engineering/theory/operating-systems/)
   * [_Modern Operating Systems_](software-engineering/theory/operating-systems/modern-operating-systems.md)
-* [Multicore Programming course](software-engineering/theory/multicore-programming-course.md)
+* 👍[Multicore Programming course](software-engineering/theory/multicore-programming-course.md)
 * [Object-Oriented Programming course](software-engineering/theory/object-oriented-programming-course.md)
 * [Database Design & Web Implementations course](software-engineering/theory/database-design-and-web-implementations-course.md)
+* 👍[Large-Scale Web Apps course](software-engineering/theory/large-scale-web-apps.md)
+* [Applied Internet Technology course](software-engineering/theory/applied-internet-technology.md)
 
 ### Programming and markdown languages
 
@@ -177,6 +179,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - 👍[_Lying_](mindset/lying.md)
 - 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
 - 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
+- 👍[_The Start-Up of You_](mindset/the-start-up-of-you.md)
 - [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
