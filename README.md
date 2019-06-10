@@ -151,13 +151,14 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_4 Essential Keys To Effective Communication_](communication/4-essential-keys-to-effective-communication.md)
 * [_People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts_](communication/people-skills.md)
 * [_10 Skills for Effective Business Communication_](communication/10-skills-for-effective-business-communication.md)
+* 👎[_Say What You Mean_](communication/say-what-you-mean.md)
 
 ### Relationships
 
-* [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
-* [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
 * 👍[_How to Be an Adult in Relationships_](communication/relationships/how-to-be-an-adult-in-relationships.md)
 * 👍[_Couple Skills_](communication/relationships/couple-skills.md)
+* [_Relationships 101: What Every Leader Needs to Know_](communication/relationships/relationships-101.md)
+* [_The Verbally Abusive Relationship: How to Recognize It and How to Respond_](communication/relationships/the-verbally-abusive-relationship.md)
 * [_Should I Stay or Should I Go?: A Guide to Knowing if Your Relationship Can – and Should – Be Saved_](communication/relationships/should-i-stay-or-should-i-go.md)
 * [_The Anatomy of Peace: Resolving the Heart of Conflict_](communication/relationships/the-anatomy-of-peace.md)
 
@@ -188,6 +189,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
 - [*The Confidence Gap*](mindset/the-confidence-gap.md)
 - 👎 _Man's Search for Meaning_
+- 👎[_Multipliers: How the Best Leaders Make Everyone Smarter_](companies/leadership/multipliers.md)
 
 ## Companies
 
@@ -234,9 +236,9 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ### Personal finance
 
-* [_The Boglehead's Guide to Investing_](economics/personal-finance/the-bogleheads-guide-to-investing.md)
 * 👍[_The White Coat Investor: A Doctor's Guide to Personal Finance and Investing_](economics/personal-finance/the-white-coat-investor.md)
 * 👍[_Rich Dad, Poor Dad_](economics/personal-finance/rich-dad-poor-dad.md)
+* [_The Boglehead's Guide to Investing_](economics/personal-finance/the-bogleheads-guide-to-investing.md)
 * [_Where are the Customers' Yachts?: or a Good Hard Look at Wall Street_](economics/personal-finance/where-are-the-customers-yachts.md)
 * [_The Richest Man in Babylon_](economics/personal-finance/the-richest-man-in-babylon.md)
 * [_The Little Book of Common Sense Investing_](economics/personal-finance/the-little-book-of-common-sense-investing.md)
