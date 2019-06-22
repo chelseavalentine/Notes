@@ -17,4 +17,6 @@ Notes taken on the Elementary French I, intensive course at NYU.
 * [Chapitre 10](chapitre-10.md)
 * [Chapitre 11](chapitre-11.md)
 * [Chapitre 12](chapitre-12.md)
+* [Chapitre 13](chapitre-13.md)
+* [Chapitre 14](chapitre-14.md)
 
