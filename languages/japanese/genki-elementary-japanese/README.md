@@ -13,8 +13,5 @@
 * [Lesson 6](lesson-6.md) & [Kanji 6](kanji-6.md)
 * [Lesson 7](lesson-7.md) & [Kanji 7](kanji-7.md)
 * [Lesson 8](lesson-8.md) & [Kanji 8](kanji-8.md)
-* [Lesson 9](lesson-9.md) & [Kanji 9](kanji-9.md)
-* [Lesson 10](lesson-10.md) & [Kanji 10](kanji-10.md)
-* [Lesson 11](lesson-11.md) & [Kanji 11](kanji-11.md)
-* [Lesson 12](lesson-12.md) & [Kanji 12](kanji-12.md)
-
+* [Lesson 9](lesson-9.md)
+* [Lesson 10](lesson-10.md)
