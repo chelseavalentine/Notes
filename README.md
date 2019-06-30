@@ -189,7 +189,6 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
 - [*The Confidence Gap*](mindset/the-confidence-gap.md)
 - 👎 _Man's Search for Meaning_
-- 👎[_Multipliers: How the Best Leaders Make Everyone Smarter_](companies/leadership/multipliers.md)
 
 ## Companies
 
@@ -218,6 +217,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 * [_Leading Change_](companies/leadership/leading-change.md)
 * 👎[_The Power of Other_](companies/leadership/the-power-of-other.md)
+* 👎[_Multipliers: How the Best Leaders Make Everyone Smarter_](companies/leadership/multipliers.md)
 
 ### Teams
 
@@ -232,6 +232,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Diversity and inclusion
 
 * [A collection of notes on articles](companies/diversity-and-inclusion/notes-on-articles.md)
+* 👎[_The Person You Mean To Be: How Good People Fight Bias_](companies/diversity-and-inclusion/the-person-you-mean-to-be.md)
 
 ## Economics
 
