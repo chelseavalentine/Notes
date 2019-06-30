@@ -197,6 +197,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_How Google Works_](companies/how-google-works.md)
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
 * [A collection of notes on articles](companies/notes-on-articles.md)
+* 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
 
 ### Management
 
