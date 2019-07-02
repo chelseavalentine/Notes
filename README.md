@@ -181,6 +181,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
 - 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
 - 👍[_The Start-Up of You_](mindset/the-start-up-of-you.md)
+- 👍[_Performing Under Pressure: The Science of Doing Your Best When It Matters Most_](mindset/performing-under-pressure.md)
 - [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
@@ -195,6 +196,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_Work Rules!: Insights from Google That Will Transform How You Live and Lead_](companies/work-rules.md)
 * [_How Google Works_](companies/how-google-works.md)
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
+* _Alive at Work: The Neuroscience of Helping Your People Love What They Do_
 * [A collection of notes on articles](companies/notes-on-articles.md)
 * 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
 
