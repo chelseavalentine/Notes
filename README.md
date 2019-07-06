@@ -175,21 +175,27 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 - 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
 - 👍[_What I Talk About When I Talk About Running_](mindset/what-i-talk-about-when-i-talk-about-running.md)
-- 👍[_The Art of Extraordinary Confidence_](mindset/the-art-of-extraordinary-confidence.md)
-- 👍[_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/the-upside-of-stress.md)
 - 👍[_Lying_](mindset/lying.md)
 - 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
 - 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
 - 👍[_The Start-Up of You_](mindset/the-start-up-of-you.md)
-- 👍[_Performing Under Pressure: The Science of Doing Your Best When It Matters Most_](mindset/performing-under-pressure.md)
-- [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/why-zebras-dont-get-ulcers.md)
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
 - [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
-- [*The Confidence Gap*](mindset/the-confidence-gap.md)
 - 👎 _Man's Search for Meaning_
+
+### Confidence
+
+* 👍[_The Art of Extraordinary Confidence_](mindset/confidence/the-art-of-extraordinary-confidence.md)
+* [*The Confidence Gap*](mindset/confidence/the-confidence-gap.md) 
+
+### Stress
+
+* 👍[_The Upside of Stress: Why Stress is Good For You, and How to Get Good at It_](mindset/stress/the-upside-of-stress.md)
+* 👍[_Performing Under Pressure: The Science of Doing Your Best When It Matters Most_](mindset/stress/performing-under-pressure.md)
+* [_Why Zebras Don't Get Ulcers: The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping_](mindset/stress/why-zebras-dont-get-ulcers.md)
 
 ## Companies
 
@@ -197,15 +203,17 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_How Google Works_](companies/how-google-works.md)
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
 * _Alive at Work: The Neuroscience of Helping Your People Love What They Do_
+
 * [A collection of notes on articles](companies/notes-on-articles.md)
 * 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
 
 ### Management
 
 - 👍[_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
+- 👍[_Help Them Grow or Watch Them Go: Career Conversations Employees _](companies/management/help-them-grow-or-watch-them-go.md)
 - [_The Manager's Path_](companies/management/the-managers-path.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
-- [_The Truth About Employee Engagements: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
+- [_The Truth About Employee Engagement: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
 - [Questions to ask during 1:1s](one-on-one-questions.md)
 
 ### Leadership
@@ -225,6 +233,10 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * [_The Five Dysfunctions of a Team_](companies/teams/the-five-dysfunctions-of-a-team.md)
 * [A collection of notes on articles](companies/teams/notes-on-articles.md)
+
+### Workplace
+
+* _Dying for a Paycheck: How Modern Management Harms Employee Health and Company Performance—and What We Can Do About It_
 
 ### Product
 
