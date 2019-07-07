@@ -203,6 +203,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_How Google Works_](companies/how-google-works.md)
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
 * _Alive at Work: The Neuroscience of Helping Your People Love What They Do_
+* _People Over Profit_
 
 * [A collection of notes on articles](companies/notes-on-articles.md)
 * 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
@@ -210,7 +211,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Management
 
 - 👍[_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
-- 👍[_Help Them Grow or Watch Them Go: Career Conversations Employees _](companies/management/help-them-grow-or-watch-them-go.md)
+- 👍[_Help Them Grow or Watch Them Go: Career Conversations Organizations Need and Employees Want _](companies/management/help-them-grow-or-watch-them-go.md)
 - [_The Manager's Path_](companies/management/the-managers-path.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
 - [_The Truth About Employee Engagement: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
@@ -220,6 +221,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * 👍[_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * 👍[_Conscious Business: How to Build Value through Values_](companies/leadership/conscious-business.md)
+* [_Management vs. Employees_](companies/leadership/management-vs-employees.md)
 * [*Unlocking Leadership Mindtraps: How to Thrive in Complexity*](companies/leadership/unlocking-leadership-mindtraps.md)
 * [_From Hierarchy to High Performance_](companies/leadership/from-hierarchy-to-high-performance.md)
 * [_The 15 Commitments of Conscious Leadership_](companies/leadership/the-15-commitments-of-conscious-leadership.md)
