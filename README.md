@@ -182,6 +182,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 - [_Managing Oneself_](mindset/managing-oneself.md)
 - [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
 - [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
+- [_Big Potential: How Transforming the Pursuit of Success Raises Our Achievement, Happiness, and Well-Being_](mindset/big-potential.md)
 - [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
 - [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
 - 👎 _Man's Search for Meaning_
