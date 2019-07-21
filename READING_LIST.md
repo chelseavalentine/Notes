@@ -2,6 +2,79 @@
 
 It's assumed that everything without `(Book)` is freely available online.
 
+## SRE/Systems
+
+### SRE/DevOps
+
+* _The Site Reliability Workbook: Practical Ways to Implement SRE_
+* _The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations_
+
+### Monitoring and alerting
+
+* _The Art of Monitoring_
+* _Practical Monitoring: Effective Strategies for the Real World_
+
+### Distributed systems
+
+* _Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services_
+
+### Scalability and performance
+
+* _The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise_
+* _Scalability Rules: Principles for Scaling Web Sites_
+* _Scalability Rules: 50 Principles for Scaling Web Sites_
+* _Scalability Patterns: Best Practices for Designing High Volume Websites_
+* _High Performance Web Sites: Essential Knowledge for Front-End Engineers_
+* _High Performance Browser Networking: What every web developer should know about networking and web performance_
+* _Java Performance: The Definitive Guide: Getting the Most Out of Your Code_
+* _Optimizing Java: Practical Techniques for Improving JVM Application Performance_
+
+### Networking/Traffic
+
+* _Networking for Beginners : Be Familiar with Computer Network Basics. Learn What a Computer Network is, Why It Matters and How Networking May Raise a Challenge to Machine Learning_
+* _Load Balancing Servers, Firewalls, and Caches_
+* _Load Balancing with HAProxy: Open-source technology for better scalability, redundancy and availability in your IT infrastructure_
+* _The TCP/IP Guide: A Comprehensive, Illustrated Internet Protocols Reference_
+* _HTTP: The Definitive Guide (Definitive Guides)_
+* _Learning HTTP/2: A Practical Guide for Beginners_
+* _Content Distribution Networks: An Engineering Approach_
+* _Network Programmability and Automation: Skills for the Next-Generation Network Engineer_
+* _DNS and BIND: Help for System Administrators_
+* _Network Warrior: Everything You Need to Know That Wasn't on the CCNA Exam_
+
+### Linux/Operating systems
+
+* _Squid Proxy Server 3.1: Beginner's Guide_
+* _Linux for Beginners: An Introduction to the Linux Operating System and Command Line_
+* _Linux Proxy Server - Squid_
+
+### Security/Cryptography
+
+* _Identity and Data Security for Web Development: Best Practices_
+* _SSH, The Secure Shell: The Definitive Guide: The Definitive Guide_
+* _Security Engineering: A Guide to Building Dependable Distributed Systems_
+* _DNS Security: In-depth Vulnerability Analysis and Mitigation Solutions_
+* _Introduction to Modern Cryptography (Chapman & Hall/CRC Cryptography and Network Security Series)_
+* _Understanding Cryptography: A Textbook for Students and Practitioners_
+* _Serious Cryptography: A Practical Introduction to Modern Encryption_
+* _Getting Started with OAuth 2.0: Programming Clients for Secure Web API Authorization and Authentication_
+
+### Services and systems
+
+* _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_
+* _Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services_
+* _Distributed Systems: An Algorithmic Approach, Second Edition (Chapman & Hall/CRC Computer and Information Science Series)_
+* _Building Microservices: Designing Fine-Grained Systems_
+* _Thinking in Systems: A Primer_
+* _System Engineering Analysis, Design, and Development: Concepts, Principles, and Practices (Wiley Series in Systems Engineering and Management)_
+* _Distributed Systems: Concurrency and Consistency_
+
+### Misc
+
+* _Database Reliability Engineering: Designing and Operating Resilient Database Systems_
+* _Elasticsearch: The Definitive Guide: A Distributed Real-Time Search and Analytics Engine_
+* _Infrastructure as Code: Managing Servers in the Cloud_
+
 ## Software
 
 ### Architecture
