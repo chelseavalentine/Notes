@@ -14,7 +14,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 ### Standards
 
 * 👍[_Clean Code_](software-engineering/standards/clean-code.md)
-* 👍[_The Clean Coder: A Code of Conduct for Professional Programmers_]((software-engineering/standards/the-clean-coder.md))
+* 👍[_The Clean Coder: A Code of Conduct for Professional Programmers_](software-engineering/standards/the-clean-coder.md)
 * [_Code Complete_](software-engineering/standards/code-complete.md)
 * [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
 * [NPR Visual's Best Practices](software-engineering/standards/npr-visuals-best-practices.md)
