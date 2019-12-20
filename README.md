@@ -16,7 +16,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * 👍[_Clean Code_](software-engineering/standards/clean-code.md)
 * 👍[_The Clean Coder: A Code of Conduct for Professional Programmers_](software-engineering/standards/the-clean-coder.md)
 * [_Code Complete_](software-engineering/standards/code-complete.md)
-* [North: Design and Development Guide](software-engineering/NorthDesignAndDevelopment-1.md)
+* [North: Design and Development Guide](software-engineering/standards/north-design-and-development-guide.md)
 * [NPR Visual's Best Practices](software-engineering/standards/npr-visuals-best-practices.md)
 
 ### Processes
@@ -41,7 +41,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [Cloud Computing](software-engineering/theory/cloud-computing/)
   * [_The Datacenter As A Computer_](software-engineering/theory/cloud-computing/the-datacenter-as-a-computer.md)
 * [Computer Architecture](software-engineering/theory/computer-architecture/)
-  * [Computer Systems Organization (CSO) course](software-engineering/theory/computer-systems-organization-course.md)
+  * [Computer Systems Organization (CSO) course](software-engineering/theory/computer-architecture/computer-systems-organization-course.md)
 * [Continuous Integration](software-engineering/theory/continuous-integration/)
   * [Continuous Integration](software-engineering/theory/continuous-integration/continuous-integration.md)
 * [Discrete Math](software-engineering/theory/discrete-math/)
@@ -64,12 +64,11 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
   * [_Clojure for the Brave and True_](software-engineering/programming-languages/clojure/clojure-for-the-brave-and-true.md)
   * [Clojure docs](software-engineering/programming-languages/clojure/clojure-docs.md)
 * [Java](software-engineering/programming-languages/java/)
-  * [Introduction to Java Programming course](software-engineering/programming-languages/introduction-to-java-programming-course/)
-    * [_Introduction to Java Programming_](software-engineering/programming-languages/introduction-to-java-programming-course/introduction-to-java-programming.md)
+  * [Introduction to Java Programming course](software-engineering/programming-languages/java/introduction-to-java-programming-course/)
 * [HTML & CSS](software-engineering/programming-languages/html-and-css/)
   * [_Front-end Engineering_](software-engineering/programming-languages/html-and-css/frontend-engineering.md)
   * [HTML](software-engineering/programming-languages/html-and-css/html.md)
-  * [HTML Best Practices]([software-engineering/programming-languages/html-and-css/html-best-practices.md)
+  * [HTML Best Practices](software-engineering/programming-languages/html-and-css/html-best-practices.md)
   * [CSS](software-engineering/programming-languages/html-and-css/css.md)
   * [CSS Best Practices](software-engineering/programming-languages/html-and-css/css-best-practices.md)
   * [Code Guide: HTML & CSS](software-engineering/programming-languages/html-and-css/code-guide-html-and-css.md)
@@ -87,8 +86,8 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
   * [_LaTex Beginner's Guide_](software-engineering/programming-languages/latex/latex-beginners-guide.md)
 * [Swift](software-engineering/programming-languages/swift/)
   * [_The Swift Programming Language (Swift 2.2)_](software-engineering/programming-languages/swift/the-swift-programming-language.md)
-* [C++](software-engineering/programming-languages/latex/c-plus-plus/)
-  * [_Jumping into C++_](software-engineering/programming-languages/latex/c-plus-plus/jumping-into-c++.md)
+* [C++](software-engineering/programming-languages/c-plus-plus/)
+  * [_Jumping into C++_](software-engineering/programming-languages/c-plus-plus/jumping-into-c++.md)
 
 ### Frameworks
 
@@ -173,19 +172,19 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ## Mindset
 
-- 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
-- 👍[_What I Talk About When I Talk About Running_](mindset/what-i-talk-about-when-i-talk-about-running.md)
-- 👍[_Lying_](mindset/lying.md)
-- 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
-- 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
-- 👍[_The Start-Up of You_](mindset/the-start-up-of-you.md)
-- [_Managing Oneself_](mindset/managing-oneself.md)
-- [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
-- [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
-- [_Big Potential: How Transforming the Pursuit of Success Raises Our Achievement, Happiness, and Well-Being_](mindset/big-potential.md)
-- [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
-- [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
-- 👎 _Man's Search for Meaning_
+* 👍[_Principles: Life and Work_](mindset/principles-life-and-work.md)
+* 👍[_What I Talk About When I Talk About Running_](mindset/what-i-talk-about-when-i-talk-about-running.md)
+* 👍[_Lying_](mindset/lying.md)
+* 👍[_How to Stop Worrying and Start Living_](mindset/how-to-stop-worrying-and-start-living.md)
+* 👍[*The Subtle Art of Not Giving a Fuck*](mindset/the-subtle-art-of-not-giving-a-fuck.md)
+* 👍[_The Start-Up of You_](mindset/the-start-up-of-you.md)
+* [_Managing Oneself_](mindset/managing-oneself.md)
+* [_Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead_](mindset/daring-greatly.md)
+* [_The Happiness Advantage: How a Positive Brain Fuels Success in Work and Life_](mindset/the-happiness-advantage.md)
+* [_Big Potential: How Transforming the Pursuit of Success Raises Our Achievement, Happiness, and Well-Being_](mindset/big-potential.md)
+* [_The Signal and the Noise: Why So Many Predictions Fail – But Some Don't_](mindset/the-signal-and-the-noise.md)
+* [_Originals: How Non-Comformists Move the World_](mindset/originals.md)
+* 👎 _Man's Search for Meaning_
 
 ### Confidence
 
@@ -205,18 +204,17 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
 * _Alive at Work: The Neuroscience of Helping Your People Love What They Do_
 * _People Over Profit_
-
 * [A collection of notes on articles](companies/notes-on-articles.md)
 * 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
 
 ### Management
 
 - 👍[_Radical Candor: Be a Kick-Ass Boss Without Losing Your Humanity_](companies/management/radical-candor.md)
-- 👍[_Help Them Grow or Watch Them Go: Career Conversations Organizations Need and Employees Want _](companies/management/help-them-grow-or-watch-them-go.md)
+- 👍[_Help Them Grow or Watch Them Go: Career Conversations Organizations Need and Employees Want_](companies/management/help-them-grow-or-watch-them-go.md)
 - [_The Manager's Path_](companies/management/the-managers-path.md)
 - [_Guide to Managerial Communication_](companies/management/guide-to-managerial-communication.md)
 - [_The Truth About Employee Engagement: A Fable About Addressing the Three Root Causes of Job Misery_](companies/management/the-truth-about-employee-engagement.md)
-- [Questions to ask during 1:1s](one-on-one-questions.md)
+- [Questions to ask during 1:1s](companies/management/one-on-one-questions.md)
 
 ### Leadership
 
