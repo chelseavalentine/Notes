@@ -199,6 +199,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ## Companies
 
+* [_The No Asshole Rule_](companies/the-no-asshole-rule.md)
 * [_Work Rules!: Insights from Google That Will Transform How You Live and Lead_](companies/work-rules.md)
 * [_How Google Works_](companies/how-google-works.md)
 * [_Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration_](companies/creativity-inc.md)
@@ -220,13 +221,17 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * 👍[_The Captain Class: A New Theory of Leadership_](companies/leadership/the-captain-class.md)
 * 👍[_Conscious Business: How to Build Value through Values_](companies/leadership/conscious-business.md)
+* 👍[_You Don't Need a Title to Be a Leader_](companies/leadership/you-dont-need-a-title-to-be-a-leader.md)
+* 👍[_The 4 Disciplines of Execution_](companies/leadership/the-4-disciplines-of-execution.md)
 * [_Management vs. Employees_](companies/leadership/management-vs-employees.md)
 * [*Unlocking Leadership Mindtraps: How to Thrive in Complexity*](companies/leadership/unlocking-leadership-mindtraps.md)
 * [_From Hierarchy to High Performance_](companies/leadership/from-hierarchy-to-high-performance.md)
 * [_The 15 Commitments of Conscious Leadership_](companies/leadership/the-15-commitments-of-conscious-leadership.md)
+* [_The Art of Action: How Leaders Close the Gaps between Plans, Actions, and Results_](companies/leadership/the-art-of-action.md)
 * [_Leaders Made Here: Building a Leadership Culture_](companies/leadership/leaders-made-here.md)
 * [_The Charisma Myth_](companies/leadership/the-charisma-myth.md)
 * [_Leading Change_](companies/leadership/leading-change.md)
+* _The Best Place to Work: The Art and Science of Creating an Extraordinary Workplace_
 * 👎[_The Power of Other_](companies/leadership/the-power-of-other.md)
 * 👎[_Multipliers: How the Best Leaders Make Everyone Smarter_](companies/leadership/multipliers.md)
 
