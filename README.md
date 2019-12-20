@@ -146,6 +146,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 * 👍[_Nonviolent Communication: A Language of Life_](communication/nonviolent-communication.md)
 * 👍[_Authentic Conversations: Moving from Manipulation to Truth and Commitment_](communication/authentic-conversations.md)
+* [_Difficult Conversations: How to Discuss What Matters Most_](communication/difficult-conversations.md)
 * [_Exactly What to Say: The Magic Words for Influence and Impact_](communication/exactly-what-to-say.md)
 * [_4 Essential Keys To Effective Communication_](communication/4-essential-keys-to-effective-communication.md)
 * [_People Skills: How to Assert Yourself, Listen to Others, and Resolve Conflicts_](communication/people-skills.md)
