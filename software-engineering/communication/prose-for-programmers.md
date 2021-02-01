@@ -1,6 +1,6 @@
 # Prose for Programmers
 
-Notes taken on [_Prose for Programmers_](https://github.com/joshuacc/prose-for-programmer).
+Notes taken on [_Prose for Programmers_](https://github.com/joshuacc/prose-for-programmers).
 
 * ask yourself what the goal and purpose of a document you're writing is, just as you'd want to know the requirements before building something
   - if it's an "I"/"me" response, then perhaps you haven't found the real purpose
