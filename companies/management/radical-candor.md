@@ -10,7 +10,7 @@
 * approach to giving criticism: do it in a way that doesn't call into question your confidence in their abilities, but doesn't leave too much room for interpretation
 * the war for talent is so intense that there's no need to pay "the asshole tax"
 
-### A new management philosophy
+## A new management philosophy
 
 * emotional labor isn't just part of the job, it's key to being a good boss
 
@@ -70,7 +70,7 @@
 
 * **the worst thing is to say silent because you want to spare yourself**
 
-### Understand what motivates each person on your team
+## Understand what motivates each person on your team
 
 * you need to understand how each person's job fits into their life goals
 * success of a team depends both on the "rock" stars and "super" stars
@@ -116,7 +116,7 @@
   * it's bad for morale
 * quarter ratings that don't personalize: "off quarter", "solid quarter", and "exceptional quarter"
 
-### Drive results collaboratively
+## Drive results collaboratively
 
 * there's a difference between always _being_ right and always _getting it_ right
 
@@ -130,7 +130,7 @@
 
 * > When facts change, I change my mind.
 
-### An approach to establishing trust with your direct reports
+## An approach to establishing trust with your direct reports
 
 * > don't think of work-life balance as some zero-sum game where everything you put into your work robs your life and vice versa; think of it as work-life integration
 
@@ -140,12 +140,12 @@
 
 * self-abnegation (the denial/abasement of oneself) is never an effective way to show you care
 
-### Techniques for avoiding burnout and boredom
+## Techniques for avoiding burnout and boredom
 
 * remember that the reason you're firing is not because they suck, or because they suck at this job; it's that the job you gave them sucks for them
 * when it's all done, acknowledge how hard these convos were and plan for some sort of clear-the-air activity
 
-### Results: things you can do to get things done together
+## Results: things you can do to get things done together
 
 * on feedback's structure:
   1. the situation you saw

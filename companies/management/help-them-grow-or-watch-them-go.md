@@ -1,13 +1,13 @@
 # Help Them Grow or Watch Them Go: Career Conversations Organizations Need and Employees Want
 
-### Ch 2: Can we talk?
+## Ch 2: Can we talk?
 
 * having conversations to inspire reflection and commitment in others can be more impactful than orchestrating assignments
   * ask questions instead of doing all the talking so that they can take ownership
   * don't immediately volunteer resolutions or provide most of the elements of someone else's development plan
 * you don't need to have all the answers! you just need to be able to ask good questions
 
-### Ch 3: Let hindsight lead the way
+## Ch 3: Let hindsight lead the way
 
 * should have a view of:
   * strengths and skills (what they're good at)
@@ -20,7 +20,7 @@
   * what do you wish you had more time for?
   * what bores you?/what takes routinely get pushed to the bottom of your to-do list?
 
-### Ch 4: Feed me
+## Ch 4: Feed me
 
 * ABC
   * Abilities
@@ -38,7 +38,7 @@
     * Do I tend to perform better when working with others or solo?
     * What factors have you noticed trigger stress or negative reactions for me?
 
-### Ch 5: What's happening
+## Ch 5: What's happening
 
 * resources to understand the changing landscape around you:
   * interview key individuals
