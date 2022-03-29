@@ -248,6 +248,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 
 ### Product
 
+* 👍 [Lovability: How to Build a Business That People Love and Be Happy Doing It](companies/product/lovability.md)
 * [A collection of notes on Ken Norton's blog posts](companies/product/ken-norton-blog-posts.md)
 * [A collection of notes on articles](companies/product/notes-on-articles.md)
 
