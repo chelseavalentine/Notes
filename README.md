@@ -207,6 +207,7 @@ _Disclaimer:_ Just because I took note of it, doesn't mean that I agree with it 
 * _Alive at Work: The Neuroscience of Helping Your People Love What They Do_
 * _People Over Profit_
 * [A collection of notes on articles](companies/notes-on-articles.md)
+* [No Rules Rules](companies/no-rules-rules.md)
 * 👎[_An Everyone Culture_](companies/an-everyone-culture.md)
 
 ### Management
